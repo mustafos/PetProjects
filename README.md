@@ -1,2 +1,2 @@
 # Pet-projects on topics
-Projects are aimed at practical consolidation of theoretical material on topics such as Swift language, UIKit & SwiftUI frameworks, Xcode tools, Interface builder, AutoLayout, iOS Core Animation, UI/UX design, MVP/MVC architecture, Multitheading(Thread & GCD & Operation), Networking(API, XML, JSON, REST), Structures & Algorithms, Core Data(SQL, NoSQL) and UI/Unit tests.
+Each of these pet project ideas provides an opportunity to explore new technologies and development techniques, while also creating something that is useful and valuable to pet owners. By working on pet projects, iOS developers can build their skills and gain experience, while also having fun and creating something they can be proud of.
