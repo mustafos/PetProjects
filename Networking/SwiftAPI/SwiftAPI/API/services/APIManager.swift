@@ -102,7 +102,7 @@ private func makeRequest() {
     
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
         if let data = data, let joke = try? JSONDecoder().decode(Joke.self, from: data) {
-            print(joke.setup)
+            print(joke.setup as Any)
         }
     }
     task.resume()
