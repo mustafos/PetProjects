@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol Interactor {
+    init(presenter: Presenter)
+}
+
+class CatalogInteractor: Interactor {
+    var presenter: Presenter!
+    
+    // Bussines Logic
+    required init(presenter: Presenter) {
+        self.presenter = presenter
+    }
+}

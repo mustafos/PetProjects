@@ -16,17 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWo-B7-XdO">
-                                <rect key="frame" x="159" y="421" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-tz-wVG">
+                                <rect key="frame" x="163.33333333333334" y="421" width="66.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Press"/>
+                                <connections>
+                                    <action selector="catalogButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDc-y1-6Qg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GWo-B7-XdO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2VR-ew-E19"/>
-                            <constraint firstItem="GWo-B7-XdO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aWy-hh-WTg"/>
+                            <constraint firstItem="KAj-tz-wVG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5xZ-Ed-MtH"/>
+                            <constraint firstItem="KAj-tz-wVG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gfm-Uh-8g7"/>
                         </constraints>
                     </view>
                 </viewController>
