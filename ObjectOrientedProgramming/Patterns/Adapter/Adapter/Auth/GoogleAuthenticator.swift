@@ -21,7 +21,9 @@ public class GoogleAuthenticator {
             
             let token = "special-token-value"
             
-            let user = GoogleUser(email: email, password: password, token: token)
+            let user = GoogleUser(email: email,
+                                  password: password,
+                                  token: token)
             completion(user, nil)
         }
 }

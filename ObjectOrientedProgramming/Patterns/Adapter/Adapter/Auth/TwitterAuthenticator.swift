@@ -21,7 +21,9 @@ public class TwitterAuthenticator {
             
             let token = "special-token-value"
             
-            let user = TwitterUser(email: email, password: password, token: token)
+            let user = TwitterUser(email: email,
+                                   password: password,
+                                   token: token)
             completion(user, nil)
         }
 }

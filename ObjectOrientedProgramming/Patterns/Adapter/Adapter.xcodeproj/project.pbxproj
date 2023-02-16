@@ -82,9 +82,9 @@
 		6A573A82299C284D00B1BD3D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				6A8C349A299C28EA00D1A7E7 /* AuthentificationServise.swift */,
 				6A573A7E299C267900B1BD3D /* GoogleAuthenticator.swift */,
 				6A573A80299C27E900B1BD3D /* TwitterAuthenticator.swift */,
-				6A8C349A299C28EA00D1A7E7 /* AuthentificationServise.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";

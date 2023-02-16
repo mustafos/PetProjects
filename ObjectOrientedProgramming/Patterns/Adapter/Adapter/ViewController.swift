@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var authService: AuthentificationServise = GoogleAuthenticatorAdapter()
-
+    var authService: AuthentificationServise = TwitterAuthenticatorAdapter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
