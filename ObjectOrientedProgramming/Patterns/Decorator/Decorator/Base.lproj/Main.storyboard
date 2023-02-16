@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Decorator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="EOw-rp-MSj">
+                                <rect key="frame" x="-34.333333333333343" y="332" width="461.66666666666674" height="213"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-NV-ujX">
+                                <rect key="frame" x="37" y="553" width="319" height="32"/>
+                                <segments>
+                                    <segment title="Base"/>
+                                    <segment title="Sport"/>
+                                    <segment title="Premium"/>
+                                </segments>
+                                <connections>
+                                    <action selector="menuCarSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="8SP-lW-vwe"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c8-1X-G6S">
+                                <rect key="frame" x="160" y="300" width="73" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-VW-gts">
+                                <rect key="frame" x="128" y="258" width="68" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-sQ-5mn">
+                                <rect key="frame" x="204" y="258" width="41" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4c8-1X-G6S" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="27h-tF-veh"/>
+                            <constraint firstItem="7RF-NV-ujX" firstAttribute="width" secondItem="EOw-rp-MSj" secondAttribute="width" multiplier="0.690625" id="56W-2X-ST3"/>
+                            <constraint firstItem="MvW-VW-gts" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="62G-o1-IAM"/>
+                            <constraint firstItem="7RF-NV-ujX" firstAttribute="centerX" secondItem="EOw-rp-MSj" secondAttribute="centerX" id="8MX-DI-I7M"/>
+                            <constraint firstItem="EOw-rp-MSj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HgO-jW-GjA"/>
+                            <constraint firstItem="7RF-NV-ujX" firstAttribute="top" secondItem="EOw-rp-MSj" secondAttribute="bottom" constant="8" id="JMs-qr-leN"/>
+                            <constraint firstItem="EOw-rp-MSj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pof-T9-uu7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OHb-sQ-5mn" secondAttribute="trailing" constant="148" id="RwZ-N7-ss1"/>
+                            <constraint firstItem="4c8-1X-G6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="SIc-9T-gzr"/>
+                            <constraint firstItem="OHb-sQ-5mn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MvW-VW-gts" secondAttribute="trailing" constant="8" symbolic="YES" id="Z8Q-Ue-4YK"/>
+                            <constraint firstItem="OHb-sQ-5mn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="cSl-uN-jgj"/>
+                            <constraint firstItem="7RF-NV-ujX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="f1k-fT-JmV"/>
+                            <constraint firstItem="4c8-1X-G6S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="241" id="vN9-kc-O5Y"/>
+                            <constraint firstItem="OHb-sQ-5mn" firstAttribute="baseline" secondItem="MvW-VW-gts" secondAttribute="baseline" id="yuY-wv-tI9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="comentLabel" destination="4c8-1X-G6S" id="3uY-1Q-wKq"/>
+                        <outlet property="priceLabel" destination="OHb-sQ-5mn" id="Efu-BD-iTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" width="320" height="213"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
