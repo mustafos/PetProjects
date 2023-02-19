@@ -1,5 +1,3 @@
-// Flyweight
-
 import UIKit
 
 class ViewController: UIViewController {
