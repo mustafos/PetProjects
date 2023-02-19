@@ -14,7 +14,7 @@ class NetworkService {
             let decoder = JSONDecoder()
             guard let data = data else { return }
             let response = try? decoder.decode([Country].self, from: data)
-            print(response)
+            print(response!)
         }
     }
     
