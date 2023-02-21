@@ -3,16 +3,20 @@
 //  SingleResponsibilityPrinciple
 //
 //  Created by Mustafa Bekirov on 12.02.2023.
-//
+//  Copyright © 2023 Mustafa Bekirov. All rights reserved.
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    let urlString = "https://pokeapi.co/api/v2/pokemon/ditto"
+    let urlString = "https://raw.githubusercontent.com/Softex-Group/task-mobile/master/test.json"
+    
+    let urlFreeApp = "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/10/apps.json"
+    
+    let urlPaidApp = "https://rss.applemarketingtools.com/api/v2/us/apps/top-paid/10/apps.json"
     
     // external dependencies
-    var networkService = NetworkService()
+    var networkDataFetcher = NetworkDataFetcher()
     let dataStore = DataStore()
     
     // user interface elements
@@ -26,7 +30,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
-        networkService.dataFetcher(urlString: urlString)
+        networkDataFetcher.fetchPaidApps(urlString: urlPaidApp) { (paidApps) in
+            print(paidApps?.feed.results.first?.name)
+        }
+        
+        networkDataFetcher.fetchFreeApps(urlString: urlFreeApp) { (freeApps) in
+            print(freeApps?.feed.results.first?.name)
+        }
+        
+        networkDataFetcher.fetchCountry(urlString: urlString) { (countries) in
+            print(countries?.first?.Name)
+        }
     }
     
     // MARK: – Business logic
