@@ -7,17 +7,9 @@
 
 import UIKit
 
-struct Country: Decodable {
-    var albumId: Int
-    var id: Int
-    var title: String
-    var url: String?
-    var thumbnailUrl: String?
-}
-
 class ViewController: UIViewController {
     
-    let urlString = "https://jsonplaceholder.typicode.com/photos"
+    let urlString = "https://pokeapi.co/api/v2/pokemon/ditto"
     
     // external dependencies
     var networkService = NetworkService()

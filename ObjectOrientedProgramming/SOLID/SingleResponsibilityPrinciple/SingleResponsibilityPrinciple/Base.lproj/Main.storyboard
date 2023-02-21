@@ -14,7 +14,7 @@
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SingleResponsibilityPrinciple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-YG-Ycc">
                                 <rect key="frame" x="78" y="169" width="237" height="41"/>
@@ -22,21 +22,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMd-C7-8pD">
-                                <rect key="frame" x="78" y="261" width="237" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNk-bJ-Fub">
-                                <rect key="frame" x="78" y="303" width="237" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changeLabel:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="TJL-9F-4z2"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfl-Lb-gFo">
                                 <rect key="frame" x="154.66666666666666" y="414.66666666666669" width="83.666666666666657" height="47.666666666666686"/>
                                 <state key="normal" title="Button"/>
@@ -47,20 +32,42 @@
                                     <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXr-0a-Epz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIb-7J-EzI">
+                                <rect key="frame" x="78" y="334" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-k0-WX1">
+                                <rect key="frame" x="78" y="276" width="237" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="dLT-6F-uyj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeLabel:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="9lu-q7-4zb"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bvF-YG-Ycc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="ZGV-Zp-fws"/>
-                            <constraint firstItem="bvF-YG-Ycc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cfu-hk-Xta"/>
-                            <constraint firstItem="Nfl-Lb-gFo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vIX-lA-bW2"/>
-                            <constraint firstItem="Nfl-Lb-gFo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vwL-EX-8mh"/>
+                            <constraint firstItem="Nfl-Lb-gFo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Jn-tQ-RK3"/>
+                            <constraint firstItem="t4X-k0-WX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="AJS-Jc-ftR"/>
+                            <constraint firstItem="nIb-7J-EzI" firstAttribute="top" secondItem="t4X-k0-WX1" secondAttribute="bottom" constant="24" id="Aqz-ty-gHh"/>
+                            <constraint firstItem="bvF-YG-Ycc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="IZp-gk-TxR"/>
+                            <constraint firstItem="nIb-7J-EzI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="NfD-oP-nBU"/>
+                            <constraint firstItem="Nfl-Lb-gFo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gDZ-e9-7Ad"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nIb-7J-EzI" secondAttribute="trailing" symbolic="YES" id="h9C-hL-lEo"/>
+                            <constraint firstItem="bvF-YG-Ycc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qv1-q3-Aev"/>
+                            <constraint firstItem="t4X-k0-WX1" firstAttribute="top" secondItem="bvF-YG-Ycc" secondAttribute="bottom" constant="66" id="uxW-Lc-67E"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myTextField" destination="GMd-C7-8pD" id="OdO-Y0-aud"/>
+                        <outlet property="myTextField" destination="t4X-k0-WX1" id="8ur-U7-v4m"/>
                         <outlet property="saveButton" destination="Nfl-Lb-gFo" id="1rH-Hl-Zk0"/>
-                        <outlet property="textLabel" destination="bvF-YG-Ycc" id="J0E-dP-YsI"/>
+                        <outlet property="textLabel" destination="nIb-7J-EzI" id="ZpC-po-iXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
