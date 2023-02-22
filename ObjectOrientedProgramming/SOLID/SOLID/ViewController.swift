@@ -35,6 +35,10 @@ class ViewController: UIViewController {
         dataFetcherService.fetchPaidApps { (newGames) in
             print(newGames?.feed.results.first?.name)
         }
+        
+        dataFetcherService.fetchLocalCountry { (localCountries) in
+            print(localCountries?.last?.Name)
+        }
     }
     
     // MARK: – Business logic

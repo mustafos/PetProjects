@@ -89,11 +89,11 @@
 			children = (
 				6ABA63FA29A6348F006B6E34 /* Models */,
 				6ABA63FD29A6348F006B6E34 /* NetworkService.swift */,
-				6ABA63FE29A6348F006B6E34 /* DataFetcherService.swift */,
+				6ABA640229A6348F006B6E34 /* NetworkDataFetcher.swift */,
 				6ABA63FF29A6348F006B6E34 /* LocalDataFetcher.swift */,
+				6ABA63FE29A6348F006B6E34 /* DataFetcherService.swift */,
 				6ABA640029A6348F006B6E34 /* DataStore.swift */,
 				6ABA640129A6348F006B6E34 /* usersAPI.txt */,
-				6ABA640229A6348F006B6E34 /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
