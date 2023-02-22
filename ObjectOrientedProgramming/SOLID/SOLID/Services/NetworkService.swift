@@ -1,6 +1,6 @@
 //
 //  NetworkService.swift
-//  SingleResponsibilityPrinciple
+//  SOLID
 //
 //  Created by Mustafa Bekirov on 12.02.2023.
 //  Copyright © 2023 Mustafa Bekirov. All rights reserved.
