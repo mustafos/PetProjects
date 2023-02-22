@@ -3,7 +3,7 @@
 //  SOLID
 //
 //  Created by Mustafa Bekirov on 22.02.2023.
-//
+//  Copyright © 2023 Mustafa Bekirov. All rights reserved.
 
 import Foundation
 
