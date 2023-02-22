@@ -9,14 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let urlString = "https://raw.githubusercontent.com/Softex-Group/task-mobile/master/test.json"
-    
-    let urlFreeApp = "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/10/apps.json"
-    
-    let urlPaidApp = "https://rss.applemarketingtools.com/api/v2/us/apps/top-paid/10/apps.json"
-    
     // external dependencies
-    var networkDataFetcher = NetworkDataFetcher()
+    var dataFetcherService = DataFetcherService()
     let dataStore = DataStore()
     
     // user interface elements
@@ -30,16 +24,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
-        networkDataFetcher.fetchPaidApps(urlString: urlPaidApp) { (paidApps) in
-            print(paidApps?.feed.results.first?.name)
-        }
-        
-        networkDataFetcher.fetchFreeApps(urlString: urlFreeApp) { (freeApps) in
-            print(freeApps?.feed.results.first?.name)
-        }
-        
-        networkDataFetcher.fetchCountry(urlString: urlString) { (countries) in
+        dataFetcherService.fetchCountry { (countries) in
             print(countries?.first?.Name)
+        }
+        
+        dataFetcherService.fetchFreeApps { (freeGames) in
+            print(freeGames?.feed.results.first?.name)
+        }
+        
+        dataFetcherService.fetchPaidApps { (newGames) in
+            print(newGames?.feed.results.first?.name)
         }
     }
     
