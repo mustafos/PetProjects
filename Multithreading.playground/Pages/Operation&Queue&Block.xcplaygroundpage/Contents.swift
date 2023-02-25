@@ -5,70 +5,70 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 var greeting = "Operation | OperationQueue | OperationBlock"
 
-//print(Thread.current)
+print(Thread.current)
 
-//let operation1 = {
-//    print("Start")
-//    print(Thread.current)
-//    print("finish")
-//}
-//
-//let queue = OperationQueue()
-//queue.addOperation(operation1)
+let operation1 = {
+    print("Start")
+    print(Thread.current)
+    print("finish")
+}
 
-//============================
-
-//print(Thread.current)
-//
-//var result: String?
-//let concatOperation = BlockOperation {
-//    result = "The Swift" + " " + "Development"
-//    print(Thread.current)
-//}
-//
-//concatOperation.start()
-//
-//print(result!)
-//
-//let queue = OperationQueue()
-//queue.addOperation(concatOperation)
-//print(result!)
-//print(Thread.current)
+let queue = OperationQueue()
+queue.addOperation(operation1)
 
 //============================
 
-//let queue1 = OperationQueue()
-//queue1.addOperation {
-//    print("test")
-//    print(Thread.current)
-//}
+print(Thread.current)
+
+var result: String?
+let concatOperation = BlockOperation {
+    result = "The Swift" + " " + "Development"
+    print(Thread.current)
+}
+
+concatOperation.start()
+
+print(result!)
+
+let queue = OperationQueue()
+queue.addOperation(concatOperation)
+print(result!)
+print(Thread.current)
 
 //============================
 
-//class MyThread: Thread {
-//    override func main() {
-//        print("Test main thread")
-//    }
-//}
-//
-//let myThread = MyThread()
-//myThread.start()
+let queue1 = OperationQueue()
+queue1.addOperation {
+    print("test")
+    print(Thread.current)
+}
 
 //============================
 
-//print(Thread.current)
-//class OperationA: Operation {
-//    override func main() {
-//        print("Test operaion A")
-//        print(Thread.current)
-//    }
-//}
-//
-//let operationA = OperationA()
-//operationA.start()
-//
-//let queue1 = OperationQueue()
-//queue1.addOperation(operationA)
+class MyThread: Thread {
+    override func main() {
+        print("Test main thread")
+    }
+}
+
+let myThread = MyThread()
+myThread.start()
+
+============================
+
+print(Thread.current)
+class OperationA: Operation {
+    override func main() {
+        print("Test operaion A")
+        print(Thread.current)
+    }
+}
+
+let operationA = OperationA()
+operationA.start()
+
+let queue1 = OperationQueue()
+queue1.addOperation(operationA)
  
 //============================ Part 2 ============================
 
