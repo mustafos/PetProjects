@@ -1,14 +1,10 @@
 # Data Structure & Algorithmus
-"""An algorithm is a recipe for making the computer do something. If you know how to cook, you understand algorithms!
-
-The ingredients -- flour, milk, eggs, butter -- are the data that the algorithm works on. The data goes into the algorithm in one form (raw, separate ingredients) and comes out in another (delicious pancakes!).
-
-So what are the data structures? They are the containers that hold the data while the algorithm works on it. In the pancake recipe, the data structures are the bag that holds the flour, the mixing bowl where you combine everything, the frying pan that browns the pancake, and finally the plate used to serve the finished pancake.
+""" Algorithms are essential to the way computers process data. Many computer programs contain algorithms that detail the specific instructions a computer should perform—in a specific order—to carry out a specified task, such as calculating employees' paychecks or printing students' report cards.
 """
 
-###Searching Algorithms
+###Searching Algorithms___________________________________________
 def array_search(A:list, N:int, x:int):
-    """ Searches for the number X in the array A from 0 to N-1 index inclusive.  
+    """ Searches for the number X in the array A from 0 to N-1 index inclusive.
         Returns the index of element X in array A. Or -1 if there is none.
         If there are several identical elements in the array equal to X, 
         then return the index of the first one in the count.
@@ -22,7 +18,7 @@ def test_array_search():
     A1 = [1, 2, 3, 4, 5]
     m = array_search(A1, 5, 8)
 
-###Binary Search
+###Binary Search_________________________________________________
 def binary_search(list, item):
     low = 0
     high = len(list) - 1
@@ -38,7 +34,7 @@ def binary_search(list, item):
             low = mid + 1
     return None
 
-###Sorted Algorithmus
+###Sorted Algorithmus_____________________________________________
 def findeSmallest(arr):
     smallest = arr[0]
     smallest_index = 0
@@ -129,7 +125,7 @@ def print_item2(item):
         sleep(1)
         print(item)
 
-###Recursion
+###Recursion__________________________________________________
 def droste(n):
     if n == 1:
         print("Droste effect")
