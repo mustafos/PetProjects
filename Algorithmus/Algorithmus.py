@@ -1,6 +1,6 @@
 # Data Structure & Algorithmus
 
-#Searching Algorithms
+###Searching Algorithms
 def array_search(A:list, N:int, x:int):
     """Searches for the number X in the array A from 0 to N-1 index inclusive.  
        Returns the index of element X in array A. Or -1 if there is none.
@@ -16,7 +16,7 @@ def test_array_search():
     A1 = [1, 2, 3, 4, 5]
     m = array_search(A1, 5, 8)
 
-#Sorted Algorithmus
+###Sorted Algorithmus
 def insert_sort(A):
     """ sorting list A by inserts """
     N = len(A)
@@ -66,3 +66,31 @@ if __name__ == "__main__":
     test_sort(insert_sort)
     test_sort(choise_sort)
     test_sort(bubble_sort)
+
+###Recursion
+def droste(n):
+    if n == 1:
+        print("Droste effect")
+    else:
+        print("Up droste n=", n)
+        droste(n-1)
+        print("Down droste n=", n)
+
+droste(5)
+
+def factorial(n):
+    assert n >= 0, """factorial of negative is not defined"""
+    if n == 0:
+        return 1
+    return factorial(n - 1) * n
+
+def gcd(a, b):
+    return a if b == 0 else gcd(b, a % b)
+
+def pow(a, n):
+    if n == 0:
+        return 1
+    elif n % 2 == 1: #odd 
+        return pow(a, n - 1) * a
+    else: #even
+        return pow(a**2, n // 2)
