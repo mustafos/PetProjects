@@ -234,9 +234,34 @@ def hoar_sort(A):
 def check_sort(A, ascending = True):
     """ Sorting check by A """
     flag = True; s = 2 * int(ascending) - 1
-    for i in range(0, N -1):
-        if a * A[i] > s * A[i + 1]:
+    for i in range(0, N - 1):
+        if A * A[i] > s * A[i + 1]:
             flag = False
             break
     return flag
+
+###Dynamic programming__________________________________________
+#Fibonacci sequence number
+def fib(n):
+    fib_num = [0, 1] + [0] * (n - 1)
+    for i in range(2, n + 1):
+        fib_num[i] = fib_num[i - 1] + fib_num[i - 2]
+    return fib_num[n]
     
+def count_trajectories(N, allowed: list):
+    K = [0, 1, int(allowed[2])] + [None] * (N - 3)
+    for i in range(3, N + 1):
+        if allowed[i]:
+            K[i] = K[i - 1] + K[i - 2] + K[i - 3]
+
+def count_min_cost(N, price: list):
+    C = [float("-inf"), price[1], price[1] + price[2]] + [0] * (n - 2)
+    for i in range(3, N + 1):
+        C[i] = price[i] + min(C[i - 1], C[i - 2])
+    return C[N]
+
+def traj_num(N):
+    K = [0, 1] + [0] * N
+    for i in range(2, N + 1):
+        K[i] = K[i - 2] + K[i - 1]
+    return K[N]
