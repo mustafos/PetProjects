@@ -234,7 +234,7 @@ def hoar_sort(A):
 def check_sort(A, ascending = True):
     """ Sorting check by A """
     flag = True; s = 2 * int(ascending) - 1
-    for i in range(0, N - 1):
+    for i in range(0, s - 1):
         if A * A[i] > s * A[i + 1]:
             flag = False
             break
@@ -255,7 +255,7 @@ def count_trajectories(N, allowed: list):
             K[i] = K[i - 1] + K[i - 2] + K[i - 3]
 
 def count_min_cost(N, price: list):
-    C = [float("-inf"), price[1], price[1] + price[2]] + [0] * (n - 2)
+    C = [float("-inf"), price[1], price[1] + price[2]] + [0] * (N - 2)
     for i in range(3, N + 1):
         C[i] = price[i] + min(C[i - 1], C[i - 2])
     return C[N]
@@ -265,3 +265,36 @@ def traj_num(N):
     for i in range(2, N + 1):
         K[i] = K[i - 2] + K[i - 1]
     return K[N]
+
+#Greatest common subsequence
+def gcs(A, B):
+    F = [[0] * (len(B) + 1) for i in range(len(A) + 1)]
+    for i in range(1, len(A) + 1):
+        for j in range(1, len(B) + 1):
+            if A[i] == B[j]:
+                F[i][j] = 1 + F[i - 1][j - 1]
+            else:
+                F[i][j] = max(F[i - 1][j], F[i][j - 1])
+    return F[-1][-1]
+
+#Greatest increasing subsequence
+def gis(A):
+    F = [0] * (len(A) + 1)
+    for i in range(1, len(A) + 1):
+        m = 0
+        for j in range(0, i):
+            if A[i] > A[j] and F[j] > m:
+                m = F[j]
+            F[i] = m + 1
+        return F[len(A)]
+
+#Distance of reduction changes
+def levenstein(A, B):
+    F = [[(i + j) if i * j == 0 else 0 for j in range(len(B) + 1)] for i in range(len(A) + 1)]
+    for i in range(1, len(A) + 1):
+        for j in range(1, len(B) + 1):
+            if A[i - 1] == B[j - 1]:
+                F[i][j] = F[i-1][j - 1]
+            else:
+                F[i][j] = 1 + min(F[i - 1][j], F[i][j - 1], F[i - 1][j - 1])
+    return F[len(A)][len(B)]
