@@ -240,6 +240,22 @@ def check_sort(A, ascending = True):
             break
     return flag
 
+# Breadth-First search(concept!!!)
+def bf_search(name):
+    search_queue = deque()
+    search_queue += graph[name]
+    searched = []
+    while search_queue:
+        person = search_queue.popleft()
+        if not person in searched:
+            if person_is_seller(person):
+                print(person + " you are exactly what we need!")
+                return True
+            else:
+                search_queue += graph[person]
+                searched.append(person)
+    return False
+
 ###Dynamic programming__________________________________________
 #Fibonacci sequence number
 def fib(n):
@@ -298,3 +314,56 @@ def levenstein(A, B):
             else:
                 F[i][j] = 1 + min(F[i - 1][j], F[i][j - 1], F[i - 1][j - 1])
     return F[len(A)][len(B)]
+
+#String equality check
+def equal(A, B):
+    if len(A) != len(B):
+        return False
+    for i in range(len(A)):
+        if A[i] != B[i]:
+            return False
+    return True
+
+def search_substring(s, sub):
+    for i in range(0, len(s) - len(sub)):
+        if equal(s[i: i + len(sub)], sub):
+            print(i)
+
+def levenshteinDistanceDP(token1, token2):
+    distances = numpy.zeros((len(token1) + 1, len(token2) + 1))
+
+    for t1 in range(len(token1) + 1):
+        distances[t1][0] = t1
+
+    for t2 in range(len(token2) + 1):
+        distances[0][t2] = t2
+        
+    printDistances(distances, len(token1), len(token2))
+    return 0
+
+def printDistances(distances, token1Length, token2Length):
+    for t1 in range(token1Length + 1):
+        for t2 in range(token2Length + 1):
+            print(int(distances[t1][t2]), end=" ")
+        print()
+
+def kmpMatch(needle, haystack):
+    
+    fail = failTable(needle)
+
+    index = 0
+    match = 0
+
+    while index + match < len(haystack):
+        print(index, match)
+        if haystack[index + match] == needle[match]:
+            match = match + 1
+            if match == len(needle):
+                return index
+        else:
+            if match == 0:
+                index = index + 1
+            else:
+                index = index + match - fail[match]
+                match = fail[match]
+    return None
