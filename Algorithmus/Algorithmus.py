@@ -241,6 +241,8 @@ def check_sort(A, ascending = True):
     return flag
 
 # Breadth-First search(concept!!!)
+deque = []
+graph = []
 def bf_search(name):
     search_queue = deque()
     search_queue += graph[name]
@@ -248,7 +250,7 @@ def bf_search(name):
     while search_queue:
         person = search_queue.popleft()
         if not person in searched:
-            if person_is_seller(person):
+            if bf_search(person):
                 print(person + " you are exactly what we need!")
                 return True
             else:
@@ -330,6 +332,7 @@ def search_substring(s, sub):
             print(i)
 
 def levenshteinDistanceDP(token1, token2):
+    numpy = []
     distances = numpy.zeros((len(token1) + 1, len(token2) + 1))
 
     for t1 in range(len(token1) + 1):
@@ -348,7 +351,7 @@ def printDistances(distances, token1Length, token2Length):
         print()
 
 def kmpMatch(needle, haystack):
-    
+    failTable = []
     fail = failTable(needle)
 
     index = 0
@@ -367,3 +370,46 @@ def kmpMatch(needle, haystack):
                 index = index + match - fail[match]
                 match = fail[match]
     return None
+
+###Data Structure______________________________________________
+#Stack
+""" Module describing the stack data structure """
+_stack  = []
+
+def push(x):
+    _stack.append(x)
+
+def pop():
+    x = _stack.pop()
+    return x
+
+def clear():
+    _stack.clear()
+
+def is_empty():
+    return len(_stack) == 0
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
+def is_braces_sequence_correct(s: str):
+    """ Checks the correctness of the bracket sequence from () [] """
+    for brace in s: 
+        if brace not in "()[]":
+            continue
+        if brace in "([":
+            _stack.push(brace)
+        else:
+            assert brace in ")]", "Close bracket expected: " + str(brace)
+            if _stack.is_empty():
+                return False
+            left = _stack.pop()
+            assert left in "([", "Opening bracket expected: " + str(brace)
+            if left == "(":
+                right = ")"
+            elif left == "[":
+                right = "]"
+            if right != brace:
+                return False
+    return _stack.is_empty()
