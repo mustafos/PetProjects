@@ -619,3 +619,45 @@ def kosaraju(G):
             i += 1
     
     return components
+
+
+def main():
+    G = read_graph()
+    start = input("What top to start from?")
+    while start not in G:
+        start = input("There is no such vertex in the graph. What top to start from?")
+        shortest_distances = dijkstra(G, start)
+        finish = input("to which top build the path?")
+        while start not in G:
+            start = input("There is no such vertex in the graph. Which vertex Build the path?")
+
+def read_graph():
+    M = int(input()) # M is the number of edges, beyond the line 'AB weight'
+    G = {}
+    for i in range(M):
+        a, b, weight = input().split()
+        weight = float(weight)
+        add_edge(G, a, b, weight)
+        add_edge(G, b, a, weight)
+    return G
+
+def add_edge(G, a, b, weight):
+    if a not in G:
+        G[a] = {b: weight}
+    else:
+        G[a][b] = weight
+
+def dijkstra(G, start):
+    Q = deque()
+    s = {}
+    s[start] = 0
+    Q.push(start)
+    while Q:
+        v = Q.pop()
+        for u in G[v]:
+            if (u not in s or s[v] + G[v][u] < s[u]):
+                s[u] = s[v] + G[v][u]
+                Q.push(u)
+
+if __name__ == "__main__":
+    main()
