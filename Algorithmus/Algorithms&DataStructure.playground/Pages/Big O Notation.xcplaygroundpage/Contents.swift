@@ -1,4 +1,5 @@
-/*Big O notation (aka Big O) is a way assessing the relative performance of a data structure or algorithm usually along two axis: time and space.*/
+/*Big O notation (aka Big O) is a way assessing the relative performance of a data structure or algorithm usually along two axis: time and space.
+ */
 
 import Foundation
 
