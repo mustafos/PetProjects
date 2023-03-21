@@ -95,6 +95,7 @@ solutionStackLeft(A: [1, 2, 3, 4, 5], K: 4)
  
 func solution(_ S : String) -> String {
     
+    // removing spaces and dashes
     let noSpace = S.replacingOccurrences(of: " ", with: "")
     let noSpaceNoDash = noSpace.replacingOccurrences(of: "-", with: "")
         
@@ -135,7 +136,7 @@ solution("0 - 22 1985--324")    // 022-198-53-24
 solution("01")                          // 01
 solution("012")                         // 012
 solution("0123")                        // 01-23
-solution("0123       444")
+solution("0123       444")              // 012-34-44
 
 
 // ContactMatch_________________________________________
@@ -144,6 +145,7 @@ solution("0123       444")
   - NO CONTACT if contact can't be found
   - A contact if a contact is found
   - The first alphabetized contact if there are multiple**/
+
 public func solution(_ A : [String], _ B : [String], _ P : String) -> String {
     var result = [String]()
     
