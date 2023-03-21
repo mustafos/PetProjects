@@ -3,5 +3,6 @@
     <pages>
         <page name='Big O Notation'/>
         <page name='Arrays'/>
+        <page name='Linked Lists'/>
     </pages>
 </playground>
