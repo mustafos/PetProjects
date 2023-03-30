@@ -6,5 +6,11 @@
         <page name='LinkedLists'/>
         <page name='BigOReduced'/>
         <page name='StacksAndQueues'/>
+        <page name='BinaryTrees'/>
+        <page name='Graphs'/>
+        <page name='HashTables'/>
+        <page name='Memoization'/>
+        <page name='GreatestHits'/>
+        <page name='Sorting'/>
     </pages>
 </playground>
