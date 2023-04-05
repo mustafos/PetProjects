@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct MenuRow: View {
-    var title: String = "FAQ / Content"
+    var title: String = "FAQ / Contact"
     var leftIcon: String = "questionmark"
     var rightIcon: String = "chevron.right"
-    
+
     var body: some View {
         HStack(spacing: 12.0) {
-            GredientIcon(icon: leftIcon)
+            GradientIcon(icon: leftIcon)
             
             Text(title)
                 .font(.subheadline)

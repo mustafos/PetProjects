@@ -40,6 +40,11 @@ struct FAQView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.subheadline)
                 .opacity(0.7)
+            
+            Link(destination: URL(string: "mailto:mandlecommerce@gmail.com")!, label: {
+                PrimaryButton()
+                    .padding(.top, 16)
+            })
         }
         .padding(.horizontal, 20)
     }
