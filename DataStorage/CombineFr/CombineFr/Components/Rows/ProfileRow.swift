@@ -15,7 +15,7 @@ struct ProfileRow: View {
             profilePicture
             
             VStack(alignment: .leading, spacing: 2) {
-                Text("Mustafa Bekirov")
+                Text("Mustafa")
                     .font(.title2)
                     .fontWeight(.bold)
                     .lineLimit(1)
@@ -84,4 +84,3 @@ struct ProfileRow_Previews: PreviewProvider {
         ProfileRow()
     }
 }
-

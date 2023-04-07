@@ -31,5 +31,3 @@ struct FAQRow_Previews: PreviewProvider {
         FAQRow(faq: faqData[0])
     }
 }
-
-

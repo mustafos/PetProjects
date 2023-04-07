@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.colorScheme) var colorSchame: ColorScheme
     @State private var contentOffset = CGFloat(0)
+    @State private var showCertificates: Bool = false
     
     var body: some View {
         NavigationView {
@@ -37,6 +38,19 @@ struct ContentView: View {
     var content: some View {
         VStack {
             ProfileRow()
+                .onTapGesture {
+                    showCertificates.toggle()
+            }
+            
+            VStack {
+                NotificationsRow()
+                
+                divider
+                
+                LiteModeRow()
+            }
+            .blurBackground()
+            .padding(.top, 20)
             
             VStack {
                 NavigationLink(destination: FAQView()) {
@@ -46,13 +60,16 @@ struct ContentView: View {
                 divider
                 
                 NavigationLink(destination: PackagesView()) {
-                    MenuRow(title: "SwiftUI Packages", leftIcon: "square.stack.3d.up.fill")
+                    MenuRow(title: "SwiftUI Packages",
+                            leftIcon: "square.stack.3d.up.fill")
                 }
                 
                 divider
                 
                 Link(destination: URL(string: "https://mustafos.github.io")!, label: {
-                    MenuRow(title: "Website", leftIcon: "network", rightIcon: "link")
+                    MenuRow(title: "Website",
+                            leftIcon: "network",
+                            rightIcon: "link")
                 })
             }
             .padding(16)
@@ -73,6 +90,9 @@ struct ContentView: View {
         .padding(.top, 20)
         .padding(.horizontal, 20)
         .padding(.bottom, 10)
+        .sheet(isPresented: $showCertificates) {
+            CertificatesView()
+        }
     }
     
     var divider: some View {

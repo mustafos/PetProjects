@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct FAQ: Identifiable, Decodable {
+struct FAQ: Decodable, Identifiable {
     var id: Int
     var question: String
     var answer: String
 }
-

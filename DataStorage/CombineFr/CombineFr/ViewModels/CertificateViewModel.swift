@@ -25,12 +25,9 @@ final class CertificateViewModel: ObservableObject {
                 if let querySnapshot = querySnapshot {
                     for document in querySnapshot.documents {
                         let data = document.data()
-//                        print("Certificate \(document.documentID): \(data)")
-
                         let id = data["id"] as? String ?? ""
                         let course = data["course"] as? String ?? ""
                         let dateValue = (data["date"] as AnyObject).dateValue().formatDate()
-//                        let date = dateValue.formatDate()
                         let logo = data["logo"] as? String ?? ""
                         let instructor = data["instructor"] as? String ?? ""
 
