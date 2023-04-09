@@ -117,6 +117,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhs-NH-YyK">
+                                <rect key="frame" x="175" y="329" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fF7-Sj-clV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,6 +131,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="wT8-6W-sWC" id="7Rk-N2-gIJ"/>
                         <outlet property="descriptionLabel" destination="Iem-Vn-nAB" id="xZM-Oq-ac3"/>
+                        <outlet property="locationLabel" destination="vhs-NH-YyK" id="kgd-HP-NVh"/>
                         <outlet property="mapView" destination="7YK-30-X9z" id="uoT-ab-S88"/>
                         <outlet property="titleLabel" destination="Tqc-SL-CIt" id="El5-hv-oKm"/>
                     </connections>
