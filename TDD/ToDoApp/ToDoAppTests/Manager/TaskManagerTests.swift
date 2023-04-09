@@ -8,18 +8,18 @@
 import XCTest
 @testable import ToDoApp
 
-final class TaskManagerTests: XCTestCase {
+class TaskManagerTests: XCTestCase {
     
     var sut: TaskManager!
 
-    override func setUpWithError() throws {
+    override func setUp() {
         sut = TaskManager()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         sut = nil
     }
-    
+
     func testInitTaskManagerWithZeroTasks() {
         XCTAssertEqual(sut.tasksCount, 0)
     }

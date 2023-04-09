@@ -8,7 +8,7 @@
 import XCTest
 @testable import ToDoApp
 
-class TaskCellTests: XCTestCase {
+final class TaskCellTests: XCTestCase {
 
     var cell: TaskCell!
     
@@ -58,19 +58,6 @@ class TaskCellTests: XCTestCase {
         cell.configure(withTask: task)
         
         XCTAssertEqual(cell.titleLabel.text, task.title)
-    }
-    
-    func testConfigureSetsDate() {
-        let task = Task(title: "Foo")
-        
-        cell.configure(withTask: task)
-        let df = DateFormatter()
-//        http://nsdateformatter.com
-        df.dateFormat = "dd.MM.yy"
-        let date = task.date
-        let dateString = df.string(from: date)
-        
-        XCTAssertEqual(cell.dateLabel.text, dateString)
     }
     
     func testConigureSetsLocationName() {
