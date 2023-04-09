@@ -13,7 +13,7 @@ class NewTaskViewController: UIViewController {
     var taskManager: TaskManager!
     var geocoder = CLGeocoder()
     
-    @IBOutlet var titleTestField: UITextField!
+    @IBOutlet var titleTextField: UITextField!
     @IBOutlet var locationTextField: UITextField!
     @IBOutlet var dateTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
@@ -22,7 +22,7 @@ class NewTaskViewController: UIViewController {
     @IBOutlet var cancelButton: UIButton!
     
     @IBAction func save() {
-        let titleString = titleTestField.text
+        let titleString = titleTextField.text
         let locationString = locationTextField.text
         let date = dateFormatter.date(from: dateTextField.text!)
         let descriptionString = descriptionTextField.text
@@ -39,7 +39,7 @@ class NewTaskViewController: UIViewController {
     
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
-        df.dateFormat = "MMM d, yyyy"
+        df.dateFormat = "dd.MM.yy"
         return df
     }
 }

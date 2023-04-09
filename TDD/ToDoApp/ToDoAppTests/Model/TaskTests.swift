@@ -8,7 +8,7 @@
 import XCTest
 @testable import ToDoApp
 
-final class TaskTests: XCTestCase {
+class TaskTests: XCTestCase {
     
     func testInitTaskWithTitle() {
         let task = Task(title: "Foo")

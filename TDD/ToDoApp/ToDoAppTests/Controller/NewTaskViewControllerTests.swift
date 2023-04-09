@@ -25,7 +25,7 @@ class NewTaskViewControllerTests: XCTestCase {
     }
     
     func testHasTitleTextField() {
-        XCTAssertTrue(sut.titleTestField.isDescendant(of: sut.view))
+        XCTAssertTrue(sut.titleTextField.isDescendant(of: sut.view))
     }
     
     func testHasLocationTextField() {
@@ -54,13 +54,13 @@ class NewTaskViewControllerTests: XCTestCase {
 
     func testSaveUsesGeocoderToConvertCoordinateFromAddress() {
         let df = DateFormatter()
-        df.dateFormat = "MMM d, yyyy"
-        let date = df.date(from: "Apr 9, 2023")
+        df.dateFormat = "dd.MM.yy"
+        let date = df.date(from: "01.01.19")
         
-        sut.titleTestField.text = "Foo"
+        sut.titleTextField.text = "Foo"
         sut.locationTextField.text = "Bar"
-        sut.dateTextField.text = "Apr 9, 2023"
-        sut.addressTextField.text = "Pilsen"
+        sut.dateTextField.text = "01.01.19"
+        sut.addressTextField.text = "Уфа"
         sut.descriptionTextField.text = "Baz"
         
         sut.taskManager = TaskManager()
@@ -68,11 +68,11 @@ class NewTaskViewControllerTests: XCTestCase {
         sut.geocoder = mockGeocoder
         sut.save()
         
-        let coordinate = CLLocationCoordinate2D(latitude: 49.74744956, longitude: 13.37754428)
+        let coordinate = CLLocationCoordinate2D(latitude: 54.7373058, longitude: 55.9722491)
         let location = Location(name: "Bar", coordinate: coordinate)
         let generatedTask = Task(title: "Foo", description: "Baz", date: date, location: location)
         
-        placemark = MockCLPlacemark(coder: )
+        placemark = MockCLPlacemark()
         placemark.mockCoordinate = coordinate
         mockGeocoder.completionHandler?([placemark], nil)
         
@@ -108,8 +108,8 @@ class NewTaskViewControllerTests: XCTestCase {
                     return
             }
  
-            XCTAssertEqual(latitude, 49.74744956)
-            XCTAssertEqual(longitude, 13.37754428)
+            XCTAssertEqual(latitude, 54.7373058)
+            XCTAssertEqual(longitude, 55.9722491)
             geocoderAnswer.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)

@@ -187,9 +187,9 @@
 		6A48FD4029E1BAB20081F848 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6A48FD1229E1BA7A0081F848 /* TaskListViewController.swift */,
 				6A5AAD2229E20392001CD928 /* DataProvider.swift */,
 				6AD4D42429E2FD6F005B834E /* DetailViewController.swift */,
+				6A48FD1229E1BA7A0081F848 /* TaskListViewController.swift */,
 				6AD4D42829E327B9005B834E /* NewTaskViewController.swift */,
 			);
 			path = Controller;

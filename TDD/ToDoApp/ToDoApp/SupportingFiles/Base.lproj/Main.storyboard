@@ -218,13 +218,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressTextField" destination="Ton-Sk-lye" id="L8j-G0-R2n"/>
+                        <outlet property="addressTextField" destination="Ceh-ck-K4U" id="QE5-Pt-Wpu"/>
                         <outlet property="cancelButton" destination="t23-io-y8O" id="O4J-Sg-iwU"/>
-                        <outlet property="dateTextField" destination="JIy-4R-czl" id="rDC-JZ-vtp"/>
-                        <outlet property="descriptionTextField" destination="Ceh-ck-K4U" id="gPy-ku-Rlu"/>
-                        <outlet property="locationTextField" destination="Tf5-TV-ydZ" id="ySL-33-TGl"/>
+                        <outlet property="dateTextField" destination="JIy-4R-czl" id="ZPU-Pl-W6A"/>
+                        <outlet property="descriptionTextField" destination="Tf5-TV-ydZ" id="ggU-95-Yrr"/>
+                        <outlet property="locationTextField" destination="Ton-Sk-lye" id="CY1-5Q-hYr"/>
                         <outlet property="saveButton" destination="QEm-ZM-3GM" id="b9E-rK-jcf"/>
-                        <outlet property="titleTestField" destination="tD9-bt-jKX" id="zxV-e4-5Qb"/>
+                        <outlet property="titleTestField" destination="tD9-bt-jKX" id="L1s-rt-Btc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1u-OV-szm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

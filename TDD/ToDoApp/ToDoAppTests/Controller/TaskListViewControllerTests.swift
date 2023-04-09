@@ -8,11 +8,11 @@
 import XCTest
 @testable import ToDoApp
 
-final class TaskListViewControllerTests: XCTestCase {
-    
-    var sut: TaskListViewController!
+class TaskListViewControllerTests: XCTestCase {
 
-    override func setUpWithError() throws {
+    var sut: TaskListViewController!
+    
+    override func setUp() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: String(describing: TaskListViewController.self))
         sut = vc as? TaskListViewController
@@ -20,28 +20,30 @@ final class TaskListViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testWhenViewIsLoadedTableViewNotNill() {
+    func testWhenViewIsLoadedTableViewNotNil() {
         XCTAssertNotNil(sut.tableView)
     }
     
-    func testWhenViewIsLoadedDataProviderIsNotNill() {
+    func testWhenViewIsLoadedDataProviderIsNotNil() {
         XCTAssertNotNil(sut.dataProvider)
     }
     
-    func testWhenViewIsLoadedTableViewDelegateSet() {
+    func testWhenViewIsLoadedTableViewDelegateIsSet() {
         XCTAssertTrue(sut.tableView.delegate is DataProvider)
     }
     
-    func testWhenViewIsLoadedTableViewDataSourceSet() {
+    func testWhenViewIsLoadedTableViewDataSourceIsSet() {
         XCTAssertTrue(sut.tableView.dataSource is DataProvider)
     }
     
-    func testWhenIsLoadedTableViewDelegateEqualsTableViewDataSource() {
-        XCTAssertEqual(sut.tableView.delegate as? DataProvider,
-                       sut.tableView.dataSource as? DataProvider)
+    func testWhenViewIsLoadedTableViewDelegateEqualsTableViewDataSource() {
+        XCTAssertEqual(
+            sut.tableView.delegate as? DataProvider,
+            sut.tableView.dataSource as? DataProvider
+        )
     }
 }

@@ -8,11 +8,11 @@
 import XCTest
 @testable import ToDoApp
 
-final class TaskCellTests: XCTestCase {
-    
-    var cell: TaskCell!
+class TaskCellTests: XCTestCase {
 
-    override func setUpWithError() throws {
+    var cell: TaskCell!
+    
+    override func setUp() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: String(describing: TaskListViewController.self)) as! TaskListViewController
         controller.loadViewIfNeeded()
@@ -24,7 +24,7 @@ final class TaskCellTests: XCTestCase {
         cell = tableView?.dequeueReusableCell(withIdentifier: String(describing: TaskCell.self), for: IndexPath(row: 0, section: 0)) as? TaskCell
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
@@ -52,7 +52,7 @@ final class TaskCellTests: XCTestCase {
         XCTAssertTrue(cell.dateLabel.isDescendant(of: cell.contentView))
     }
     
-    func testConfigureSetsTitle() {
+    func testConigureSetsTitle() {
         let task = Task(title: "Foo")
         
         cell.configure(withTask: task)
@@ -65,15 +65,15 @@ final class TaskCellTests: XCTestCase {
         
         cell.configure(withTask: task)
         let df = DateFormatter()
-        // http://nsdateformatter.com
-        df.dateFormat = "MMM d, yyyy"
+//        http://nsdateformatter.com
+        df.dateFormat = "dd.MM.yy"
         let date = task.date
         let dateString = df.string(from: date)
         
         XCTAssertEqual(cell.dateLabel.text, dateString)
     }
     
-    func testConfigureSetsLocationName() {
+    func testConigureSetsLocationName() {
         let location = Location(name: "Foo")
         let task = Task(title: "Bar", location: location)
         
@@ -90,7 +90,6 @@ final class TaskCellTests: XCTestCase {
     func testDoneTaskShouldStrikeThrough() {
         configureCellWithTask()
         let attributedString = NSAttributedString(string: "Foo", attributes: [NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.single.rawValue])
-        
         XCTAssertEqual(cell.titleLabel.attributedText, attributedString)
     }
     
@@ -114,7 +113,5 @@ extension TaskCellTests {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             return UITableViewCell()
         }
-        
-        
     }
 }

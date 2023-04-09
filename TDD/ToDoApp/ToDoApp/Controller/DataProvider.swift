@@ -21,8 +21,8 @@ extension DataProvider: UITableViewDelegate {
         
         guard let section = Section(rawValue: indexPath.section) else { fatalError() }
         switch section {
-            case .todo: return "Done"
-            case .done: return "Undone"
+        case .todo: return "Done"
+        case .done: return "Undone"
         }
     }
 }
@@ -33,8 +33,8 @@ extension DataProvider: UITableViewDataSource {
         guard let section = Section(rawValue: section) else { fatalError() }
         guard let taskManager = taskManager else { return 0 }
         switch section {
-            case .todo: return taskManager.tasksCount
-            case .done: return taskManager.doneTasksCount
+        case .todo: return taskManager.tasksCount
+        case .done: return taskManager.doneTasksCount
         }
     }
     
@@ -47,12 +47,12 @@ extension DataProvider: UITableViewDataSource {
         
         let task: Task
         switch section {
-            case .todo: task = taskManager.task(at: indexPath.row)
-            case .done: task = taskManager.doneTask(at: indexPath.row)
+        case .todo: task = taskManager.task(at: indexPath.row)
+        case .done: task = taskManager.doneTask(at: indexPath.row)
         }
-    
+
         cell.configure(withTask: task)
-        
+
         return cell
     }
     
@@ -70,7 +70,6 @@ extension DataProvider: UITableViewDataSource {
             case .todo: taskManager.checkTask(at: indexPath.row)
             case .done: taskManager.uncheckTask(at: indexPath.row)
         }
-    
         tableView.reloadData()
     }
 }

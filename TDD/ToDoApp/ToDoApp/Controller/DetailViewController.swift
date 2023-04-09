@@ -11,15 +11,16 @@ import MapKit
 class DetailViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var locationLabel: UILabel!
     
     var task: Task!
+    
     var dateFormatter: DateFormatter {
         let df = DateFormatter()
-            df.dateFormat = "MMM d, yyyy"
-            return df
+        df.dateFormat = "dd.MM.yy"
+        return df
     }
     
     override func viewWillAppear(_ animated: Bool) {
