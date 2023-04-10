@@ -51,8 +51,4 @@ class TaskListViewControllerTests: XCTestCase {
         let target = sut.navigationItem.rightBarButtonItem?.target
         XCTAssertEqual(target as? TaskListViewController, sut)
     }
-    
-    func testAddNewTaskPresentsNewTaskViewController() {
-        XCTAssertNil(sut.presentedViewController)
-    }
 }

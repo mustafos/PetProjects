@@ -67,9 +67,10 @@ extension DataProvider: UITableViewDataSource {
             let taskManager = taskManager else { fatalError() }
         
         switch section {
-            case .todo: taskManager.checkTask(at: indexPath.row)
-            case .done: taskManager.uncheckTask(at: indexPath.row)
+        case .todo: taskManager.checkTask(at: indexPath.row)
+        case .done: taskManager.uncheckTask(at: indexPath.row)
         }
+        
         tableView.reloadData()
     }
 }
