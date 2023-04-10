@@ -100,7 +100,7 @@ class APIClientTests: XCTestCase {
             XCTAssertNotNil(caughtError)
         }
     }
-
+    
     func testLoginWhenResponseErrorReturnsError() {
         let jsonDataStub = "{\"token\": \"tokenString\"}".data(using: .utf8)
         let error = NSError(domain: "Server error", code: 404, userInfo: nil)
@@ -127,7 +127,6 @@ extension APIClientTests {
         
         var urlComponents: URLComponents? {
             guard let url = url else {
-
                 return nil
             }
             return URLComponents(url: url, resolvingAgainstBaseURL: true)
@@ -139,7 +138,6 @@ extension APIClientTests {
         
         func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
             self.url = url
-//            return URLSession.shared.dataTask(with: url)
             mockDataTask.completionHandler = completionHandler
             return mockDataTask
         }

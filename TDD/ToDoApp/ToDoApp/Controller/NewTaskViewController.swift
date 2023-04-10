@@ -16,10 +16,10 @@ class NewTaskViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var locationTextField: UITextField!
     @IBOutlet var dateTextField: UITextField!
-    @IBOutlet var addressTextField: UITextField!
     @IBOutlet var descriptionTextField: UITextField!
-    @IBOutlet var saveButton: UIButton!
+    @IBOutlet var addressTextField: UITextField!
     @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var saveButton: UIButton!
     
     @IBAction func save() {
         let titleString = titleTextField.text
@@ -34,6 +34,10 @@ class NewTaskViewController: UIViewController {
             let location = Location(name: locationString!, coordinate: coordinate)
             let task = Task(title: titleString!, description: descriptionString, date: date, location: location)
             self.taskManager.add(task: task)
+            
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     

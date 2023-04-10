@@ -161,27 +161,27 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="958-tj-VFu">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="170"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tD9-bt-jKX">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tD9-bt-jKX">
                                                 <rect key="frame" x="0.0" y="0.0" width="313" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ton-Sk-lye">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ton-Sk-lye">
                                                 <rect key="frame" x="0.0" y="34" width="313" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-4R-czl">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-4R-czl">
                                                 <rect key="frame" x="0.0" y="68" width="313" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-ck-K4U">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-ck-K4U">
                                                 <rect key="frame" x="0.0" y="102" width="313" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tf5-TV-ydZ">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tf5-TV-ydZ">
                                                 <rect key="frame" x="0.0" y="136" width="313" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -194,7 +194,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEm-ZM-3GM">
                                                 <rect key="frame" x="0.0" y="0.0" width="313" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                                 <connections>
                                                     <action selector="save" destination="1gu-tp-vUW" eventType="touchUpInside" id="yvU-tV-TS4"/>
                                                 </connections>
@@ -202,7 +202,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t23-io-y8O">
                                                 <rect key="frame" x="0.0" y="34.333333333333314" width="313" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -225,13 +225,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressTextField" destination="Ceh-ck-K4U" id="QE5-Pt-Wpu"/>
+                        <outlet property="addressTextField" destination="Tf5-TV-ydZ" id="5b4-Tm-Be3"/>
                         <outlet property="cancelButton" destination="t23-io-y8O" id="O4J-Sg-iwU"/>
-                        <outlet property="dateTextField" destination="JIy-4R-czl" id="ZPU-Pl-W6A"/>
-                        <outlet property="descriptionTextField" destination="Tf5-TV-ydZ" id="ggU-95-Yrr"/>
-                        <outlet property="locationTextField" destination="Ton-Sk-lye" id="CY1-5Q-hYr"/>
+                        <outlet property="dateTextField" destination="Ceh-ck-K4U" id="7iF-Xt-EyN"/>
+                        <outlet property="descriptionTextField" destination="JIy-4R-czl" id="eWw-qJ-f6s"/>
+                        <outlet property="locationTextField" destination="Ton-Sk-lye" id="c1o-fP-AnG"/>
                         <outlet property="saveButton" destination="QEm-ZM-3GM" id="b9E-rK-jcf"/>
                         <outlet property="titleTestField" destination="tD9-bt-jKX" id="L1s-rt-Btc"/>
+                        <outlet property="titleTextField" destination="tD9-bt-jKX" id="28S-VQ-hVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1u-OV-szm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

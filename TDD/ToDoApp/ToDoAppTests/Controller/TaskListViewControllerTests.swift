@@ -13,6 +13,7 @@ class TaskListViewControllerTests: XCTestCase {
     var sut: TaskListViewController!
     
     override func setUp() {
+        super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: String(describing: TaskListViewController.self))
         sut = vc as? TaskListViewController
@@ -50,5 +51,24 @@ class TaskListViewControllerTests: XCTestCase {
     func testTaskListVCHasAddBarButtonWithSelfAsTarget() {
         let target = sut.navigationItem.rightBarButtonItem?.target
         XCTAssertEqual(target as? TaskListViewController, sut)
+    }
+    
+    func testWhenViewAppearedTableViewRealoded() {
+        let mockTableView = MockTableView()
+        sut.tableView = mockTableView
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        
+        XCTAssertTrue((sut.tableView as! MockTableView).isReloaded)
+    }
+}
+
+extension TaskListViewControllerTests {
+    class MockTableView: UITableView {
+        var isReloaded = false
+        override func reloadData() {
+            isReloaded = true
+        }
     }
 }
