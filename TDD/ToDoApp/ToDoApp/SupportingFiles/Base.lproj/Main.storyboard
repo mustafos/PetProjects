@@ -76,13 +76,13 @@
                     <navigationItem key="navigationItem" id="IwP-lR-BSJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0lD-YA-DTT">
                             <connections>
-                                <action selector="addNewTask:" destination="BYZ-38-t0r" id="KLi-wD-tg0"/>
+                                <action selector="addNewTask:" destination="BYZ-38-t0r" id="BgQ-Ge-cel"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dataProvider" destination="gF0-0U-js5" id="0A0-BK-Ub7"/>
-                        <outlet property="tableView" destination="2jF-hN-682" id="P0c-gu-MAB"/>
+                        <outlet property="dataProvider" destination="gF0-0U-js5" id="osW-js-Skp"/>
+                        <outlet property="tableView" destination="2jF-hN-682" id="3Az-WC-xHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -58,7 +58,6 @@ class TaskListViewControllerTests: XCTestCase {
         guard
             let newTaskButton = sut.navigationItem.rightBarButtonItem,
             let action = newTaskButton.action else {
-
                 return NewTaskViewController()
         }
         
@@ -106,6 +105,29 @@ class TaskListViewControllerTests: XCTestCase {
         tableView?.delegate?.tableView!(tableView!, didSelectRowAt: IndexPath(row: 0, section: 0))
         waitForExpectations(timeout: 1, handler: nil)
     }
+    
+    func testSelectedCellNotificationPushesDetailVC() {
+        let mockNavigatonController = MockNavigationController(rootViewController: sut)
+        UIApplication.shared.keyWindow?.rootViewController = mockNavigatonController
+        
+        sut.loadViewIfNeeded()
+        
+        let task = Task(title: "Foo")
+        let task1 = Task(title: "Bar")
+        sut.dataProvider.taskManager?.add(task: task)
+        sut.dataProvider.taskManager?.add(task: task1)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DidSelectRow notification"), object: self, userInfo: ["task" : task1])
+        
+        guard let detailViewController = mockNavigatonController.pushedViewController as? DetailViewController else {
+            XCTFail()
+            return
+        }
+        
+        detailViewController.loadViewIfNeeded()
+        XCTAssertNotNil(detailViewController.titleLabel)
+        XCTAssertTrue(detailViewController.task == task1)
+    }
 }
 
 extension TaskListViewControllerTests {
@@ -113,6 +135,17 @@ extension TaskListViewControllerTests {
         var isReloaded = false
         override func reloadData() {
             isReloaded = true
+        }
+    }
+}
+
+extension TaskListViewControllerTests {
+    class MockNavigationController: UINavigationController {
+        var pushedViewController: UIViewController?
+        
+        override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+            pushedViewController = viewController
+            super.pushViewController(viewController, animated: animated)
         }
     }
 }
