@@ -18,6 +18,19 @@ struct Location {
     }
 }
 
+extension Location {
+    typealias PlistDictionary = [String : Any]
+    init?(dict: PlistDictionary) {
+        self.name = dict["name"] as! String
+        if let latitude = dict["latitude"] as? Double,
+           let longitude = dict["longitude"] as? Double {
+            self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        } else {
+            self.coordinate = nil
+        }
+    }
+}
+
 extension Location: Equatable {
     static func == (lhs: Location, rhs: Location) -> Bool {
         guard rhs.coordinate?.latitude == lhs.coordinate?.latitude &&

@@ -12,6 +12,7 @@ import CoreLocation
 class LocationTests: XCTestCase {
 
     override func setUp() {
+        super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -33,5 +34,16 @@ class LocationTests: XCTestCase {
                                 coordinate: coordinate)
         XCTAssertEqual(location.coordinate?.latitude, coordinate.latitude)
         XCTAssertEqual(location.coordinate?.longitude, coordinate.longitude)
+    }
+    
+    func testCanBeCreatedFromPlistDictionary() {
+        let location = Location(name: "Foo", coordinate: CLLocationCoordinate2D(latitude: 10.0, longitude: 10.0))
+        let dict: [String : Any] = ["name" : "Foo",
+                                    "latitude" : 10.0,
+                                    "longitude" : 10.0]
+        
+        let createdLocation = Location(dict: dict)
+        
+        XCTAssertEqual(location, createdLocation)
     }
 }

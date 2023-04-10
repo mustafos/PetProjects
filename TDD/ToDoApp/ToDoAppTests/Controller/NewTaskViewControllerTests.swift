@@ -56,12 +56,12 @@ class NewTaskViewControllerTests: XCTestCase {
     func testSaveUsesGeocoderToConvertCoordinateFromAddress() {
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yy"
-        let date = df.date(from: "01.01.23")
+        let date = df.date(from: "01.01.19")
         
         sut.titleTextField.text = "Foo"
         sut.locationTextField.text = "Bar"
-        sut.dateTextField.text = "01.01.23"
-        sut.addressTextField.text = "Pilsen"
+        sut.dateTextField.text = "01.01.19"
+        sut.addressTextField.text = "Уфа"
         sut.descriptionTextField.text = "Baz"
         
         sut.taskManager = TaskManager()
@@ -95,7 +95,7 @@ class NewTaskViewControllerTests: XCTestCase {
 
     func testGeocoderFetchesCorrectCoordinate() {
         let geocoderAnswer = expectation(description: "Geocoder answer")
-        let addressString = "Pilsen"
+        let addressString = "Уфа"
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(addressString) { (placemarks, error) in
             
@@ -126,9 +126,9 @@ class NewTaskViewControllerTests: XCTestCase {
         mockNewTaskViewController.locationTextField = UITextField()
         mockNewTaskViewController.locationTextField.text = "Baz"
         mockNewTaskViewController.addressTextField = UITextField()
-        mockNewTaskViewController.addressTextField.text = "Pilsen"
+        mockNewTaskViewController.addressTextField.text = "Уфа"
         mockNewTaskViewController.dateTextField = UITextField()
-        mockNewTaskViewController.dateTextField.text = "01.01.23"
+        mockNewTaskViewController.dateTextField.text = "01.01.19"
         
         // when
         mockNewTaskViewController.save()

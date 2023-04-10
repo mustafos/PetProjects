@@ -66,7 +66,7 @@
 		6A48FD1529E1BA7A0081F848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A48FD1729E1BA7B0081F848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A48FD1A29E1BA7B0081F848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6A48FD1C29E1BA7B0081F848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A48FD1C29E1BA7B0081F848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
 		6A48FD2129E1BA7B0081F848 /* ToDoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A48FD2529E1BA7B0081F848 /* ToDoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppTests.swift; sourceTree = "<group>"; };
 		6A48FD2B29E1BA7B0081F848 /* ToDoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +155,7 @@
 				6A5AAD1C29E1D311001CD928 /* Manager */,
 				6A091F3F29E34E24005B4D58 /* Extensions */,
 				6A48FD4129E1BAD70081F848 /* SupportingFiles */,
+				6A48FD1C29E1BA7B0081F848 /* Info.plist */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -215,7 +216,6 @@
 				6A48FD1429E1BA7A0081F848 /* Main.storyboard */,
 				6A48FD1729E1BA7B0081F848 /* Assets.xcassets */,
 				6A48FD1929E1BA7B0081F848 /* LaunchScreen.storyboard */,
-				6A48FD1C29E1BA7B0081F848 /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
