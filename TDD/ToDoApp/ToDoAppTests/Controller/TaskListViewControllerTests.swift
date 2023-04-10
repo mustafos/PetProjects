@@ -53,6 +53,32 @@ class TaskListViewControllerTests: XCTestCase {
         XCTAssertEqual(target as? TaskListViewController, sut)
     }
     
+    func presentingNewTaskViewController() -> NewTaskViewController {
+        
+        guard
+            let newTaskButton = sut.navigationItem.rightBarButtonItem,
+            let action = newTaskButton.action else {
+
+                return NewTaskViewController()
+        }
+        
+        UIApplication.shared.keyWindow?.rootViewController = sut
+        sut.performSelector(onMainThread: action, with: newTaskButton, waitUntilDone: true)
+        
+        let newTaskViewController = sut.presentedViewController as! NewTaskViewController
+        return newTaskViewController
+    }
+    
+    func testAddNewTaskPresentsNewTaskViewController() {
+        let newTaskViewController = presentingNewTaskViewController()
+        XCTAssertNotNil(newTaskViewController.titleTextField)
+    }
+    
+    func testSharesSameTaskManagerWithNewTaskVC() {
+        let newTaskViewController = presentingNewTaskViewController()
+        XCTAssertTrue(newTaskViewController.taskManager === sut.dataProvider.taskManager)
+    }
+    
     func testWhenViewAppearedTableViewRealoded() {
         let mockTableView = MockTableView()
         sut.tableView = mockTableView
@@ -61,6 +87,24 @@ class TaskListViewControllerTests: XCTestCase {
         sut.endAppearanceTransition()
         
         XCTAssertTrue((sut.tableView as! MockTableView).isReloaded)
+    }
+    
+    func testTappingCellSendsNotification() {
+        let task = Task(title: "Foo")
+        sut.dataProvider.taskManager!.add(task: task)
+        
+        expectation(forNotification: NSNotification.Name(rawValue: "DidSelectRow notification"), object: nil) { notification -> Bool in
+            
+            guard let taskFromNotification = notification.userInfo?["task"] as? Task else {
+                return false
+            }
+            
+            return task == taskFromNotification
+        }
+        
+        let tableView = sut.tableView
+        tableView?.delegate?.tableView!(tableView!, didSelectRowAt: IndexPath(row: 0, section: 0))
+        waitForExpectations(timeout: 1, handler: nil)
     }
 }
 
