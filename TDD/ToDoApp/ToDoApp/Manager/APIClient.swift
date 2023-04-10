@@ -22,11 +22,7 @@ class APIClient {
         
         let allowedCharacters = CharacterSet.urlQueryAllowed
         
-        guard
-            let name = name.addingPercentEncoding(withAllowedCharacters: allowedCharacters),
-            let password = password.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else {
-                fatalError()
-        }
+        guard let name = name.addingPercentEncoding(withAllowedCharacters: allowedCharacters), let password = password.addingPercentEncoding(withAllowedCharacters: allowedCharacters) else { fatalError() }
         
         let query = "name=\(name)&password=\(password)"
         guard let url = URL(string: "https://todoapp.com/login?\(query)") else {
