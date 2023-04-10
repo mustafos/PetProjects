@@ -149,10 +149,10 @@
 		6A48FD0D29E1BA7A0081F848 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A5AAD1C29E1D311001CD928 /* Manager */,
-				6A48FD4029E1BAB20081F848 /* Controller */,
-				6A48FD3F29E1BAAB0081F848 /* View */,
 				6A48FD3E29E1BA9C0081F848 /* Model */,
+				6A48FD3F29E1BAAB0081F848 /* View */,
+				6A48FD4029E1BAB20081F848 /* Controller */,
+				6A5AAD1C29E1D311001CD928 /* Manager */,
 				6A091F3F29E34E24005B4D58 /* Extensions */,
 				6A48FD4129E1BAD70081F848 /* SupportingFiles */,
 			);
@@ -162,11 +162,11 @@
 		6A48FD2429E1BA7B0081F848 /* ToDoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A5AAD1229E1BE04001CD928 /* Model */,
 				6A47753429E2E27300569741 /* View */,
 				6A5AAD1F29E1FD92001CD928 /* Controller */,
 				6A5AAD1929E1D271001CD928 /* Manager */,
-				6A48FD2529E1BA7B0081F848 /* ToDoAppTests.swift */,
-				6A5AAD1229E1BE04001CD928 /* Model */,
+				6A5BDDC529E3FA07004649B1 /* SupportingFile */,
 			);
 			path = ToDoAppTests;
 			sourceTree = "<group>";
@@ -251,11 +251,19 @@
 		6A5AAD1F29E1FD92001CD928 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6A5AAD2029E1FDD4001CD928 /* TaskListViewControllerTests.swift */,
 				6A336A6C29E2AE540023F53B /* DataProviderTests.swift */,
 				6AD4D42229E2FC9F005B834E /* DetailViewControllerTests.swift */,
+				6A5AAD2029E1FDD4001CD928 /* TaskListViewControllerTests.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A5BDDC529E3FA07004649B1 /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				6A48FD2529E1BA7B0081F848 /* ToDoAppTests.swift */,
+			);
+			path = SupportingFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
