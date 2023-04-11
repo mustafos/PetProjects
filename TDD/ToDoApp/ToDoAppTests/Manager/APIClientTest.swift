@@ -127,6 +127,7 @@ extension APIClientTests {
         
         var urlComponents: URLComponents? {
             guard let url = url else {
+
                 return nil
             }
             return URLComponents(url: url, resolvingAgainstBaseURL: true)

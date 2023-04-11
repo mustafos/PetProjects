@@ -25,6 +25,8 @@ class TaskListViewController: UIViewController {
         dataProvider.taskManager = taskManager
         
         NotificationCenter.default.addObserver(self, selector: #selector(showDetail(withNotification:)), name: NSNotification.Name(rawValue: "DidSelectRow notification"), object: nil)
+        
+        view.accessibilityIdentifier = "mainView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +35,10 @@ class TaskListViewController: UIViewController {
     }
     
     @objc func showDetail(withNotification notification: Notification) {
-        guard let userInfo = notification.userInfo, let task = userInfo["task"] as? Task, let detailViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController else {
+        guard
+            let userInfo = notification.userInfo,
+            let task = userInfo["task"] as? Task,
+            let detailViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController else {
             fatalError()
         }
         detailViewController.task = task

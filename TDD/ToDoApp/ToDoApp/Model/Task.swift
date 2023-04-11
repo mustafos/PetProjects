@@ -12,6 +12,7 @@ struct Task {
     let description: String?
     let date: Date
     let location: Location?
+    var isDone = false
     
     var dict: [String : Any] {
         var dict: [String : Any] = [:]
@@ -51,9 +52,10 @@ extension Task {
 
 extension Task: Equatable {
     static func == (lhs: Task, rhs: Task) -> Bool {
-        if lhs.title == rhs.title,
-           lhs.description == rhs.description,
-           lhs.location == rhs.location {
+        if
+            lhs.title == rhs.title,
+            lhs.description == rhs.description,
+            lhs.location == rhs.location {
             return true
         }
         return false

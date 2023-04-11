@@ -16,4 +16,3 @@ extension String {
         return encodedString
     }
 }
-

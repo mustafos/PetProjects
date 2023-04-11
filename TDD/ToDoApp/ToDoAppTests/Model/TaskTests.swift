@@ -74,4 +74,3 @@ class TaskTests: XCTestCase {
         XCTAssertEqual(task, generatedTask)
     }
 }
-
