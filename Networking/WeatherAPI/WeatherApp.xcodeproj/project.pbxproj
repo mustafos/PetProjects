@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A18DCE029EC785E00C89B83 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A18DCDF29EC785E00C89B83 /* AddCityViewController.swift */; };
 		6A5001EC29EB1F8700652B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5001EB29EB1F8700652B94 /* AppDelegate.swift */; };
 		6A5001EE29EB1F8700652B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5001ED29EB1F8700652B94 /* SceneDelegate.swift */; };
 		6A5001F029EB1F8700652B94 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5001EF29EB1F8700652B94 /* WeatherViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A18DCDF29EC785E00C89B83 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		6A5001E829EB1F8700652B94 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5001EB29EB1F8700652B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A5001ED29EB1F8700652B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A18DCDE29EC783700C89B83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A5001EF29EB1F8700652B94 /* WeatherViewController.swift */,
+				6A18DCDF29EC785E00C89B83 /* AddCityViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6A5001DF29EB1F8700652B94 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +77,12 @@
 		6A5001EA29EB1F8700652B94 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A18DCDE29EC783700C89B83 /* Controller */,
 				6A8F5E0329EC6C3700258847 /* Extension */,
 				6AB5DA3229EC5D010092C00E /* model */,
 				6AB5DA3129EC5CF70092C00E /* manager */,
 				6A5001EB29EB1F8700652B94 /* AppDelegate.swift */,
 				6A5001ED29EB1F8700652B94 /* SceneDelegate.swift */,
-				6A5001EF29EB1F8700652B94 /* WeatherViewController.swift */,
 				6A5001F129EB1F8700652B94 /* Main.storyboard */,
 				6A5001F429EB1F8800652B94 /* Assets.xcassets */,
 				6A5001F629EB1F8800652B94 /* LaunchScreen.storyboard */,
@@ -184,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5001F029EB1F8700652B94 /* WeatherViewController.swift in Sources */,
+				6A18DCE029EC785E00C89B83 /* AddCityViewController.swift in Sources */,
 				6A5001EC29EB1F8700652B94 /* AppDelegate.swift in Sources */,
 				6A8F5E0529EC6C6F00258847 /* Double+Extensions.swift in Sources */,
 				6AB5DA3629EC5E810092C00E /* WeatherManager.swift in Sources */,
