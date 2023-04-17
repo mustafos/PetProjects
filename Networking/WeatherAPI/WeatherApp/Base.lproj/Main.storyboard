@@ -110,6 +110,9 @@
                                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="searchButtonTapped:" destination="Kpd-zc-cKB" eventType="touchUpInside" id="DYw-nc-BcQ"/>
+                                                </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hzl-dc-ASQ">
                                                 <rect key="frame" x="0.0" y="140.66666666666666" width="232" height="20"/>
@@ -146,6 +149,12 @@
                             <constraint firstItem="d5a-gA-cr4" firstAttribute="centerY" secondItem="Jbr-AY-6Bo" secondAttribute="centerY" multiplier="0.7" id="stW-WL-2HA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="hzl-dc-ASQ" id="3Vs-uM-1Tg"/>
+                        <outlet property="cityTextField" destination="TOI-gF-mar" id="nD0-Hc-Rzz"/>
+                        <outlet property="searchButton" destination="sSJ-zJ-4z1" id="McC-Sj-iCS"/>
+                        <outlet property="statusLabel" destination="1Br-gO-gyj" id="UBb-Lw-tJc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh9-TX-nKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
