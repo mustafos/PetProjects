@@ -9,7 +9,7 @@ int main() {
     return 0;
 }
 
-//___Memory_______A[i] === *(A + i)___________________________________________
+//___Memory_______A[i] === *(A + i)______________________________________
 struct movies_t {
   string title;
   int year;
@@ -89,7 +89,7 @@ struct friends_t {
 
 friends_t * pfriends = &charlie;
 
-//___Dynamic_memory____________________________________________________________
+//___Dynamic_memory_______________________________________________________
 using namespace std;
 
 int main ()
@@ -116,7 +116,7 @@ int main ()
   return 0;
 }
 
-//___2D_Arrays______A[k][j] === *(A + k * 4 + j)______________________________
+//___2D_Arrays______A[k][j] === *(A + k * 4 + j)_________________________
 using namespace std;
 
 int foo [] = {16, 2, 77, 40, 12071};
@@ -147,7 +147,7 @@ int main ()
   printarray (firstarray,3);
   printarray (secondarray,5);
 }
-//___Strings__C_C++_ANSI______________________________________________________
+//___Strings__C_C++_ANSI_________________________________________________
 using namespace std;
 
 int main ()
@@ -179,3 +179,176 @@ int main ()
   cout << mystring << endl;
   return 0;
 }
+
+typedef std::string DataType;
+
+struct tNode{
+    DataType data;
+    tNode* next;
+};
+
+tNode * insert_node(tNode *p_begin, DataType data);
+
+int main()
+{
+    tNode *p_begin = nullptr;
+    p_begin = insert_node(p_begin, "Hello");
+    p_begin = insert_node(p_begin, "World");
+    p_begin = insert_node(p_begin, "Firs");
+    
+    tNode *p = p_begin;
+    while (p) {
+        std::cout << p->data << std::endl;
+        p = p->next;
+    }
+    
+    return 0;
+}
+
+tNode * insert_node(tNode *p_begin. DataType data)
+{
+    tNode *p = new tNode;
+    p->data = data;
+    p->next = p_begin;
+    return p;
+}
+
+//___Template_Functions__________________________________________________
+
+template<typename T>
+T absolute(T x);
+
+int main()
+{
+    int8_t x8 = -1;
+    std::cout << absolute(xf) << std::endl;
+    std::cout << absolute("Hello") << std::endl;
+    std::cout << absolute<int32_t>(-8.3) << std::endl;
+    
+    return 0;
+}
+
+template<typename T>
+T absolute (T x)
+{
+    return (x < 0)? -x: x;
+}
+
+template<int number>
+void self_counter()
+{
+    static int32_t counter = 0;
+    counter++;
+    std::cout << "called" << counter << " times\n";
+}
+
+template<>
+void self_counter<0>();
+
+int main()
+{
+    self_counter<1>();
+    self_counter<1>();
+    self_counter<2>();
+    self_counter<2>();
+    self_counter();
+    
+    return 0;
+}
+
+// overloading functions
+using namespace std;
+
+int operate (int a, int b)
+{
+  return (a*b);
+}
+
+double operate (double a, double b)
+{
+  return (a/b);
+}
+
+int main ()
+{
+  int x=5,y=2;
+  double n=5.0,m=2.0;
+  cout << operate (x,y) << '\n';
+  cout << operate (n,m) << '\n';
+  return 0;
+}
+
+// overloaded functions
+using namespace std;
+
+int sum (int a, int b)
+{
+  return a+b;
+}
+
+double sum (double a, double b)
+{
+  return a+b;
+}
+
+int main ()
+{
+  cout << sum (10,20) << '\n';
+  cout << sum (1.0,1.5) << '\n';
+  return 0;
+}
+
+// function template
+using namespace std;
+
+template <class T>
+T sum (T a, T b)
+{
+  T result;
+  result = a + b;
+  return result;
+}
+
+int main () {
+  int i=5, j=6, k;
+  double f=2.0, g=0.5, h;
+  k=sum<int>(i,j);
+  h=sum<double>(f,g);
+  cout << k << '\n';
+  cout << h << '\n';
+  return 0;
+}
+
+// function templates
+using namespace std;
+
+template <class T, class U>
+bool are_equal (T a, U b)
+{
+  return (a==b);
+}
+
+int main ()
+{
+  if (are_equal(10,10.0))
+    cout << "x and y are equal\n";
+  else
+    cout << "x and y are not equal\n";
+  return 0;
+}
+
+// template arguments
+using namespace std;
+
+template <class T, int N>
+T fixed_multiply (T val)
+{
+  return val * N;
+}
+
+int main() {
+  std::cout << fixed_multiply<int,2>(10) << '\n';
+  std::cout << fixed_multiply<int,3>(10) << '\n';
+}
+
+//________________________________________________________________________
