@@ -1,3 +1,4 @@
+#include "fractions.hpp"
 /// Header file for rational complex numbers
 /// description of the fraction structure type
 /// declaration of functions for working with rational complex numbers
