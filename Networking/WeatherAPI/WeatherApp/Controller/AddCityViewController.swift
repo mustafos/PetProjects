@@ -8,21 +8,20 @@
 import UIKit
 
 class AddCityViewController: UIViewController {
-
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var statusLabel: UILabel!
     
     private let weatherManager = WeatherManager()
     
-    var delegate: WeatherViewControllerDelegate? = nil
+    weak var delegate: WeatherViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupGestures()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,8 +41,9 @@ class AddCityViewController: UIViewController {
     }
     
     @objc private func dismissViewController() {
-        dismiss(animated: true)
+        dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func searchButtonTapped(_ sender: Any) {
         statusLabel.isHidden = true
@@ -66,10 +66,10 @@ class AddCityViewController: UIViewController {
             guard let this = self else { return }
             this.activityIndicatorView.stopAnimating()
             switch result {
-                case .success(let model):
-                    this.handleSearchSuccess(model: model)
-                case .failure(let error):
-                    this.showSearchError(text: error.localizedDescription)
+            case .success(let model):
+                this.handleSearchSuccess(model: model)
+            case .failure(let error):
+                this.showSearchError(text: error.localizedDescription)
             }
         }
     }

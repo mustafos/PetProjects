@@ -31,6 +31,7 @@ struct Weather: Decodable {
 }
 
 struct WeatherModel {
+    
     let countryName: String
     let temp: Int
     let conditionId: Int
@@ -52,7 +53,6 @@ struct WeatherModel {
                 return "wind"
             default:
                 return "cloud"
-                
         }
     }
 }

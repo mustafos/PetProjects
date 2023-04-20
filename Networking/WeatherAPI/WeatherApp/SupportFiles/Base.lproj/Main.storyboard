@@ -53,19 +53,19 @@
                     <navigationItem key="navigationItem" id="vaV-07-UFE">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="location" catalog="system" id="eaf-sP-pyg">
                             <connections>
-                                <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="rUY-rt-GWl"/>
+                                <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="0aI-5g-2Og"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7So-TK-aWJ">
                             <connections>
-                                <action selector="addCityButtonTapped:" destination="BYZ-38-t0r" id="V6F-Ng-Fie"/>
+                                <action selector="addCityButtonTapped:" destination="BYZ-38-t0r" id="sIu-ec-1OY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="conditionImageView" destination="Grv-YX-CPN" id="uSf-zP-wns"/>
-                        <outlet property="conditionLabel" destination="8Qq-MD-fat" id="lhR-y2-6Na"/>
-                        <outlet property="temperatureLabel" destination="8za-vB-XdH" id="uS5-bN-2BG"/>
+                        <outlet property="conditionImageView" destination="Grv-YX-CPN" id="sHO-do-WtT"/>
+                        <outlet property="conditionLabel" destination="8Qq-MD-fat" id="gKF-uK-ZaM"/>
+                        <outlet property="temperatureLabel" destination="8za-vB-XdH" id="kg8-rp-Q1D"/>
                         <segue destination="Kpd-zc-cKB" kind="presentation" identifier="showAddCity" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="kgY-EE-g9w"/>
                     </connections>
                 </viewController>
@@ -111,7 +111,7 @@
                                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="searchButtonTapped:" destination="Kpd-zc-cKB" eventType="touchUpInside" id="DYw-nc-BcQ"/>
+                                                    <action selector="searchButtonTapped:" destination="Kpd-zc-cKB" eventType="touchUpInside" id="aEw-TS-sPN"/>
                                                 </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hzl-dc-ASQ">
@@ -150,10 +150,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="hzl-dc-ASQ" id="3Vs-uM-1Tg"/>
-                        <outlet property="cityTextField" destination="TOI-gF-mar" id="nD0-Hc-Rzz"/>
-                        <outlet property="searchButton" destination="sSJ-zJ-4z1" id="McC-Sj-iCS"/>
-                        <outlet property="statusLabel" destination="1Br-gO-gyj" id="UBb-Lw-tJc"/>
+                        <outlet property="activityIndicatorView" destination="hzl-dc-ASQ" id="zvX-x8-fxD"/>
+                        <outlet property="cityTextField" destination="TOI-gF-mar" id="MlN-1M-KZ9"/>
+                        <outlet property="searchButton" destination="sSJ-zJ-4z1" id="MHo-Br-eNo"/>
+                        <outlet property="statusLabel" destination="1Br-gO-gyj" id="nvk-oE-kKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh9-TX-nKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
