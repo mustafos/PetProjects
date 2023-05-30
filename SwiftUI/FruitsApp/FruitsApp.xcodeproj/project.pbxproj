@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6A0CBB512A263F1100DC3D99 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0CBB502A263F1100DC3D99 /* SettingsView.swift */; };
 		6A0CBB532A2643D500DC3D99 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0CBB522A2643D500DC3D99 /* SettingsLabelView.swift */; };
+		6A0CBB552A2647B800DC3D99 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0CBB542A2647B800DC3D99 /* SettingsRowView.swift */; };
 		6A4491992A25EDC200A21D12 /* FruitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4491982A25EDC200A21D12 /* FruitCardView.swift */; };
 		6A44919B2A25F20D00A21D12 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44919A2A25F20D00A21D12 /* StartButtonView.swift */; };
 		6A44919D2A25F5D900A21D12 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44919C2A25F5D900A21D12 /* OnboardingView.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		6A0CBB502A263F1100DC3D99 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6A0CBB522A2643D500DC3D99 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		6A0CBB542A2647B800DC3D99 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		6A4491982A25EDC200A21D12 /* FruitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCardView.swift; sourceTree = "<group>"; };
 		6A44919A2A25F20D00A21D12 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		6A44919C2A25F5D900A21D12 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				6A44919C2A25F5D900A21D12 /* OnboardingView.swift */,
 				6AF950B72A261EAB00285733 /* FruitDetailView.swift */,
 				6A0CBB502A263F1100DC3D99 /* SettingsView.swift */,
+				6A0CBB542A2647B800DC3D99 /* SettingsRowView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				6A4491A32A25F91200A21D12 /* FruitData.swift in Sources */,
 				6AF950BC2A2625F800285733 /* SourceLinkView.swift in Sources */,
+				6A0CBB552A2647B800DC3D99 /* SettingsRowView.swift in Sources */,
 				6A4491992A25EDC200A21D12 /* FruitCardView.swift in Sources */,
 				6A4491A52A26067500A21D12 /* FruitRowView.swift in Sources */,
 				6AF950BE2A26288E00285733 /* FruitNutrientsView.swift in Sources */,
