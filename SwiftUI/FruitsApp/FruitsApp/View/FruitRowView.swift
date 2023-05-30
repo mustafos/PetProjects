@@ -28,7 +28,7 @@ struct FruitRowView: View {
                     .font(.caption)
                     .foregroundColor(Color.secondary)
             }
-        } //: – HSTACK
+        } //: HSTACK
     }
 }
 
