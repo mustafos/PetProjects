@@ -32,6 +32,8 @@
 		6A1799812A279C26009A9201 /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1799802A279C26009A9201 /* CoverImageView.swift */; };
 		6A1799842A279E2E009A9201 /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1799832A279E2E009A9201 /* CoverImageModel.swift */; };
 		6A1799872A279F7B009A9201 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1799862A279F7B009A9201 /* CodableBundleExtension.swift */; };
+		6A1CF5D62A291F9D00BC0746 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CF5D52A291F9D00BC0746 /* LocationModel.swift */; };
+		6A58E6C62A2A89E700FC3F98 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A58E6C52A2A89E700FC3F98 /* MapAnnotationView.swift */; };
 		6A963BE62A27A5570038DF2E /* AnimalListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A963BE52A27A5570038DF2E /* AnimalListItemView.swift */; };
 		6A963BE82A27A72D0038DF2E /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A963BE72A27A72D0038DF2E /* AnimalModel.swift */; };
 		6A963BEA2A27B2AA0038DF2E /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A963BE92A27B2AA0038DF2E /* AnimalDetailView.swift */; };
@@ -74,6 +76,8 @@
 		6A1799802A279C26009A9201 /* CoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageView.swift; sourceTree = "<group>"; };
 		6A1799832A279E2E009A9201 /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
 		6A1799862A279F7B009A9201 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
+		6A1CF5D52A291F9D00BC0746 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		6A58E6C52A2A89E700FC3F98 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		6A963BE52A27A5570038DF2E /* AnimalListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListItemView.swift; sourceTree = "<group>"; };
 		6A963BE72A27A72D0038DF2E /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		6A963BE92A27B2AA0038DF2E /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				6A963BF32A27C1A80038DF2E /* ExternalWeblinkView.swift */,
 				6A963BF72A27C6050038DF2E /* VideoListItemView.swift */,
 				6A963BF92A27D1DC0038DF2E /* VideoPlayerView.swift */,
+				6A58E6C52A2A89E700FC3F98 /* MapAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				6A1799832A279E2E009A9201 /* CoverImageModel.swift */,
 				6A963BE72A27A72D0038DF2E /* AnimalModel.swift */,
 				6A963BF52A27C58A0038DF2E /* VideoModel.swift */,
+				6A1CF5D52A291F9D00BC0746 /* LocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,9 +327,11 @@
 				6A963BFD2A27D2F20038DF2E /* VideoPlayerHelper.swift in Sources */,
 				6A963BF22A27BD5B0038DF2E /* InsetMapView.swift in Sources */,
 				6A0FF5042A265FD600492A63 /* AfricaAppApp.swift in Sources */,
+				6A58E6C62A2A89E700FC3F98 /* MapAnnotationView.swift in Sources */,
 				6A0FF5322A26645100492A63 /* VideoListView.swift in Sources */,
 				6A963BF62A27C58A0038DF2E /* VideoModel.swift in Sources */,
 				6A0FF5362A26648D00492A63 /* GalleryView.swift in Sources */,
+				6A1CF5D62A291F9D00BC0746 /* LocationModel.swift in Sources */,
 				6A963BEE2A27B7190038DF2E /* InsetGalleryView.swift in Sources */,
 				6A963BF82A27C6050038DF2E /* VideoListItemView.swift in Sources */,
 				6A1799872A279F7B009A9201 /* CodableBundleExtension.swift in Sources */,
