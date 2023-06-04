@@ -5,6 +5,7 @@ struct TouchDownAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Shop())
         }
     }
 }

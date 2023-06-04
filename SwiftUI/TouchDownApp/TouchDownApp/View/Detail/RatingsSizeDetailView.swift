@@ -1,45 +1,45 @@
 import SwiftUI
 
-struct RatingsSizeDetailView: View {
+struct RatingsSizesDetailView: View {
+    // MARK: - PROPERTY
     
     let sizes: [String] = ["XS", "S", "M", "L", "XL"]
     
+    // MARK: - BODY
+    
     var body: some View {
-        HStack(alignment: .top, spacing: 3) {
+        HStack(alignment: .top, spacing: 3, content: {
             // RATINGS
-            VStack(alignment: .leading, spacing: 3) {
+            VStack(alignment: .leading, spacing: 3, content: {
                 Text("Ratings")
                     .font(.footnote)
                     .fontWeight(.semibold)
                     .foregroundColor(colorGray)
                 
-                HStack(alignment: .center, spacing: 3) {
+                HStack(alignment: .center, spacing: 3, content: {
                     ForEach(1...5, id: \.self) { item in
-                        Button {
-                            print("HL")
-                        } label: {
+                        Button(action: {}, label: {
                             Image(systemName: "star.fill")
                                 .frame(width: 28, height: 28, alignment: .center)
-                                .background(colorGray).cornerRadius(5)
+                                .background(colorGray.cornerRadius(5))
                                 .foregroundColor(.white)
-                        }
+                        })
                     }
-                }
-            }
+                })
+            })
+            
             Spacer()
             
             // SIZES
-            VStack(alignment: .trailing, spacing: 3) {
+            VStack(alignment: .trailing, spacing: 3, content: {
                 Text("Sizes")
                     .font(.footnote)
                     .fontWeight(.semibold)
                     .foregroundColor(colorGray)
                 
-                HStack(alignment: .center, spacing: 5) {
+                HStack(alignment: .center, spacing: 5, content: {
                     ForEach(sizes, id: \.self) { size in
-                        Button {
-                            print("G")
-                        } label: {
+                        Button(action: {}, label: {
                             Text(size)
                                 .font(.footnote)
                                 .fontWeight(.heavy)
@@ -50,18 +50,19 @@ struct RatingsSizeDetailView: View {
                                     RoundedRectangle(cornerRadius: 5)
                                         .stroke(colorGray, lineWidth: 2)
                                 )
-                        }
-
+                        })
                     }
-                }
-            }
-        }
+                })
+            })
+        }) //: HSTACK
     }
 }
 
-struct RatingsSizeDetail_Previews: PreviewProvider {
+// MARK: - PREVIEW
+
+struct RatingsSizesDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RatingsSizeDetailView()
+        RatingsSizesDetailView()
             .previewLayout(.sizeThatFits)
             .padding()
     }
