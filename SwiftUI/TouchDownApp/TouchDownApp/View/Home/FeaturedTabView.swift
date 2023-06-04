@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct FeaturedTabView: View {
-
-    // MARK: – BODY
     var body: some View {
         TabView {
             ForEach(players) { player in
@@ -15,7 +13,6 @@ struct FeaturedTabView: View {
     }
 }
 
-// MARK: – PREVIEW
 struct FeaturedTabView_Previews: PreviewProvider {
     static var previews: some View {
         FeaturedTabView()

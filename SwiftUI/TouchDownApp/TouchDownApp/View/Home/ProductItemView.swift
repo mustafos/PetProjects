@@ -2,10 +2,12 @@ import SwiftUI
 
 struct ProductItemView: View {
     
+    // MARK: - PROPERTY
     let product: Product
     
+    // MARK: - BODY
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: 6, content: {
             // PHOTO
             ZStack {
                 Image(product.image)
@@ -22,13 +24,14 @@ struct ProductItemView: View {
                 .fontWeight(.black)
             
             // PRICE
-            Text(product.fprmattedPrice)
+            Text(product.formattedPrice)
                 .fontWeight(.semibold)
                 .foregroundColor(.gray)
-        } //: VSTACK
+        }) //: VSTACK
     }
 }
 
+// MARK: - PREVIEW
 struct ProductItemView_Previews: PreviewProvider {
     static var previews: some View {
         ProductItemView(product: products[0])

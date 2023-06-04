@@ -1,10 +1,6 @@
 import SwiftUI
 
 struct LogoView: View {
-    
-    // MARK: – PROPERTIES
-    
-    // MARK: – BODY
     var body: some View {
         HStack(spacing: 4) {
             Text("Touch".uppercased())
@@ -21,12 +17,10 @@ struct LogoView: View {
                 .font(.title3)
                 .fontWeight(.black)
                 .foregroundColor(.black)
-            
         } //: HSTACK
     }
 }
 
-// MARK: – PREVIEW
 struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
         LogoView()

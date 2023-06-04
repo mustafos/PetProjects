@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CategoryGridView: View {
-    
+
     // MARK: - BODY
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
