@@ -2,10 +2,10 @@ import SwiftUI
 
 struct FeaturedItemView: View {
     
-    // MARK: – PROPERTIES
+    // MARK: - PROPERTY
     let player: Player
     
-    // MARK: – BODY
+    // MARK: - BODY
     var body: some View {
         Image(player.image)
             .resizable()
@@ -14,7 +14,7 @@ struct FeaturedItemView: View {
     }
 }
 
-// MARK: – PREVIEW
+// MARK: - PREVIEW
 struct FeaturedItemView_Previews: PreviewProvider {
     static var previews: some View {
         FeaturedItemView(player: players[0])

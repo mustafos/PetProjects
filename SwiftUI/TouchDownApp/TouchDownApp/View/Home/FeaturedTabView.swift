@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct FeaturedTabView: View {
-    
-    // MARK: – PROPERTIES
-    
+
     // MARK: – BODY
     var body: some View {
         TabView {
@@ -21,7 +19,7 @@ struct FeaturedTabView: View {
 struct FeaturedTabView_Previews: PreviewProvider {
     static var previews: some View {
         FeaturedTabView()
-            .previewDevice("iPhone 13 mini")
+            .previewDevice("iPhone 12 Pro")
             .background(Color.gray)
     }
 }

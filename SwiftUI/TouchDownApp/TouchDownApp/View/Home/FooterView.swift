@@ -1,10 +1,6 @@
 import SwiftUI
 
 struct FooterView: View {
-    
-    // MARK: – PROPERTIES
-    
-    // MARK: – BODY
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
             Text("We offer the most cutting edge, comfortable, lightweight and durable football helmets in the market at affordable prices.")
@@ -15,6 +11,7 @@ struct FooterView: View {
             Image("logo-lineal")
                 .renderingMode(.template)
                 .foregroundColor(.gray)
+                .layoutPriority(0)
             
             Text("Copyright © 2023 Mustafa Bekirov\nAll rights reserved")
                 .font(.footnote)
@@ -27,7 +24,6 @@ struct FooterView: View {
     }
 }
 
-// MARK: – PREVIEW
 struct FooterView_Previews: PreviewProvider {
     static var previews: some View {
         FooterView()
