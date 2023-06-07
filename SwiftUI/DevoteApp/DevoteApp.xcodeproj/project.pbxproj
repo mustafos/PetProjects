@@ -18,6 +18,7 @@
 		6A9FEF0E2A2E17E2003CED2B /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FEF0B2A2E17DC003CED2B /* sound-rise.mp3 */; };
 		6A9FEF0F2A2E17E2003CED2B /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FEF0C2A2E17DF003CED2B /* sound-tap.mp3 */; };
 		6A9FEF102A2E17E2003CED2B /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A9FEF0D2A2E17E2003CED2B /* sound-ding.mp3 */; };
+		6AC2B6462A31204C0072890E /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2B6452A31204C0072890E /* BackgroundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6A9FEF0C2A2E17DF003CED2B /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		6A9FEF0D2A2E17E2003CED2B /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		6A9FEF172A2E192F003CED2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6AC2B6452A31204C0072890E /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6A9FEEFA2A2E1790003CED2B /* ContentView.swift */,
+				6AC2B6452A31204C0072890E /* BackgroundImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A9FEF022A2E1792003CED2B /* Persistence.swift in Sources */,
+				6AC2B6462A31204C0072890E /* BackgroundImageView.swift in Sources */,
 				6A9FEEFB2A2E1790003CED2B /* ContentView.swift in Sources */,
 				6A7D09332A2FBD940070510C /* HideKeyboardExtension.swift in Sources */,
 				6A400A3E2A2E2567003F80B2 /* Constant.swift in Sources */,
