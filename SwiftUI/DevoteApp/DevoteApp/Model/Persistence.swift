@@ -1,7 +1,6 @@
 import CoreData
 
 struct PersistenceController {
-    
     // MARK: - 1. PERSISTENT CONTROLLER
     static let shared = PersistenceController()
     
