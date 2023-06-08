@@ -87,7 +87,8 @@ extension UIViewController {
 extension AnagramsViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let inputStr = toReverseTextField.text ?? ""
+        var inputStr = toReverseTextField.text ?? ""
+        inputStr = (inputStr as NSString).replacingCharacters(in: range, with: string)
         if changeLogic.selectedSegmentIndex == 0 {
             let revert = model.reverseExceptAlphabeticSymbols(in: inputStr)
             resultLabel.text = revert + " "
