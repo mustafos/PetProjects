@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct NewTaskItemView: View {
-    
     // MARK: - PROPERTY
     
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
