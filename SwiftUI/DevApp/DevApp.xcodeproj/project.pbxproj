@@ -12,6 +12,7 @@
 		6AFA3DFE2A34D0DF0023E61A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA3DFD2A34D0DF0023E61A /* Assets.xcassets */; };
 		6AFA3E012A34D0DF0023E61A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA3E002A34D0DF0023E61A /* Preview Assets.xcassets */; };
 		6AFA3E082A34D33D0023E61A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA3E072A34D33D0023E61A /* LaunchScreen.storyboard */; };
+		6AFA3E0A2A34D4F70023E61A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA3E092A34D4F70023E61A /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		6AFA3DFD2A34D0DF0023E61A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AFA3E002A34D0DF0023E61A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6AFA3E072A34D33D0023E61A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AFA3E092A34D4F70023E61A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				6AFA3DF92A34D0DA0023E61A /* DevAppApp.swift */,
 				6AFA3DFB2A34D0DA0023E61A /* ContentView.swift */,
+				6AFA3E092A34D4F70023E61A /* CardView.swift */,
 				6AFA3E072A34D33D0023E61A /* LaunchScreen.storyboard */,
 				6AFA3DFD2A34D0DF0023E61A /* Assets.xcassets */,
 				6AFA3DFF2A34D0DF0023E61A /* Preview Content */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AFA3DFC2A34D0DA0023E61A /* ContentView.swift in Sources */,
+				6AFA3E0A2A34D4F70023E61A /* CardView.swift in Sources */,
 				6AFA3DFA2A34D0DA0023E61A /* DevAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
