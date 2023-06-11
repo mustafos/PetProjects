@@ -1,0 +1,29 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  },
+  "stickers" : [
+    {
+      "filename" : "sticker-develop.sticker"
+    },
+    {
+      "filename" : "sticker-discover.sticker"
+    },
+    {
+      "filename" : "sticker-distribute.sticker"
+    },
+    {
+      "filename" : "sticker-experiment.sticker"
+    },
+    {
+      "filename" : "sticker-implement.sticker"
+    },
+    {
+      "filename" : "sticker-learn.sticker"
+    }
+  ]
+}
