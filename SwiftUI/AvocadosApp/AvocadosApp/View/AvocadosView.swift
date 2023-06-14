@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AvocadosView: View {
     
-    // MARK: – PROPERTIES
+    // MARK: - PROPERTIES
     
     @State private var pulsateAnimation: Bool = false
     
@@ -17,7 +17,7 @@ struct AvocadosView: View {
                 .shadow(color: Color("ColorBlackTransparentDark"), radius: 12, x: 0, y: 8)
                 .scaleEffect(self.pulsateAnimation ? 1 : 0.9)
                 .opacity(self.pulsateAnimation ? 1 : 0.9)
-                .animation(Animation.easeOut(duration: 1.5).repeatForever(autoreverses: true))
+                .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
             
             VStack {
                 Text("Avocados".uppercased())
@@ -26,16 +26,18 @@ struct AvocadosView: View {
                     .padding()
                     .shadow(color: Color("ColorBlackTransparentDark"), radius: 4, x: 0, y: 4)
                 Text("""
-            Creamy, green, and full of nutrients! Avocado is a powerhouse ingredient at any meal. Enjoy these handpicked avocado recipes for breakfast, lunch, dinner & more!
-            """)
+Creamy, green, and full of nutrients!
+Avocado is a powerhouse ingredient at any meal. Enjoy these handpicked avocado recipes for breakfast, lunch, dinner & more!
+""")
                 .lineLimit(nil)
                 .font(.system(.headline, design: .serif))
                 .foregroundColor(Color("ColorGreenLight"))
                 .multilineTextAlignment(.center)
                 .lineSpacing(8)
                 .frame(maxWidth: 640, minHeight: 120)
-                .padding()
             }
+            .padding()
+            
             Spacer()
         }
         .background(
@@ -44,14 +46,16 @@ struct AvocadosView: View {
                 .aspectRatio(contentMode: .fill)
         )
         .edgesIgnoringSafeArea(.all)
-        .onAppear {
+        .onAppear(perform: {
             self.pulsateAnimation.toggle()
-        }
+        })
     }
 }
 
 struct AvocadosView_Previews: PreviewProvider {
     static var previews: some View {
         AvocadosView()
+            .previewDevice("iPhone 12 Pro")
+            .environment(\.colorScheme, .dark)
     }
 }
