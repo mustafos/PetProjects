@@ -20,6 +20,9 @@
 		6AD0AD022A388E6C00456C08 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AD012A388E6C00456C08 /* HeaderModel.swift */; };
 		6AD0AD042A388F1C00456C08 /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AD032A388F1C00456C08 /* HeaderData.swift */; };
 		6AD0AD062A38986200456C08 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AD052A38986200456C08 /* DishesView.swift */; };
+		6AD0AD082A38A19900456C08 /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AD072A38A19900456C08 /* FactsView.swift */; };
+		6AD0AD0A2A38A1EE00456C08 /* FactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AD092A38A1EE00456C08 /* FactData.swift */; };
+		6AD0AD0C2A38A35F00456C08 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD0AD0B2A38A35F00456C08 /* FactModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		6AD0AD012A388E6C00456C08 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		6AD0AD032A388F1C00456C08 /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
 		6AD0AD052A38986200456C08 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
+		6AD0AD072A38A19900456C08 /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
+		6AD0AD092A38A1EE00456C08 /* FactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactData.swift; sourceTree = "<group>"; };
+		6AD0AD0B2A38A35F00456C08 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD0AD032A388F1C00456C08 /* HeaderData.swift */,
+				6AD0AD092A38A1EE00456C08 /* FactData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				6AD0AD012A388E6C00456C08 /* HeaderModel.swift */,
+				6AD0AD0B2A38A35F00456C08 /* FactModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 				6AD0ACFD2A387F0700456C08 /* AppView.swift */,
 				6AD0ACFF2A38874800456C08 /* HeaderView.swift */,
 				6AD0AD052A38986200456C08 /* DishesView.swift */,
+				6AD0AD072A38A19900456C08 /* FactsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 			files = (
 				6AD0ACFC2A387ECE00456C08 /* SettingsView.swift in Sources */,
 				6A780F212A3641EF001AED48 /* ContentView.swift in Sources */,
+				6AD0AD0C2A38A35F00456C08 /* FactModel.swift in Sources */,
 				6AD0ACFE2A387F0700456C08 /* AppView.swift in Sources */,
 				6AD0ACFA2A387E8700456C08 /* RipeningStagesView.swift in Sources */,
 				6A780F1F2A3641EF001AED48 /* AvocadosAppApp.swift in Sources */,
@@ -198,6 +208,8 @@
 				6AD0AD022A388E6C00456C08 /* HeaderModel.swift in Sources */,
 				6AD0AD042A388F1C00456C08 /* HeaderData.swift in Sources */,
 				6AD0AD062A38986200456C08 /* DishesView.swift in Sources */,
+				6AD0AD0A2A38A1EE00456C08 /* FactData.swift in Sources */,
+				6AD0AD082A38A19900456C08 /* FactsView.swift in Sources */,
 				6AD0AD002A38874800456C08 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
