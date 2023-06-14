@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A070CC92A3990F9003A6E73 /* RipeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A070CC82A3990F9003A6E73 /* RipeningView.swift */; };
+		6A070CCB2A399165003A6E73 /* RipeningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A070CCA2A399165003A6E73 /* RipeningModel.swift */; };
+		6A070CCF2A399211003A6E73 /* RipeningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A070CCE2A399211003A6E73 /* RipeningData.swift */; };
 		6A780F1F2A3641EF001AED48 /* AvocadosAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A780F1E2A3641EF001AED48 /* AvocadosAppApp.swift */; };
 		6A780F212A3641EF001AED48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A780F202A3641EF001AED48 /* ContentView.swift */; };
 		6A780F232A3641F0001AED48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A780F222A3641F0001AED48 /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A070CC82A3990F9003A6E73 /* RipeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningView.swift; sourceTree = "<group>"; };
+		6A070CCA2A399165003A6E73 /* RipeningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningModel.swift; sourceTree = "<group>"; };
+		6A070CCE2A399211003A6E73 /* RipeningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningData.swift; sourceTree = "<group>"; };
 		6A780F1B2A3641EF001AED48 /* AvocadosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvocadosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A780F1E2A3641EF001AED48 /* AvocadosAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosAppApp.swift; sourceTree = "<group>"; };
 		6A780F202A3641EF001AED48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 				6AD0AD032A388F1C00456C08 /* HeaderData.swift */,
 				6AD0AD092A38A1EE00456C08 /* FactData.swift */,
 				6AD0AD0F2A38AFA600456C08 /* RecipeData.swift */,
+				6A070CCE2A399211003A6E73 /* RipeningData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 				6AD0AD012A388E6C00456C08 /* HeaderModel.swift */,
 				6AD0AD0B2A38A35F00456C08 /* FactModel.swift */,
 				6AD0AD0D2A38AF6800456C08 /* RecipeModel.swift */,
+				6A070CCA2A399165003A6E73 /* RipeningModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 				6AD0AD132A38C0A500456C08 /* RecipeDetailView.swift */,
 				6AD0AD152A38C0E500456C08 /* RecipeCookingView.swift */,
 				6AD0AD172A38C10F00456C08 /* RecipeRatingView.swift */,
+				6A070CC82A3990F9003A6E73 /* RipeningView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,8 +227,10 @@
 			files = (
 				6AD0ACFC2A387ECE00456C08 /* SettingsView.swift in Sources */,
 				6A780F212A3641EF001AED48 /* ContentView.swift in Sources */,
+				6A070CCB2A399165003A6E73 /* RipeningModel.swift in Sources */,
 				6AD0AD0C2A38A35F00456C08 /* FactModel.swift in Sources */,
 				6AD0ACFE2A387F0700456C08 /* AppView.swift in Sources */,
+				6A070CCF2A399211003A6E73 /* RipeningData.swift in Sources */,
 				6AD0ACFA2A387E8700456C08 /* RipeningStagesView.swift in Sources */,
 				6A780F1F2A3641EF001AED48 /* AvocadosAppApp.swift in Sources */,
 				6AD0ACF82A387E5000456C08 /* AvocadosView.swift in Sources */,
@@ -228,6 +239,7 @@
 				6AD0AD042A388F1C00456C08 /* HeaderData.swift in Sources */,
 				6AD0AD062A38986200456C08 /* DishesView.swift in Sources */,
 				6AD0AD162A38C0E500456C08 /* RecipeCookingView.swift in Sources */,
+				6A070CC92A3990F9003A6E73 /* RipeningView.swift in Sources */,
 				6AD0AD182A38C10F00456C08 /* RecipeRatingView.swift in Sources */,
 				6AD0AD0A2A38A1EE00456C08 /* FactData.swift in Sources */,
 				6AD0AD122A38B02E00456C08 /* RecipeCardView.swift in Sources */,
