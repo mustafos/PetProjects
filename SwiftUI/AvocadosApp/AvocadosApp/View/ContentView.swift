@@ -6,6 +6,7 @@ struct ContentView: View {
     
     var headers: [Header] = headersData
     var facts: [Fact] = factsData
+    var resipes: [Recipe] = recipesData
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -43,6 +44,18 @@ struct ContentView: View {
                     .padding(.vertical)
                     .padding(.leading, 60)
                     .padding(.trailing, 20)
+                }
+                
+                // MARK: – RECIPE CARDS
+                
+                Text("Avocado Recipes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                
+                VStack(alignment: .center, spacing: 20) {
+                    ForEach(resipes) { item in
+                        RecipeCardView(recipe: item)
+                    }
                 }
                 
                 // MARK: – FOOTER

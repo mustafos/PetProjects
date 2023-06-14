@@ -1,20 +1,24 @@
-//
-//  RecipeRatingView.swift
-//  AvocadosApp
-//
-//  Created by Mustafa Bekirov on 13.06.2023.
-//
-
 import SwiftUI
 
 struct RecipeRatingView: View {
+    // MARK: - PROPERTIES
+    
+    var recipe: Recipe
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .center, spacing: 5) {
+            ForEach(1...(recipe.rating), id: \.self) { _ in
+                Image(systemName: "star.fill")
+                    .font(.body)
+                    .foregroundColor(Color.yellow)
+            }
+        }
     }
 }
 
 struct RecipeRatingView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeRatingView()
+        RecipeRatingView(recipe: recipesData[0])
+            .previewLayout(.fixed(width: 320, height: 60))
     }
 }
