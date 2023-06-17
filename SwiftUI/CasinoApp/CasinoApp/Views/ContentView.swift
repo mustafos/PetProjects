@@ -87,12 +87,49 @@ struct ContentView: View {
                             .resizable()
                             .modifier(ImageModifier())
                     }
-
+                    
                 } // Slot Machine
                 .layoutPriority(2)
                 // Footer
                 
                 Spacer()
+                
+                HStack {
+                    // MARK: – BET 20
+                    HStack(alignment: .center, spacing: 10) {
+                        Button {
+                            print("Bet 20 coins")
+                        } label: {
+                            Text("20")
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                                .modifier(BetNumberModifier())
+                        }
+                        .modifier(BetCapsuleModifier())
+                        
+                        Image("gfx-casino-chips")
+                            .resizable()
+                            .opacity(0)
+                            .modifier(CasinoChipsModifier())
+                    }
+                    
+                    // MARK: – BET 10
+                    HStack(alignment: .center, spacing: 10) {
+                        Image("gfx-casino-chips")
+                            .resizable()
+                            .opacity(1)
+                            .modifier(CasinoChipsModifier())
+                        Button {
+                            print("Bet 10 coins")
+                        } label: {
+                            Text("10")
+                                .fontWeight(.heavy)
+                                .foregroundColor(.yellow)
+                                .modifier(BetNumberModifier())
+                        }
+                        .modifier(BetCapsuleModifier())
+                    }
+                }
             }
             // Buttons
             .overlay(
