@@ -11,12 +11,12 @@ struct ContentView: View {
     @State private var betAmount: Int = 10
     @State private var reels: Array = [0, 1, 2]
     @State private var showingInfoView: Bool = false
+    @State private var isActiveBet10: Bool = true
+    @State private var isActiveBet20: Bool = false
+    @State private var showingModal: Bool = false
     
     // MARK: – FUNCTIONS
     func spinReels() {
-        // reels[0] = Int.random(in: 0...symbols.count - 1)
-        // reels[1] = Int.random(in: 0...symbols.count - 1)
-        // reels[2] = Int.random(in: 0...symbols.count - 1)
         reels = reels.map({ _ in
             Int.random(in: 0...symbols.count - 1)
         })
@@ -47,6 +47,25 @@ struct ContentView: View {
     
     func playerLoses() {
         coins -= betAmount
+    }
+    
+    func activateBet20() {
+        betAmount = 20
+        isActiveBet20 = true
+        isActiveBet10 = false
+    }
+    
+    func activateBet10() {
+        betAmount = 10
+        isActiveBet10 = true
+        isActiveBet20 = false
+    }
+    
+    func isGameOver() {
+        if coins <= 0 {
+            // SHOW MODAL WINDOW
+            showingModal = true
+        }
     }
     
     // MARK: – BODY
@@ -130,6 +149,9 @@ struct ContentView: View {
                         
                         // CHECK WINNING
                         self.checkWinning()
+                        
+                        // GAME IS OVER
+                        self.isGameOver()
                     } label: {
                         Image("gfx-spin")
                             .renderingMode(.original)
@@ -147,18 +169,18 @@ struct ContentView: View {
                     // MARK: – BET 20
                     HStack(alignment: .center, spacing: 10) {
                         Button {
-                            print("Bet 20 coins")
+                            self.activateBet20()
                         } label: {
                             Text("20")
                                 .fontWeight(.heavy)
-                                .foregroundColor(.white)
+                                .foregroundColor(isActiveBet20 ? Color("ColorYellow") : Color.white)
                                 .modifier(BetNumberModifier())
                         }
                         .modifier(BetCapsuleModifier())
                         
                         Image("gfx-casino-chips")
                             .resizable()
-                            .opacity(0)
+                            .opacity(isActiveBet20 ? 1 : 0)
                             .modifier(CasinoChipsModifier())
                     }
                     
@@ -166,14 +188,14 @@ struct ContentView: View {
                     HStack(alignment: .center, spacing: 10) {
                         Image("gfx-casino-chips")
                             .resizable()
-                            .opacity(1)
+                            .opacity(isActiveBet10 ? 1 : 0)
                             .modifier(CasinoChipsModifier())
                         Button {
-                            print("Bet 10 coins")
+                            self.activateBet10()
                         } label: {
                             Text("10")
                                 .fontWeight(.heavy)
-                                .foregroundColor(.yellow)
+                                .foregroundColor(isActiveBet10 ? Color("ColorYellow") : Color.white)
                                 .modifier(BetNumberModifier())
                         }
                         .modifier(BetCapsuleModifier())
@@ -203,7 +225,67 @@ struct ContentView: View {
             )
             .padding()
             .frame(maxWidth: 720)
-            // POPUP
+            .blur(radius: $showingModal.wrappedValue ? 5 : 0, opaque: false)
+            
+            // MARK: – POPUP
+            if $showingModal.wrappedValue {
+                ZStack {
+                    Color("ColorTransparentBlack").edgesIgnoringSafeArea(.all)
+                    
+                    // MODAL
+                    VStack(spacing: 0) {
+                        // TITLE
+                        Text("GAME OVER")
+                            .font(.system(.title, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding()
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .background(Color("ColorPink"))
+                            .foregroundColor(Color.white)
+                        
+                        Spacer()
+                        
+                        // MESSAGE
+                        VStack(alignment: .center, spacing: 16) {
+                            Image("gfx-seven-reel")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 72)
+                            
+                            Text("Bad luck! You lost all of the coins. \n Let's play again!")
+                                .font(.system(.body, design: .rounded))
+                                .lineLimit(2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(Color.gray)
+                                .layoutPriority(1)
+                            
+                            Button {
+                                self.showingModal = false
+                                self.coins = 100
+                            } label: {
+                                Text("New Game".uppercased())
+                                    .font(.system(.body, design: .rounded))
+                                    .fontWeight(.semibold)
+                                    .accentColor(Color("ColorPink"))
+                                    .padding(.horizontal, 12)
+                                    .padding(.vertical, 8)
+                                    .frame(minWidth: 128)
+                                    .background(
+                                        Capsule()
+                                            .strokeBorder(lineWidth: 1.75)
+                                            .foregroundColor(Color("ColorPink"))
+                                    )
+                            }
+                        }
+                        
+                        Spacer()
+                    }
+                    .frame(minWidth: 280, idealWidth: 280, maxWidth: 320, minHeight: 260, idealHeight: 280, maxHeight: 320, alignment: .center)
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .shadow(color: Color("ColorTransparentBlack"), radius: 6, x: 0, y: 8)
+                }
+            }
         } //: ZSTACK
         .sheet(isPresented: $showingInfoView) {
             InfoView()
