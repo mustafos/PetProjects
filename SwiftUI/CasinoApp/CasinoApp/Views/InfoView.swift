@@ -12,31 +12,34 @@ struct InfoView: View {
             Form {
                 Section(header: Text("About the application")) {
                     FormRowView(firstItem: "Application", secondItem: "Slot Machine")
-                    FormRowView(firstItem: "Platforms", secondItem: "iPhone, iPad, iMac")
-                    FormRowView(firstItem: "Developer & Designer", secondItem: "Mustafa Bekirov")
-                    FormRowView(firstItem: "Copyright", secondItem: "© 2023 All rights reserved.")
-                    FormRowView(firstItem: "Version", secondItem: "1.0.0")
+                    FormRowView(firstItem: "Platforms", secondItem: "iPhone, iPad, Mac")
+                    FormRowView(firstItem: "Developer", secondItem: "John / Jane")
+                    FormRowView(firstItem: "Designer", secondItem: "Robert Petras")
+                    FormRowView(firstItem: "Music", secondItem: "Dan Lebowitz")
+                    FormRowView(firstItem: "Website", secondItem: "https://credo.academy")
+                    FormRowView(firstItem: "Copyright", secondItem: "© All rights reserved.")
+                    FormRowView(firstItem: "Version", secondItem: "1.5.1")
                 }
             }
             .font(.system(.body, design: .rounded))
         }
         .padding(.top, 40)
-        .overlay (
+        .overlay(
             Button(action: {
                 audioPlayer?.stop()
                 self.presentationMode.wrappedValue.dismiss()
-            }, label: {
+            }) {
                 Image(systemName: "xmark.circle")
                     .font(.title)
-            })
-            .padding(.top, 30)
-            .padding(.trailing, 20)
-            .accentColor(.secondary)
+            }
+                .padding(.top, 30)
+                .padding(.trailing, 20)
+                .accentColor(Color.secondary)
             , alignment: .topTrailing
         )
-        .onAppear {
+        .onAppear(perform: {
             playSound(sound: "background-music", type: "mp3")
-        }
+        })
     }
 }
 
@@ -46,7 +49,7 @@ struct FormRowView: View {
     
     var body: some View {
         HStack {
-            Text(firstItem).foregroundColor(.gray)
+            Text(firstItem).foregroundColor(Color.gray)
             Spacer()
             Text(secondItem)
         }
@@ -56,5 +59,7 @@ struct FormRowView: View {
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
         InfoView()
+            .previewDevice("iPhone 13")
     }
 }
+

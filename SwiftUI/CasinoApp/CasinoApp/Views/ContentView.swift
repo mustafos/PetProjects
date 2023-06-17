@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - PROPERTIES
     
-    // MARK: – PROPERTIES
     let symbols = ["gfx-bell", "gfx-cherry", "gfx-coin", "gfx-grape", "gfx-seven", "gfx-strawberry"]
     let haptics = UINotificationFeedbackGenerator()
     
@@ -15,10 +15,14 @@ struct ContentView: View {
     @State private var isActiveBet20: Bool = false
     @State private var showingModal: Bool = false
     @State private var animatingSymbol: Bool = false
-    @State private var animatingModel: Bool = false
+    @State private var animatingModal: Bool = false
     
-    // MARK: – FUNCTIONS
+    // MARK: - FUNCTIONS
+    
     func spinReels() {
+        // reels[0] = Int.random(in: 0...symbols.count - 1)
+        // reels[1] = Int.random(in: 0...symbols.count - 1)
+        // reels[2] = Int.random(in: 0...symbols.count - 1)
         reels = reels.map({ _ in
             Int.random(in: 0...symbols.count - 1)
         })
@@ -87,22 +91,27 @@ struct ContentView: View {
         activateBet10()
         playSound(sound: "chimeup", type: "mp3")
     }
-    // MARK: – BODY
+    
+    // MARK: - BODY
+    
     var body: some View {
         ZStack {
-            // Background
+            // MARK: - BACKGROUND
+            
             LinearGradient(gradient: Gradient(colors: [Color("ColorPink"), Color("ColorPurple")]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             
-            // MARK: – INTERFACE
+            // MARK: - INTERFACE
+            
             VStack(alignment: .center, spacing: 5) {
                 
-                // MARK: – HEADER
+                // MARK: - HEADER
                 
                 LogoView()
                 
                 Spacer()
                 
-                // MARK: – SCORE
+                // MARK: - SCORE
+                
                 HStack {
                     HStack {
                         Text("Your\nCoins".uppercased())
@@ -125,15 +134,16 @@ struct ContentView: View {
                         Text("High\nScore".uppercased())
                             .scoreLabelStyle()
                             .multilineTextAlignment(.leading)
+                        
                     }
                     .modifier(ScoreContainerModifier())
                 }
                 
-                // Slot machine
+                // MARK: - SLOT MACHINE
                 
                 VStack(alignment: .center, spacing: 0) {
                     
-                    // MARK: - REEL 1
+                    // MARK: - REEL #1
                     ZStack {
                         ReelView()
                         Image(symbols[reels[0]])
@@ -141,16 +151,15 @@ struct ContentView: View {
                             .modifier(ImageModifier())
                             .opacity(animatingSymbol ? 1 : 0)
                             .offset(y: animatingSymbol ? 0 : -50)
-                            .animation(.easeOut(duration: Double.random(in: 0.5...0.7)))
-                            .onAppear {
+                            .animation(.easeOut(duration: Double.random(in: 0.5...0.7)), value: animatingSymbol)
+                            .onAppear(perform: {
                                 self.animatingSymbol.toggle()
                                 playSound(sound: "riseup", type: "mp3")
-                            }
+                            })
                     }
                     
                     HStack(alignment: .center, spacing: 0) {
-                        
-                        // MARK: - REEL 2
+                        // MARK: - REEL #2
                         ZStack {
                             ReelView()
                             Image(symbols[reels[1]])
@@ -158,15 +167,15 @@ struct ContentView: View {
                                 .modifier(ImageModifier())
                                 .opacity(animatingSymbol ? 1 : 0)
                                 .offset(y: animatingSymbol ? 0 : -50)
-                                .animation(.easeOut(duration: Double.random(in: 0.7...0.9)))
-                                .onAppear {
+                                .animation(.easeOut(duration: Double.random(in: 0.7...0.9)), value: animatingSymbol)
+                                .onAppear(perform: {
                                     self.animatingSymbol.toggle()
-                                }
+                                })
                         }
                         
                         Spacer()
                         
-                        // MARK: - REEL 3
+                        // MARK: - REEL #3
                         ZStack {
                             ReelView()
                             Image(symbols[reels[2]])
@@ -174,16 +183,16 @@ struct ContentView: View {
                                 .modifier(ImageModifier())
                                 .opacity(animatingSymbol ? 1 : 0)
                                 .offset(y: animatingSymbol ? 0 : -50)
-                                .animation(.easeOut(duration: Double.random(in: 0.9...1.1)))
-                                .onAppear {
+                                .animation(.easeOut(duration: Double.random(in: 0.9...1.1)), value: animatingSymbol)
+                                .onAppear(perform: {
                                     self.animatingSymbol.toggle()
-                                }
+                                })
                         }
                     }
                     .frame(maxWidth: 500)
                     
                     // MARK: - SPIN BUTTON
-                    Button {
+                    Button(action: {
                         // 1. SET THE DEFAULT STATE: NO ANIMATION
                         withAnimation {
                             self.animatingSymbol = false
@@ -202,34 +211,26 @@ struct ContentView: View {
                         
                         // 5. GAME IS OVER
                         self.isGameOver()
-                        
-                        // SPIN THE REELS
-                        self.spinReels()
-                        
-                        // CHECK WINNING
-                        self.checkWinning()
-                        
-                        // GAME IS OVER
-                        self.isGameOver()
-                    } label: {
+                    }) {
                         Image("gfx-spin")
                             .renderingMode(.original)
                             .resizable()
                             .modifier(ImageModifier())
                     }
-                    
                 } // Slot Machine
                 .layoutPriority(2)
-                // Footer
+                
+                // MARK: - FOOTER
                 
                 Spacer()
                 
                 HStack {
-                    // MARK: – BET 20
+                    
+                    // MARK: - BET 20
                     HStack(alignment: .center, spacing: 10) {
-                        Button {
+                        Button(action: {
                             self.activateBet20()
-                        } label: {
+                        }) {
                             Text("20")
                                 .fontWeight(.heavy)
                                 .foregroundColor(isActiveBet20 ? Color("ColorYellow") : Color.white)
@@ -242,20 +243,23 @@ struct ContentView: View {
                             .offset(x: isActiveBet20 ? 0 : 20)
                             .opacity(isActiveBet20 ? 1 : 0)
                             .modifier(CasinoChipsModifier())
+                            .animation(.default, value: isActiveBet20)
                     }
                     
                     Spacer()
                     
-                    // MARK: – BET 10
+                    // MARK: - BET 10
                     HStack(alignment: .center, spacing: 10) {
                         Image("gfx-casino-chips")
                             .resizable()
                             .offset(x: isActiveBet10 ? 0 : -20)
                             .opacity(isActiveBet10 ? 1 : 0)
                             .modifier(CasinoChipsModifier())
-                        Button {
+                            .animation(.default, value: isActiveBet10)
+                        
+                        Button(action: {
                             self.activateBet10()
-                        } label: {
+                        }) {
                             Text("10")
                                 .fontWeight(.heavy)
                                 .foregroundColor(isActiveBet10 ? Color("ColorYellow") : Color.white)
@@ -265,32 +269,34 @@ struct ContentView: View {
                     }
                 }
             }
-            // MARK: – BUTTONS
+            // MARK: - BUTTONS
             .overlay(
                 // RESET
                 Button(action: {
                     self.resetGame()
-                }, label: {
+                }) {
                     Image(systemName: "arrow.2.circlepath.circle")
-                })
-                .modifier(ButtonModifier()),
+                        .foregroundColor(.white)
+                }
+                    .modifier(ButtonModifier()),
                 alignment: .topLeading
             )
             .overlay(
                 // INFO
                 Button(action: {
                     self.showingInfoView = true
-                }, label: {
+                }) {
                     Image(systemName: "info.circle")
-                })
-                .modifier(ButtonModifier()),
+                        .foregroundColor(.white)
+                }
+                    .modifier(ButtonModifier()),
                 alignment: .topTrailing
             )
             .padding()
             .frame(maxWidth: 720)
             .blur(radius: $showingModal.wrappedValue ? 5 : 0, opaque: false)
             
-            // MARK: – POPUP
+            // MARK: - POPUP
             if $showingModal.wrappedValue {
                 ZStack {
                     Color("ColorTransparentBlack").edgesIgnoringSafeArea(.all)
@@ -315,19 +321,19 @@ struct ContentView: View {
                                 .scaledToFit()
                                 .frame(maxHeight: 72)
                             
-                            Text("Bad luck! You lost all of the coins. \n Let's play again!")
+                            Text("Bad luck! You lost all of the coins. \nLet's play again!")
                                 .font(.system(.body, design: .rounded))
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(Color.gray)
                                 .layoutPriority(1)
                             
-                            Button {
+                            Button(action: {
                                 self.showingModal = false
-                                self.animatingModel = false
+                                self.animatingModal = false
                                 self.activateBet10()
                                 self.coins = 100
-                            } label: {
+                            }) {
                                 Text("New Game".uppercased())
                                     .font(.system(.body, design: .rounded))
                                     .fontWeight(.semibold)
@@ -349,24 +355,27 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(20)
                     .shadow(color: Color("ColorTransparentBlack"), radius: 6, x: 0, y: 8)
-                    .opacity($animatingModel.wrappedValue ? 1 : 0)
-                    .offset(y: $animatingModel.wrappedValue ? 0 : -100)
-                    .animation(Animation.spring(response: 0.6, dampingFraction: 1.0, blendDuration: 1.0))
-                    .onAppear {
-                        self.animatingModel = true
-                    }
+                    .opacity($animatingModal.wrappedValue ? 1 : 0)
+                    .offset(y: $animatingModal.wrappedValue ? 0 : -100)
+                    .animation(Animation.spring(response: 0.6, dampingFraction: 1.0, blendDuration: 1.0), value: showingModal)
+                    .onAppear(perform: {
+                        self.animatingModal = true
+                    })
                 }
             }
-        } //: ZSTACK
+            
+        } // ZStack
         .sheet(isPresented: $showingInfoView) {
             InfoView()
         }
     }
 }
 
-// MARK: – PREVIEW
+// MARK: - PREVIEW
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 13")
     }
 }
