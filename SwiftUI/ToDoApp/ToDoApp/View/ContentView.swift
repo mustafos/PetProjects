@@ -144,6 +144,5 @@ struct ContentView_Previews: PreviewProvider {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         return ContentView()
             .environment(\.managedObjectContext, context)
-            .previewDevice("iPhone 12 Pro")
     }
 }
