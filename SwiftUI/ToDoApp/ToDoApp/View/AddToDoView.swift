@@ -50,7 +50,6 @@ struct AddTodoView: View {
                             
                             do {
                                 try self.managedObjectContext.save()
-                                // print("New todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
                             } catch {
                                 print(error)
                             }

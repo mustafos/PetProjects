@@ -84,8 +84,6 @@ struct ContentView: View {
                         //.scaleEffect(self.animatingButton ? 1 : 0)
                             .frame(width: 88, height: 88, alignment: .center)
                     }
-                    //.animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
-                    
                     Button(action: {
                         self.showingAddTodoView.toggle()
                     }) {
