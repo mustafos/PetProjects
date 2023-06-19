@@ -4,6 +4,7 @@ import Supabase
 class QuizManager: ObservableObject {
     
     @Published var questions = [Question]()
+    @Published var quizResult = QuizResult(correct: 0, total: 0, grade: "100%")
     
 //    @Published var questions = [
 //        Question(title: "When was the iPhone first released?", answer: "A", options: ["A", "B", "C", "D"]),
@@ -35,13 +36,23 @@ class QuizManager: ObservableObject {
         return questions.filter({ $0.selection == nil }).isEmpty
     }
     
-    func qradeQuiz() -> String {
+    func qradeQuiz() {
         var correct: CGFloat = 0
         for question in questions {
             if question.answer == question.selection {
                 correct += 1
             }
         }
-        return "\((correct/CGFloat(questions.count)) * 100) %"
+        self.quizResult = QuizResult(correct: correct , total: CGFloat(questions.count), grade: "\((correct/CGFloat(questions.count)) * 100)%")
     }
+    
+    func resetQuiz() {
+        self.questions = questions.map({ Question(id: $0.id, createdAt: $0.createdAt, title: $0.title, answer: $0.answer, options: $0.options, selection: nil)})
+    }
+}
+
+struct QuizResult {
+    let correct: CGFloat
+    let total: CGFloat
+    let grade: String
 }

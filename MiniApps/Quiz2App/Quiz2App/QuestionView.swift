@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Question: Identifiable, Decodable {
-    let id = UUID()
+    var id = UUID()
     let createdAt: String
     let title: String
     let answer: String

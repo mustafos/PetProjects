@@ -3,21 +3,23 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var manager = QuizManager()
-    @State var showStart = false
+    @State var selection = 0
+    @State var showStart = true
     @State var showResults = false
     
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             ForEach(manager.questions.indices, id: \.self) { index in
                 VStack {
                     Spacer()
                     QuestionView(question: $manager.questions[index])
                     Spacer()
-                    
                     if let lastQuestion = manager.questions.last, lastQuestion.id == manager.questions[index].id {
-                        
                         Button {
-                            print("OK")
+                            manager.qradeQuiz()
+                            showResults = true
+                            manager.resetQuiz()
+                            selection = 0
                         } label: {
                             Text("Submit")
                                 .padding()
@@ -32,6 +34,7 @@ struct ContentView: View {
                         .disabled(!manager.canSubmitQuiz())
                     }
                 }
+                .tag(index)
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
@@ -39,7 +42,7 @@ struct ContentView: View {
             StartView()
         }
         .fullScreenCover(isPresented: $showResults) {
-            ResultsView()
+            ResultsView(result: manager.quizResult)
         }
     }
 }
