@@ -20,6 +20,7 @@
 		6A0E67DA2A40CE9500079DA8 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E67D92A40CE9500079DA8 /* FooterView.swift */; };
 		6A1D07F92A42443B0030C666 /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D07F82A42443B0030C666 /* HeaderComponent.swift */; };
 		6A1D07FB2A4245750030C666 /* GuideComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D07FA2A4245750030C666 /* GuideComponent.swift */; };
+		6A1D07FD2A4247EE0030C666 /* GuiddeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D07FC2A4247EE0030C666 /* GuiddeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6A0E67D92A40CE9500079DA8 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		6A1D07F82A42443B0030C666 /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
 		6A1D07FA2A4245750030C666 /* GuideComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponent.swift; sourceTree = "<group>"; };
+		6A1D07FC2A4247EE0030C666 /* GuiddeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiddeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				6A0E67D52A40C97900079DA8 /* CardView.swift */,
 				6A0E67D72A40CCA900079DA8 /* HeaderView.swift */,
 				6A0E67D92A40CE9500079DA8 /* FooterView.swift */,
+				6A1D07FC2A4247EE0030C666 /* GuiddeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				6A0E67D22A40C8D000079DA8 /* HoneymoonData.swift in Sources */,
 				6A0E67DA2A40CE9500079DA8 /* FooterView.swift in Sources */,
+				6A1D07FD2A4247EE0030C666 /* GuiddeView.swift in Sources */,
 				6A0E67D82A40CCA900079DA8 /* HeaderView.swift in Sources */,
 				6A0E67CF2A40C85900079DA8 /* HoneymoonModel.swift in Sources */,
 				6A1D07F92A42443B0030C666 /* HeaderComponent.swift in Sources */,
