@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    // MARK: – PROPERTIES
+    
     var body: some View {
         HStack {
             Button {
