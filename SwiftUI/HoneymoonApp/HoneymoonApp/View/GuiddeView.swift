@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct GuiddeView: View {
+    
+    // MARK: – PROPERTIES
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -11,8 +15,7 @@ struct GuiddeView: View {
                 
                 Text("Get Strarted!")
                     .fontWeight(.black)
-                    .font(.largeTitle)
-                    .foregroundColor(Color.pink)
+                    .modifier(TitleModifier())
                 
                 Text("Discover and the perfect destination for your romantic Honeymoon!")
                     .lineLimit(nil)
@@ -47,14 +50,11 @@ struct GuiddeView: View {
                 
                 Button {
                     // Action
-                    print("button was tapped")
+                    // print("button was tapped")
+                    self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Continue".uppercased())
-                        .font(.headline)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .background(Capsule().fill(Color.pink))
-                        .foregroundColor(Color.white)
+                        .modifier(ButtonModifier())
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity)
