@@ -1,12 +1,11 @@
 import SwiftUI
 
 struct CardView: View, Identifiable {
+    // MARK: - PROPERTIES
     
-    // MARK: – PROPERTIES
     let id = UUID()
     var honeymoon: Destination
     
-    // MARK: – BODY
     var body: some View {
         Image(honeymoon.image)
             .resizable()
@@ -21,7 +20,7 @@ struct CardView: View, Identifiable {
                         .fontWeight(.bold)
                         .shadow(radius: 1)
                         .padding(.horizontal, 18)
-                        .padding(.bottom, 4)
+                        .padding(.vertical, 4)
                         .overlay(
                             Rectangle()
                                 .fill(Color.white)
@@ -46,7 +45,6 @@ struct CardView: View, Identifiable {
     }
 }
 
-// MARK: – PREVIEW
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(honeymoon: honeymoonData[0])

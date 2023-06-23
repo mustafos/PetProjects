@@ -1,17 +1,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - PROPERTIES
     
-    // MARK: PROPERTIES
     @State var showAlert: Bool = false
     @State var showGuide: Bool = false
     @State var showInfo: Bool = false
     @GestureState private var dragState = DragState.inactive
-    private let dragAreaThreshold: CGFloat = 65.0
+    private var dragAreaThreshold: CGFloat = 65.0
     @State private var lastCardIndex: Int = 1
     @State private var cardRemovalTransition = AnyTransition.trailingBottom
     
-    // MARK: – CARD VIEWS
+    // MARK: - CARD VIEWS
     
     @State var cardViews: [CardView] = {
         var views = [CardView]()
@@ -21,7 +21,7 @@ struct ContentView: View {
         return views
     }()
     
-    // MARK: MOVE THE CARD
+    // MARK: - MOVE THE CARD
     
     private func moveCards() {
         cardViews.removeFirst()
@@ -36,6 +36,7 @@ struct ContentView: View {
     }
     
     // MARK: TOP CARD
+    
     private func isTopCard(cardView: CardView) -> Bool {
         guard let index = cardViews.firstIndex(where: { $0.id == cardView.id }) else {
             return false
@@ -43,7 +44,7 @@ struct ContentView: View {
         return index == 0
     }
     
-    // MARK: DRAG STATES
+    // MARK: - DRAG STATES
     
     enum DragState {
         case inactive
@@ -80,34 +81,32 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            // MARK: – HEADER
+            // MARK: - HEADER
             HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
                 .opacity(dragState.isDragging ? 0.0 : 1.0)
-                .animation(.default)
+                .animation(.default, value: showInfo)
             
             Spacer()
             
-            // MARK: – CARDS
+            // MARK: - CARDS
             ZStack {
                 ForEach(cardViews) { cardView in
                     cardView
                         .zIndex(self.isTopCard(cardView: cardView) ? 1 : 0)
-                        .overlay(content: {
+                        .overlay(
                             ZStack {
                                 // X-MARK SYMBOL
                                 Image(systemName: "x.circle")
                                     .modifier(SymbolModifier())
-                                    .opacity(self.dragState.translation.width < -self.dragAreaThreshold
-                                             && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
+                                    .opacity(self.dragState.translation.width < -self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
                                 
                                 // HEART SYMBOL
                                 Image(systemName: "heart.circle")
                                     .modifier(SymbolModifier())
-                                    .opacity(self.dragState.translation.width > self.dragAreaThreshold
-                                             && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
+                                    .opacity(self.dragState.translation.width > self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
                             }
-                        })
-                        .offset(x: self.isTopCard(cardView: cardView) ? self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ? self.dragState.translation.height : 0)
+                        )
+                        .offset(x: self.isTopCard(cardView: cardView) ?  self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ?  self.dragState.translation.height : 0)
                         .scaleEffect(self.dragState.isDragging && self.isTopCard(cardView: cardView) ? 0.85 : 1.0)
                         .rotationEffect(Angle(degrees: self.isTopCard(cardView: cardView) ? Double(self.dragState.translation.width / 12) : 0))
                         .animation(.interpolatingSpring(stiffness: 120, damping: 120))
@@ -123,21 +122,29 @@ struct ContentView: View {
                                         break
                                 }
                             })
-                                .onChanged({ value in
-                                    guard case .second(true, let drag?) = value else { return }
-                                })
-                                .onEnded({ value in
-                                    guard case .second(true, let drag?) = value else { return }
-                                    
-                                    if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
-                                        self.moveCards()
+                                .onChanged({ (value) in
+                                    guard case .second(true, let drag?) = value else {
+                                        return
                                     }
                                     
-                                    if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
-                                        playSound(sound: "sound-rise", type: "mp3")
-                                        self.moveCards()
+                                    if drag.translation.width < -self.dragAreaThreshold {
+                                        self.cardRemovalTransition = .leadingBottom
+                                    }
+                                    
+                                    if drag.translation.width > self.dragAreaThreshold {
+                                        self.cardRemovalTransition = .trailingBottom
                                     }
                                 })
+                                    .onEnded({ (value) in
+                                        guard case .second(true, let drag?) = value else {
+                                            return
+                                        }
+                                        
+                                        if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
+                                            playSound(sound: "sound-rise", type: "mp3")
+                                            self.moveCards()
+                                        }
+                                    })
                         ).transition(self.cardRemovalTransition)
                 }
             }
@@ -145,10 +152,10 @@ struct ContentView: View {
             
             Spacer()
             
-            // MARK: – FOOTER
+            // MARK: - FOOTER
             FooterView(showBookingAlert: $showAlert)
                 .opacity(dragState.isDragging ? 0.0 : 1.0)
-                .animation(.default)
+                .animation(.default, value: showInfo)
         }
         .alert(isPresented: $showAlert) {
             Alert(
@@ -162,6 +169,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewDevice("iPhone 13 mini")
+            .previewDevice("iPhone 13")
     }
 }

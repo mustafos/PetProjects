@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct InfoView: View {
-    
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
     
@@ -27,6 +26,7 @@ struct InfoView: View {
                 Spacer(minLength: 10)
                 
                 Button(action: {
+                    // ACTION
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Continue".uppercased())
