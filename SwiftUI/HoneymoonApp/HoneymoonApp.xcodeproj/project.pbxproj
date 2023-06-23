@@ -25,6 +25,7 @@
 		6A1D07FB2A4245750030C666 /* GuideComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D07FA2A4245750030C666 /* GuideComponent.swift */; };
 		6A1D07FD2A4247EE0030C666 /* GuiddeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D07FC2A4247EE0030C666 /* GuiddeView.swift */; };
 		6AACA39B2A46027600184344 /* SymbolModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AACA39A2A46027600184344 /* SymbolModifier.swift */; };
+		6AACA39E2A4606F500184344 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AACA39D2A4606F500184344 /* CardTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		6A1D07FA2A4245750030C666 /* GuideComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponent.swift; sourceTree = "<group>"; };
 		6A1D07FC2A4247EE0030C666 /* GuiddeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiddeView.swift; sourceTree = "<group>"; };
 		6AACA39A2A46027600184344 /* SymbolModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolModifier.swift; sourceTree = "<group>"; };
+		6AACA39D2A4606F500184344 /* CardTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		6A0E67B92A40AEDA00079DA8 /* HoneymoonApp */ = {
 			isa = PBXGroup;
 			children = (
+				6AACA39C2A4606DC00184344 /* Extension */,
 				6A0E67BA2A40AEDA00079DA8 /* HoneymoonAppApp.swift */,
 				6A0E67D02A40C85D00079DA8 /* Model */,
 				6A0E67D42A40C96700079DA8 /* View */,
@@ -157,6 +160,14 @@
 				6A1D07FA2A4245750030C666 /* GuideComponent.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		6AACA39C2A4606DC00184344 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6AACA39D2A4606F500184344 /* CardTransition.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 				6A0C752A2A443D810049AC21 /* InfoView.swift in Sources */,
 				6A0E67DA2A40CE9500079DA8 /* FooterView.swift in Sources */,
 				6A0C752C2A443E260049AC21 /* TitleModifier.swift in Sources */,
+				6AACA39E2A4606F500184344 /* CardTransition.swift in Sources */,
 				6AACA39B2A46027600184344 /* SymbolModifier.swift in Sources */,
 				6A1D07FD2A4247EE0030C666 /* GuiddeView.swift in Sources */,
 				6A0E67D82A40CCA900079DA8 /* HeaderView.swift in Sources */,
