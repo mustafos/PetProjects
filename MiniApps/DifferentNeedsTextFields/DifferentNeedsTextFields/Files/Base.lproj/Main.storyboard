@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerIdentifier" id="BYZ-38-t0r" customClass="ViewController" customModule="DifferentNeedsTextFields" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1HT-ec-pJ8">
+                                <rect key="frame" x="25" y="99" width="343" height="491"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZQ-Dw-cUC">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="ZEC-M6-iBu"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="hbD-cn-e46"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="34"/>
+                                        <color key="textColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jX-aX-gpL" customClass="CustomView" customModule="DifferentNeedsTextFields" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71" width="343" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="jf5-sD-d0P"/>
+                                            <constraint firstAttribute="width" constant="343" id="pTt-jZ-Von"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bM-IH-uiA" customClass="CustomView" customModule="DifferentNeedsTextFields" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="161" width="343" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-sc-vhH">
+                                                <rect key="frame" x="301.33333333333331" y="36.333333333333314" width="33.666666666666686" height="15.666666666666664"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="6sQ-8K-ace"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ei9-sc-vhH" secondAttribute="trailing" constant="7.9999999999999432" id="8MB-xq-01L"/>
+                                            <constraint firstItem="Ei9-sc-vhH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2bM-IH-uiA" secondAttribute="leading" constant="20" symbolic="YES" id="DyM-PX-FCM"/>
+                                            <constraint firstAttribute="height" constant="60" id="fCT-JT-8Xx"/>
+                                            <constraint firstItem="Ei9-sc-vhH" firstAttribute="top" secondItem="2bM-IH-uiA" secondAttribute="top" constant="36.333333333333314" id="jMe-Gd-gVo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-zb-U2W" customClass="CustomView" customModule="DifferentNeedsTextFields" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="251" width="343" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="efg-Aa-Zb9"/>
+                                            <constraint firstAttribute="width" constant="343" id="oB8-TW-eZi"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-fy-vt3" customClass="CustomView" customModule="DifferentNeedsTextFields" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="341" width="343" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="HDa-Hl-PSo"/>
+                                            <constraint firstAttribute="height" constant="60" id="UfU-Bn-HAZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0x-pj-5ti" customClass="CustomView" customModule="DifferentNeedsTextFields" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="431" width="343" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0dk-bP-Rbx"/>
+                                            <constraint firstAttribute="width" constant="343" id="74a-7a-PCF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8G2-1k-MJY">
+                                <rect key="frame" x="24" y="598" width="147" height="74.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min length 8 characters." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukU-6v-aQt">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="15.666666666666666"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min 1 digit." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-Lv-Ejf">
+                                        <rect key="frame" x="0.0" y="19.666666666666629" width="63.666666666666664" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                        <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min 1 lowercase." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xI-OT-lqu">
+                                        <rect key="frame" x="0.0" y="39.333333333333371" width="97.666666666666671" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                        <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min 1 capital required." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-Ad-8JT">
+                                        <rect key="frame" x="0.0" y="58.999999999999993" width="131.33333333333334" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                        <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8G2-1k-MJY" firstAttribute="top" secondItem="1HT-ec-pJ8" secondAttribute="bottom" constant="8" id="4QM-0j-rDX"/>
+                            <constraint firstItem="1HT-ec-pJ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Et7-jA-7ZQ"/>
+                            <constraint firstItem="1HT-ec-pJ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jio-oU-DSO"/>
+                            <constraint firstItem="8G2-1k-MJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Oth-Tn-jU5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="capitalRequiredLabel" destination="XE9-Ad-8JT" id="Nzu-OP-GhP"/>
+                        <outlet property="counterLabel" destination="Ei9-sc-vhH" id="bCk-6L-bIq"/>
+                        <outlet property="digitLabel" destination="0BQ-Lv-Ejf" id="8cu-P8-cWu"/>
+                        <outlet property="fifthView" destination="u0x-pj-5ti" id="h2w-L4-9mc"/>
+                        <outlet property="firstView" destination="7jX-aX-gpL" id="CEf-Gd-A1T"/>
+                        <outlet property="fourthView" destination="ZZ0-fy-vt3" id="7Qc-ub-Kec"/>
+                        <outlet property="lengthCharLabel" destination="ukU-6v-aQt" id="fU0-xK-PHy"/>
+                        <outlet property="lowercaseLabel" destination="5xI-OT-lqu" id="ge3-2q-18t"/>
+                        <outlet property="secondView" destination="2bM-IH-uiA" id="d6r-WX-F22"/>
+                        <outlet property="thirdView" destination="bVu-zb-U2W" id="TA0-oj-A7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
