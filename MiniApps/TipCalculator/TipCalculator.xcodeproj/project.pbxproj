@@ -30,6 +30,7 @@
 		6AA7B3AA2A4C563700E54F47 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3A92A4C563700E54F47 /* ThemeFont.swift */; };
 		6AA7B3AD2A4C568A00E54F47 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3AC2A4C568A00E54F47 /* UIColor+Extension.swift */; };
 		6AA7B3B02A4F6EA100E54F47 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3AF2A4F6EA100E54F47 /* LabelFactory.swift */; };
+		6ACC0BBE2A51810800C0DDBD /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACC0BBD2A51810800C0DDBD /* AmountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		6AA7B3A92A4C563700E54F47 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		6AA7B3AC2A4C568A00E54F47 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6AA7B3AF2A4F6EA100E54F47 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		6ACC0BBD2A51810800C0DDBD /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				6AA7B3A42A4C51EC00E54F47 /* SplitInputView.swift */,
 				6AA7B3A02A4C519B00E54F47 /* BillInputView.swift */,
 				6AA7B3A22A4C51C200E54F47 /* TipInputView.swift */,
+				6ACC0BBD2A51810800C0DDBD /* AmountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACC0BBE2A51810800C0DDBD /* AmountView.swift in Sources */,
 				6AA7B3602A4C4B4F00E54F47 /* CalculatorVC.swift in Sources */,
 				6A2B24462A50BD160047249E /* UIView+Extension.swift in Sources */,
 				6AA7B39D2A4C4F9F00E54F47 /* LogoView.swift in Sources */,

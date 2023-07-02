@@ -4,7 +4,9 @@ import SnapKit
 class ResultView: UIView {
     
     private let headerLabel: UILabel = {
-        LabelFactory.build(text: "Total p/person", font: ThemeFont.demiBold(ofSize: 18))
+        LabelFactory.build(
+            text: "Total p/person",
+            font: ThemeFont.demiBold(ofSize: 18))
     }()
     
     private let amountPerPersonLabel: UILabel = {
@@ -43,9 +45,9 @@ class ResultView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(),
+            AmountView(title: "Total bill", textAligment: .left),
             UIView(),
-            AmountView()
+            AmountView(title: "Total tip", textAligment: .right)
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -70,6 +72,7 @@ class ResultView: UIView {
             make.trailing.equalTo(snp.trailing).offset(-24)
             make.bottom.equalTo(snp.bottom).offset(-24)
         }
+        
         horizontalLineView.snp.makeConstraints { make in
             make.height.equalTo(2)
         }
@@ -85,20 +88,5 @@ class ResultView: UIView {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: height).isActive = true
         return view
-    }
-}
-
-class AmountView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        layout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func layout() -> Void {
-        backgroundColor = .red
     }
 }
