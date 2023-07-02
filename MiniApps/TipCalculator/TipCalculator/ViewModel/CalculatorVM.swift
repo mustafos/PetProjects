@@ -12,7 +12,10 @@ class CalculatorVM {
         let updateViewPublisher: AnyPublisher<Result, Never>
     }
     
+    private var cancellables = Set<AnyCancellable>()
+    
     func transform(input: Input) -> Output {
+        
         let result = Result(
             amountPerPerson: 500,
             totalBill: 1000,
