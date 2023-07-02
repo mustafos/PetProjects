@@ -16,6 +16,10 @@ class CalculatorVM {
     
     func transform(input: Input) -> Output {
         
+        input.tipPublisher.sink { tip in
+            print("the tip: \(tip)")
+        }.store(in: &cancellables)
+        
         let result = Result(
             amountPerPerson: 500,
             totalBill: 1000,
