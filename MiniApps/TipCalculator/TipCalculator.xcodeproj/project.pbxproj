@@ -173,10 +173,10 @@
 			children = (
 				6AA7B39C2A4C4F9F00E54F47 /* LogoView.swift */,
 				6AA7B39E2A4C516500E54F47 /* ResultView.swift */,
-				6AA7B3A42A4C51EC00E54F47 /* SplitInputView.swift */,
-				6AA7B3A02A4C519B00E54F47 /* BillInputView.swift */,
-				6AA7B3A22A4C51C200E54F47 /* TipInputView.swift */,
 				6ACC0BBD2A51810800C0DDBD /* AmountView.swift */,
+				6AA7B3A02A4C519B00E54F47 /* BillInputView.swift */,
+				6AA7B3A42A4C51EC00E54F47 /* SplitInputView.swift */,
+				6AA7B3A22A4C51C200E54F47 /* TipInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

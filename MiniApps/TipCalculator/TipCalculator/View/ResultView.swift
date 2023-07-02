@@ -1,5 +1,4 @@
 import UIKit
-import SnapKit
 
 class ResultView: UIView {
     
