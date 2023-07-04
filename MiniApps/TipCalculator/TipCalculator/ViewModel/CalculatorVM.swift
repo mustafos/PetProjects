@@ -16,8 +16,8 @@ class CalculatorVM {
     
     func transform(input: Input) -> Output {
         
-        input.tipPublisher.sink { tip in
-            print("the tip: \(tip)")
+        input.splitPublisher.sink { split in
+            print("the split: \(split)")
         }.store(in: &cancellables)
         
         let result = Result(
