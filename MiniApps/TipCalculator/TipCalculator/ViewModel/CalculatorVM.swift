@@ -2,20 +2,27 @@ import Foundation
 import Combine
 
 class CalculatorVM {
+    
     struct Input {
         let billPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
+        let logoViewTapPublisher: AnyPublisher<Void, Never>
     }
     
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
+        let resultCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     private var cancellables = Set<AnyCancellable>()
+    private var audioPlayerService: AudioPlayerService
+    
+    init(audioPlayerService: AudioPlayerService = DefaultAudioPlayer()) {
+        self.audioPlayerService = audioPlayerService
+    }
     
     func transform(input: Input) -> Output {
-        
         let updateViewPublisher = Publishers.CombineLatest3(
             input.billPublisher,
             input.tipPublisher,
@@ -30,7 +37,17 @@ class CalculatorVM {
                 
                 return Just(result)
             }.eraseToAnyPublisher()
-        return Output(updateViewPublisher: updateViewPublisher)
+        
+        let resultCalculatorPublisher = input
+            .logoViewTapPublisher
+            .handleEvents(receiveOutput:  { [unowned self] in
+            audioPlayerService.playSound()
+        }).flatMap {
+            return Just($0)
+        }.eraseToAnyPublisher()
+        
+        return Output(updateViewPublisher: updateViewPublisher,
+                      resultCalculatorPublisher: resultCalculatorPublisher)
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {
