@@ -12,7 +12,7 @@ class CalculatorVM {
     
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
-        let resultCalculatorPublisher: AnyPublisher<Void, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     private var cancellables = Set<AnyCancellable>()
@@ -47,7 +47,7 @@ class CalculatorVM {
         }.eraseToAnyPublisher()
         
         return Output(updateViewPublisher: updateViewPublisher,
-                      resultCalculatorPublisher: resultCalculatorPublisher)
+                      resetCalculatorPublisher: resultCalculatorPublisher)
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {
