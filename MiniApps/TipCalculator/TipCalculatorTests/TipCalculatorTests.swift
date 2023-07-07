@@ -7,10 +7,13 @@ final class TipCalculatorTests: XCTestCase {
     // sut -> system under text
     private var sut: CalculatorVM!
     private var cancellables: Set<AnyCancellable>!
-    private let logoViewTapSubject = PassthroughSubject<Void, Never>()
+    private var logoViewTapSubject: PassthroughSubject<Void, Never>!
+    private var audioPlayerService: MockAudioPlayerService!
     
     override func setUp() {
-        sut = .init()
+        audioPlayerService = .init()
+        sut = .init(audioPlayerService: audioPlayerService)
+        logoViewTapSubject = .init()
         cancellables = .init()
         super.setUp()
     }
@@ -19,6 +22,8 @@ final class TipCalculatorTests: XCTestCase {
         super.tearDown()
         sut = nil
         cancellables = nil
+        audioPlayerService = nil
+        logoViewTapSubject = nil
     }
     
     func testResultWithoutTipForPerson() {
@@ -76,11 +81,30 @@ final class TipCalculatorTests: XCTestCase {
         }.store(in: &cancellables)
     }
     
+    func testSoundPlayedAndCalculatorResetOnLogoViewTap() {
+        let input = buildInput(bill: 100, tip: .tenPercent, split: 2)
+        let output = sut.transform(input: input)
+        let expectation1 = XCTestExpectation(description: "reset calculator called")
+        let expectation2 = audioPlayerService.expectation
+        output.resetCalculatorPublisher.sink { _ in
+            expectation1.fulfill()
+        }.store(in: &cancellables)
+        logoViewTapSubject.send()
+        wait(for: [expectation1, expectation2], timeout: 1.0)
+    }
+    
     private func buildInput(bill: Double, tip: Tip, split: Int) -> CalculatorVM.Input {
         return .init(
             billPublisher: Just(bill).eraseToAnyPublisher(),
             tipPublisher: Just(tip).eraseToAnyPublisher(),
             splitPublisher: Just(split).eraseToAnyPublisher(),
             logoViewTapPublisher: logoViewTapSubject.eraseToAnyPublisher())
+    }
+}
+
+class MockAudioPlayerService: AudioPlayerService {
+    var expectation = XCTestExpectation(description: "playSound is called")
+    func playSound() {
+        expectation.fulfill()
     }
 }
