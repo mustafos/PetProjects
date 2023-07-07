@@ -1,10 +1,3 @@
-//
-//  TipCalculatorUITestsLaunchTests.swift
-//  TipCalculatorUITests
-//
-//  Created by Mustafa Bekirov on 28.06.2023.
-//
-
 import XCTest
 
 final class TipCalculatorUITestsLaunchTests: XCTestCase {
