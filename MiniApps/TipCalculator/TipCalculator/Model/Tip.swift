@@ -16,10 +16,9 @@ enum Tip {
             case .fifteenPercent:
                 return "15%"
             case .twentyPercent:
-                return "20%"
+                return  "20%"
             case .custom(let value):
                 return String(value)
         }
     }
 }
-
