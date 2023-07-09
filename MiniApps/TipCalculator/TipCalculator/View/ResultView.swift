@@ -1,12 +1,11 @@
 import UIKit
-import SnapKit
 
 class ResultView: UIView {
     
     private let headerLabel: UILabel = {
         LabelFactory.build(
             text: "Total p/person",
-            font: ThemeFont.demiBold(ofSize: 18))
+            font: ThemeFont.demibold(ofSize: 18))
     }()
     
     private let amountPerPersonLabel: UILabel = {
@@ -15,18 +14,19 @@ class ResultView: UIView {
         let text = NSMutableAttributedString(
             string: "$0",
             attributes: [
-                .font: ThemeFont.bold(ofSize: 40)
+                .font: ThemeFont.bold(ofSize: 48)
             ])
         text.addAttributes([
             .font: ThemeFont.bold(ofSize: 24)
         ], range: NSMakeRange(0, 1))
         label.attributedText = text
+        label.accessibilityIdentifier = ScreenIdentifier.ResultView.totalAmountPerPersonValueLabel.rawValue
         return label
     }()
     
     private let horizontalLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = ThemeColot.separator
+        view.backgroundColor = ThemeColor.separator
         return view
     }()
     
@@ -43,11 +43,27 @@ class ResultView: UIView {
         return stackView
     }()
     
+    private let totalBillView: AmountView = {
+        let view = AmountView(
+            title: "Total bill",
+            textAlignment: .left,
+            amountLabelIdentifier: ScreenIdentifier.ResultView.totalBillValueLabel.rawValue)
+        return view
+    }()
+    
+    private let totalTipView: AmountView = {
+        let view = AmountView(
+            title: "Total tip",
+            textAlignment: .right,
+            amountLabelIdentifier: ScreenIdentifier.ResultView.totalTipValueLabel.rawValue)
+        return view
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(title: "Total bill", textAligment: .left),
+            totalBillView,
             UIView(),
-            AmountView(title: "Total tip", textAligment: .right)
+            totalTipView
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -63,9 +79,23 @@ class ResultView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(result: Result) {
+        let text = NSMutableAttributedString(
+            string: result.amountPerPerson.currencyFormatted,
+            attributes: [.font: ThemeFont.bold(ofSize: 48)])
+        text.addAttributes([
+            .font: ThemeFont.bold(ofSize: 24)
+        ], range: NSMakeRange(0, 1))
+        amountPerPersonLabel.attributedText = text
+        
+        totalBillView.configure(amount: result.totalBill)
+        totalTipView.configure(amount: result.totalTip)
+    }
+    
     private func layout() {
         backgroundColor = .white
         addSubview(vStackView)
+        
         vStackView.snp.makeConstraints { make in
             make.top.equalTo(snp.top).offset(24)
             make.leading.equalTo(snp.leading).offset(24)

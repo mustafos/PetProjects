@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  TipCalculator
-//
-//  Created by Mustafa Bekirov on 28.06.2023.
-//
-
 import UIKit
 
 @main
