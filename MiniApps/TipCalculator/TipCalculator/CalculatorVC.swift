@@ -44,7 +44,7 @@ class CalculatorVC: UIViewController {
             Just(())
         }.eraseToAnyPublisher()
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
@@ -76,13 +76,12 @@ class CalculatorVC: UIViewController {
                 usingSpringWithDamping: 5.0,
                 initialSpringVelocity: 0.5,
                 options: .curveEaseInOut) {
-                self.logoView.transform = .init(scaleX: 1.5, y: 1.5)
-            } completion: { _ in
-                UIView.animate(withDuration: 0.1) {
-                    self.logoView.transform = .identity
+                    self.logoView.transform = .init(scaleX: 1.5, y: 1.5)
+                } completion: { _ in
+                    UIView.animate(withDuration: 0.1) {
+                        self.logoView.transform = .identity
+                    }
                 }
-            }
-
         }.store(in: &cancellables)
     }
     
@@ -93,7 +92,7 @@ class CalculatorVC: UIViewController {
     }
     
     private func layout() {
-        view.backgroundColor = ThemeColot.bg
+        view.backgroundColor = ThemeColor.bg
         view.addSubview(vStackView)
         
         vStackView.snp.makeConstraints { make in
@@ -124,4 +123,3 @@ class CalculatorVC: UIViewController {
         }
     }
 }
-

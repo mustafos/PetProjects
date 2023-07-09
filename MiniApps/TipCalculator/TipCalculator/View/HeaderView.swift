@@ -3,11 +3,15 @@ import UIKit
 class HeaderView: UIView {
     
     private let topLabel: UILabel = {
-        LabelFactory.build(text: nil, font: ThemeFont.bold(ofSize: 18))
+        LabelFactory.build(
+            text: nil,
+            font: ThemeFont.bold(ofSize: 18))
     }()
     
     private let bottomLabel: UILabel = {
-        LabelFactory.build(text: nil, font: ThemeFont.regular(ofSize: 16))
+        LabelFactory.build(
+            text: nil,
+            font: ThemeFont.regular(ofSize: 16))
     }()
     
     private let topSpacerView = UIView()

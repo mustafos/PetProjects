@@ -30,27 +30,30 @@ class BillInputView: UIView {
     private lazy var textField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .none
-        textField.font = ThemeFont.demiBold(ofSize: 28)
+        textField.font = ThemeFont.demibold(ofSize: 28)
         textField.keyboardType = .decimalPad
         textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        textField.tintColor = ThemeColot.text
-        textField.textColor = ThemeColot.text
+        textField.tintColor = ThemeColor.text
+        textField.textColor = ThemeColor.text
         textField.accessibilityIdentifier = ScreenIdentifier.BillInputView.textField.rawValue
         // Add toolbar
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 36))
-        toolbar.barStyle = .default
-        toolbar.sizeToFit()
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 36))
+        toolBar.barStyle = .default
+        toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(
-            title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
-        toolbar.items = [
+            title: "Done",
+            style: .plain,
+            target: self,
+            action: #selector(doneButtonTapped))
+        toolBar.items = [
             UIBarButtonItem(
                 barButtonSystemItem: .flexibleSpace,
                 target: nil,
                 action: nil),
             doneButton
         ]
-        toolbar.isUserInteractionEnabled = true
-        textField.inputAccessoryView = toolbar
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
         return textField
     }()
     

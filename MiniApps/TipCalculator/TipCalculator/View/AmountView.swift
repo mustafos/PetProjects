@@ -3,21 +3,21 @@ import UIKit
 class AmountView: UIView {
     
     private let title: String
-    private let textAligment: NSTextAlignment
+    private let textAlignment: NSTextAlignment
     private let amountLabelIdentifier: String
     
     private lazy var titleLabel: UILabel = {
         LabelFactory.build(
             text: title,
             font: ThemeFont.regular(ofSize: 18),
-            textColor: ThemeColot.text,
-            textAligment: textAligment)
+            textColor: ThemeColor.text,
+            textAlignment: textAlignment)
     }()
     
     private lazy var amountLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = textAligment
-        label.textColor = ThemeColot.primary
+        label.textAlignment = textAlignment
+        label.textColor = ThemeColor.primary
         let text = NSMutableAttributedString(
             string: "$0",
             attributes: [
@@ -33,16 +33,16 @@ class AmountView: UIView {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-        titleLabel,
-        amountLabel
+            titleLabel,
+            amountLabel
         ])
         stackView.axis = .vertical
         return stackView
     }()
     
-    init(title: String, textAligment: NSTextAlignment, amountLabelIdentifier: String) {
+    init(title: String, textAlignment: NSTextAlignment, amountLabelIdentifier: String) {
         self.title = title
-        self.textAligment = textAligment
+        self.textAlignment = textAlignment
         self.amountLabelIdentifier = amountLabelIdentifier
         super.init(frame: .zero)
         layout()
@@ -62,11 +62,10 @@ class AmountView: UIView {
         amountLabel.attributedText = text
     }
     
-    private func layout() -> Void {
+    private func layout() {
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
 }
-

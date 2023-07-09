@@ -58,7 +58,6 @@ class SplitInputView: UIView {
     var valuePublisher: AnyPublisher<Int, Never> {
         return splitSubject.removeDuplicates().eraseToAnyPublisher()
     }
-    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -76,7 +75,9 @@ class SplitInputView: UIView {
     }
     
     private func layout() {
+        
         [headerView, stackView].forEach(addSubview(_:))
+        
         stackView.snp.makeConstraints { make in
             make.top.bottom.trailing.equalToSuperview()
         }
@@ -86,6 +87,7 @@ class SplitInputView: UIView {
                 make.width.equalTo(button.snp.height)
             }
         }
+        
         headerView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.centerY.equalTo(stackView.snp.centerY)
@@ -104,8 +106,8 @@ class SplitInputView: UIView {
         let button = UIButton()
         button.setTitle(text, for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
-        button.backgroundColor = ThemeColot.primary
-        button.addRoundeCorners(corners: corners, radius: 8.0)
+        button.backgroundColor = ThemeColor.primary
+        button.addRoundedCorners(corners: corners, radius: 8.0)
         return button
     }
 }

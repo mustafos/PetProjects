@@ -5,7 +5,7 @@ class ResultView: UIView {
     private let headerLabel: UILabel = {
         LabelFactory.build(
             text: "Total p/person",
-            font: ThemeFont.demiBold(ofSize: 18))
+            font: ThemeFont.demibold(ofSize: 18))
     }()
     
     private let amountPerPersonLabel: UILabel = {
@@ -14,19 +14,19 @@ class ResultView: UIView {
         let text = NSMutableAttributedString(
             string: "$0",
             attributes: [
-                .font: ThemeFont.bold(ofSize: 40)
+                .font: ThemeFont.bold(ofSize: 48)
             ])
         text.addAttributes([
             .font: ThemeFont.bold(ofSize: 24)
         ], range: NSMakeRange(0, 1))
         label.attributedText = text
-        label.accessibilityIdentifier = ScreenIdentifier.totalAmountPerPersonValueLabel.rawValue
+        label.accessibilityIdentifier = ScreenIdentifier.ResultView.totalAmountPerPersonValueLabel.rawValue
         return label
     }()
     
     private let horizontalLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = ThemeColot.separator
+        view.backgroundColor = ThemeColor.separator
         return view
     }()
     
@@ -46,7 +46,7 @@ class ResultView: UIView {
     private let totalBillView: AmountView = {
         let view = AmountView(
             title: "Total bill",
-            textAligment: .left,
+            textAlignment: .left,
             amountLabelIdentifier: ScreenIdentifier.ResultView.totalBillValueLabel.rawValue)
         return view
     }()
@@ -54,7 +54,7 @@ class ResultView: UIView {
     private let totalTipView: AmountView = {
         let view = AmountView(
             title: "Total tip",
-            textAligment: .right,
+            textAlignment: .right,
             amountLabelIdentifier: ScreenIdentifier.ResultView.totalTipValueLabel.rawValue)
         return view
     }()
@@ -82,10 +82,10 @@ class ResultView: UIView {
     func configure(result: Result) {
         let text = NSMutableAttributedString(
             string: result.amountPerPerson.currencyFormatted,
-            attributes: [.font: ThemeFont.bold(ofSize: 40)])
-        text.addAttributes(
-            [.font: ThemeFont.bold(ofSize: 24)],
-            range: NSMakeRange(0, 1))
+            attributes: [.font: ThemeFont.bold(ofSize: 48)])
+        text.addAttributes([
+            .font: ThemeFont.bold(ofSize: 24)
+        ], range: NSMakeRange(0, 1))
         amountPerPersonLabel.attributedText = text
         
         totalBillView.configure(amount: result.totalBill)
@@ -95,6 +95,7 @@ class ResultView: UIView {
     private func layout() {
         backgroundColor = .white
         addSubview(vStackView)
+        
         vStackView.snp.makeConstraints { make in
             make.top.equalTo(snp.top).offset(24)
             make.leading.equalTo(snp.leading).offset(24)

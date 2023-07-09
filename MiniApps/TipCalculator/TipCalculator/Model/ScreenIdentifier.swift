@@ -29,6 +29,4 @@ enum ScreenIdentifier {
         case incrementButton
         case quantityValueLabel
     }
-    
 }
-

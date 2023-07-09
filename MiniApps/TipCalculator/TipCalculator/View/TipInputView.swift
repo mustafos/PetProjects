@@ -47,7 +47,7 @@ class TipInputView: UIView {
         button.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipButton.rawValue
         button.setTitle("Custom tip", for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
-        button.backgroundColor = ThemeColot.primary
+        button.backgroundColor = ThemeColor.primary
         button.tintColor = .white
         button.addCornerRadius(radius: 8.0)
         button.tapPublisher.sink { [weak self] _ in
@@ -80,7 +80,6 @@ class TipInputView: UIView {
     }()
     
     private let tipSubject: CurrentValueSubject<Tip, Never> = .init(.none)
-    
     var valuePublisher: AnyPublisher<Tip, Never> {
         return tipSubject.eraseToAnyPublisher()
     }
@@ -105,7 +104,6 @@ class TipInputView: UIView {
         buttonVStackView.snp.makeConstraints { make in
             make.top.bottom.trailing.equalToSuperview()
         }
-        
         headerView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalTo(buttonVStackView.snp.leading).offset(-24)
@@ -124,6 +122,7 @@ class TipInputView: UIView {
                 textField.placeholder = "Make it generous!"
                 textField.keyboardType = .numberPad
                 textField.autocorrectionType = .no
+                textField.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue
             }
             let cancelAction = UIAlertAction(
                 title: "Cancel",
@@ -148,20 +147,21 @@ class TipInputView: UIView {
                 case .none:
                     break
                 case .tenPercent:
-                    tenPercentTipButton.backgroundColor = ThemeColot.secondary
+                    tenPercentTipButton.backgroundColor = ThemeColor.secondary
                 case .fifteenPercent:
-                    fifteenPercentTipButton.backgroundColor = ThemeColot.secondary
+                    fifteenPercentTipButton.backgroundColor = ThemeColor.secondary
                 case .twentyPercent:
-                    twentyPercentTipButton.backgroundColor = ThemeColot.secondary
+                    twentyPercentTipButton.backgroundColor = ThemeColor.secondary
                 case .custom(let value):
-                    customTipButton.backgroundColor = ThemeColot.secondary
+                    customTipButton.backgroundColor = ThemeColor.secondary
                     let text = NSMutableAttributedString(
                         string: "$\(value)",
                         attributes: [
                             .font: ThemeFont.bold(ofSize: 20)
                         ])
                     text.addAttributes([
-                        .font: ThemeFont.bold(ofSize: 14)], range: NSMakeRange(0, 1))
+                        .font: ThemeFont.bold(ofSize: 14)
+                    ], range: NSMakeRange(0, 1))
                     customTipButton.setAttributedTitle(text, for: .normal)
             }
         }.store(in: &cancellables)
@@ -172,7 +172,7 @@ class TipInputView: UIView {
          fifteenPercentTipButton,
          twentyPercentTipButton,
          customTipButton].forEach {
-            $0.backgroundColor = ThemeColot.primary
+            $0.backgroundColor = ThemeColor.primary
         }
         let text = NSMutableAttributedString(
             string: "Custom tip",
@@ -182,7 +182,7 @@ class TipInputView: UIView {
     
     private func buildTipButton(tip: Tip) -> UIButton {
         let button = UIButton(type: .custom)
-        button.backgroundColor = ThemeColot.primary
+        button.backgroundColor = ThemeColor.primary
         button.addCornerRadius(radius: 8.0)
         let text = NSMutableAttributedString(
             string: tip.stringValue,
@@ -191,7 +191,7 @@ class TipInputView: UIView {
                 .foregroundColor: UIColor.white
             ])
         text.addAttributes([
-            .font: ThemeFont.demiBold(ofSize: 14)
+            .font: ThemeFont.demibold(ofSize: 14)
         ], range: NSMakeRange(2, 1))
         button.setAttributedTitle(text, for: .normal)
         return button

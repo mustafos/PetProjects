@@ -179,7 +179,7 @@
 				6A853EB62A51C01C00DC05B8 /* ViewModel */,
 				6AA7B3AE2A4F6E8B00E54F47 /* Factory */,
 				6AA7B3AB2A4C566E00E54F47 /* Extension */,
-				6AA7B3A62A4C560F00E54F47 /* Helpers */,
+				6AA7B3A62A4C560F00E54F47 /* Configuration */,
 				6ACB253D2A5835CA001C7CC3 /* Service */,
 				6ACB253B2A58355A001C7CC3 /* Resource */,
 				6AA7B3642A4C4B5000E54F47 /* Assets.xcassets */,
@@ -228,13 +228,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		6AA7B3A62A4C560F00E54F47 /* Helpers */ = {
+		6AA7B3A62A4C560F00E54F47 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
 				6AA7B3A72A4C562E00E54F47 /* ThemeColor.swift */,
 				6AA7B3A92A4C563700E54F47 /* ThemeFont.swift */,
 			);
-			path = Helpers;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		6AA7B3AB2A4C566E00E54F47 /* Extension */ = {

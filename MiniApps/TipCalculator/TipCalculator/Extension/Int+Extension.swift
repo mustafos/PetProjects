@@ -1,7 +1,7 @@
 import Foundation
 
 extension Int {
-    var stringValue: String? {
+    var stringValue: String {
         return String(self)
     }
 }

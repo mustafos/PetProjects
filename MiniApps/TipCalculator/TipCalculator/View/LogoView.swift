@@ -12,17 +12,17 @@ class LogoView: UIView {
         let label = UILabel()
         let text = NSMutableAttributedString(
             string: "Mr TIP",
-            attributes: [.font: ThemeFont.demiBold(ofSize: 16)])
+            attributes: [.font: ThemeFont.demibold(ofSize: 16)])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(3, 3))
-            label.attributedText = text
-            return label
+        label.attributedText = text
+        return label
     }()
     
     private let bottomLabel: UILabel = {
         LabelFactory.build(
             text: "Calculator",
-            font: ThemeFont.demiBold(ofSize: 20),
-            textAligment: .left)
+            font: ThemeFont.demibold(ofSize: 20),
+            textAlignment: .left)
     }()
     
     private lazy var vStackView: UIStackView = {
