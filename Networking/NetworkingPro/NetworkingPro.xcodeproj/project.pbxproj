@@ -13,6 +13,7 @@
 		6ABB03642A668F5F00939CB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ABB03632A668F5F00939CB7 /* Preview Assets.xcassets */; };
 		6ABB036B2A668F7D00939CB7 /* NetworkServiceWithCompletions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB036A2A668F7D00939CB7 /* NetworkServiceWithCompletions.swift */; };
 		6ABB036D2A66952200939CB7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB036C2A66952200939CB7 /* User.swift */; };
+		6AE5D37A2A6C541100AF8C2D /* NetworkServiceWithAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5D3792A6C541100AF8C2D /* NetworkServiceWithAsync.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		6ABB03632A668F5F00939CB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6ABB036A2A668F7D00939CB7 /* NetworkServiceWithCompletions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceWithCompletions.swift; sourceTree = "<group>"; };
 		6ABB036C2A66952200939CB7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6AE5D3792A6C541100AF8C2D /* NetworkServiceWithAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceWithAsync.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6ABB036C2A66952200939CB7 /* User.swift */,
 				6ABB035E2A668F5E00939CB7 /* ContentView.swift */,
 				6ABB036A2A668F7D00939CB7 /* NetworkServiceWithCompletions.swift */,
+				6AE5D3792A6C541100AF8C2D /* NetworkServiceWithAsync.swift */,
 				6ABB03602A668F5F00939CB7 /* Assets.xcassets */,
 				6ABB03622A668F5F00939CB7 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ABB036D2A66952200939CB7 /* User.swift in Sources */,
+				6AE5D37A2A6C541100AF8C2D /* NetworkServiceWithAsync.swift in Sources */,
 				6ABB035F2A668F5E00939CB7 /* ContentView.swift in Sources */,
 				6ABB036B2A668F7D00939CB7 /* NetworkServiceWithCompletions.swift in Sources */,
 				6ABB035D2A668F5E00939CB7 /* NetworkingProApp.swift in Sources */,
