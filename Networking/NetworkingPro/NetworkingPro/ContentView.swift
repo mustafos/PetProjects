@@ -19,6 +19,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
+            /*Completions*/
 //            NetworkServiceWithCompletions.shared.fetchData { result in
 //                switch result {
 //                    case .success(let usersData):
@@ -28,9 +29,22 @@ struct ContentView: View {
 //                        print(failure.localizedDescription)
 //                }
 //            }
-            Task {
-                let result = try await NetworkServiceWithAsync.shared.fetchData()
-                self.user = result.results[0]
+            
+            /*Async*/
+//            Task {
+//                let result = try await NetworkServiceWithAsync.shared.fetchData()
+//                self.user = result.results[0]
+//            }
+            
+            /*Alamofire*/
+            NetworkServiceWithAlamofire.shared.fetchData { result in
+                switch result {
+                    case .success(let userResults):
+                        let user = userResults.results[0]
+                        self.user = user
+                    case .failure(let error):
+                        print(error)
+                }
             }
         }
         .padding()

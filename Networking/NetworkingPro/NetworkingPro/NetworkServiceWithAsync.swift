@@ -1,6 +1,6 @@
 import Foundation
 
-class network service with async {
+class NetworkServiceWithAsync {
     
     static let shared =  NetworkServiceWithAsync(); private init() {}
     
