@@ -14,10 +14,33 @@ struct ContentView: View {
                     let dto = ToDo.TodoDTO(userId: 5,
                                            title: todoTitle,
                                            completed: false)
-                    Task {
-                        let todo = try await NetworkService.shared.createToDo(dto)
-                        print(todo.id)
-                        print(todo.title)
+                    /*Async-Await*/
+//                    Task {
+//                        let todo = try await NetworkService.shared.createToDo(dto)
+//                        print(todo.id)
+//                        print(todo.title)
+//                    }
+                    
+                    /*Completion Handler*/
+//                    NetworkServiceWithCB.shared.createToDo(dto) { result in
+//                        switch result {
+//                            case .success(let todo):
+//                                print(todo.id)
+//                                print(todo.title)
+//                            case .failure(let error):
+//                                print(error)
+//                        }
+//                    }
+                    
+                    /*Alamofire*/
+                    NetworkServiceWithAlamofire.shared.createToDo(dto) { result in
+                        switch result {
+                            case .success(let todo):
+                                print(todo.id)
+                                print(todo.title)
+                            case .failure(let error):
+                                print(error)
+                        }
                     }
                 }
             }.padding()
