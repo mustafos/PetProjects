@@ -1,15 +1,26 @@
-//
-//  FeedView.swift
-//  TwitterClone
-//
-//  Created by Mustafa Bekirov on 26.07.2023.
-//
-
 import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .bottomTrailing) {
+            ScrollView {
+                
+            }
+            
+            Button {
+                print("tap button")
+            } label: {
+                Image("Tweet")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: 32, height: 32)
+                    .padding()
+            }
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding()
+        }
     }
 }
 
