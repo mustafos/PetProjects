@@ -9,11 +9,12 @@ struct SearchView: View {
             SearchBar(text: $searchText)
                 .padding()
             
-            VStack {
-                ForEach(0..<19) { _ in
-                    Text("Add Users here...")
+            VStack(alignment: .leading) {
+                ForEach(0..<10) { _ in
+                    HStack { Spacer() }
+                    UserCell()
                 }
-            }
+            }.padding(.leading)
         }
     }
 }
