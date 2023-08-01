@@ -16,7 +16,7 @@ struct ContentView: View {
                         Text("Search")
                     }
                 
-                Text("Message")
+                ConversationsView()
                     .tabItem {
                         Image(systemName: "envelope")
                         Text("Message")
