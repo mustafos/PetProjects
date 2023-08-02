@@ -10,6 +10,7 @@ struct Question: Identifiable, Decodable {
 }
 
 struct QuestionView: View {
+    
     @Binding var question: Question
     
     var body: some View {
@@ -46,10 +47,3 @@ struct QuestionView: View {
         .shadow(color: Color(uiColor: .label).opacity(0.2), radius: 10)
     }
 }
-
-//struct QuestionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuestionView(question: Question(createdAt: "", title: "When was the iPhone first released?", answer: "A", options: ["A", "B", "C"])
-//)
-//    }
-//}

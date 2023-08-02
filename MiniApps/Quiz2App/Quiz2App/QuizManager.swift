@@ -6,13 +6,6 @@ class QuizManager: ObservableObject {
     @Published var questions = [Question]()
     @Published var quizResult = QuizResult(correct: 0, total: 0, grade: "100%")
     
-//    @Published var questions = [
-//        Question(title: "When was the iPhone first released?", answer: "A", options: ["A", "B", "C", "D"]),
-//        Question(title: "iPhone first released?", answer: "A", options: ["A", "B", "C"]),
-//        Question(title: "When was the iPhone?", answer: "A", options: ["A", "B", "C"]),
-//        Question(title: "the iPhone first released?", answer: "A", options: ["A", "B"])
-//    ]
-    
     let client = SupabaseClient(supabaseURL: URL(string: "https://jcvpfuzxclsxrwhwxzbv.supabase.co")!, supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjdnBmdXp4Y2xzeHJ3aHd4emJ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODcxMTI4NzMsImV4cCI6MjAwMjY4ODg3M30.YLDeHlPpkQtDbrpJnwZ23rip1foPNbPO7au1J71jHG4")
     
     init() {

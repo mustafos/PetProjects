@@ -25,7 +25,8 @@ struct ContentView: View {
                                 .padding()
                                 .foregroundColor(.white)
                                 .background(
-                                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                    RoundedRectangle(cornerRadius: 20,
+                                                     style: .continuous)
                                         .fill(Color("AppColor"))
                                         .frame(width: 340)
                                 )

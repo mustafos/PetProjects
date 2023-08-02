@@ -8,7 +8,7 @@ struct StartView: View {
             Text("Quiz App")
                 .font(.system(size: 64))
             
-            Text("Are you ready to start the quiz?!?")
+            Text("Are you ready to start the quiz?")
                 .font(.system(size: 24))
             
             Button {
