@@ -1,20 +1,42 @@
-//
-//  MessageView.swift
-//  TwitterClone
-//
-//  Created by Mustafa Bekirov on 04.08.2023.
-//
-
 import SwiftUI
 
 struct MessageView: View {
+    
+    let message: MockMessage
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if message.isCurrentUser {
+                Spacer()
+                Text(message.messageText)
+                    .padding()
+                    .background(Color.blue)
+                    .clipShape(ChatBubble(isFromCurrentUser: true))
+                    .foregroundColor(.white)
+                    .padding(.horizontal)
+            } else {
+                HStack(alignment: .bottom) {
+                    Image(message.imageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                    
+                    Text(message.messageText)
+                        .padding()
+                        .background(Color(.systemGray5))
+                        .clipShape(ChatBubble(isFromCurrentUser: false))
+                        .foregroundColor(.black)
+                }
+                .padding(.horizontal)
+                Spacer()
+            }
+        }
     }
 }
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView()
+        MessageView(message: MOCK_MESSAGES[0])
     }
 }
