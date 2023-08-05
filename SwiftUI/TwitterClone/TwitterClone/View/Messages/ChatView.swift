@@ -8,15 +8,33 @@ struct ChatView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(0..<15) { _ in
+                    ForEach(MOCK_MESSAGES) { message in
                         HStack {
-                            Spacer()
-                            Text("Test message text")
-                                .padding()
-                                .background(Color.blue)
-                                .clipShape(ChatBubble(isFromCurrentUser: true))
-                                .foregroundColor(.white)
+                            if message.isCurrentUser {
+                                Spacer()
+                                Text(message.messageText)
+                                    .padding()
+                                    .background(Color.blue)
+                                    .clipShape(ChatBubble(isFromCurrentUser: true))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal)
+                            } else {
+                                HStack(alignment: .bottom) {
+                                    Image(message.imageName)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 40, height: 40)
+                                        .clipShape(Circle())
+                                    
+                                    Text(message.messageText)
+                                        .padding()
+                                        .background(Color(.systemGray5))
+                                        .clipShape(ChatBubble(isFromCurrentUser: false))
+                                        .foregroundColor(.black)
+                                }
                                 .padding(.horizontal)
+                                Spacer()
+                            }
                         }
                     }
                 }
