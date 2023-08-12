@@ -20,9 +20,6 @@ struct ContentView: View {
     // MARK: - FUNCTIONS
     
     func spinReels() {
-        // reels[0] = Int.random(in: 0...symbols.count - 1)
-        // reels[1] = Int.random(in: 0...symbols.count - 1)
-        // reels[2] = Int.random(in: 0...symbols.count - 1)
         reels = reels.map({ _ in
             Int.random(in: 0...symbols.count - 1)
         })
