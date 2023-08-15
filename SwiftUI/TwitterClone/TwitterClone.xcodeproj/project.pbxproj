@@ -21,6 +21,7 @@
 		6A68D0CF2A84F6D6006A0FA5 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6A68D0CE2A84F6D6006A0FA5 /* FirebaseFunctions */; };
 		6A68D0D12A84F6D6006A0FA5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6A68D0D02A84F6D6006A0FA5 /* FirebaseStorage */; };
 		6A68D0D32A84FB4D006A0FA5 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68D0D22A84FB4D006A0FA5 /* AuthViewModel.swift */; };
+		6A74D7272A8A7A3800ABE8CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A74D7262A8A7A3800ABE8CD /* User.swift */; };
 		6A8C67B22A719E6F0094927F /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C67B12A719E6F0094927F /* FeedView.swift */; };
 		6AA247212A7F8EA2004C7869 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA247202A7F8EA2004C7869 /* NewMessageView.swift */; };
 		6AA247242A815594004C7869 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA247232A815594004C7869 /* UserProfileView.swift */; };
@@ -54,6 +55,7 @@
 		6A61B3572A84E79B00A86109 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6A68D0C72A84F629006A0FA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A68D0D22A84FB4D006A0FA5 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		6A74D7262A8A7A3800ABE8CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6A8C67B12A719E6F0094927F /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		6AA247202A7F8EA2004C7869 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		6AA247232A815594004C7869 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				6A039ECF2A7D6ECF001D9D1A /* Message.swift */,
+				6A74D7262A8A7A3800ABE8CD /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				6A68D0D32A84FB4D006A0FA5 /* AuthViewModel.swift in Sources */,
 				6A039ED02A7D6ECF001D9D1A /* Message.swift in Sources */,
 				6AA247242A815594004C7869 /* UserProfileView.swift in Sources */,
+				6A74D7272A8A7A3800ABE8CD /* User.swift in Sources */,
 				6A14026D2A76E7FA0008981E /* SearchBar.swift in Sources */,
 				6AA247282A815651004C7869 /* ProfileActionButtonView.swift in Sources */,
 				6AB367B52A83B895003311C7 /* CustomTextField.swift in Sources */,
