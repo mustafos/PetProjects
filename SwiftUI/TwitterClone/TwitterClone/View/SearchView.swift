@@ -9,11 +9,12 @@ struct SearchView: View {
         ScrollView {
             SearchBar(text: $searchText)
                 .padding()
+            
             VStack(alignment: .leading) {
                 ForEach(viewModel.users) { user in
                     HStack { Spacer() }
                     NavigationLink {
-                        UserProfileView()
+                        UserProfileView(user: user)
                     } label: {
                         UserCell(user: user)
                     }
