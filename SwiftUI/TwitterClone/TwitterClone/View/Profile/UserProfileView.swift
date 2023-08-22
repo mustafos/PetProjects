@@ -2,22 +2,23 @@ import SwiftUI
 
 struct UserProfileView: View {
     let user: User
-//    @ObservedObject var viewModel: ProfileViewModel
-    @State private var selectedFilter: TweetFilterOptions = .tweets
+    @ObservedObject var viewModel: ProfileViewModel
+    
+    init(user: User) {
+        self.user = user
+        self.viewModel = ProfileViewModel(user: user)
+    }
 
     var body: some View {
         ScrollView {
             VStack {
-                ProfileHeaderView(user: user)
-                    .padding()
-                
-                FilterButtonView(selectedOption: $selectedFilter)
+                ProfileHeaderView(isFollowed: $viewModel.isFollowed, viewModel: viewModel)
                     .padding()
                 
                 ForEach(0..<9) { tweet in
                     TweetCell()
+                        .padding()
                 }
-                .padding()
             }
             .navigationTitle("pharaon")
         }
