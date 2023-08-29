@@ -21,7 +21,7 @@ class AuthManager {
     
     let client = SupabaseClient(
         supabaseURL: URL(string: "https://ypcrzbibwjnnvedmywfm.supabase.co")!,
-        supabaseKey: "//YOUR_SUPABASE_KEY_HERE")
+        supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwY3J6Ymlid2pubnZlZG15d2ZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTMxMzgzNjEsImV4cCI6MjAwODcxNDM2MX0.waHwBq9ian-TBmM0HbQz25_TB6NUOCwyHwV_nw90Khg")
     
     
     func getCurrentSession() async throws -> AppUser {
@@ -43,4 +43,5 @@ class AuthManager {
         try await client.auth.signOut()
     }
 }
+
 //YOUR_SUPABASE_KEY_HERE
