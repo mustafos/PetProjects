@@ -1,4 +1,5 @@
 import SwiftUI
+import Kingfisher
 
 struct NewTweetView: View {
     
@@ -9,12 +10,14 @@ struct NewTweetView: View {
         NavigationView {
             VStack {
                 HStack(alignment: .top) {
-                    Image("spiderman")
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 64, height: 64)
-                        .cornerRadius(32)
+                    if let user = AuthViewModel.shared.user {
+                        KFImage(URL(string: user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                            .frame(width: 64, height: 64)
+                            .cornerRadius(32)
+                    }
                     
                     TextArea("What's happening?", text: $captionText)
                     
