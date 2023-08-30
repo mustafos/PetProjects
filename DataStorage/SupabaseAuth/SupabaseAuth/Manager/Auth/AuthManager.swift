@@ -28,16 +28,38 @@ class AuthManager {
         let session = try await client.auth.session
         return AppUser(uid: session.user.id.uuidString, email: session.user.email)
     }
-
-    func signInWithApple(idToken: String, nonce: String) async throws -> AppUser {
-        let session = try await client.auth.signInWithIdToken(credentials: .init(provider: .apple, idToken: idToken, nonce: nonce))
+    
+    func registerNewUserWithEmail(email: String, password: String) async throws -> AppUser {
+        let regAuthResponse = try await client.auth.signUp(email: email, password: password)
+        guard let session = regAuthResponse.session else { throw NSError() }
         return AppUser(uid: session.user.id.uuidString, email: session.user.email)
     }
     
-    func signInWithGoogle(idToken: String, nonce: String) async throws -> AppUser {
-        let session = try await client.auth.signInWithIdToken(credentials: .init(provider: .google, idToken: idToken))
+    func signInWithEmail(email: String, password: String) async throws -> AppUser {
+        let session = try await client.auth.signIn(email: email, password: password)
         return AppUser(uid: session.user.id.uuidString, email: session.user.email)
     }
+
+    func signInWithApple(email: String, password: String) async throws -> AppUser {
+        let session = try await client.auth.signIn(email: email, password: password)
+        return AppUser(uid: session.user.id.uuidString, email: session.user.email)
+    }
+    
+    func signInWithGoogle(email: String, password: String) async throws -> AppUser {
+        let session = try await client.auth.signIn(email: email, password: password)
+        return AppUser(uid: session.user.id.uuidString, email: session.user.email)
+    }
+    
+    // MARK: – BUGFIX .signInWithIdToken method with @_spi
+//    func signInWithApple(idToken: String, nonce: String) async throws -> AppUser {
+//        let session = try await client.auth.signInWithIdToken(credentials: .init(provider: .apple, idToken: idToken, nonce: nonce))
+//        return AppUser(uid: session.user.id.uuidString, email: session.user.email)
+//    }
+//
+//    func signInWithGoogle(idToken: String, nonce: String) async throws -> AppUser {
+//        let session = try await client.auth.signInWithIdToken(credentials: .init(provider: .google, idToken: idToken))
+//        return AppUser(uid: session.user.id.uuidString, email: session.user.email)
+//    }
     
     func signOut() async throws {
         try await client.auth.signOut()
