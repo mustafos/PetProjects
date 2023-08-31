@@ -45,7 +45,7 @@ struct SignInView: View {
             } label: {
                 Text("Sign In")
                     .padding()
-                    .foregroundColor(Color(uiColor: .label))
+                    .foregroundColor(Color(uiColor: .systemBackground))
                     .frame(maxWidth: .infinity)
                     .frame(height: 55)
                     .background {
@@ -75,7 +75,7 @@ struct SignInView: View {
                                 .stroke(Color(uiColor: .label), lineWidth: 1)
                         }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, 1)
                 
                 Button {
                     Task {
@@ -96,6 +96,7 @@ struct SignInView: View {
                                 .stroke(Color(uiColor: .label), lineWidth: 1)
                         }
                 }
+                Spacer()
             }
             .padding(.top)
             .padding(.horizontal, 24)

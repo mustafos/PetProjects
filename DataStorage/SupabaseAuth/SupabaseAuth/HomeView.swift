@@ -31,6 +31,15 @@ struct HomeView: View {
                         .foregroundColor(.red)
                 }
             }
+            .onAppear {
+                Task {
+                    do {
+                        try await ToDoViewModel().fetchItems(for: appUser.uid)
+                    } catch {
+                        print(error)
+                    }
+                }
+            }
         }
     }
 }

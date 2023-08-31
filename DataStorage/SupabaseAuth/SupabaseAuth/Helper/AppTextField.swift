@@ -13,11 +13,6 @@ struct AppTextField: View {
     
     var body: some View {
         ZStack {
-            if text.isEmpty {
-                Text(placeholder)
-                    .foregroundColor(.black)
-                    .padding(.leading)
-            }
             TextField(placeholder, text: $text)
                 .padding()
                 .overlay {

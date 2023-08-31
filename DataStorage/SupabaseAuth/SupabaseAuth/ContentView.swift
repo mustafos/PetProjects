@@ -13,8 +13,8 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            if let _ = appUser {
-                HomeView(appUser: $appUser)
+            if let appUser = appUser {
+                ToDoView(appUser: appUser)
             } else {
                 SignInView(appUser: $appUser)
             }
