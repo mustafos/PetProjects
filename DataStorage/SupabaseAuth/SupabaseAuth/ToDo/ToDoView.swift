@@ -15,12 +15,17 @@ struct ToDoView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LazyVStack {
-                    ForEach(viewModel.todos, id: \.text) { todo in
-                        Text(todo.text)
+                ScrollView(showsIndicators: false) {
+                    LazyVStack {
+                        ForEach(viewModel.todos, id: \.text) { todo in
+                            ToDoItemView(todo: todo)
+                                .environmentObject(viewModel)
+                                .padding(.horizontal)
+                        }
                     }
                 }
             }
+            .background(Color.green)
             .navigationTitle("ToDo")
             .toolbar {
                 NavigationLink {

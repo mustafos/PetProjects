@@ -35,7 +35,9 @@ class ToDoViewModel: ObservableObject {
     }
     
     // MARK: Delete
-    func deleteItems() async throws {
-        
+    @MainActor
+    func deleteItems(todo: ToDo) async throws {
+        try await DatabaseManager.shared.deleteToDoItem(id: todo.id)
+        todos.removeAll(where: { $0.id == todo.id })
     }
 }

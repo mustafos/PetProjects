@@ -21,14 +21,24 @@ class DatabaseManager {
     func createToDoItem(item: ToDoPlayLoad) async throws {
         let response = try await client.database.from("todos").insert(values: item).execute()
         print(response)
+        print(response.status)
+        print(response.underlyingResponse.data)
     }
     
     func fetchToDoItem(for uid: String) async throws -> [ToDo] {
         let response = try await client.database.from("todos").select().equals(column: "user-uid", value: uid).order(column: "created_at", ascending: true).execute()
         let data = response.underlyingResponse.data
+        
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let todos = try decoder.decode([ToDo].self, from: data)
         return todos
+    }
+    
+    func deleteToDoItem(id: Int) async throws {
+        let response = try await client.database.from("todos").delete().eq(column: "id", value: id).execute()
+        print(response)
+        print(response.status)
+        print(String(data: response.underlyingResponse.data, encoding: .utf8))
     }
 }
