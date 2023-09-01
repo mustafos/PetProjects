@@ -30,6 +30,7 @@
 		6A593BAC2A9B922F00C33A91 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A593BAB2A9B922E00C33A91 /* HomeView.swift */; };
 		6A593BB82A9B970900C33A91 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6A593BB72A9B970900C33A91 /* Supabase */; };
 		6A84BE2F2A9D09F900D7F8E7 /* SignInGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A84BE2E2A9D09F900D7F8E7 /* SignInGoogle.swift */; };
+		6AEE0DEE2AA0B40C002F851F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE0DED2AA0B40C002F851F /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		6A593BA92A9B74E200C33A91 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		6A593BAB2A9B922E00C33A91 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6A84BE2E2A9D09F900D7F8E7 /* SignInGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogle.swift; sourceTree = "<group>"; };
+		6AEE0DED2AA0B40C002F851F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				6A84BE2D2A9D09D500D7F8E7 /* Auth */,
 				6A3667942A9E04BD008C9867 /* DatabaseManager.swift */,
+				6AEE0DED2AA0B40C002F851F /* StorageManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				6A14494A2A9DEBC600132BED /* RegistrationView.swift in Sources */,
 				6A84BE2F2A9D09F900D7F8E7 /* SignInGoogle.swift in Sources */,
 				6A3667952A9E04BD008C9867 /* DatabaseManager.swift in Sources */,
+				6AEE0DEE2AA0B40C002F851F /* StorageManager.swift in Sources */,
 				6A593B972A9B73AE00C33A91 /* ContentView.swift in Sources */,
 				6A1449452A9DE7CC00132BED /* AltTextField.swift in Sources */,
 				6A1449472A9DE8AA00132BED /* AppSecureField.swift in Sources */,

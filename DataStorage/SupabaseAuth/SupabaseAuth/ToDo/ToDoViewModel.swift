@@ -5,7 +5,7 @@
 //  Created by Mustafa Bekirov on 31.08.2023.
 //
 
-import Foundation
+import UIKit
 
 class ToDoViewModel: ObservableObject {
     
@@ -39,5 +39,11 @@ class ToDoViewModel: ObservableObject {
     func deleteItems(todo: ToDo) async throws {
         try await DatabaseManager.shared.deleteToDoItem(id: todo.id)
         todos.removeAll(where: { $0.id == todo.id })
+    }
+    
+    func fetchProfilePhoto(for user: AppUser) async throws -> UIImage {
+        let data = try await StorageManager.shared.fetchProfilePhoto(for: user)
+        guard let image = UIImage(data: data) else { throw NSError() }
+        return image
     }
 }
