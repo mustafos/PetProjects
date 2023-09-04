@@ -4,7 +4,8 @@ import Kingfisher
 struct NewTweetView: View {
     
     @Binding var isPresented: Bool
-    @State private var captionText: String = ""
+    @State var captionText: String = ""
+    @ObservedObject var viewModel = UploadTweetViewModel()
     
     var body: some View {
         NavigationView {
@@ -30,7 +31,7 @@ struct NewTweetView: View {
                     Text("Cancel")
                         .foregroundColor(.blue)
                 }), trailing: Button(action: {
-                    print("tweet")
+                    viewModel.uploadTweet(caption: captionText)
                 }, label: {
                     Text("Tweet")
                         .padding(.horizontal)
