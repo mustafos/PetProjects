@@ -26,7 +26,8 @@ class UploadTweetViewModel: ObservableObject {
         }
     }
     
-    /// User completion handler to dismiss view
+/// User completion handler to dismiss view
+
 //    func uploadTweet(caption: String, completion: @escaping ((Error? -> Void))) {
 //        guard let user = AuthViewModel.shared.user else { return }
 //        let docRef = COLLECTION_TWEETS.document()

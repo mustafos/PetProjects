@@ -36,7 +36,6 @@ struct NewTweetView: View {
                         .foregroundColor(.blue)
                 }), trailing: Button(action: {
                     viewModel.uploadTweet(caption: captionText)
-                    }
                 }, label: {
                     Text("Tweet")
                         .padding(.horizontal)
@@ -44,7 +43,7 @@ struct NewTweetView: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .clipShape(Capsule())
-            }))
+                }))
                 Spacer()
             }
         }
