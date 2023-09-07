@@ -9,7 +9,11 @@ struct FeedView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(viewModel.tweets) { tweet in
-                        TweetCell(tweet: tweet)
+                        NavigationLink {
+                            TweetDetailView(tweet: tweet)
+                        } label: {
+                            TweetCell(tweet: tweet)
+                        }
                     }
                 }
                 .padding()
