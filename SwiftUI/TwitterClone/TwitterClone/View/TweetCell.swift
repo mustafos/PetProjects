@@ -2,6 +2,7 @@ import SwiftUI
 import Kingfisher
 
 struct TweetCell: View {
+    
     let tweet: Tweet
     
     var body: some View {
@@ -34,7 +35,7 @@ struct TweetCell: View {
             .padding(.bottom)
             .padding(.trailing)
             
-            TweetActionsView()
+            TweetActionsView(tweet: tweet)
             
             Divider()
         }
