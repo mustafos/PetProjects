@@ -3,7 +3,6 @@ import Kingfisher
 
 struct ProfileHeaderView: View {
     
-    @State var selectedFilter: TweetFilterOptions = .tweets
     @Binding var isFollowed: Bool
     let viewModel: ProfileViewModel
     
@@ -50,9 +49,6 @@ struct ProfileHeaderView: View {
             .padding()
             
             ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
-            
-            FilterButtonView(selectedOption: $selectedFilter)
-                .padding()
             
             Spacer()
         }
