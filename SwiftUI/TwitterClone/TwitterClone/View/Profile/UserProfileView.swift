@@ -15,9 +15,9 @@ struct UserProfileView: View {
                 ProfileHeaderView(isFollowed: $viewModel.isFollowed, viewModel: viewModel)
                     .padding()
                 
-                ForEach(0 ..< 5) { item in
-//                    TweetCell()
-//                        .padding()
+                ForEach(viewModel.userTweets) { tweet in
+                    TweetCell(tweet: tweet)
+                        .padding()
                 }
             }
             .navigationTitle("pharaon")
