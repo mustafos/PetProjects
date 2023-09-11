@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @State private var searchText = ""
+    @State var searchText = ""
     @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
@@ -11,7 +11,7 @@ struct SearchView: View {
                 .padding()
             
             VStack(alignment: .leading) {
-                ForEach(viewModel.users) { user in
+                ForEach(searchText.isEmpty ? viewModel.users : viewModel.filteredUsers(searchText)) { user in
                     HStack { Spacer() }
                     
                     NavigationLink {
