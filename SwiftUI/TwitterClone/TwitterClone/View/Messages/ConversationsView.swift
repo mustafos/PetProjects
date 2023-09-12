@@ -20,7 +20,7 @@ struct ConversationsView: View {
                         NavigationLink {
                             ChatView(user: message.user)
                         } label: {
-                            ConversationCell()
+                            ConversationCell(message: message)
                         }
                     }
                 }

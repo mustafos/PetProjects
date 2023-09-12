@@ -1,10 +1,13 @@
 import SwiftUI
+import Kingfisher
 
 struct ConversationCell: View {
+    let message: Message
+    
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack(spacing: 12) {
-                Image("batman")
+                KFImage(URL(string: message.user.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipped()
@@ -12,23 +15,18 @@ struct ConversationCell: View {
                     .cornerRadius(28)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Bruce Wayne")
+                    Text(message.user.fullname)
                         .font(.system(size: 14, weight: .semibold))
                     
-                    Text("Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.")
+                    Text(message.text)
                         .font(.system(size: 15))
                         .lineLimit(2)
                 }
                 .foregroundColor(.black)
                 .padding(.trailing)
+                Spacer()
             }
             Divider()
         }
-    }
-}
-
-struct ConversationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ConversationCell()
     }
 }

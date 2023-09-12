@@ -2,6 +2,7 @@ import SwiftUI
 
 class ConversationsViewModel: ObservableObject {
     @Published var recentMessages = [Message]()
+    private var recentMessageDictionary = [String: Message]()
     
     init() {
         fetchRecentMessages()
@@ -23,8 +24,8 @@ class ConversationsViewModel: ObservableObject {
                 COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
                     guard let data = snapshot?.data() else { return }
                     let user = User(dictionary: data)
-                    
-                    self.recentMessages.append(Message(user: user, dictionary: messageDate))
+                    self.recentMessageDictionary[uid] = Message(user: user, dictionary: messageDate)
+                    self.recentMessages = Array(self.recentMessageDictionary.values)
                 }
             }
         }
