@@ -5,21 +5,23 @@ struct ConversationsView: View {
     @State private var isShowingNewMessageView = false
     @State private var showChat = true
     @State private var inSearchMode = false
+    @ObservedObject var viewModel = ConversationsViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-//            NavigationLink(destination: ChatView(),
-//                           isActive: $showChat,
-//                           label: {} )
+            
+            //            NavigationLink(destination: ChatView(),
+            //                           isActive: $showChat,
+            //                           label: {} )
+            
             ScrollView {
                 VStack {
-                    ForEach(0..<9) { _ in
-                        ConversationCell()
-//                        NavigationLink {
-//                            ChatView()
-//                        } label: {
-//                            ConversationCell()
-//                        }
+                    ForEach(viewModel.recentMessages) { message in
+                        NavigationLink {
+                            ChatView(user: message.user)
+                        } label: {
+                            ConversationCell()
+                        }
                     }
                 }
                 .padding()

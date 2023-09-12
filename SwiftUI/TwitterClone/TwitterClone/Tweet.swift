@@ -8,7 +8,7 @@ struct Tweet: Identifiable {
     let caption: String
     let likes: Int
     let uid: String
-    let timestamo: Timestamp
+    let timestamp: Timestamp
     
     init(dictionary: [String: Any]) {
         self.id = dictionary["id"] as? String ?? ""
@@ -18,6 +18,6 @@ struct Tweet: Identifiable {
         self.caption = dictionary["caption"] as? String ?? ""
         self.likes = dictionary["likes"] as? Int ?? 0
         self.uid = dictionary["uid"] as? String ?? ""
-        self.timestamo = dictionary["timestamo"] as? Timestamp ?? Timestamp(date: Date())
+        self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
     }
 }
