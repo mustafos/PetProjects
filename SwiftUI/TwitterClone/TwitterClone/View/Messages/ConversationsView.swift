@@ -2,18 +2,18 @@ import SwiftUI
 
 struct ConversationsView: View {
     
-    @State private var isShowingNewMessageView = false
-    @State private var showChat = true
-    @State private var inSearchMode = false
+    @State var isShowingNewMessageView = false
+    @State var showChat = true
+    @State var user: User?
     @ObservedObject var viewModel = ConversationsViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            
-            //            NavigationLink(destination: ChatView(),
-            //                           isActive: $showChat,
-            //                           label: {} )
-            
+            if let user = user {
+                NavigationLink(destination: ChatView(user: user),
+                               isActive: $showChat,
+                               label: {})
+            }
             ScrollView {
                 VStack {
                     ForEach(viewModel.recentMessages) { message in
@@ -41,7 +41,7 @@ struct ConversationsView: View {
             .clipShape(Circle())
             .padding()
             .sheet(isPresented: $isShowingNewMessageView) {
-                NewMessageView(show: $isShowingNewMessageView, startChat: $showChat)
+                NewMessageView(show: $isShowingNewMessageView, startChat: $showChat, user: $user)
             }
         }
     }
