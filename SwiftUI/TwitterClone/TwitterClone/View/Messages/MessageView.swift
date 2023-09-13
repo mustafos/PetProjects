@@ -1,14 +1,15 @@
 import SwiftUI
+import Kingfisher
 
 struct MessageView: View {
     
-    let message: MockMessage
+    let message: Message
     
     var body: some View {
         HStack {
-            if message.isCurrentUser {
+            if message.isFromCurrentUser {
                 Spacer()
-                Text(message.messageText)
+                Text(message.text)
                     .padding()
                     .background(Color.blue)
                     .clipShape(ChatBubble(isFromCurrentUser: true))
@@ -16,13 +17,13 @@ struct MessageView: View {
                     .padding(.horizontal)
             } else {
                 HStack(alignment: .bottom) {
-                    Image(message.imageName)
+                    KFImage(URL(string: message.user.profileImageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: 40, height: 40)
                         .clipShape(Circle())
                     
-                    Text(message.messageText)
+                    Text(message.text)
                         .padding()
                         .background(Color(.systemGray5))
                         .clipShape(ChatBubble(isFromCurrentUser: false))
@@ -32,11 +33,5 @@ struct MessageView: View {
                 Spacer()
             }
         }
-    }
-}
-
-struct MessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageView(message: MOCK_MESSAGES[0])
     }
 }
