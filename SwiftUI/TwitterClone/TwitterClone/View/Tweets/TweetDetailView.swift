@@ -28,7 +28,7 @@ struct TweetDetailView: View {
             Text(tweet.caption)
                 .font(.system(size: 22))
             
-            Text("11:25 AM • 07/09/2023")
+            Text(tweet.detailedTimestampString)
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
             

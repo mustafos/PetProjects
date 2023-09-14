@@ -55,6 +55,7 @@
 		6AD712C22A77FD7A00D3A2F8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD712C12A77FD7A00D3A2F8 /* UserCell.swift */; };
 		6AD712C52A78019700D3A2F8 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD712C42A78019700D3A2F8 /* ConversationsView.swift */; };
 		6AD712C72A7801A800D3A2F8 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD712C62A7801A800D3A2F8 /* ConversationCell.swift */; };
+		6AF7E8EA2AB3569600C28236 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF7E8E92AB3569600C28236 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		6AD712C12A77FD7A00D3A2F8 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		6AD712C42A78019700D3A2F8 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		6AD712C62A7801A800D3A2F8 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		6AF7E8E92AB3569600C28236 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				6AA247222A815586004C7869 /* Profile */,
 				6AD712C32A78017D00D3A2F8 /* Messages */,
 				6AC775D22A71952D007ABA3A /* ContentView.swift */,
+				6AF7E8E92AB3569600C28236 /* MainTabView.swift */,
 				6A8C67B12A719E6F0094927F /* FeedView.swift */,
 				6AD04D362A7525DE00024D88 /* TweetCell.swift */,
 				6A14026A2A76E76D0008981E /* SearchView.swift */,
@@ -364,6 +367,7 @@
 				6A039ECC2A7C30E3001D9D1A /* ChatView.swift in Sources */,
 				6ABD48292AAF8F0F004684A7 /* ChatViewModel.swift in Sources */,
 				6AD712C52A78019700D3A2F8 /* ConversationsView.swift in Sources */,
+				6AF7E8EA2AB3569600C28236 /* MainTabView.swift in Sources */,
 				6AB367B12A83B54D003311C7 /* LoginView.swift in Sources */,
 				6AB367AA2A83A565003311C7 /* NewTweetView.swift in Sources */,
 				6A7105352A951E4C00D26587 /* ProfileViewModel.swift in Sources */,
