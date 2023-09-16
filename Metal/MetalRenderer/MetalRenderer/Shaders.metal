@@ -21,7 +21,6 @@ constant float3 color[6] = {
 
 struct VertexIn {
     float4 position [[attribute(0)]];
-    float3 color [[attribute(1)]];
 };
 
 struct VertexOut {
@@ -32,8 +31,9 @@ struct VertexOut {
 vertex VertexOut vertex_main(VertexIn vertexBuffer [[stage_in]]) {
     VertexOut out {
         .position = vertexBuffer.position,
-        .color = vertexBuffer.color
+        .color = float3(0, 0, 1)
     };
+    out.position.y -= 0.5;
     return out;
 }
 
