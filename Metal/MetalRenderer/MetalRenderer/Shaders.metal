@@ -28,9 +28,10 @@ struct VertexOut {
 
 vertex VertexOut vertex_main(VertexIn vertexBuffer [[stage_in]],
                              constant uint &colorIndex [[buffer(11)]],
-                             constant float4x4 &modelMatrix [[buffer(21)]]) {
+                             constant float4x4 &modelMatrix [[buffer(21)]],
+                             constant float4x4 &viewMatrix [[buffer(22)]]) {
     VertexOut out {
-        .position = modelMatrix * vertexBuffer.position,
+        .position = viewMatrix * modelMatrix * vertexBuffer.position,
         .color = color[colorIndex]
     };
     return out;

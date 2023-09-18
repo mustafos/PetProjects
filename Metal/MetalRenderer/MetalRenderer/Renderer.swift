@@ -73,6 +73,14 @@ extension Renderer: MTKViewDelegate {
         
         commandEncoder.setRenderPipelineState(pipelineState)
         
+        var viewTransform = Transform()
+        viewTransform.position.y = 1.0
+        
+        var viewMetrix = viewTransform.matrix.inverse
+        commandEncoder.setVertexBytes(&viewMetrix,
+                                      length: MemoryLayout<float4x4>.stride,
+                                      index: 22)
+        
         let models = [tree, train]
         for model in models {
         var modelMatrix = model.transform.matrix
