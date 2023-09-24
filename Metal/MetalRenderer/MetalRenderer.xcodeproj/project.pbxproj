@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4FDA832AC0B085005C5ABD /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4FDA822AC0B085005C5ABD /* Camera.swift */; };
 		6A65F8BB2AB3A9DB00C137D5 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A65F8BA2AB3A9DB00C137D5 /* Shaders.metal */; };
 		6ACF458D2AB774E900DD6147 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACF458C2AB774E900DD6147 /* Transform.swift */; };
 		6ACF458F2AB77B4100DD6147 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACF458E2AB77B4100DD6147 /* MathLibrary.swift */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A4FDA822AC0B085005C5ABD /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		6A4FDA842AC0B3AE005C5ABD /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		6A65F8BA2AB3A9DB00C137D5 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		6ACF458C2AB774E900DD6147 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		6ACF458E2AB77B4100DD6147 /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
@@ -87,9 +90,11 @@
 				6ADE39902AB5B1B4003EE05C /* Model.swift */,
 				6AF3CCFC2AB364B1005BF681 /* ViewController.swift */,
 				6AF3CD092AB3656C005BF681 /* Renderer.swift */,
+				6A4FDA842AC0B3AE005C5ABD /* Common.h */,
 				6ACF458E2AB77B4100DD6147 /* MathLibrary.swift */,
 				6ADE398E2AB59136003EE05C /* Extension.swift */,
 				6A65F8BA2AB3A9DB00C137D5 /* Shaders.metal */,
+				6A4FDA822AC0B085005C5ABD /* Camera.swift */,
 				6ACF458C2AB774E900DD6147 /* Transform.swift */,
 				6ADE39962AB5B65D003EE05C /* Models */,
 				6AF3CCFE2AB364B3005BF681 /* Assets.xcassets */,
@@ -181,6 +186,7 @@
 				6ADE39912AB5B1B4003EE05C /* Model.swift in Sources */,
 				6AF3CD0A2AB3656C005BF681 /* Renderer.swift in Sources */,
 				6AF3CCFB2AB364B1005BF681 /* AppDelegate.swift in Sources */,
+				6A4FDA832AC0B085005C5ABD /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +263,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = MetalRenderer/Common.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -313,6 +320,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = MetalRenderer/Common.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;

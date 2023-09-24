@@ -8,6 +8,8 @@
 #include <metal_stdlib>
 using namespace metal;
 
+#import "Common.h"
+
 constant float3 color[6] = {
     float3(1, 0, 0),
     float3(0, 1, 0),
@@ -28,10 +30,9 @@ struct VertexOut {
 
 vertex VertexOut vertex_main(VertexIn vertexBuffer [[stage_in]],
                              constant uint &colorIndex [[buffer(11)]],
-                             constant float4x4 &modelMatrix [[buffer(21)]],
-                             constant float4x4 &viewMatrix [[buffer(22)]]) {
+                             constant Uniforms &uniforms [[buffer(21)]]) {
     VertexOut out {
-        .position = viewMatrix * modelMatrix * vertexBuffer.position,
+        .position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * vertexBuffer.position,
         .color = color[colorIndex]
     };
     return out;

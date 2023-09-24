@@ -24,6 +24,9 @@ class Renderer: NSObject {
     
     let train: Model
     let tree: Model
+    let camera = Camera()
+    
+    var uniforms = Uniforms()
     
     init(view: MTKView) {
         guard let device = MTLCreateSystemDefaultDevice(),
@@ -45,6 +48,8 @@ class Renderer: NSObject {
         tree = Model(name: "treefir")
         tree.transform.position = [-1, 0, 0.3]
         tree.transform.scale = 0.5
+        
+        camera.transform.position = [0, 0.5, -3]
         
         super.init()
     }
@@ -69,10 +74,17 @@ class Renderer: NSObject {
         
         return try! Renderer.device.makeRenderPipelineState(descriptor: pipelineDescriptor)
     }
+    
+    func zoom(delta: Float) {
+        let sensitivity: Float = 0.05
+        let cameraVector = camera.transform.matrix.upperLeft.columns.2
+        camera.transform.position += delta * sensitivity * cameraVector
+    }
 }
 
 extension Renderer: MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        camera.aspect = Float(view.bounds.width / view.bounds.height)
     }
     
     func draw(in view: MTKView) {
@@ -86,24 +98,14 @@ extension Renderer: MTKViewDelegate {
         commandEncoder.setRenderPipelineState(pipelineState)
         commandEncoder.setDepthStencilState(depthStencilState)
         
-        let projectionMetrix = float4x4(projectionFov: radians(fromDegrees: 65),
-                                        near: 0.1, far: 100,
-                                        aspect: Float(view.bounds.width / view.bounds.height))
-        
-        var viewTransform = Transform()
-        viewTransform.position.y = 1.0
-        viewTransform.position.z = -2.0
-        
-        var viewMetrix = projectionMetrix * viewTransform.matrix.inverse
-        commandEncoder.setVertexBytes(&viewMetrix,
-                                      length: MemoryLayout<float4x4>.stride,
-                                      index: 22)
+        uniforms.viewMatrix = camera.viewMatrix
+        uniforms.projectionMatrix = camera.projectionMatrix
         
         let models = [tree, train]
         for model in models {
-            var modelMatrix = model.transform.matrix
-            commandEncoder.setVertexBytes(&modelMatrix,
-                                          length: MemoryLayout<float4x4>.stride,
+            uniforms.modelMatrix = model.transform.matrix
+            commandEncoder.setVertexBytes(&uniforms,
+                                          length: MemoryLayout<Uniforms>.stride,
                                           index: 21)
             
             for mtkMesh in model.mtkMeshes {
