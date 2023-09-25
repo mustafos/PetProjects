@@ -44,6 +44,7 @@ class Renderer: NSObject {
         train = Model(name: "train")
         train.transform.position = [0.4, 0, 0]
         train.transform.scale = 0.5
+        train.transform.rotation.y = radians(fromDegrees: 180)
         
         tree = Model(name: "treefir")
         tree.transform.position = [-1, 0, 0.3]
