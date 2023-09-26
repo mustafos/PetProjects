@@ -24,9 +24,10 @@ class Renderer: NSObject {
     
     let train: Model
     let tree: Model
-    let camera = Camera()
     
+    let camera = Camera()
     var uniforms = Uniforms()
+    var fragmentUniforms = FragmentUniforms()
     
     init(view: MTKView) {
         guard let device = MTLCreateSystemDefaultDevice(),
@@ -95,12 +96,22 @@ extension Renderer: MTKViewDelegate {
             return
         }
         
+        var viewTreansform = Transform()
+        viewTreansform.position.y = 1.0
+        viewTreansform.position.z = -2.0
+        
         let commandEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor)!
         commandEncoder.setRenderPipelineState(pipelineState)
-        commandEncoder.setDepthStencilState(depthStencilState)
         
         uniforms.viewMatrix = camera.viewMatrix
         uniforms.projectionMatrix = camera.projectionMatrix
+        
+        fragmentUniforms.cameraPosition = camera.transform.position
+        commandEncoder.setFragmentBytes(&fragmentUniforms,
+                                        length: MemoryLayout<FragmentUniforms>.stride,
+                                        index: 22)
+        
+        commandEncoder.setDepthStencilState(depthStencilState)
         
         let models = [tree, train]
         for model in models {
