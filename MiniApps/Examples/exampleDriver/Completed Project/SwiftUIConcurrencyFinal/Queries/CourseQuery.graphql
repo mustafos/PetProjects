@@ -1,0 +1,30 @@
+query Course($locale: String!) {
+  courseCollection(locale: $locale) {
+    courses: items {
+      sys {
+        publishedAt
+        id
+      }
+      title
+      subtitle
+      numberOfSections
+      numberOfHours
+      subject
+      colors
+      illustration {
+        url
+      }
+      sectionCollection {
+        sections: items {
+          sys {
+            id
+          }
+          title
+          subtitle
+          content
+        
+        }
+      }
+    }
+  }
+}

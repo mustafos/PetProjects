@@ -1,0 +1,36 @@
+{
+    "publishedAt": "2021-06-16T18:53:45.596Z",
+    "id": "3WzcPYRYAfb2pa8Yc4pgMv",
+    "title": "UI Design for Developers",
+    "subtitle": "Build a multi-platform app from scratch using the new techniques in iOS 14. We'll use the Sidebar and Lazy Grids to make the layout adaptive for iOS, iPadOS, macOS Big Sur and we'll learn the new Matched Geometry Effect to create beautiful transitions.",
+    "numberOfSections": 22,
+    "numberOfHours": 3,
+    "subject": "Design",
+    "colors": [
+        "#E14885",
+        "#F14366"
+    ],
+    "illustration": "https://images.ctfassets.net/l39hqq1h1o7w/uYpu4cJAR00HLa2CJ93Pm/fe171920277b9e23379bfe70857aebaa/Swift_Advanced.png",
+    "sectionCollection": {
+        "sections": [
+            {
+                "id": "4YEpXhTiRg4hTt2X0JK8IT",
+                "title": "UI Design for Developers",
+                "subtitle": "Learn just enough visual design  to be dangerous as a developer",
+                "content": "Many design courses focus on the finer details, heavy theories, getting you to the 99% of being a visual designer, but often disregard the code and handoff aspect. They end up alienating developers who just wish to learn the essentials. If you're looking to learn *just enough* UI design to be 100% self-sufficient and collaborate better with designers, this course if for you."
+            },
+            {
+                "id": "4cqpQIABji5QqKMKiWJy62",
+                "title": "UI Patterns and Inspiration",
+                "subtitle": "Design from scratch using known patterns and create wireframes",
+                "content": "Wireframing is an important aspect of designing webpages. A wireframe is like a blueprint of how the application's structure will look like. In this section, we'll create a wireframe and then add elements to it."
+            },
+            {
+                "id": "1NkN0N20fwn1e2OSFyGpqN",
+                "title": "Colors and Branding",
+                "subtitle": "Create your color palette using monochromatic, analogous and complimentary colors",
+                "content": "Choosing a **color theme** for your web application can be **daunting**. This section starts off with going through some amazing resources that make the task of selecting colors easier. Then, we move on to applying said colors to the wireframes we added previously. "
+            }
+        ]
+    }
+}

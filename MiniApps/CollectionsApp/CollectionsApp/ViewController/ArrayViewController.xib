@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArrayViewController" customModule="CollectionsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="createArrayButton" destination="YD8-5T-aJ8" id="nNn-2o-vCG"/>
+                <outlet property="mainActivityIndicator" destination="oiN-jT-Tno" id="nRN-xQ-phb"/>
+                <outlet property="timeBuildLabel" destination="GOc-ot-YC5" id="Hvy-cF-HHh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOc-ot-YC5">
+                    <rect key="frame" x="0.0" y="59" width="393" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="wND-kA-dcd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="oiN-jT-Tno">
+                    <rect key="frame" x="0.0" y="59" width="393" height="100"/>
+                    <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="zFb-G9-4I6"/>
+                    </constraints>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-5T-aJ8">
+                    <rect key="frame" x="0.0" y="59" width="393" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="zJc-OF-hQ0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Create Int array with 10_000_000 elements"/>
+                    <connections>
+                        <action selector="timeButtonAction:" destination="-1" eventType="touchUpInside" id="2VJ-So-RvP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GOc-ot-YC5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BQs-sp-XBa"/>
+                <constraint firstItem="oiN-jT-Tno" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LiY-mD-f4Z"/>
+                <constraint firstItem="YD8-5T-aJ8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NR3-79-kzf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oiN-jT-Tno" secondAttribute="trailing" id="YrQ-B6-hZC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YD8-5T-aJ8" secondAttribute="trailing" id="bpC-lF-ZFb"/>
+                <constraint firstItem="YD8-5T-aJ8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cvV-8m-JBQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GOc-ot-YC5" secondAttribute="trailing" id="cy7-DU-LOR"/>
+                <constraint firstItem="GOc-ot-YC5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lCz-jd-Nwa"/>
+                <constraint firstItem="oiN-jT-Tno" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="x39-ff-GkE"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
