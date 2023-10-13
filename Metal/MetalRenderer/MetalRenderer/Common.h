@@ -20,4 +20,10 @@ typedef struct {
     vector_float3 cameraPosition;
 } FragmentUniforms;
 
+typedef struct {
+    vector_float3 baseColor;
+    vector_float3 specularColor;
+    float shininess;
+} Material;
+
 #endif /* Common_h */

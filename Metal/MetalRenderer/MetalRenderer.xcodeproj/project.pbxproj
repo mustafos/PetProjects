@@ -17,6 +17,7 @@
 		6ADE39912AB5B1B4003EE05C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADE39902AB5B1B4003EE05C /* Model.swift */; };
 		6ADE39942AB5B62E003EE05C /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6ADE39922AB5B62E003EE05C /* train.obj */; };
 		6ADE39952AB5B62E003EE05C /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6ADE39932AB5B62E003EE05C /* train.mtl */; };
+		6AEBFA622AD68F8900717469 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEBFA612AD68F8900717469 /* Mesh.swift */; };
 		6AF09ED72AC614740036BF90 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF09ED62AC614740036BF90 /* Node.swift */; };
 		6AF09ED92AC614C00036BF90 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF09ED82AC614C00036BF90 /* Scene.swift */; };
 		6AF09EDB2AC615C40036BF90 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF09EDA2AC615C40036BF90 /* GameScene.swift */; };
@@ -40,6 +41,7 @@
 		6ADE39902AB5B1B4003EE05C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6ADE39922AB5B62E003EE05C /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
 		6ADE39932AB5B62E003EE05C /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
+		6AEBFA612AD68F8900717469 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 		6AF09ED62AC614740036BF90 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		6AF09ED82AC614C00036BF90 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		6AF09EDA2AC615C40036BF90 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				6AF3CCFA2AB364B1005BF681 /* AppDelegate.swift */,
 				6ADE39902AB5B1B4003EE05C /* Model.swift */,
+				6AEBFA612AD68F8900717469 /* Mesh.swift */,
 				6AF3CCFC2AB364B1005BF681 /* ViewController.swift */,
 				6AF3CD092AB3656C005BF681 /* Renderer.swift */,
 				6A4FDA842AC0B3AE005C5ABD /* Common.h */,
@@ -198,6 +201,7 @@
 				6ACF458F2AB77B4100DD6147 /* MathLibrary.swift in Sources */,
 				6ACF458D2AB774E900DD6147 /* Transform.swift in Sources */,
 				6AF09EDB2AC615C40036BF90 /* GameScene.swift in Sources */,
+				6AEBFA622AD68F8900717469 /* Mesh.swift in Sources */,
 				6ADE39912AB5B1B4003EE05C /* Model.swift in Sources */,
 				6AF3CD0A2AB3656C005BF681 /* Renderer.swift in Sources */,
 				6AF3CCFB2AB364B1005BF681 /* AppDelegate.swift in Sources */,

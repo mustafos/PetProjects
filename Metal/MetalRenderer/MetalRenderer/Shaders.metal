@@ -37,26 +37,25 @@ struct VertexIn {
 };
 
 vertex VertexOut vertex_main(VertexIn vertexBuffer [[stage_in]],
-                             constant uint &colorIndex [[buffer(11)]],
                              constant Uniforms &uniforms [[buffer(21)]]) {
     VertexOut out {
         .position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * vertexBuffer.position,
         .worldNormal = (uniforms.modelMatrix * float4(vertexBuffer.normal, 0)).xyz,
         .worldPosition = (uniforms.modelMatrix * vertexBuffer.position).xyz,
-        .color = color[colorIndex]
     };
     return out;
 }
 
 fragment float4 fragment_main(VertexOut in [[stage_in]],
+                              constant Material &material [[buffer(11)]],
                               constant FragmentUniforms &fragmentUniforms [[buffer(22)]]) {
     float3 lightVector = normalize(lightPosition);
     float3 normalVector = normalize(in.worldNormal);
     
-    float materialShininess = 32;
-    float3 materialSpecularColor = float3(1.0, 1.0, 1.0);
+    float materialShininess = material.shininess;
+    float3 materialSpecularColor = material.specularColor;
     
-    float3 baseColor = in.color;
+    float3 baseColor = material.baseColor;
     
     float diffuseIntensity = saturate(dot(lightVector, normalVector));
     
