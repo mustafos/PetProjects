@@ -9,10 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isNight = false
+    @State private var isVideoPlayerPresented = false
     var body: some View {
         ZStack {
             BackgroungView(isNight: $isNight)
             VStack {
+                HStack {
+                    Spacer()
+                    Button("VideoPlayer", systemImage: "play.circle") {
+                        isVideoPlayerPresented.toggle()
+                    }
+                    .fullScreenCover(isPresented: $isVideoPlayerPresented) {
+                        MainVideoView()
+                    }
+                }
+                .padding()
+                
                 CityTextView(cityName: "Prague, CZ")
                 
                 MainWeatherView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 14)
@@ -29,7 +41,7 @@ struct ContentView: View {
                 Button(action: {
                     isNight.toggle()
                 }, label: {
-                    WeatherButton(title: "Change Day Time")
+                    WeatherButton(title: "Change Day Time", textColor: .white, backgroundColor: Color.cyan)
                 })
                 
                 Spacer()
@@ -54,7 +66,7 @@ struct WeatherDayView: View {
                 .foregroundColor(.white)
             
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
@@ -69,7 +81,10 @@ struct WeatherDayView: View {
 struct BackgroungView: View {
     @Binding var isNight: Bool
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .lemon, isNight ? .gray : .sky]), startPoint: .topTrailing, endPoint: .bottomLeading)
+        //        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .lemon, isNight ? .gray : .sky]), startPoint: .topTrailing, endPoint: .bottomLeading)
+        //            .ignoresSafeArea()
+        ContainerRelativeShape()
+            .fill(isNight ? Color.black.gradient : Color.red.gradient)
             .ignoresSafeArea()
     }
 }

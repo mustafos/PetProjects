@@ -9,17 +9,27 @@ import SwiftUI
 
 struct WeatherButton: View {
     var title: String
+    var textColor: Color
+    var backgroundColor: Color
+    
     var body: some View {
-        Text(title)
-            .frame(width: 200, height: 50)
-            .background(.white)
-            .foregroundColor(.blue)
-            .font(.system(size: 20, weight: .bold, design: .rounded))
-            .cornerRadius(15)
+        VStack(spacing: 20) {
+            Text(title)
+                .bold()
+                .frame(width: 200, height: 50)
+                .background(backgroundColor)
+                .cornerRadius(15)
+            
+            Text(title)
+                .frame(width: 200, height: 50)
+                .background(backgroundColor)
+                .cornerRadius(15)
+        }
+        .foregroundColor(textColor)
     }
 }
 
 
 #Preview {
-    WeatherButton(title: "Weather Button")
+    WeatherButton(title: "Weather Button", textColor: .white, backgroundColor: .cyan)
 }
