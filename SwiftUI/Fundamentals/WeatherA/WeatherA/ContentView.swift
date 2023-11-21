@@ -81,8 +81,8 @@ struct WeatherDayView: View {
 struct BackgroungView: View {
     @Binding var isNight: Bool
     var body: some View {
-        //        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .lemon, isNight ? .gray : .sky]), startPoint: .topTrailing, endPoint: .bottomLeading)
-        //            .ignoresSafeArea()
+//                LinearGradient(gradient: Gradient(colors: [isNight ? .black : .lemon, isNight ? .gray : .sky]), startPoint: .topTrailing, endPoint: .bottomLeading)
+//                    .ignoresSafeArea()
         ContainerRelativeShape()
             .fill(isNight ? Color.black.gradient : Color.red.gradient)
             .ignoresSafeArea()
