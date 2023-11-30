@@ -9,7 +9,6 @@ import Foundation
 import MetalKit
 
 struct Mesh {
-    
     let mtkMesh: MTKMesh
     let submeshes: [Submesh]
     
@@ -24,9 +23,32 @@ struct Mesh {
 struct Submesh {
     let mtkSubmesh: MTKSubmesh
     var material: Material
+    
+    struct Textures {
+        let baseColor: MTLTexture?
+        
+        init(material: MDLMaterial?) {
+            guard let baseColor = material?.property(with: .baseColor), 
+                    baseColor.type == .texture,
+                    let mdlTexture = baseColor.textureSamplerValue?.texture else {
+                self.baseColor = nil
+                return
+            }
+            let textureLoader = MTKTextureLoader(device: Renderer.device)
+            let textureLoaderOptions: [MTKTextureLoader.Option: Any] = [
+                .origin: MTKTextureLoader.Origin.bottomLeft
+            ]
+            self.baseColor = try? textureLoader.newTexture(texture: mdlTexture,
+                                                           options: textureLoaderOptions)
+        }
+    }
+    
+    let textures: Textures
+    
     init(mdlSubmesh: MDLSubmesh, mtkSubmesh: MTKSubmesh) {
         self.mtkSubmesh = mtkSubmesh
         material = Material(material: mdlSubmesh.material)
+        textures = Textures(material: mdlSubmesh.material)
     }
 }
 
