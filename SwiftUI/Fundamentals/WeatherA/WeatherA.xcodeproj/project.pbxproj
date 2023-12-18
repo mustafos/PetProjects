@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1F3C412B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A1F3C402B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf */; };
+		6A1F3C442B2CED940032247C /* FontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F3C432B2CED940032247C /* FontView.swift */; };
 		6A3F58B82B0660AA0098B470 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F58B72B0660AA0098B470 /* CustomProgressBar.swift */; };
 		6A774DAB2B0CCB270054C8C6 /* ArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */; };
 		6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A1F3C402B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		6A1F3C422B2CE7AB0032247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6A1F3C432B2CED940032247C /* FontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontView.swift; sourceTree = "<group>"; };
 		6A3F58B72B0660AA0098B470 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayStorage.swift; sourceTree = "<group>"; };
 		6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageUserDefault.swift; sourceTree = "<group>"; };
@@ -56,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1F3C3F2B2CE6460032247C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6A1F3C402B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf */,
+				6A1F3C432B2CED940032247C /* FontView.swift */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		6A3F58B92B0660AD0098B470 /* ProgressBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +120,11 @@
 		6AFD24682AEAA0DE00A33836 /* WeatherA */ = {
 			isa = PBXGroup;
 			children = (
+				6A1F3C422B2CE7AB0032247C /* Info.plist */,
 				6AFD24692AEAA0DE00A33836 /* WeatherAApp.swift */,
 				6AFD246B2AEAA0DE00A33836 /* ContentView.swift */,
 				6AFD24772AEAB27700A33836 /* WeatherButton.swift */,
+				6A1F3C3F2B2CE6460032247C /* Font */,
 				6A3F58B92B0660AD0098B470 /* ProgressBar */,
 				6AFF0EDD2AFD8499001ED21D /* ScrollView */,
 				6A9AAF942AFB99FF00290FF6 /* UserDefaults */,
@@ -194,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AEFBC7B2AEC3EF0007D893B /* video.json in Resources */,
+				6A1F3C412B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf in Resources */,
 				6AFD24712AEAA0E000A33836 /* Preview Assets.xcassets in Resources */,
 				6AFD246E2AEAA0E000A33836 /* Assets.xcassets in Resources */,
 			);
@@ -211,6 +228,7 @@
 				6AEFBC812AEC415D007D893B /* VideoUploader.swift in Sources */,
 				6AEFBC7D2AEC3F66007D893B /* VideoModel.swift in Sources */,
 				6AEFBC762AEC380B007D893B /* MainVideoView.swift in Sources */,
+				6A1F3C442B2CED940032247C /* FontView.swift in Sources */,
 				6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */,
 				6AFD246A2AEAA0DE00A33836 /* WeatherAApp.swift in Sources */,
 				6AEFBC7F2AEC4113007D893B /* Decoder.swift in Sources */,
@@ -355,6 +373,7 @@
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -384,6 +403,7 @@
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

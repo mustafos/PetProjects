@@ -93,10 +93,24 @@ struct CityTextView: View {
     var cityName: String
     var body: some View {
         Text(cityName)
-            .font(.system(.largeTitle, design: .rounded))
+        
+        // Add font like file
+            .font(.custom("JetBrains Mono", size: 23))
+//            .font(.system(.largeTitle, design: .rounded))
             .foregroundColor(.white)
             .padding()
     }
+    // MARK: - Check font name
+//    init(cityName: String) {
+//        self.cityName = cityName
+//        for familyName in UIFont.familyNames {
+//            print(familyName)
+//            
+//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+//                print("-- \(fontName)")
+//            }
+//        }
+//    }
 }
 
 struct MainWeatherView: View {
