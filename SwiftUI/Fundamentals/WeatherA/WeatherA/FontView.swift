@@ -11,7 +11,6 @@ struct FontView: View {
     var body: some View {
         Text("Custom Font")
             .font(.custom("Zapfino", size: 52, relativeTo: .largeTitle))
-//            .font(.custom("JetBrains Mono", size: 23))
     }
     
     // MARK: - Check font name

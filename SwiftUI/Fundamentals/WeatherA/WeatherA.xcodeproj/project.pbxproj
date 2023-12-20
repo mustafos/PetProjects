@@ -10,6 +10,7 @@
 		6A1F3C412B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A1F3C402B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf */; };
 		6A1F3C442B2CED940032247C /* FontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F3C432B2CED940032247C /* FontView.swift */; };
 		6A3F58B82B0660AA0098B470 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F58B72B0660AA0098B470 /* CustomProgressBar.swift */; };
+		6A47B2D92B2CF4A9006F7441 /* APICallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47B2D82B2CF4A9006F7441 /* APICallsView.swift */; };
 		6A774DAB2B0CCB270054C8C6 /* ArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */; };
 		6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */; };
 		6AEFBC762AEC380B007D893B /* MainVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFBC752AEC380B007D893B /* MainVideoView.swift */; };
@@ -32,6 +33,7 @@
 		6A1F3C422B2CE7AB0032247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A1F3C432B2CED940032247C /* FontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontView.swift; sourceTree = "<group>"; };
 		6A3F58B72B0660AA0098B470 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
+		6A47B2D82B2CF4A9006F7441 /* APICallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallsView.swift; sourceTree = "<group>"; };
 		6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayStorage.swift; sourceTree = "<group>"; };
 		6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageUserDefault.swift; sourceTree = "<group>"; };
 		6AEFBC752AEC380B007D893B /* MainVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVideoView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 				6A3F58B72B0660AA0098B470 /* CustomProgressBar.swift */,
 			);
 			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		6A47B2D72B2CF1A2006F7441 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6A47B2D82B2CF4A9006F7441 /* APICallsView.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		6A9AAF942AFB99FF00290FF6 /* UserDefaults */ = {
@@ -124,6 +134,7 @@
 				6AFD24692AEAA0DE00A33836 /* WeatherAApp.swift */,
 				6AFD246B2AEAA0DE00A33836 /* ContentView.swift */,
 				6AFD24772AEAB27700A33836 /* WeatherButton.swift */,
+				6A47B2D72B2CF1A2006F7441 /* Network */,
 				6A1F3C3F2B2CE6460032247C /* Font */,
 				6A3F58B92B0660AD0098B470 /* ProgressBar */,
 				6AFF0EDD2AFD8499001ED21D /* ScrollView */,
@@ -233,6 +244,7 @@
 				6AFD246A2AEAA0DE00A33836 /* WeatherAApp.swift in Sources */,
 				6AEFBC7F2AEC4113007D893B /* Decoder.swift in Sources */,
 				6A3F58B82B0660AA0098B470 /* CustomProgressBar.swift in Sources */,
+				6A47B2D92B2CF4A9006F7441 /* APICallsView.swift in Sources */,
 				6AEFBC792AEC396B007D893B /* VideoViewModel.swift in Sources */,
 				6AFD24782AEAB27700A33836 /* WeatherButton.swift in Sources */,
 				6AEFBC852AEC4A08007D893B /* VideoPlayer.swift in Sources */,
