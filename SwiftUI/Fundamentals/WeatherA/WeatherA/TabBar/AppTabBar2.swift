@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct AppTabBar2: View {
+    @State private var selectedTab: Tab = .house
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                TabView(selection: $selectedTab) {
+                    ForEach(Tab.allCases, id: \.rawValue) { tab in
+                        HStack {
+                            Image(systemName: tab.rawValue)
+                            Text("\(tab.rawValue.capitalized)")
+                                .bold()
+                                .animation(nil, value: selectedTab)
+                        }
+                        .tag(tab)
+                    }
+                }
+            }
+            VStack {
+                Spacer()
+                CustomTabBar2(selectedTab: $selectedTab)
+            }
+        }
     }
 }
 
