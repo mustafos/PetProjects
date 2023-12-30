@@ -2,7 +2,7 @@
 //  DropTow.swift
 //  WeatherA
 //
-//  Created by Mustafa Bekirov on 27.12.2023.
+//  Created by Mustafa Bekirov on 28.12.2023.
 //
 
 import SwiftUI
