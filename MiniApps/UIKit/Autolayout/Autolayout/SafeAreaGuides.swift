@@ -14,12 +14,17 @@ class SafeAreaGuides: UIViewController {
     }
     
     func setupViews() -> Void {
+        let blueView = UIView()
+        blueView.translatesAutoresizingMaskIntoConstraints = false
+        blueView.backgroundColor = .blue
+        
         let topLabel = makeLabel(withText: "top")
         let bottomLabel = makeLabel(withText: "bottom")
         
         let leadingLabel = makeLabel(withText: "leading")
         let trailingLabel = makeLabel(withText: "trailing")
         
+        view.addSubview(blueView)
         view.addSubview(topLabel)
         view.addSubview(bottomLabel)
         view.addSubview(leadingLabel)
@@ -36,7 +41,12 @@ class SafeAreaGuides: UIViewController {
             leadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
             trailingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            trailingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            trailingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            blueView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            blueView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            blueView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            blueView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
         ])
     }
     
