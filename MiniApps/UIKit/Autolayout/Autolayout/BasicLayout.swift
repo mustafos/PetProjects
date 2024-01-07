@@ -2,7 +2,7 @@
 //  BasicLayout.swift
 //  Autolayout
 //
-//  Created by Mustafa Bekirov on 06.01.2024.
+//  Created by Mustafa Bekirov on 05.01.2024.
 //
 
 import UIKit
