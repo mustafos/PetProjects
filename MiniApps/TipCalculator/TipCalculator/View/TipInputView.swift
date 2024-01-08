@@ -138,7 +138,7 @@ class TipInputView: UIView {
             return controller
         }()
         
-        parentViewController?.present(alertController, animated: true)
+//        parentViewController?.present(alertController, animated: true)
     }
     
     private func observe() {

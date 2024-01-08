@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
-//  CustomTabBarApp
+//  TabBarController.swift
+//  TipCalculator
 //
-//  Created by Vasichko Anna on 02.06.2022.
+//  Created by Mustafa Bekirov on 08.01.2024.
 //
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
-
+class TabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
@@ -18,26 +18,27 @@ class MainTabBarController: UITabBarController {
     private func generateTabBar() {
         viewControllers = [
             generateVC(
-                viewController: HomeViewController(),
-                title: "Home",
-                image: UIImage(systemName: "house.fill")
+                viewController: DropDownController(),
+                image: UIImage(systemName: "filemenu.and.selection")
             ),
             generateVC(
-                viewController: PersonViewController(),
-                title: "Personal Info",
+                viewController: DropDownController(),
                 image: UIImage(systemName: "person.fill")
             ),
             generateVC(
-                viewController: SettingsViewController(),
-                title: "Settings",
+                viewController: DropDownController(),
                 image: UIImage(systemName: "slider.horizontal.3")
+            ),
+            generateVC(
+                viewController: DropDownController(),
+                image: UIImage(systemName: "car")
             )
         ]
     }
     
-    private func generateVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
-        viewController.tabBarItem.title = title
+    private func generateVC(viewController: UIViewController, image: UIImage?) -> UIViewController {
         viewController.tabBarItem.image = image
+        viewController.tabBarItem.selectedImage = UIImage(named: "selectedTab")?.withRenderingMode(.alwaysOriginal)
         return viewController
     }
     
@@ -66,10 +67,8 @@ class MainTabBarController: UITabBarController {
         tabBar.itemWidth = width / 5
         tabBar.itemPositioning = .centered
         
-        roundLayer.fillColor = UIColor.mainWhite.cgColor
-        
-        tabBar.tintColor = .tabBarItemAccent
-        tabBar.unselectedItemTintColor = .tabBarItemLight
+        roundLayer.fillColor = UIColor.systemGray6.cgColor
+        tabBar.unselectedItemTintColor = .systemMint
     }
 }
 
