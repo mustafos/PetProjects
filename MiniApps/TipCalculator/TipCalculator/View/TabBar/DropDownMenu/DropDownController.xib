@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropDownController" customModule="TipCalculator" customModuleProvider="target">
             <connections>
                 <outlet property="dropDownButton" destination="XaP-jf-Yx2" id="l9A-yP-vxi"/>
+                <outlet property="showButton" destination="2vl-gQ-RJu" id="jeN-RU-23F"/>
+                <outlet property="showLabel" destination="O0c-PY-68n" id="Lg2-zU-dkI"/>
                 <outlet property="tableViewMenu" destination="bKE-WO-y0i" id="yJ8-UX-64K"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,7 +33,14 @@
                                 <constraint firstAttribute="height" constant="46" id="PtP-dQ-RMR"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Select Item"/>
+                            <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Select Item" imagePadding="170">
+                                <imageReference key="image" image="chevron.down" catalog="system" symbolScale="large" variableValue="0.60000000000000009"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                </preferredSymbolConfiguration>
+                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="openDropMenu:" destination="-1" eventType="touchUpInside" id="eQe-Ws-vl5"/>
                             </connections>
@@ -43,12 +53,55 @@
                             </constraints>
                         </tableView>
                     </subviews>
+                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                    <constraints>
+                        <constraint firstItem="bKE-WO-y0i" firstAttribute="top" secondItem="XaP-jf-Yx2" secondAttribute="bottom" id="0oZ-h6-8eq"/>
+                        <constraint firstAttribute="bottom" secondItem="bKE-WO-y0i" secondAttribute="bottom" id="5JA-Tp-dMY"/>
+                        <constraint firstItem="bKE-WO-y0i" firstAttribute="leading" secondItem="4Uq-1P-KFJ" secondAttribute="leading" id="BDf-Ft-OpE"/>
+                        <constraint firstAttribute="trailing" secondItem="bKE-WO-y0i" secondAttribute="trailing" id="HVq-6c-8HY"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-vs-MEa">
+                    <rect key="frame" x="20" y="465" width="353" height="66.333333333333371"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vl-gQ-RJu">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="46"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="m2I-cF-CuP"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Show">
+                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="openShowMenu:" destination="-1" eventType="touchUpInside" id="eoe-jV-X3e"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-PY-68n">
+                            <rect key="frame" x="0.0" y="46" width="353" height="20.333333333333329"/>
+                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="O0c-PY-68n" secondAttribute="trailing" id="32R-XP-GBw"/>
+                        <constraint firstItem="O0c-PY-68n" firstAttribute="leading" secondItem="gLJ-vs-MEa" secondAttribute="leading" id="FpU-pt-Fll"/>
+                        <constraint firstItem="O0c-PY-68n" firstAttribute="top" secondItem="2vl-gQ-RJu" secondAttribute="bottom" id="Xbz-9o-XQU"/>
+                        <constraint firstAttribute="bottom" secondItem="O0c-PY-68n" secondAttribute="bottom" id="nY1-b6-ElW"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="gLJ-vs-MEa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Z4Z-2D-1xF"/>
                 <constraint firstItem="4Uq-1P-KFJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="b2m-az-s54"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gLJ-vs-MEa" secondAttribute="trailing" constant="20" id="e96-Ro-ANN"/>
+                <constraint firstItem="gLJ-vs-MEa" firstAttribute="top" secondItem="4Uq-1P-KFJ" secondAttribute="bottom" constant="20" id="kaC-ye-yBH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Uq-1P-KFJ" secondAttribute="trailing" constant="20" id="qVD-qW-AYT"/>
                 <constraint firstItem="4Uq-1P-KFJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uGH-eh-xII"/>
             </constraints>
@@ -56,8 +109,18 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

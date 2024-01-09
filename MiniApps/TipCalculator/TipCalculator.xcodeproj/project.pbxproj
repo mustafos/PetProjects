@@ -50,7 +50,10 @@
 		6AA7B3AD2A4C568A00E54F47 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3AC2A4C568A00E54F47 /* UIColor+Extension.swift */; };
 		6AA7B3B02A4F6EA100E54F47 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3AF2A4F6EA100E54F47 /* LabelFactory.swift */; };
 		6AC7663E2B4AD518007EDB05 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7663D2B4AD518007EDB05 /* TabBarController.swift */; };
-		6AC766402B4AD552007EDB05 /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7663F2B4AD552007EDB05 /* DropDownController.swift */; };
+		6AC766432B4AD9C5007EDB05 /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC766412B4AD9C5007EDB05 /* DropDownController.swift */; };
+		6AC766442B4AD9C5007EDB05 /* DropDownController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC766422B4AD9C5007EDB05 /* DropDownController.xib */; };
+		6AC766472B4ADDE4007EDB05 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC766452B4ADDE4007EDB05 /* ItemViewCell.swift */; };
+		6AC766482B4ADDE4007EDB05 /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC766462B4ADDE4007EDB05 /* ItemViewCell.xib */; };
 		6ACB253F2A5835DE001C7CC3 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB253E2A5835DE001C7CC3 /* AudioPlayerService.swift */; };
 		6ACC0BBE2A51810800C0DDBD /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACC0BBD2A51810800C0DDBD /* AmountView.swift */; };
 /* End PBXBuildFile section */
@@ -113,7 +116,10 @@
 		6AA7B3AC2A4C568A00E54F47 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6AA7B3AF2A4F6EA100E54F47 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		6AC7663D2B4AD518007EDB05 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		6AC7663F2B4AD552007EDB05 /* DropDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
+		6AC766412B4AD9C5007EDB05 /* DropDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
+		6AC766422B4AD9C5007EDB05 /* DropDownController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownController.xib; sourceTree = "<group>"; };
+		6AC766452B4ADDE4007EDB05 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
+		6AC766462B4ADDE4007EDB05 /* ItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
 		6ACB253C2A583598001C7CC3 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
 		6ACB253E2A5835DE001C7CC3 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		6ACC0BBD2A51810800C0DDBD /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
@@ -332,9 +338,28 @@
 			isa = PBXGroup;
 			children = (
 				6AC7663D2B4AD518007EDB05 /* TabBarController.swift */,
-				6AC7663F2B4AD552007EDB05 /* DropDownController.swift */,
+				6AC766492B4ADDE9007EDB05 /* DropDownMenu */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6AC766492B4ADDE9007EDB05 /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6AC7664A2B4ADDFD007EDB05 /* ItemCell */,
+				6AC766412B4AD9C5007EDB05 /* DropDownController.swift */,
+				6AC766422B4AD9C5007EDB05 /* DropDownController.xib */,
+			);
+			path = DropDownMenu;
+			sourceTree = "<group>";
+		};
+		6AC7664A2B4ADDFD007EDB05 /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AC766452B4ADDE4007EDB05 /* ItemViewCell.swift */,
+				6AC766462B4ADDE4007EDB05 /* ItemViewCell.xib */,
+			);
+			path = ItemCell;
 			sourceTree = "<group>";
 		};
 		6ACB253B2A58355A001C7CC3 /* Resource */ = {
@@ -477,7 +502,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC766442B4AD9C5007EDB05 /* DropDownController.xib in Resources */,
 				6A1033EA2B4338910087194C /* ColorPickerViewController.xib in Resources */,
+				6AC766482B4ADDE4007EDB05 /* ItemViewCell.xib in Resources */,
 				6AA7B3682A4C4B5000E54F47 /* LaunchScreen.storyboard in Resources */,
 				6AA7B3652A4C4B5000E54F47 /* Assets.xcassets in Resources */,
 			);
@@ -508,7 +535,7 @@
 				6AA43B7C2B3DED85008194D9 /* MainViewController.swift in Sources */,
 				6A853EB82A51C03800DC05B8 /* CalculatorVM.swift in Sources */,
 				6A70B6572B46047600D83BE6 /* AddSwiftUI.swift in Sources */,
-				6AC766402B4AD552007EDB05 /* DropDownController.swift in Sources */,
+				6AC766432B4AD9C5007EDB05 /* DropDownController.swift in Sources */,
 				6A70B6592B46055400D83BE6 /* ExistingUIKit.swift in Sources */,
 				6A37CDCE2A5352A1003ED266 /* UIResponder+Extension.swift in Sources */,
 				6A6AFC802A54B536001CF87A /* Int+Extension.swift in Sources */,
@@ -531,6 +558,7 @@
 				6A1612C62A57648400C44791 /* Double+Extension.swift in Sources */,
 				6A46B8152B474EB300003D6F /* SendingViewController.swift in Sources */,
 				6AA7B3B02A4F6EA100E54F47 /* LabelFactory.swift in Sources */,
+				6AC766472B4ADDE4007EDB05 /* ItemViewCell.swift in Sources */,
 				6A548ECB2A51B5650008DCAA /* Tip.swift in Sources */,
 				6AA7B3A52A4C51EC00E54F47 /* SplitInputView.swift in Sources */,
 				6AA7B3A32A4C51C200E54F47 /* TipInputView.swift in Sources */,

@@ -43,32 +43,39 @@ class TabBarController: UITabBarController {
     }
     
     private func setTabBarAppearance() {
-        let positionOnX: CGFloat = 10
         let positionOnY: CGFloat = 14
-        let width = tabBar.bounds.width - positionOnX * 2
-        let height = tabBar.bounds.height + positionOnY * 2
+        let height = tabBar.bounds.height + positionOnY
         
-        let roundLayer = CAShapeLayer()
+        // Create a UIView for the rounded background
+        let tabBarView = UIView()
+        tabBarView.translatesAutoresizingMaskIntoConstraints = false
+        tabBar.insertSubview(tabBarView, at: 0)
         
-        let bezierPath = UIBezierPath(
-            roundedRect: CGRect(
-                x: positionOnX,
-                y: tabBar.bounds.minY - positionOnY,
-                width: width,
-                height: height
-            ),
-            cornerRadius: height / 2
-        )
+        // Add layoutMarginsGuide for trailing, leading, and bottom
+        NSLayoutConstraint.activate([
+            tabBarView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            tabBarView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            tabBarView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+            tabBarView.heightAnchor.constraint(equalToConstant: height)
+        ])
         
-        roundLayer.path = bezierPath.cgPath
+        // Apply capsule shape to the backgroundView
+        tabBarView.layer.cornerRadius = height / 2
+        tabBarView.backgroundColor = UIColor.systemGray6
         
-        tabBar.layer.insertSublayer(roundLayer, at: 0)
-        
-        tabBar.itemWidth = width / 5
-        tabBar.itemPositioning = .centered
-        
-        roundLayer.fillColor = UIColor.systemGray6.cgColor
         tabBar.unselectedItemTintColor = .systemMint
+        
+        if let items = tabBar.items {
+            for (index, item) in items.enumerated() {
+                if index == 0 {
+                    tabBar.itemSpacing = 50
+                    // Apply insets only to the first item
+                    item.imageInsets = UIEdgeInsets(top: 0, left: 37, bottom: 0, right: -37)
+                } else if index == items.count - 1 {
+                    // Apply insets only to the last item
+                    item.imageInsets = UIEdgeInsets(top: 0, left: -37, bottom: 0, right: 37)
+                }
+            }
+        }
     }
 }
-
