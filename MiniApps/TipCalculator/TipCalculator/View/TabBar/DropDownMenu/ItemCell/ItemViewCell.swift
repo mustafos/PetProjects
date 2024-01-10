@@ -8,7 +8,9 @@
 import UIKit
 
 class ItemViewCell: UITableViewCell {
-
+    static let identifier = "ItemViewCell"
+    @IBOutlet weak var titleCell: UILabel!
+    @IBOutlet weak var imageCell: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -38,20 +38,16 @@ class ColorPickerViewController: UIViewController {
 }
 
 extension ColorPickerViewController: UIColorPickerViewControllerDelegate {
-    
-    //  Called once you have finished picking the color.
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         self.view.backgroundColor = viewController.selectedColor
-        
+
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.cancellable?.cancel()
             print(self.cancellable == nil)
         }
     }
-    
-    //  Called on every color selection done in the picker.
+
     func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
-            self.view.backgroundColor = viewController.selectedColor
-        
+        self.view.backgroundColor = viewController.selectedColor
     }
 }

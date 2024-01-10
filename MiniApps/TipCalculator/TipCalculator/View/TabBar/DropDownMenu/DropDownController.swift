@@ -11,18 +11,23 @@ class DropDownController: UIViewController {
     // MARK: – IBOutlet
     @IBOutlet weak var dropDownButton: UIButton!
     @IBOutlet weak var tableViewMenu: UITableView!
-    
     @IBOutlet weak var showButton: UIButton!
     @IBOutlet weak var showLabel: UILabel!
-    
-    private let itemList = ["Item1", "Item2", "Item3", "Item4", "Item5", "Item6"]
+    var itemList: [String] = ["Item1", "Item2", "Item3", "Item4", "Item5", "Item6"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
         view.backgroundColor = .orange
         tableViewMenu.isHidden = true
         showLabel.isHidden = true
         showLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim enim ut metus convallis aliquam."
+    }
+    
+    private func configTableView() {
+        tableViewMenu.register(UINib(nibName: "ItemViewCell", bundle: nil), forCellReuseIdentifier: ItemViewCell.identifier)
+        tableViewMenu.rowHeight = UITableView.automaticDimension
+        tableViewMenu.showsVerticalScrollIndicator = false
     }
     
     @IBAction func openDropMenu(_ sender: Any) {
@@ -43,14 +48,17 @@ extension DropDownController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
-        cell.textLabel?.text = itemList[indexPath.row]
-        cell.imageView?.image = UIImage(systemName: "star.fill")
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItemViewCell.identifier, for: indexPath) as! ItemViewCell
+        cell.titleCell.text = itemList[indexPath.row]
+        cell.titleCell.textColor = UIColor(.black)
+
+        cell.imageCell.image = UIImage(systemName: "star")
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dropDownButton.setTitle("\(itemList[indexPath.row])", for: .normal)
-        tableViewMenu.isHidden = false
+        tableViewMenu.isHidden = true
     }
 }
