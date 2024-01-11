@@ -13,6 +13,7 @@
 		6A2B24462A50BD160047249E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2B24452A50BD160047249E /* UIView+Extension.swift */; };
 		6A37CDCE2A5352A1003ED266 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37CDCD2A5352A1003ED266 /* UIResponder+Extension.swift */; };
 		6A46B8152B474EB300003D6F /* SendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A46B8142B474EB300003D6F /* SendingViewController.swift */; };
+		6A4A115A2B4E8497004E6A80 /* SwifterSwiftExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A11592B4E8497004E6A80 /* SwifterSwiftExample.swift */; };
 		6A548ECB2A51B5650008DCAA /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A548ECA2A51B5650008DCAA /* Tip.swift */; };
 		6A548ECD2A51B65B0008DCAA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A548ECC2A51B65B0008DCAA /* HeaderView.swift */; };
 		6A6AFC802A54B536001CF87A /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6AFC7F2A54B536001CF87A /* Int+Extension.swift */; };
@@ -82,6 +83,7 @@
 		6A2B24452A50BD160047249E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6A37CDCD2A5352A1003ED266 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		6A46B8142B474EB300003D6F /* SendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendingViewController.swift; sourceTree = "<group>"; };
+		6A4A11592B4E8497004E6A80 /* SwifterSwiftExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterSwiftExample.swift; sourceTree = "<group>"; };
 		6A548ECA2A51B5650008DCAA /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		6A548ECC2A51B65B0008DCAA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6A6AFC7F2A54B536001CF87A /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -181,6 +183,14 @@
 				6A46B8142B474EB300003D6F /* SendingViewController.swift */,
 			);
 			path = "Part 2";
+			sourceTree = "<group>";
+		};
+		6A4A11582B4E847E004E6A80 /* SwifterSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6A4A11592B4E8497004E6A80 /* SwifterSwiftExample.swift */,
+			);
+			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
 		6A548EC92A51B55B0008DCAA /* Model */ = {
@@ -289,10 +299,11 @@
 		6AA7B3992A4C4F5B00E54F47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6A4A11582B4E847E004E6A80 /* SwifterSwift */,
+				6AC766492B4ADDE9007EDB05 /* DropDownMenu */,
 				6AC7663C2B4AD4D1007EDB05 /* TabBar */,
 				6A70B6552B46044C00D83BE6 /* UIHostingController */,
 				6A1033E62B4338630087194C /* ColorPicker */,
-				6AA43B782B3DEC56008194D9 /* UICollectionView */,
 				6AA7B39C2A4C4F9F00E54F47 /* LogoView.swift */,
 				6AA7B39E2A4C516500E54F47 /* ResultView.swift */,
 				6ACC0BBD2A51810800C0DDBD /* AmountView.swift */,
@@ -338,7 +349,6 @@
 			isa = PBXGroup;
 			children = (
 				6AC7663D2B4AD518007EDB05 /* TabBarController.swift */,
-				6AC766492B4ADDE9007EDB05 /* DropDownMenu */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -346,6 +356,7 @@
 		6AC766492B4ADDE9007EDB05 /* DropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
+				6AA43B782B3DEC56008194D9 /* UICollectionView */,
 				6AC7664A2B4ADDFD007EDB05 /* ItemCell */,
 				6AC766412B4AD9C5007EDB05 /* DropDownController.swift */,
 				6AC766422B4AD9C5007EDB05 /* DropDownController.xib */,
@@ -558,6 +569,7 @@
 				6A1612C62A57648400C44791 /* Double+Extension.swift in Sources */,
 				6A46B8152B474EB300003D6F /* SendingViewController.swift in Sources */,
 				6AA7B3B02A4F6EA100E54F47 /* LabelFactory.swift in Sources */,
+				6A4A115A2B4E8497004E6A80 /* SwifterSwiftExample.swift in Sources */,
 				6AC766472B4ADDE4007EDB05 /* ItemViewCell.swift in Sources */,
 				6A548ECB2A51B5650008DCAA /* Tip.swift in Sources */,
 				6AA7B3A52A4C51EC00E54F47 /* SplitInputView.swift in Sources */,

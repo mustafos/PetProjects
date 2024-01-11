@@ -28,7 +28,7 @@ class ExpandableCell: UICollectionViewCell {
     private lazy var bottomContainer = UIView()
     
     private lazy var arrowImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "arrow_down")!.withRenderingMode(.alwaysTemplate))
+        let imageView = UIImageView(image: UIImage(systemName: "chevron.down")!.withRenderingMode(.alwaysTemplate))
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
         return imageView
