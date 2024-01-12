@@ -8,33 +8,95 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let margin: CGFloat = 20
+    let spacing: CGFloat = 32
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupViews()
     }
     
-    func setupViews() -> Void {
-        let label = makeLabel(withText: "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum[d] exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? [D]Quis autem vel eum i[r]ure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?\nAt vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem reru[d]um facilis est e[r]t expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellend[a]us. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.")
-        
-        view.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: view.readableContentGuide.topAnchor),
-            label.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor),
-            label.bottomAnchor.constraint(equalTo: view.readableContentGuide.bottomAnchor)
-        ])
+    func setupNavigationBar() {
+        navigationItem.title = "Playback"
     }
     
-    func makeLabel(withText text: String) -> UILabel {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = text
-        label.backgroundColor = .yellow
-        label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 20)
+    func setupViews() {
+        let offlineLabel = makeLabel(withText: "Offline")
+        let offlineSwitch = makeSwitch(isOn: false)
+        let offlineSublabel = makeSubLabel(withText: "When you go offline, you'll only be able to play the music and podcasts you've downloaded.")
         
-        return label
+        let crossfadeLabel = makeBoldLabel(withText: "Crossfade")
+        let crossfadeMinLabel = makeSubLabel(withText: "0s")
+        let crossfadeMaxLabel = makeSubLabel(withText: "12s")
+        let crossfadeProgressView = makeProgressView()
+        
+        let gaplessPlaybackLabel = makeLabel(withText: "Gapless Playback")
+        let gaplessPlaybackSwitch = makeSwitch(isOn: true)
+        
+        let hideSongsLabel = makeLabel(withText: "Hide Unplayable Songs")
+        let hideSongsSwitch = makeSwitch(isOn: true)
+        
+        let enableNormalizationLabel = makeLabel(withText: "Enable Audio Normalization")
+        let enableNormalizationSwitch = makeSwitch(isOn: true)
+        
+        view.addSubview(offlineLabel)
+        view.addSubview(offlineSwitch)
+        view.addSubview(offlineSublabel)
+        
+        view.addSubview(crossfadeLabel)
+        view.addSubview(crossfadeMinLabel)
+        view.addSubview(crossfadeProgressView)
+        view.addSubview(crossfadeMaxLabel)
+        
+        view.addSubview(gaplessPlaybackLabel)
+        view.addSubview(gaplessPlaybackSwitch)
+        
+        view.addSubview(hideSongsLabel)
+        view.addSubview(hideSongsSwitch)
+        
+        view.addSubview(enableNormalizationLabel)
+        view.addSubview(enableNormalizationSwitch)
+        
+        offlineLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: margin).isActive = true
+        offlineLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        
+        offlineSwitch.centerYAnchor.constraint(equalTo: offlineLabel.centerYAnchor).isActive = true
+        offlineSwitch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
+        
+        offlineSublabel.topAnchor.constraint(equalTo: offlineLabel.bottomAnchor, constant: margin).isActive = true
+        offlineSublabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        offlineSublabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
+        
+        crossfadeLabel.topAnchor.constraint(equalTo: offlineSublabel.bottomAnchor, constant: spacing).isActive = true
+        crossfadeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        crossfadeMinLabel.topAnchor.constraint(equalTo: crossfadeLabel.bottomAnchor, constant: spacing).isActive = true
+        crossfadeMinLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        
+        crossfadeProgressView.centerYAnchor.constraint(equalTo: crossfadeMinLabel.centerYAnchor).isActive = true
+        crossfadeProgressView.leadingAnchor.constraint(equalTo: crossfadeMinLabel.trailingAnchor, constant: 4).isActive = true
+        crossfadeProgressView.trailingAnchor.constraint(equalTo: crossfadeMaxLabel.leadingAnchor, constant: -4).isActive = true
+        
+        crossfadeMaxLabel.centerYAnchor.constraint(equalTo: crossfadeMinLabel.centerYAnchor).isActive = true
+        crossfadeMaxLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
+        
+        gaplessPlaybackLabel.topAnchor.constraint(equalTo: crossfadeMinLabel.bottomAnchor, constant: spacing).isActive = true
+        gaplessPlaybackLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        
+        gaplessPlaybackSwitch.centerYAnchor.constraint(equalTo: gaplessPlaybackLabel.centerYAnchor).isActive = true
+        gaplessPlaybackSwitch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
+        
+        hideSongsLabel.topAnchor.constraint(equalTo: gaplessPlaybackLabel.bottomAnchor, constant: spacing).isActive = true
+        hideSongsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        
+        hideSongsSwitch.centerYAnchor.constraint(equalTo: hideSongsLabel.centerYAnchor).isActive = true
+        hideSongsSwitch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
+        
+        enableNormalizationLabel.topAnchor.constraint(equalTo: hideSongsLabel.bottomAnchor, constant: spacing).isActive = true
+        enableNormalizationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        
+        enableNormalizationSwitch.centerYAnchor.constraint(equalTo: enableNormalizationLabel.centerYAnchor).isActive = true
+        enableNormalizationSwitch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
     }
 }
