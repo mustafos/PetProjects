@@ -126,6 +126,4 @@ class ExpandableCell: UICollectionViewCell {
             expandedConstraint.layoutConstraints.first?.priority = .defaultLow
         }
     }
-    
 }
-

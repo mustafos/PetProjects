@@ -6,18 +6,18 @@
 //
 
 import UIKit
-//import RxSwift
-//import RxCocoa
+import RxSwift
 import SnapKit
 import SwifterSwift
 
 class MainViewController: BaseViewController {
     
     private let sizingCell = ExpandableCell()
+    let itemList: [String] = ["Item1", "Item2", "Item3", "Item4", "Item5", "Item6"]
     
     // MARK: Важно выставить allowsMultipleSelection для множественного выбора
     private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout() //JumpAvoidingFlowLayout()
+        let layout = UICollectionViewFlowLayout() 
         layout.scrollDirection = .vertical
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -69,14 +69,14 @@ extension MainViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        5
+        3
     }
     
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
-    // MARK: Динамический расчет высоты
+    // MARK: Dynamic height calculation
     func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
@@ -122,7 +122,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainViewController: UICollectionViewDelegate {
     
-    // MARK: Переопределяем метод для анимированного сворачивания ячейки
+    // MARK: Overriding the method for animated cell collapse
     func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
         collectionView.deselectItem(at: indexPath, animated: true)
         collectionView.performBatchUpdates(nil)
@@ -134,7 +134,7 @@ extension MainViewController: UICollectionViewDelegate {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
         collectionView.performBatchUpdates(nil)
         
-        // MARK: И скроллим так, чтобы при разворачивании ячейки ее было полностью видно
+        // MARK: Overriding the method for animated cell expansion
         DispatchQueue.main.async {
             guard let attributes = collectionView.collectionViewLayout.layoutAttributesForItem(at: indexPath) else {
                 return
@@ -150,19 +150,15 @@ extension MainViewController: UICollectionViewDelegate {
                 animated: true
             )
             
-            // MARK: Весь этот костыль можно спокойно заменить на:
+            // MARK: This whole crutch can be easily replaced with:
             // collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
-            // Но тогда не будет инсета в 20 пикселей сверху (для красоты)
+            // But then there will be no 20 pixel inset on top (for beauty)
         }
         
         return true
     }
     
 }
-
-import UIKit
-import RxSwift
-import RxCocoa
 
 class BaseViewController: UIViewController {
     
