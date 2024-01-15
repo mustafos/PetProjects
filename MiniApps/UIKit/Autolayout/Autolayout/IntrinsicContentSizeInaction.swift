@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  IntrinsicContentSizeInaction.swift
 //  Autolayout
 //
-//  Created by Mustafa Bekirov on 01.01.2024.
+//  Created by Mustafa Bekirov on 14.01.2024.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntrinsicContentSizeInaction: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
     
     func setupViews() {
-        let label1 = makeLabel(withText: "label1")
+        let label1 = makeBigLabel(withText: "label1")
         
         view.addSubview(label1)
         
@@ -26,5 +26,21 @@ class ViewController: UIViewController {
         label1.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
         label1.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+    }
+    
+    func makeBigLabel(withText text: String) -> UILabel {
+        let label = BigLabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.backgroundColor = .yellow
+
+        return label
+    }
+}
+
+class BigLabel: UILabel {
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 200, height: 300)
     }
 }
