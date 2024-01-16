@@ -15,16 +15,29 @@ class ViewController: UIViewController {
     }
     
     func setupViews() {
-        let label1 = makeLabel(withText: "label1")
+        let nameLabel = makeLabel(withText: "Name")
+        let textField = makeTextField(withPlaceholderText: "Enter name here")
+        view.addSubview(nameLabel)
+        view.addSubview(textField)
         
-        view.addSubview(label1)
+        nameLabel.backgroundColor = .yellow
         
-        label1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
-        label1.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
         
-        label1.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        label1.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        textField.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 8).isActive = true
+        textField.firstBaselineAnchor.constraint(equalTo: nameLabel.firstBaselineAnchor).isActive = true
+        textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
         
-        label1.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        nameLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
+    }
+    
+    func makeTextField(withPlaceholderText text: String) -> UITextField {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = text
+        textField.backgroundColor = .lightGray
+        
+        return textField
     }
 }

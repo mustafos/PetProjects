@@ -19,6 +19,7 @@
 		6AD4DB922B43405E0014BFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4DB912B43405E0014BFCC /* Assets.xcassets */; };
 		6AD4DB952B43405E0014BFCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4DB932B43405E0014BFCC /* LaunchScreen.storyboard */; };
 		6AD8BF492B54430F00A50BAA /* IntrinsicContentSizeInaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8BF482B54430F00A50BAA /* IntrinsicContentSizeInaction.swift */; };
+		6AD8BF4B2B5448A800A50BAA /* CompressionResistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8BF4A2B5448A800A50BAA /* CompressionResistance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6AD4DB942B43405E0014BFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AD4DB962B43405E0014BFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD8BF482B54430F00A50BAA /* IntrinsicContentSizeInaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicContentSizeInaction.swift; sourceTree = "<group>"; };
+		6AD8BF4A2B5448A800A50BAA /* CompressionResistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionResistance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				6AD4DB882B43405D0014BFCC /* AppDelegate.swift */,
 				6A4A115F2B4E9132004E6A80 /* SceneDelegate.swift */,
 				6AD4DB8C2B43405D0014BFCC /* ViewController.swift */,
+				6AD8BF4A2B5448A800A50BAA /* CompressionResistance.swift */,
 				6AD8BF482B54430F00A50BAA /* IntrinsicContentSizeInaction.swift */,
 				6A4A115B2B4E8C66004E6A80 /* SpotifyConfigScreen.swift */,
 				6A5403882B49EF8800BBB20A /* ReadbleContent.swift */,
@@ -164,6 +167,7 @@
 				6A4A11602B4E9132004E6A80 /* SceneDelegate.swift in Sources */,
 				6A4A115E2B4E8EB3004E6A80 /* Factories.swift in Sources */,
 				6A5403892B49EF8800BBB20A /* ReadbleContent.swift in Sources */,
+				6AD8BF4B2B5448A800A50BAA /* CompressionResistance.swift in Sources */,
 				6AD8BF492B54430F00A50BAA /* IntrinsicContentSizeInaction.swift in Sources */,
 				6A5403872B49ED0100BBB20A /* LayoutMargins.swift in Sources */,
 				6AD4DB8D2B43405D0014BFCC /* ViewController.swift in Sources */,
