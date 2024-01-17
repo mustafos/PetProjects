@@ -14,7 +14,7 @@ class CompressionResistance: UIViewController {
         setupViews()
     }
     
-    func setupViews() {
+    private func setupViews() {
         let nameLabel = makeLabel(withText: "Name")
         let textField = makeTextField(withPlaceholderText: "Enter name here")
         view.addSubview(nameLabel)

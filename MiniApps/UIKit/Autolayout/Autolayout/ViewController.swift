@@ -9,35 +9,132 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let buttonHeight: CGFloat = 40
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
-    
+
     func setupViews() {
-        let nameLabel = makeLabel(withText: "Name")
-        let textField = makeTextField(withPlaceholderText: "Enter name here")
-        view.addSubview(nameLabel)
-        view.addSubview(textField)
-        
-        nameLabel.backgroundColor = .yellow
-        
-        nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
-        
-        textField.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 8).isActive = true
-        textField.firstBaselineAnchor.constraint(equalTo: nameLabel.firstBaselineAnchor).isActive = true
-        textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
-        
-        nameLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 251), for: .horizontal)
+        let albumImage = makeImageView(named: "rush")
+        let trackLabel = makeTrackLabel(withText: "Title")
+        let albumLabel = makeAlbumLabel(withText: "Subtitle • Cat")
+
+//        let playButton = makePlayButton()
+//        let previewStartLabel = makePreviewLabel(withText: "0:00")
+//        let previewEndLabel = makePreviewLabel(withText: "0:30")
+//        let progressView = makeProgressView()
+
+//        let spotifyButton = makeSpotifyButton(withText: "PLAY ON SPOTIFY")
+
+        view.addSubview(albumImage)
+        view.addSubview(trackLabel)
+        view.addSubview(albumLabel)
+
+        view.addSubview(playButton)
+        view.addSubview(previewStartLabel)
+        view.addSubview(progressView)
+        view.addSubview(previewEndLabel)
+
+//        view.addSubview(spotifyButton)
+
+        albumImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        albumImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        albumImage.heightAnchor.constraint(equalTo: albumImage.widthAnchor, multiplier: 1).isActive = true
+        albumImage.widthAnchor.constraint(equalToConstant: view.bounds.width).isActive = true
+
+        trackLabel.topAnchor.constraint(equalTo: albumImage.bottomAnchor, constant: 8).isActive = true
+        trackLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        trackLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+
+        albumLabel.topAnchor.constraint(equalTo: trackLabel.bottomAnchor, constant: 8).isActive = true
+        albumLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        albumLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+
+        playButton.topAnchor.constraint(equalTo: albumLabel.bottomAnchor, constant: 8).isActive = true
+        playButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        playButton.heightAnchor.constraint(equalToConstant: buttonHeight).isActive = true
+        playButton.widthAnchor.constraint(equalToConstant: buttonHeight).isActive = true
+
+        previewStartLabel.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
+        previewStartLabel.leadingAnchor.constraint(equalTo: playButton.trailingAnchor, constant: 8).isActive = true
+
+        progressView.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
+        progressView.leadingAnchor.constraint(equalTo: previewStartLabel.trailingAnchor, constant: 8).isActive = true
+
+        previewEndLabel.centerYAnchor.constraint(equalTo: playButton.centerYAnchor).isActive = true
+        previewEndLabel.leadingAnchor.constraint(equalTo: progressView.trailingAnchor, constant: 8).isActive = true
+        previewEndLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+
+//        spotifyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        spotifyButton.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 32).isActive = true
+//        spotifyButton.heightAnchor.constraint(equalToConstant: buttonHeight).isActive = true
+
+        // spotifyButton.heightAnchor we need to set to get our nice rounded corners - height is fixed
+        // spotifyButton.widthAnchor we don't need to set because the intrinsic content size and insets are enough - width is dynamic
     }
-    
-    func makeTextField(withPlaceholderText text: String) -> UITextField {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = text
-        textField.backgroundColor = .lightGray
-        
-        return textField
+
+    private func makeImageView(named: String) -> UIImageView {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: named)
+
+        // Stretch and grow
+        view.setContentHuggingPriority(UILayoutPriority(rawValue: 249), for: .vertical)
+        view.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 749), for: .vertical)
+
+        return view
+    }
+
+    private func makeTrackLabel(withText text: String) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+
+        return label
+    }
+
+    private func makeAlbumLabel(withText text: String) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .lightGray
+
+        return label
+    }
+
+    private func makePlayButton() -> UIButton {
+        let image = UIImage(named: "play") as UIImage?
+
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(image, for: .normal)
+        button.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+
+        return button
+    }
+
+    private func makePreviewLabel(withText text: String) -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 10)
+
+        return label
+    }
+
+    private func makeProgressView() -> UIProgressView {
+        let progressView = UIProgressView(progressViewStyle: .default)
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        progressView.tintColor = .gray
+
+        return progressView
     }
 }

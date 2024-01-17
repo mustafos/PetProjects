@@ -75,6 +75,15 @@ func makeStackView(withOrientation axis: NSLayoutConstraint.Axis) -> UIStackView
     return stackView
 }
 
+func makeImageView(named: String) -> UIImageView {
+    let view = UIImageView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.contentMode = .scaleAspectFit
+    view.image = UIImage(named: named)
+    
+    return view
+}
+
 public extension NSLayoutConstraint {
     @objc func setActiveBreakable(priority: UILayoutPriority = UILayoutPriority(900)) {
         self.priority = priority

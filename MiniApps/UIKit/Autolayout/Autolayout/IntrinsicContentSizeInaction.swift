@@ -14,7 +14,7 @@ class IntrinsicContentSizeInaction: UIViewController {
         setupViews()
     }
     
-    func setupViews() {
+    private func setupViews() {
         let label1 = makeBigLabel(withText: "label1")
         
         view.addSubview(label1)
@@ -28,7 +28,7 @@ class IntrinsicContentSizeInaction: UIViewController {
         label1.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
     }
     
-    func makeBigLabel(withText text: String) -> UILabel {
+    private func makeBigLabel(withText text: String) -> UILabel {
         let label = BigLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text

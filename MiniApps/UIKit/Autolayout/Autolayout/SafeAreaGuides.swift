@@ -13,7 +13,7 @@ class SafeAreaGuides: UIViewController {
         setupViews()
     }
     
-    func setupViews() -> Void {
+    private func setupViews() -> Void {
         let blueView = UIView()
         blueView.translatesAutoresizingMaskIntoConstraints = false
         blueView.backgroundColor = .blue

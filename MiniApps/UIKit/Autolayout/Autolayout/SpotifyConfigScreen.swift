@@ -17,11 +17,11 @@ class SpotifyConfigScreen: UIViewController {
         setupViews()
     }
     
-    func setupNavigationBar() {
+    private  func setupNavigationBar() {
         navigationItem.title = "Playback"
     }
     
-    func setupViews() {
+    private func setupViews() {
         let offlineLabel = makeLabel(withText: "Offline")
         let offlineSwitch = makeSwitch(isOn: false)
         let offlineSublabel = makeSubLabel(withText: "When you go offline, you'll only be able to play the music and podcasts you've downloaded.")

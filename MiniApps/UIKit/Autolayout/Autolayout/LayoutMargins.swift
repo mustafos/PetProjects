@@ -14,7 +14,7 @@ class LayoutMargins: UIViewController {
         setupViews()
     }
     
-    func setupViews() -> Void {
+    private func setupViews() -> Void {
         
         // create controls
         let leadingGuid = UILayoutGuide()
