@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  SpotifyPlayer.swift
 //  Autolayout
 //
-//  Created by Mustafa Bekirov on 01.01.2024.
+//  Created by Mustafa Bekirov on 16.01.2024.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SpotifyPlayer: UIViewController {
     
     let buttonHeight: CGFloat = 40
 
@@ -161,3 +161,4 @@ class ViewController: UIViewController {
         return button
     }
 }
+

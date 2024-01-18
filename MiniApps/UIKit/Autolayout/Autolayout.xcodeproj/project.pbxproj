@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A07D2BB2B57359900F30C10 /* SpotifyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07D2BA2B57359900F30C10 /* SpotifyPlayer.swift */; };
 		6A4A115C2B4E8C66004E6A80 /* SpotifyConfigScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A115B2B4E8C66004E6A80 /* SpotifyConfigScreen.swift */; };
 		6A4A115E2B4E8EB3004E6A80 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A115D2B4E8EB3004E6A80 /* Factories.swift */; };
 		6A4A11602B4E9132004E6A80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A115F2B4E9132004E6A80 /* SceneDelegate.swift */; };
@@ -20,11 +21,11 @@
 		6AD4DB952B43405E0014BFCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4DB932B43405E0014BFCC /* LaunchScreen.storyboard */; };
 		6AD8BF492B54430F00A50BAA /* IntrinsicContentSizeInaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8BF482B54430F00A50BAA /* IntrinsicContentSizeInaction.swift */; };
 		6AD8BF4B2B5448A800A50BAA /* CompressionResistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8BF4A2B5448A800A50BAA /* CompressionResistance.swift */; };
-		6AEB1FE42B55CE4900D12236 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEB1FE32B55CE4900D12236 /* Images.swift */; };
 		6AEB1FE62B55D23700D12236 /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6AEB1FE52B55D23700D12236 /* meow.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A07D2BA2B57359900F30C10 /* SpotifyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayer.swift; sourceTree = "<group>"; };
 		6A4A115B2B4E8C66004E6A80 /* SpotifyConfigScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConfigScreen.swift; sourceTree = "<group>"; };
 		6A4A115D2B4E8EB3004E6A80 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		6A4A115F2B4E9132004E6A80 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		6AD4DB962B43405E0014BFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD8BF482B54430F00A50BAA /* IntrinsicContentSizeInaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicContentSizeInaction.swift; sourceTree = "<group>"; };
 		6AD8BF4A2B5448A800A50BAA /* CompressionResistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionResistance.swift; sourceTree = "<group>"; };
-		6AEB1FE32B55CE4900D12236 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		6AEB1FE52B55D23700D12236 /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,7 @@
 				6AD4DB882B43405D0014BFCC /* AppDelegate.swift */,
 				6A4A115F2B4E9132004E6A80 /* SceneDelegate.swift */,
 				6AD4DB8C2B43405D0014BFCC /* ViewController.swift */,
-				6AEB1FE32B55CE4900D12236 /* Images.swift */,
+				6A07D2BA2B57359900F30C10 /* SpotifyPlayer.swift */,
 				6AD8BF4A2B5448A800A50BAA /* CompressionResistance.swift */,
 				6AD8BF482B54430F00A50BAA /* IntrinsicContentSizeInaction.swift */,
 				6A4A115B2B4E8C66004E6A80 /* SpotifyConfigScreen.swift */,
@@ -170,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A4A115C2B4E8C66004E6A80 /* SpotifyConfigScreen.swift in Sources */,
-				6AEB1FE42B55CE4900D12236 /* Images.swift in Sources */,
+				6A07D2BB2B57359900F30C10 /* SpotifyPlayer.swift in Sources */,
 				6A5403832B49DC0F00BBB20A /* SafeAreaGuides.swift in Sources */,
 				6A4A11602B4E9132004E6A80 /* SceneDelegate.swift in Sources */,
 				6A4A115E2B4E8EB3004E6A80 /* Factories.swift in Sources */,
