@@ -1,13 +1,13 @@
 //
-//  StackView.swift
+//  ScrollableStack.swift
 //  TipCalculator
 //
-//  Created by Mustafa Bekirov on 17.01.2024.
+//  Created by Mustafa Bekirov on 18.01.2024.
 //
 
 import UIKit
 
-class StackView: UIViewController {
+class ScrollableStack: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
