@@ -9,13 +9,19 @@ import UIKit
 
 class ScrollableStack: UIViewController {
 
+    @IBOutlet weak var arrayOfButtons: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        arrayOfButtons.imageForNormal = UIImage(named: "noSel")
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func selectedButtonAction(_ sender: UIButton) {
+        sender.imageForNormal = UIImage(named: "sel")
+    }
+    
     /*
     // MARK: - Navigation
 
