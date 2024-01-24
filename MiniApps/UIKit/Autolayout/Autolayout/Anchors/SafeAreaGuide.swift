@@ -16,7 +16,7 @@ class SafeAreaGuide: UIViewController {
 
     func setupViews() {
         navigationItem.title = "Safe Area Guide"
-
+        
         let topLabel = makeLabel(withText: "top")
         let bottomLabel = makeLabel(withText: "bottom")
         let leadingLabel = makeLabel(withText: "leading")
