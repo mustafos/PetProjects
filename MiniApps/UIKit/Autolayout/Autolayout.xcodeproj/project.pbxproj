@@ -28,6 +28,9 @@
 		6A8ACC662B58119900DC50F6 /* EqualSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8ACC652B58119900DC50F6 /* EqualSpacing.swift */; };
 		6A8ACC682B5811C800DC50F6 /* EqualCentering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8ACC672B5811C800DC50F6 /* EqualCentering.swift */; };
 		6A8ACC6A2B5811DE00DC50F6 /* CHCRFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8ACC692B5811DE00DC50F6 /* CHCRFill.swift */; };
+		6ABD965D2B65A0260088B90F /* OrientationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD965C2B65A0260088B90F /* OrientationView.swift */; };
+		6ABD965F2B65A05F0088B90F /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD965E2B65A05F0088B90F /* RedView.swift */; };
+		6ABD96612B65A0840088B90F /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD96602B65A0840088B90F /* BlueView.swift */; };
 		6AD4DB892B43405D0014BFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4DB882B43405D0014BFCC /* AppDelegate.swift */; };
 		6AD4DB8D2B43405D0014BFCC /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4DB8C2B43405D0014BFCC /* LabViewController.swift */; };
 		6AD4DB922B43405E0014BFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4DB912B43405E0014BFCC /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		6A8ACC652B58119900DC50F6 /* EqualSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualSpacing.swift; sourceTree = "<group>"; };
 		6A8ACC672B5811C800DC50F6 /* EqualCentering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualCentering.swift; sourceTree = "<group>"; };
 		6A8ACC692B5811DE00DC50F6 /* CHCRFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCRFill.swift; sourceTree = "<group>"; };
+		6ABD965C2B65A0260088B90F /* OrientationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationView.swift; sourceTree = "<group>"; };
+		6ABD965E2B65A05F0088B90F /* RedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
+		6ABD96602B65A0840088B90F /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		6AD4DB852B43405D0014BFCC /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD4DB882B43405D0014BFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD4DB8C2B43405D0014BFCC /* LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +154,16 @@
 			path = Distributions;
 			sourceTree = "<group>";
 		};
+		6ABD965B2B65A0100088B90F /* Orientations */ = {
+			isa = PBXGroup;
+			children = (
+				6ABD965C2B65A0260088B90F /* OrientationView.swift */,
+				6ABD965E2B65A05F0088B90F /* RedView.swift */,
+				6ABD96602B65A0840088B90F /* BlueView.swift */,
+			);
+			path = Orientations;
+			sourceTree = "<group>";
+		};
 		6AD4DB7C2B43405D0014BFCC = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +185,7 @@
 			children = (
 				6AD4DB882B43405D0014BFCC /* AppDelegate.swift */,
 				6AD4DB8C2B43405D0014BFCC /* LabViewController.swift */,
+				6ABD965B2B65A0100088B90F /* Orientations */,
 				6A8ACC5D2B580EB200DC50F6 /* Anchors */,
 				6A8ACC602B580FE000DC50F6 /* IntrinsicContentSize */,
 				6A8ACC612B5810DD00DC50F6 /* StackViews */,
@@ -252,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABD96612B65A0840088B90F /* BlueView.swift in Sources */,
 				6A8ACC5C2B5806E600DC50F6 /* SimpleStackView.swift in Sources */,
 				6A4A115C2B4E8C66004E6A80 /* CHCRImage.swift in Sources */,
 				6A07D2BB2B57359900F30C10 /* Fill.swift in Sources */,
@@ -260,6 +278,7 @@
 				6A59428A2B618287009E4BD0 /* Visibility.swift in Sources */,
 				6A8ACC642B58114700DC50F6 /* FillEqually.swift in Sources */,
 				6A8ACC6A2B5811DE00DC50F6 /* CHCRFill.swift in Sources */,
+				6ABD965F2B65A05F0088B90F /* RedView.swift in Sources */,
 				6A5942862B61823F009E4BD0 /* Constants.swift in Sources */,
 				6A61B2692B5D6BBE000B3750 /* CustomView.swift in Sources */,
 				6A4A115E2B4E8EB3004E6A80 /* Factories.swift in Sources */,
@@ -271,6 +290,7 @@
 				6AD8BF4B2B5448A800A50BAA /* CHCRForm.swift in Sources */,
 				6AD8BF492B54430F00A50BAA /* OverrideLabel.swift in Sources */,
 				6A8ACC662B58119900DC50F6 /* EqualSpacing.swift in Sources */,
+				6ABD965D2B65A0260088B90F /* OrientationView.swift in Sources */,
 				6A5403872B49ED0100BBB20A /* LayoutMargins.swift in Sources */,
 				6A8ACC5F2B580F6300DC50F6 /* SpacerViews.swift in Sources */,
 				6AD4DB8D2B43405D0014BFCC /* LabViewController.swift in Sources */,
