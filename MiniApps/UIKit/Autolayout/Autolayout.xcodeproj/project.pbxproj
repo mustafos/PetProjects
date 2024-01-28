@@ -31,6 +31,8 @@
 		6ABD965D2B65A0260088B90F /* OrientationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD965C2B65A0260088B90F /* OrientationView.swift */; };
 		6ABD965F2B65A05F0088B90F /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD965E2B65A05F0088B90F /* RedView.swift */; };
 		6ABD96612B65A0840088B90F /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD96602B65A0840088B90F /* BlueView.swift */; };
+		6ABD96642B65A0EF0088B90F /* AdjustConstraintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD96632B65A0EF0088B90F /* AdjustConstraintsView.swift */; };
+		6ABD96662B65A10D0088B90F /* AdjustConstraintsBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD96652B65A10D0088B90F /* AdjustConstraintsBlueView.swift */; };
 		6AD4DB892B43405D0014BFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4DB882B43405D0014BFCC /* AppDelegate.swift */; };
 		6AD4DB8D2B43405D0014BFCC /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4DB8C2B43405D0014BFCC /* LabViewController.swift */; };
 		6AD4DB922B43405E0014BFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4DB912B43405E0014BFCC /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		6ABD965C2B65A0260088B90F /* OrientationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationView.swift; sourceTree = "<group>"; };
 		6ABD965E2B65A05F0088B90F /* RedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
 		6ABD96602B65A0840088B90F /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		6ABD96632B65A0EF0088B90F /* AdjustConstraintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustConstraintsView.swift; sourceTree = "<group>"; };
+		6ABD96652B65A10D0088B90F /* AdjustConstraintsBlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustConstraintsBlueView.swift; sourceTree = "<group>"; };
 		6AD4DB852B43405D0014BFCC /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD4DB882B43405D0014BFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AD4DB8C2B43405D0014BFCC /* LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewController.swift; sourceTree = "<group>"; };
@@ -160,8 +164,18 @@
 				6ABD965C2B65A0260088B90F /* OrientationView.swift */,
 				6ABD965E2B65A05F0088B90F /* RedView.swift */,
 				6ABD96602B65A0840088B90F /* BlueView.swift */,
+				6ABD96622B65A0E00088B90F /* AdjustConstraints */,
 			);
 			path = Orientations;
+			sourceTree = "<group>";
+		};
+		6ABD96622B65A0E00088B90F /* AdjustConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				6ABD96632B65A0EF0088B90F /* AdjustConstraintsView.swift */,
+				6ABD96652B65A10D0088B90F /* AdjustConstraintsBlueView.swift */,
+			);
+			path = AdjustConstraints;
 			sourceTree = "<group>";
 		};
 		6AD4DB7C2B43405D0014BFCC = {
@@ -279,6 +293,7 @@
 				6A8ACC642B58114700DC50F6 /* FillEqually.swift in Sources */,
 				6A8ACC6A2B5811DE00DC50F6 /* CHCRFill.swift in Sources */,
 				6ABD965F2B65A05F0088B90F /* RedView.swift in Sources */,
+				6ABD96662B65A10D0088B90F /* AdjustConstraintsBlueView.swift in Sources */,
 				6A5942862B61823F009E4BD0 /* Constants.swift in Sources */,
 				6A61B2692B5D6BBE000B3750 /* CustomView.swift in Sources */,
 				6A4A115E2B4E8EB3004E6A80 /* Factories.swift in Sources */,
@@ -291,6 +306,7 @@
 				6AD8BF492B54430F00A50BAA /* OverrideLabel.swift in Sources */,
 				6A8ACC662B58119900DC50F6 /* EqualSpacing.swift in Sources */,
 				6ABD965D2B65A0260088B90F /* OrientationView.swift in Sources */,
+				6ABD96642B65A0EF0088B90F /* AdjustConstraintsView.swift in Sources */,
 				6A5403872B49ED0100BBB20A /* LayoutMargins.swift in Sources */,
 				6A8ACC5F2B580F6300DC50F6 /* SpacerViews.swift in Sources */,
 				6AD4DB8D2B43405D0014BFCC /* LabViewController.swift in Sources */,
