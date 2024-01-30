@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1491FC2B66E2B100D7ED87 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1491FB2B66E2B100D7ED87 /* PopUpView.swift */; };
 		6A1F3C412B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A1F3C402B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf */; };
 		6A1F3C442B2CED940032247C /* FontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F3C432B2CED940032247C /* FontView.swift */; };
 		6A3635392B3A18D500AB8E40 /* CustomTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3635382B3A18D500AB8E40 /* CustomTabBar2.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A1491FB2B66E2B100D7ED87 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		6A1F3C402B2CE72B0032247C /* JetBrainsMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JetBrainsMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		6A1F3C422B2CE7AB0032247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A1F3C432B2CED940032247C /* FontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				6A5F47712B3B41FF00266024 /* DropdownMenu.swift */,
+				6A1491FB2B66E2B100D7ED87 /* PopUpView.swift */,
 				6A5F47732B3B4A2200266024 /* DropTow.swift */,
 				6A50D4C52B3C227C00DFFB80 /* PickerMenu.swift */,
 			);
@@ -283,6 +286,7 @@
 				6AFD246C2AEAA0DE00A33836 /* ContentView.swift in Sources */,
 				6AEFBC812AEC415D007D893B /* VideoUploader.swift in Sources */,
 				6AEFBC7D2AEC3F66007D893B /* VideoModel.swift in Sources */,
+				6A1491FC2B66E2B100D7ED87 /* PopUpView.swift in Sources */,
 				6AEFBC762AEC380B007D893B /* MainVideoView.swift in Sources */,
 				6A1F3C442B2CED940032247C /* FontView.swift in Sources */,
 				6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */,

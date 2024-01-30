@@ -19,13 +19,13 @@ class CustomTabBarVC: UITabBarController {
         index: 1,
         icon: UIImage(named: "noSel")?.withTintColor(.black, renderingMode: .alwaysOriginal),
         selectedIcon: UIImage(named: "sel")?.withRenderingMode(.alwaysOriginal),
-        viewController: DropDownController())
+        viewController: PopUpMenu())
     
     private let favouriteTab = CustomTabBarItem(
         index: 2,
         icon: UIImage(named: "noSel")?.withTintColor(.black, renderingMode: .alwaysOriginal),
         selectedIcon: UIImage(named: "sel")?.withRenderingMode(.alwaysOriginal),
-        viewController: SliderViewController())
+        viewController: MenuExample())
     
     private let lastTab = CustomTabBarItem(
         index: 3,

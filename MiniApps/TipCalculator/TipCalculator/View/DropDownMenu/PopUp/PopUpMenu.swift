@@ -9,8 +9,10 @@ import UIKit
 
 class PopUpMenu: UIViewController {
     let dataSource = ["Apple", "Mango", "Orange", "Banana", "Kiwi", "Watermelon"]
-    
-    @IBOutlet weak var tableViewButton: UIButton!
+
+    @IBOutlet weak var tableViewButton: UIView!
+    @IBOutlet weak var selectedText: UIButton!
+    @IBOutlet weak var selectImage: UIImageView!
     
     let tableView = UITableView()
     let transparentView = UIView()
@@ -18,7 +20,6 @@ class PopUpMenu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
@@ -37,29 +38,33 @@ class PopUpMenu: UIViewController {
         tableView.separatorStyle = .none
         tableView.layer.borderColor = UIColor.systemGray5.cgColor
         tableView.layer.borderWidth = 1.0
-        
+        selectImage.tintColor = .black
         tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
-        tableViewButton.setTitle(dataSource[0], for: .normal)
+        selectedText.setTitle(dataSource[0], for: .normal)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideTableView))
         transparentView.addGestureRecognizer(tapGesture)
         
         tableView.isHidden = true
-//        transparentView.isHidden = true
     }
     
     @objc private func showTableView(frames: CGRect) {
         tableView.isHidden.toggle()
-//        transparentView.isHidden = false
     }
     
     @objc private func hideTableView() {
         tableView.isHidden.toggle()
-//        transparentView.isHidden = true
+        updateSelectButtonImage()
     }
     
     @IBAction func onShowTableViewButtonPressed(_ sender: UIButton) {
         showTableView(frames: sender.frame)
+        updateSelectButtonImage()
+    }
+    
+    private func updateSelectButtonImage() {
+        let imageName = tableView.isHidden ? "chevron.down" : "chevron.up"
+        selectImage.image = UIImage(systemName: imageName)
     }
 }
 
@@ -70,6 +75,7 @@ extension PopUpMenu: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.selectionStyle = .none
         cell.textLabel?.text = dataSource[indexPath.row]
         return cell
     }
@@ -79,7 +85,8 @@ extension PopUpMenu: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableViewButton.setTitle(dataSource[indexPath.row], for: .normal)
+        let selectedString = dataSource[indexPath.row]
+        selectedText.setTitle(selectedString, for: .normal)
         hideTableView()
     }
 }
