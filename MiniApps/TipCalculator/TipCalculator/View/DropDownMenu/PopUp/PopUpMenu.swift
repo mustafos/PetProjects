@@ -34,7 +34,7 @@ class PopUpMenu: UIViewController {
         let tableViewHeight = (dataSource.count > 3) ? 120.0 : CGFloat(dataSource.count) * tableView.rowHeight
         tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: tableViewHeight)
         self.view.addSubview(tableView)
-        tableView.layer.cornerRadius = 5
+        tableView.layer.cornerRadius = 24
         tableView.separatorStyle = .none
         tableView.layer.borderColor = UIColor.systemGray5.cgColor
         tableView.layer.borderWidth = 1.0
@@ -46,6 +46,30 @@ class PopUpMenu: UIViewController {
         transparentView.addGestureRecognizer(tapGesture)
         
         tableView.isHidden = true
+    }
+    
+    // TODO: – Pop-up button
+    func setupConstraints() -> Void {
+//        let colorClosure = { (action: UIAction) in
+//            updateColor(action.title)
+//        }
+//        
+//        let button = UIButton(primaryAction: nil)
+//        
+//        button.menu = UIMenu(children: [
+//            UIAction(title: "Bondi Blue", handler: colorClosure),
+//            UIAction(title: "Flower Power", state: .on, handler: colorClosure)
+//        ])
+//        
+//        button.showsMenuAsPrimaryAction = true
+//        
+//        button.changesSelectionAsPrimaryAction = true
+//        
+//        // Update to the currently set one
+//        updateColor(button.menu?.selectedElements.first?.title)
+//        
+//        // Update the selection
+//        (button.menu?.children[selectedColorIndex()] as? UIAction)?.state = .on
     }
     
     @objc private func showTableView(frames: CGRect) {
@@ -81,7 +105,7 @@ extension PopUpMenu: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 48
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
