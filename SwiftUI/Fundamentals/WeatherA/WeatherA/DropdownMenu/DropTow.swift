@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct DropTow: View {
-    @State var show: Bool = true
+    @State var isShow: Bool = false
     @State var name: String = "Item 1"
     
     var body: some View {
         VStack {
             ZStack {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: 24)
                     ScrollView(showsIndicators: false) {
-                        VStack(spacing: 17) {
+                        VStack(spacing: 12) {
                             ForEach(drop.indices, id: \.self) { item in
                                 if item != 0 {
                                     Rectangle().frame(height: 1)
@@ -26,57 +26,57 @@ struct DropTow: View {
                                 Button {
                                     withAnimation {
                                         name = drop[item].title
-                                        show.toggle()
+                                        isShow.toggle()
                                     }
                                 } label: {
                                     Text(drop[item].title)
                                         .font(.system(size: 20, weight: .bold, design: .rounded))
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.gray)
                                     Spacer()
                                 }
                             }
                             .padding(.horizontal)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.vertical, 15)
+                        .padding(.vertical, 20)
                     }
                 }
                 .overlay {
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: 24)
                         .stroke(lineWidth: 1)
                         .foregroundStyle(.gray)
-                        .padding(1)
                 }
-                .frame(height: show ? 200 : 50)
-                .offset(y: show ? 0 : -135)
-                .foregroundStyle(.ultraThinMaterial)
+                .frame(height: isShow ? 240 : 48)
+                .offset(y: isShow ? 0 : -133)
+                .foregroundStyle(.red)
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10).frame(height: 60)
-                        .foregroundStyle(.white)
+                    RoundedRectangle(cornerRadius: 24).frame(height: 48)
+                        .foregroundStyle(.ultraThinMaterial)
                     HStack {
                         Text(name)
                             .font(.title2)
                         Spacer()
                         Image(systemName: "chevron.down")
-                            .rotationEffect(.degrees(show ? -180 : 0))
+                            .font(.title2)
+                            .rotationEffect(.degrees(isShow ? -180 : 0))
                     }
                     .bold()
                     .padding(.horizontal)
                     .foregroundStyle(.black)
-                    RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).frame(height: 60)
-                        .padding(1)
+                    RoundedRectangle(cornerRadius: 24).stroke(lineWidth: 1).frame(height: 48)
                 }
                 .offset(y: -133)
                 .onTapGesture {
                     withAnimation {
-                        show.toggle()
+                        isShow.toggle()
                     }
                 }
             }
         }
-        .padding()
-        .frame(height: 280).offset(y: 40)
+//        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//        .frame(height: .infinity).offset(y: 40)
     }
 }
 
