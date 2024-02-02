@@ -12,7 +12,7 @@ struct WeatherAApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            APICallsView()
+            MonolithDropdown()
         }
     }
 }
