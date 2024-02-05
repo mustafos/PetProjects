@@ -13,7 +13,7 @@ class CustomTabBarVC: UITabBarController {
         index: 0,
         icon: UIImage(named: "noSel")?.withTintColor(.black, renderingMode: .alwaysOriginal),
         selectedIcon: UIImage(named: "sel")?.withRenderingMode(.alwaysOriginal),
-        viewController: CalculatorVC())
+        viewController: DropDownViewAI())
     
     private let searchTab = CustomTabBarItem(
         index: 1,

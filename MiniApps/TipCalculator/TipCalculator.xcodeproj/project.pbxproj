@@ -62,6 +62,8 @@
 		6AA7B3AA2A4C563700E54F47 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3A92A4C563700E54F47 /* ThemeFont.swift */; };
 		6AA7B3AD2A4C568A00E54F47 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3AC2A4C568A00E54F47 /* UIColor+Extension.swift */; };
 		6AA7B3B02A4F6EA100E54F47 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7B3AF2A4F6EA100E54F47 /* LabelFactory.swift */; };
+		6AB78F272B709DDC008EF93D /* DropDownAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB78F262B709DDC008EF93D /* DropDownAI.swift */; };
+		6AB78F292B709E3A008EF93D /* DropDownViewAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB78F282B709E3A008EF93D /* DropDownViewAI.swift */; };
 		6AC7663E2B4AD518007EDB05 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7663D2B4AD518007EDB05 /* TabBarController.swift */; };
 		6AC766432B4AD9C5007EDB05 /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC766412B4AD9C5007EDB05 /* DropDownController.swift */; };
 		6AC766442B4AD9C5007EDB05 /* DropDownController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC766422B4AD9C5007EDB05 /* DropDownController.xib */; };
@@ -142,6 +144,8 @@
 		6AA7B3A92A4C563700E54F47 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		6AA7B3AC2A4C568A00E54F47 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6AA7B3AF2A4F6EA100E54F47 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		6AB78F262B709DDC008EF93D /* DropDownAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownAI.swift; sourceTree = "<group>"; };
+		6AB78F282B709E3A008EF93D /* DropDownViewAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewAI.swift; sourceTree = "<group>"; };
 		6AC7663D2B4AD518007EDB05 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6AC766412B4AD9C5007EDB05 /* DropDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
 		6AC766422B4AD9C5007EDB05 /* DropDownController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownController.xib; sourceTree = "<group>"; };
@@ -422,6 +426,15 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		6AB78F252B709DC2008EF93D /* DropDownAI */ = {
+			isa = PBXGroup;
+			children = (
+				6AB78F262B709DDC008EF93D /* DropDownAI.swift */,
+				6AB78F282B709E3A008EF93D /* DropDownViewAI.swift */,
+			);
+			path = DropDownAI;
+			sourceTree = "<group>";
+		};
 		6AC7663C2B4AD4D1007EDB05 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +446,7 @@
 		6AC766492B4ADDE9007EDB05 /* DropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
+				6AB78F252B709DC2008EF93D /* DropDownAI */,
 				6A1491E82B6698EF00D7ED87 /* PopUp */,
 				6AA43B782B3DEC56008194D9 /* UICollectionView */,
 				6AC7664A2B4ADDFD007EDB05 /* ItemCell */,
@@ -631,6 +645,7 @@
 				6A70B6572B46047600D83BE6 /* AddSwiftUI.swift in Sources */,
 				6AC766432B4AD9C5007EDB05 /* DropDownController.swift in Sources */,
 				6A70B6592B46055400D83BE6 /* ExistingUIKit.swift in Sources */,
+				6AB78F272B709DDC008EF93D /* DropDownAI.swift in Sources */,
 				6A37CDCE2A5352A1003ED266 /* UIResponder+Extension.swift in Sources */,
 				6A6AFC802A54B536001CF87A /* Int+Extension.swift in Sources */,
 				6A7EC2B22A59F20600C68A4A /* ScreenIdentifier.swift in Sources */,
@@ -661,6 +676,7 @@
 				6A4A115A2B4E8497004E6A80 /* SwifterSwiftExample.swift in Sources */,
 				6AC766472B4ADDE4007EDB05 /* ItemViewCell.swift in Sources */,
 				6A5942812B617E93009E4BD0 /* CustomTabItemView.swift in Sources */,
+				6AB78F292B709E3A008EF93D /* DropDownViewAI.swift in Sources */,
 				6A548ECB2A51B5650008DCAA /* Tip.swift in Sources */,
 				6AA7B3A52A4C51EC00E54F47 /* SplitInputView.swift in Sources */,
 				6AA7B3A32A4C51C200E54F47 /* TipInputView.swift in Sources */,
