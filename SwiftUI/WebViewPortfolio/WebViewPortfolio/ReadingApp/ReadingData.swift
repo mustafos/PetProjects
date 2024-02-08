@@ -2,17 +2,22 @@
 //  ReadingData.swift
 //  WebViewPortfolio
 //
-//  Created by Mustafa Bekirov on 06.02.2024.
+//  Created by Mustafa Bekirov on 08.02.2024.
 //
 
 import SwiftUI
 
-struct ReadingData: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ReadingData: Codable, Equatable, Identifiable {
+    let url: URL?
+    let title: String
+    let creationDate: Date
+    var hasFinishedReading: Bool
+    var id: Date { return creationDate }
+    
+    static func example() -> ReadingData {
+        ReadingData(url: URL(string: "https://habr.com/ru/companies/it-guide/articles/733272/"),
+                    title: "Habr",
+                    creationDate: Date(),
+                    hasFinishedReading: false)
     }
-}
-
-#Preview {
-    ReadingData()
 }

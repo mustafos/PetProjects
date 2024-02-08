@@ -2,17 +2,51 @@
 //  ReadingListViewModel.swift
 //  WebViewPortfolio
 //
-//  Created by Mustafa Bekirov on 06.02.2024.
+//  Created by Mustafa Bekirov on 08.02.2024.
 //
 
-import SwiftUI
+import Foundation
 
-struct ReadingListViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class ReadingListViewModel: ObservableObject {
+    @Published var readingData: [ReadingData] = []
+    
+    private var fileURL: URL {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documentsDirectory.appendingPathComponent("readingListData.json")
     }
-}
-
-#Preview {
-    ReadingListViewModel()
+    
+    init() {
+        load()
+    }
+    
+    func add(_ url: URL, title: String) {
+        let new = ReadingData(url: url, title: title, creationDate: Date(), hasFinishedReading: false)
+        readingData.append(new)
+        save()
+    }
+    
+    func remove(_ data: ReadingData) {
+        if let index = readingData.firstIndex(of: data) {
+            readingData.remove(at: index)
+            save()
+        }
+    }
+    
+    private func save() {
+        do {
+            let data = try JSONEncoder().encode(readingData)
+            try data.write(to: fileURL)
+        } catch {
+            print("Error saving reading list: \(error)")
+        }
+    }
+    
+    private func load() {
+        do {
+            let data = try Data(contentsOf: fileURL)
+            readingData = try JSONDecoder().decode([ReadingData].self, from: data)
+        } catch {
+            print("Error loading reading list: \(error)")
+        }
+    }
 }

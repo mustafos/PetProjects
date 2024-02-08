@@ -2,17 +2,30 @@
 //  ReadingDataRow.swift
 //  WebViewPortfolio
 //
-//  Created by Mustafa Bekirov on 06.02.2024.
+//  Created by Mustafa Bekirov on 08.02.2024.
 //
 
 import SwiftUI
 
 struct ReadingDataRow: View {
+    let readingData: ReadingData
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .firstTextBaseline) {
+            Image(systemName: readingData.hasFinishedReading ? "book.fill" : "book")
+                .foregroundColor(.green)
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text(readingData.title)
+                    .bold()
+                Text(readingData.creationDate,
+                     format: .dateTime.day().month().year())
+            }
+            Spacer()
+           
+        }
     }
 }
 
 #Preview {
-    ReadingDataRow()
+    ReadingDataRow(readingData: ReadingData.example())
 }

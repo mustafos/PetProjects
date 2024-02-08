@@ -2,17 +2,83 @@
 //  ReadingDataEditorView.swift
 //  WebViewPortfolio
 //
-//  Created by Mustafa Bekirov on 06.02.2024.
+//  Created by Mustafa Bekirov on 08.02.2024.
 //
 
 import SwiftUI
 
 struct ReadingDataEditorView: View {
+    
+    enum FocusedField {
+        case title, url
+    }
+    
+    @ObservedObject var readingViewModel: ReadingListViewModel
+    
+    @State var newURLString = ""
+    @State var title = ""
+    @FocusState private var focusedField: FocusedField?
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+        
+            Text("Create new reading item")
+                .font(.title2)
+            HStack {
+                Text("Title:")
+                TextField("title", text: $title)
+                    .textFieldStyle(.roundedBorder)
+                    .focused($focusedField, equals: .title)
+            }
+            
+            HStack {
+                Text("URL:")
+                TextField("New URL", text: $newURLString)
+                    .textFieldStyle(.roundedBorder)
+                    .focused($focusedField, equals: .url)
+            }
+            
+            
+            HStack {
+                
+                Button("Cancel") {
+                    dismiss()
+                }
+                .buttonStyle(.bordered)
+                
+                Button(action: {
+                finish()
+                }) {
+                    Text("Add")
+                }
+                .buttonStyle(.borderedProminent)
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+        }
+        .padding()
+        .onSubmit {
+            if focusedField == .title {
+                focusedField = .url
+            } else {
+                finish()
+            }
+        }
+        .onAppear {
+            focusedField = .title
+        }
+    }
+    
+    func finish() {
+        if let url = URL(string: newURLString) {
+            readingViewModel.add(url, title: title)
+            dismiss()
+        }
     }
 }
 
 #Preview {
-    ReadingDataEditorView()
+    ReadingDataEditorView(readingViewModel: ReadingListViewModel())
 }
