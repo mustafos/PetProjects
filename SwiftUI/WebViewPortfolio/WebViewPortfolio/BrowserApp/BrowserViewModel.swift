@@ -2,17 +2,46 @@
 //  BrowserViewModel.swift
 //  WebViewPortfolio
 //
-//  Created by Mustafa Bekirov on 06.02.2024.
+//  Created by Mustafa Bekirov on 09.02.2024.
 //
 
-import SwiftUI
+import Foundation
+import WebKit
 
-struct BrowserViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class BrowserViewModel: NSObject, ObservableObject {
+    weak var webView: WKWebView? {
+        didSet {
+            webView?.navigationDelegate = self
+        }
+    }
+    
+    @Published var urlString = "https://github.com/mustafos"
+    @Published var canGoBack = false
+    @Published var canGoForward = false
+    
+    func loadURLString() {
+        if let url = URL(string: urlString) {
+            webView?.load(URLRequest(url: url))
+        }
+    }
+    
+    func goBack() {
+        webView?.goBack()
+    }
+    
+    func goForward() {
+        webView?.goForward()
+    }
+    
+    func reload() {
+        webView?.reload()
     }
 }
 
-#Preview {
-    BrowserViewModel()
+extension BrowserViewModel: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        canGoBack = webView.canGoBack
+        canGoForward = webView.canGoForward
+        urlString = webView.url?.absoluteString ?? ""
+    }
 }

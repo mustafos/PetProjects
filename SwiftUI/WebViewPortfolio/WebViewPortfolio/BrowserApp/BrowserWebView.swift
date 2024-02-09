@@ -2,17 +2,22 @@
 //  BrowserWebView.swift
 //  WebViewPortfolio
 //
-//  Created by Mustafa Bekirov on 06.02.2024.
+//  Created by Mustafa Bekirov on 09.02.2024.
 //
 
 import SwiftUI
+import WebKit
 
-struct BrowserWebView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct BrowserWebView: UIViewRepresentable {
+    let url: URL
+    @ObservedObject var viewModel: BrowserViewModel
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        viewModel.webView = webView
+        webView.load(URLRequest(url: url))
+        return webView
     }
-}
-
-#Preview {
-    BrowserWebView()
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {}
 }
