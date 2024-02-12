@@ -58,3 +58,4 @@ class LabViewController: UITableViewController {
         navigationController?.pushViewController(labs[indexPath.row].viewController, animated: false)
     }
 }
+
