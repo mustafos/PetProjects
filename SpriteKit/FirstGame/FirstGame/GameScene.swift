@@ -10,14 +10,43 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    private var progressBar = ProgressBar()
+    
     private var spinnyNode : SKShapeNode?
     private var player: SKSpriteNode = SKSpriteNode()
+    private var player2: SKSpriteNode = SKSpriteNode()
+    private var sceneCamera: SKCameraNode = SKCameraNode()
+    private var shardParticle: SKEmitterNode = SKEmitterNode()
+    private var fumesParticle: SKEmitterNode = SKEmitterNode()
     
     override func didMove(to view: SKView) {
         
-        player = SKSpriteNode(imageNamed: "player")
+        camera = sceneCamera
+        
+        /*Use for 3D model*/
+        // camera?.xScale = 0.2
+        
+        progressBar.getSceneFrame(sceneFrame: frame)
+        progressBar.buildProgressBar()
+        addChild(progressBar)
+        
+        var count = 0
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            if count > 9 { timer.invalidate() }
+            self.progressBar.updateProgressBar()
+            count += 1
+        }
+        
+        player = SKSpriteNode(imageNamed: "ufo")
         player.position = CGPoint(x: 0, y: 0)
         self.addChild(player)
+        
+        player2 = SKSpriteNode(imageNamed: "moon")
+        player2.position = CGPoint(x: 50, y: 50)
+        self.addChild(player2)
+        
+        fumesParticle = SKEmitterNode(fileNamed: "IceShard")!
+        self.addChild(fumesParticle)
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.01
@@ -51,6 +80,11 @@ class GameScene: SKScene {
             self.addChild(n)
         }
     }
+    
+    func rightDown(atPoint pos: CGPoint) {
+        let shootShard = ShootShard(startPos: player.position, endPos: pos)
+        addChild(shootShard)
+    }
 
     override func mouseDown(with event: NSEvent) {
         self.touchDown(atPoint: event.location(in: self))
@@ -58,6 +92,10 @@ class GameScene: SKScene {
     
     override func mouseDragged(with event: NSEvent) {
         self.touchDown(atPoint: event.location(in: self))
+    }
+    
+    override func rightMouseDown(with event: NSEvent) {
+        self.rightDown(atPoint: event.location(in: self))
     }
     
     override func keyDown(with event: NSEvent) {
@@ -72,5 +110,10 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        camera?.position.x = player.position.x
+        camera?.position.y = player.position.y
+        
+        // Update fumesParticle position
+        fumesParticle.position = CGPoint(x: player.position.x, y: player.position.y - 15)
     }
 }
