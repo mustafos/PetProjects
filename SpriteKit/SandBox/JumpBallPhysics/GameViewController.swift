@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  SandBox
 //
-//  Created by Mustafa Bekirov on 16.02.2024.
+//  Created by Mustafa Bekirov on 17.02.2024.
 //
 
 import UIKit

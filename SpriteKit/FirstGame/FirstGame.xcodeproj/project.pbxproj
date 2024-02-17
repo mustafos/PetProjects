@@ -17,10 +17,7 @@
 		6A19C5DB2B7FB5680019B8AF /* IceShard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6A19C5DA2B7FB5680019B8AF /* IceShard.sks */; };
 		6A19C5E52B7FD4780019B8AF /* ShootShard.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6A19C5E42B7FD4780019B8AF /* ShootShard.sks */; };
 		6A19C5E72B7FD7B10019B8AF /* ShootShard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19C5E62B7FD7B10019B8AF /* ShootShard.swift */; };
-		6A19C5EC2B7FE39E0019B8AF /* bomb.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A19C5EB2B7FE39E0019B8AF /* bomb.wav */; };
-		6A19C5EE2B7FE3E80019B8AF /* space.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A19C5ED2B7FE3E80019B8AF /* space.mp3 */; };
 		6A19C5F22B7FE7C80019B8AF /* plasma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A19C5F12B7FE7C80019B8AF /* plasma.mp3 */; };
-		6A4FBA482B7FEE2F002CBF2C /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4FBA472B7FEE2F002CBF2C /* ProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +33,7 @@
 		6A19C5DA2B7FB5680019B8AF /* IceShard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IceShard.sks; sourceTree = "<group>"; };
 		6A19C5E42B7FD4780019B8AF /* ShootShard.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShootShard.sks; sourceTree = "<group>"; };
 		6A19C5E62B7FD7B10019B8AF /* ShootShard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootShard.swift; sourceTree = "<group>"; };
-		6A19C5EB2B7FE39E0019B8AF /* bomb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bomb.wav; sourceTree = "<group>"; };
-		6A19C5ED2B7FE3E80019B8AF /* space.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = space.mp3; sourceTree = "<group>"; };
 		6A19C5F12B7FE7C80019B8AF /* plasma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = plasma.mp3; sourceTree = "<group>"; };
-		6A4FBA472B7FEE2F002CBF2C /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +70,6 @@
 				6A19C5C72B7FA9640019B8AF /* GameScene.sks */,
 				6A19C5C92B7FA9640019B8AF /* Actions.sks */,
 				6A19C5CB2B7FA9640019B8AF /* GameScene.swift */,
-				6A4FBA472B7FEE2F002CBF2C /* ProgressBar.swift */,
 				6A19C5E62B7FD7B10019B8AF /* ShootShard.swift */,
 				6A19C5DA2B7FB5680019B8AF /* IceShard.sks */,
 				6A19C5E42B7FD4780019B8AF /* ShootShard.sks */,
@@ -92,9 +85,7 @@
 		6A19C5EA2B7FE2280019B8AF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				6A19C5EB2B7FE39E0019B8AF /* bomb.wav */,
 				6A19C5F12B7FE7C80019B8AF /* plasma.mp3 */,
-				6A19C5ED2B7FE3E80019B8AF /* space.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -159,10 +150,8 @@
 			files = (
 				6A19C5F22B7FE7C80019B8AF /* plasma.mp3 in Resources */,
 				6A19C5C82B7FA9640019B8AF /* GameScene.sks in Resources */,
-				6A19C5EE2B7FE3E80019B8AF /* space.mp3 in Resources */,
 				6A19C5D02B7FA9660019B8AF /* Assets.xcassets in Resources */,
 				6A19C5E52B7FD4780019B8AF /* ShootShard.sks in Resources */,
-				6A19C5EC2B7FE39E0019B8AF /* bomb.wav in Resources */,
 				6A19C5DB2B7FB5680019B8AF /* IceShard.sks in Resources */,
 				6A19C5CA2B7FA9640019B8AF /* Actions.sks in Resources */,
 				6A19C5D32B7FA9660019B8AF /* Main.storyboard in Resources */,
@@ -179,7 +168,6 @@
 				6A19C5CE2B7FA9640019B8AF /* ViewController.swift in Sources */,
 				6A19C5CC2B7FA9640019B8AF /* GameScene.swift in Sources */,
 				6A19C5E72B7FD7B10019B8AF /* ShootShard.swift in Sources */,
-				6A4FBA482B7FEE2F002CBF2C /* ProgressBar.swift in Sources */,
 				6A19C5C62B7FA9640019B8AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

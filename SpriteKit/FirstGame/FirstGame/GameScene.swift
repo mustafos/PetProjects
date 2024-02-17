@@ -10,8 +10,6 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var progressBar = ProgressBar()
-    
     private var spinnyNode : SKShapeNode?
     private var player: SKSpriteNode = SKSpriteNode()
     private var player2: SKSpriteNode = SKSpriteNode()
@@ -25,17 +23,6 @@ class GameScene: SKScene {
         
         /*Use for 3D model*/
         // camera?.xScale = 0.2
-        
-        progressBar.getSceneFrame(sceneFrame: frame)
-        progressBar.buildProgressBar()
-        addChild(progressBar)
-        
-        var count = 0
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            if count > 9 { timer.invalidate() }
-            self.progressBar.updateProgressBar()
-            count += 1
-        }
         
         player = SKSpriteNode(imageNamed: "ufo")
         player.position = CGPoint(x: 0, y: 0)
