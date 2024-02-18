@@ -22,9 +22,9 @@ class Player: SKSpriteNode {
         zPosition = 1
         
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
-        physicsBody?.categoryBitMask = CollisionType.player.rawValue
-        physicsBody?.collisionBitMask = CollisionType.hookjoint.rawValue | CollisionType.rayhead.rawValue
-        physicsBody?.contactTestBitMask = CollisionType.hookjoint.rawValue | CollisionType.rayhead.rawValue
+//        physicsBody?.categoryBitMask = CollisionType.player.rawValue
+//        physicsBody?.collisionBitMask = CollisionType.hookjoint.rawValue | CollisionType.rayhead.rawValue
+//        physicsBody?.contactTestBitMask = CollisionType.hookjoint.rawValue | CollisionType.rayhead.rawValue
         physicsBody?.isDynamic = true
         physicsBody?.affectedByGravity = true
         physicsBody?.allowsRotation = true

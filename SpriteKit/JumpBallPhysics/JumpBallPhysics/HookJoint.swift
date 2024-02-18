@@ -20,9 +20,9 @@ class HookJoint: SKSpriteNode {
         zPosition = 0
         
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
-        physicsBody?.categoryBitMask = CollisionType.hookjoint.rawValue
-        physicsBody?.collisionBitMask = CollisionType.player.rawValue | CollisionType.raycast.rawValue
-        physicsBody?.contactTestBitMask = CollisionType.player.rawValue | CollisionType.raycast.rawValue
+//        physicsBody?.categoryBitMask = CollisionType.hookjoint.rawValue
+//        physicsBody?.collisionBitMask = CollisionType.player.rawValue | CollisionType.raycast.rawValue
+//        physicsBody?.contactTestBitMask = CollisionType.player.rawValue | CollisionType.raycast.rawValue
         physicsBody?.isDynamic = false
         physicsBody?.affectedByGravity = false
         physicsBody?.allowsRotation = false
