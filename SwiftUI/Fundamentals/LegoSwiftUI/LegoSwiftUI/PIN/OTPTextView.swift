@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+//OTPTextView { value in
+//    print(value)
+//}
+
 struct OTPTextView: View {
     @State private var verificationCode = ""
     @FocusState private var focusField: FocusField?

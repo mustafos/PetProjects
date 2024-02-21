@@ -14,9 +14,6 @@ struct ContentView: View {
             Color.white.edgesIgnoringSafeArea(.all)
             
             VStack {
-                OTPTextView { value in
-                    print(value)
-                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay(alignment: .top) {
