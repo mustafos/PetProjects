@@ -1,5 +1,5 @@
 //
-//  ExpenseData.swift
+//  ExpenseDate.swift
 //  LegoSwiftUI
 //
 //  Created by Mustafa Bekirov on 23.02.2024.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct ExpenseData {
+struct ExpenseDate {
     private(set) var allExpenses: [Expense]?
     
-    mutating func createExpenseData(days: Int) {
+    mutating func createExpenseDate(days: Int) {
         self.allExpenses = []
         var selectedExpense = initialExpense
         var add = true
@@ -31,7 +31,7 @@ struct ExpenseData {
             let selectedDate = Calendar.current.date(byAdding: .day, value: (-1 * interval), to: Date())!
             self.allExpenses!.append(Expense(day: selectedDate,
                                              amount: Int.random(in: minExpense..<maxExpense),
-                                             description: expenseDescriptionData.randomElement() ?? ""))
+                                             description: expenseDescriptionDate.randomElement() ?? ""))
         }
     }
 }

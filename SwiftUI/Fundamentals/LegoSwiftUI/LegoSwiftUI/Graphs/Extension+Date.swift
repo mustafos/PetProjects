@@ -1,5 +1,5 @@
 //
-//  Extension+Data.swift
+//  Extension+Date.swift
 //  LegoSwiftUI
 //
 //  Created by Mustafa Bekirov on 23.02.2024.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension Data {
+extension Date {
     func toString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
