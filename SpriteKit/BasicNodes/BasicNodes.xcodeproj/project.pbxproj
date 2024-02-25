@@ -15,6 +15,7 @@
 		6AA8384E2B8B3DFA00D1FEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA8384C2B8B3DFA00D1FEFC /* Main.storyboard */; };
 		6AA838502B8B3DFC00D1FEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA8384F2B8B3DFC00D1FEFC /* Assets.xcassets */; };
 		6AA838532B8B3DFC00D1FEFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA838512B8B3DFC00D1FEFC /* LaunchScreen.storyboard */; };
+		6AA8385A2B8B6F3600D1FEFC /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6AA838592B8B6F3600D1FEFC /* Stars.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		6AA8384D2B8B3DFA00D1FEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AA8384F2B8B3DFC00D1FEFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AA838522B8B3DFC00D1FEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AA838592B8B6F3600D1FEFC /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stars.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6AA838442B8B3DFA00D1FEFC /* GameScene.sks */,
 				6AA838462B8B3DFA00D1FEFC /* Actions.sks */,
 				6AA838482B8B3DFA00D1FEFC /* GameScene.swift */,
+				6AA838592B8B6F3600D1FEFC /* Stars.sks */,
 				6AA8384A2B8B3DFA00D1FEFC /* GameViewController.swift */,
 				6AA8384C2B8B3DFA00D1FEFC /* Main.storyboard */,
 				6AA8384F2B8B3DFC00D1FEFC /* Assets.xcassets */,
@@ -134,6 +137,7 @@
 				6AA838502B8B3DFC00D1FEFC /* Assets.xcassets in Resources */,
 				6AA838532B8B3DFC00D1FEFC /* LaunchScreen.storyboard in Resources */,
 				6AA838472B8B3DFA00D1FEFC /* Actions.sks in Resources */,
+				6AA8385A2B8B6F3600D1FEFC /* Stars.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
