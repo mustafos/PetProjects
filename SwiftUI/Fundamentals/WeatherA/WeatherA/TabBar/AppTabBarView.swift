@@ -74,7 +74,7 @@ struct TabBarItem: View {
         } else {
             ZStack {
                 Button {
-                    withAnimation(.spring()) {
+                    withAnimation(.easeInOut(duration: 0.5)) {
                         selected = tab
                     }
                 } label: {
