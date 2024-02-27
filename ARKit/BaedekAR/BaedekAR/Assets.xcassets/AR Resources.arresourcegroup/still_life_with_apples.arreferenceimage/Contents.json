@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "still_life_with_apples.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 0.33000000000000002
+  }
+}
