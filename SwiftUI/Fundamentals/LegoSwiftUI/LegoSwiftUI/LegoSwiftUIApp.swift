@@ -12,8 +12,7 @@ struct LegoSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-//            BottomTabBar()
-            LoginView()
+            LandingPageView()
 //            HashtagView(tags: hashtags) { tag in
 //                print(tag)
 //            }
