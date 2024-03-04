@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "eye.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 0.33000000000000002
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "block_this-creepy_clown.arreferenceimage"
+    },
+    {
+      "filename" : "boat_on_beach.arreferenceimage"
+    },
+    {
+      "filename" : "bob_dobbs.arreferenceimage"
+    },
+    {
+      "filename" : "cat_in_grayscale.arreferenceimage"
+    },
+    {
+      "filename" : "eye.arreferenceimage"
+    },
+    {
+      "filename" : "rainbow_hedgehog.arreferenceimage"
+    },
+    {
+      "filename" : "starry_night.arreferenceimage"
+    },
+    {
+      "filename" : "still_life_with_apples.arreferenceimage"
+    }
+  ]
+}
