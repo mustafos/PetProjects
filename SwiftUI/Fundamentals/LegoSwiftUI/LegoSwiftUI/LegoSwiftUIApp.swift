@@ -16,7 +16,8 @@ struct LegoSwiftUIApp: App {
 //            LandingPageView()
 //            CaruselContentView()
 //            BlogViewTypeOne()
-            MapView()
+//            MapView()
+            SmoothIconAnimation()
 //            HashtagView(tags: hashtags) { tag in
 //                print(tag)
 //            }
