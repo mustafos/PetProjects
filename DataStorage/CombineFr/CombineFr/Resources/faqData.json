@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "question": "How many courses are coming?",
+        "answer": "We release an average of 10 courses per calendar year."
+    },
+    {
+        "id": 2,
+        "question": "How do I cancel my plan?",
+        "answer": "You can cancel at any time in your Account tab. Your plan will set to renew automatically unless you cancel it, in which case your access will end at the end of the current period."
+    },
+    {
+        "id": 3,
+        "question": "Can I download the content?",
+        "answer": "Yes, you can download the videos, source files, ePub files and resources such as icons, illustrations, mockups, etc from the site. These come with your subscription, even the monthly plan."
+    }
+]

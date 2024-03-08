@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct TypewriterTextAnimation: View {
+    
+    let text:  String
+    var delay: CGFloat = 75
+    var font: Font
+    var textAlignment: TextAlignment = .leading
+    
+    @State private var animatedText = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(animatedText)
+                .multilineTextAlignment(.center)
+                .font(font)
+                .padding()
+                .task {
+                    await animate()
+                }
+        }
+    }
+    
+    private func animate() async {
+        for char in text {
+            animatedText.append(char)
+            try! await Task.sleep(for: .milliseconds(delay))
+        }
     }
 }
 
 #Preview {
-    TypewriterTextAnimation()
+    TypewriterTextAnimation(text: "Demo Text View", font: .body)
 }

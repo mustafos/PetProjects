@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ltr-pl-ICU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Reverse Words-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReverseWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-oT-KJo">
+                                <rect key="frame" x="42.333333333333343" y="167" width="308.33333333333326" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-rB-0gv">
+                                        <rect key="frame" x="39.666666666666671" y="0.0" width="229.33333333333331" height="40"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqZ-Zx-A9K">
+                                        <rect key="frame" x="0.33333333333331439" y="56" width="308" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="8Dz-Bf-f1L"/>
+                                            <constraint firstAttribute="width" constant="308" id="Z0x-13-brs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="o1m-PO-xtb">
+                                <rect key="frame" x="9" y="307" width="375" height="137"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-Ls-UoF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0BE-ZR-A9T"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="GJe-nY-WBC"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-qy-Wlt">
+                                        <rect key="frame" x="0.0" y="76" width="375" height="61"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="Pcz-hx-BE1"/>
+                                            <constraint firstAttribute="height" constant="61" id="xli-yf-3Og"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="UBN-5u-0AA"/>
+                                    <constraint firstAttribute="width" constant="375" id="Wag-c5-KyC"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tg-Lh-gBA">
+                                <rect key="frame" x="164.66666666666666" y="763.66666666666663" width="63.666666666666657" height="54.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0K-ex-0gd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iA-hv-0eS">
+                                <rect key="frame" x="154" y="773.66666666666663" width="85" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reverse"/>
+                                <connections>
+                                    <action selector="reverseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fn0-eW-wdp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1m-PO-xtb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CnM-Xf-53h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFi-oT-KJo" secondAttribute="trailing" constant="42.333333333333371" id="P5t-hN-LAa"/>
+                            <constraint firstItem="0Tg-Lh-gBA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164.66666666666666" id="TlY-yN-bsm"/>
+                            <constraint firstItem="KFi-oT-KJo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="UxV-jQ-J2R"/>
+                            <constraint firstItem="0Tg-Lh-gBA" firstAttribute="centerY" secondItem="0iA-hv-0eS" secondAttribute="centerY" id="bvD-LM-kNN"/>
+                            <constraint firstItem="KFi-oT-KJo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dty-yi-4f3"/>
+                            <constraint firstItem="0Tg-Lh-gBA" firstAttribute="centerX" secondItem="0iA-hv-0eS" secondAttribute="centerX" id="eDQ-gt-5Fa"/>
+                            <constraint firstItem="o1m-PO-xtb" firstAttribute="top" secondItem="KFi-oT-KJo" secondAttribute="bottom" constant="40" id="gbN-9r-m8y"/>
+                            <constraint firstItem="0Tg-Lh-gBA" firstAttribute="centerX" secondItem="o1m-PO-xtb" secondAttribute="centerX" id="nQF-Sx-gPw"/>
+                            <constraint firstItem="o1m-PO-xtb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="qVd-IH-xrq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Tg-Lh-gBA" secondAttribute="bottom" constant="1.1368683772161603e-13" id="uTB-l9-h9W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reverse Words" id="HO9-Ay-KnE">
+                        <barButtonItem key="rightBarButtonItem" title="Anagram" id="7NP-rB-A0W">
+                            <connections>
+                                <segue destination="dbF-Yi-0xC" kind="show" id="GdG-XJ-bL8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clearButton" destination="0Tg-Lh-gBA" id="KbI-Fd-0N4"/>
+                        <outlet property="resultTextView" destination="ysY-qy-Wlt" id="CEm-7Q-svA"/>
+                        <outlet property="reverseButton" destination="0iA-hv-0eS" id="lBI-NE-VY2"/>
+                        <outlet property="subtitleLabel" destination="JqZ-Zx-A9K" id="Gkw-8k-03Z"/>
+                        <outlet property="titleLabel" destination="7Xu-rB-0gv" id="Khi-6i-rWv"/>
+                        <outlet property="wordsTextField" destination="fvD-Ls-UoF" id="eEz-Wq-f92"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gwE-x0-HX6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ltr-pl-ICU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uz1-Au-VwA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0qm-HY-vFV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJm-P4-Pno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+        <!--Anagrams View Controller-->
+        <scene sceneID="LmC-Ui-FaA">
+            <objects>
+                <viewController id="dbF-Yi-0xC" customClass="AnagramsViewController" customModule="ReverseWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GkU-H2-n3u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="EqG-Qk-vSh">
+                                <rect key="frame" x="0.0" y="143" width="393" height="244.66666666666663"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to revrse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dke-hA-vQI">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mco-4Y-3xb">
+                                        <rect key="frame" x="16" y="45" width="361" height="32"/>
+                                        <segments>
+                                            <segment title="Default"/>
+                                            <segment title="Custom"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="customChange:" destination="dbF-Yi-0xC" eventType="valueChanged" id="fhx-KQ-4B2"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFN-wT-3AO">
+                                        <rect key="frame" x="41" y="87" width="311" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignore" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AoD-gE-yta">
+                                        <rect key="frame" x="16" y="118.33333333333331" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STh-Kq-FzG">
+                                        <rect key="frame" x="170.66666666666666" y="163.33333333333331" width="52" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUq-5n-Iwu">
+                                        <rect key="frame" x="16" y="194.66666666666669" width="361" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dke-hA-vQI" firstAttribute="leading" secondItem="EqG-Qk-vSh" secondAttribute="leading" constant="16" id="CGf-aS-pPb"/>
+                                    <constraint firstItem="yUq-5n-Iwu" firstAttribute="leading" secondItem="EqG-Qk-vSh" secondAttribute="leading" constant="16" id="Ldz-mC-JQx"/>
+                                    <constraint firstItem="AoD-gE-yta" firstAttribute="leading" secondItem="EqG-Qk-vSh" secondAttribute="leading" constant="16" id="bA2-nh-z9e"/>
+                                    <constraint firstItem="Mco-4Y-3xb" firstAttribute="leading" secondItem="EqG-Qk-vSh" secondAttribute="leading" constant="16" id="voF-FQ-GXE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rKM-qY-38I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EqG-Qk-vSh" firstAttribute="top" secondItem="rKM-qY-38I" secondAttribute="top" constant="40" id="QCH-Ko-BLV"/>
+                            <constraint firstItem="EqG-Qk-vSh" firstAttribute="leading" secondItem="rKM-qY-38I" secondAttribute="leading" id="eAJ-Bx-RUK"/>
+                            <constraint firstItem="rKM-qY-38I" firstAttribute="trailing" secondItem="EqG-Qk-vSh" secondAttribute="trailing" id="lhL-In-f4b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hBr-Tx-kJu"/>
+                    <connections>
+                        <outlet property="changeLogic" destination="Mco-4Y-3xb" id="wWn-93-Yng"/>
+                        <outlet property="ignoredTextField" destination="AoD-gE-yta" id="K9N-pR-769"/>
+                        <outlet property="infoLabel" destination="YFN-wT-3AO" id="z9P-dh-PNI"/>
+                        <outlet property="resultLabel" destination="yUq-5n-Iwu" id="Yuo-jj-EuD"/>
+                        <outlet property="toReverseTextField" destination="Dke-hA-vQI" id="udx-v8-kJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8w2-tC-sSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
