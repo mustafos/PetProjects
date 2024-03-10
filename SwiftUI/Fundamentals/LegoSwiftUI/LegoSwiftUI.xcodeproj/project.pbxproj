@@ -37,6 +37,9 @@
 		6A80EA132B85424000C3D750 /* FocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA122B85424000C3D750 /* FocusField.swift */; };
 		6A80EA152B85443900C3D750 /* OTPTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA142B85443900C3D750 /* OTPTextView.swift */; };
 		6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA162B8545D200C3D750 /* Extension+String.swift */; };
+		6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9453E2B9DA4CA00CB81F0 /* ExpandableView.swift */; };
+		6AA945412B9DA62000CB81F0 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */; };
+		6AA945432B9DA66400CB81F0 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945422B9DA66400CB81F0 /* ExpandedView.swift */; };
 		6AD3B2662B92655C001D7873 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3B2652B92655C001D7873 /* LoginView.swift */; };
 		6AD3B2692B9265AA001D7873 /* MadimiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD3B2682B9265AA001D7873 /* MadimiOne-Regular.ttf */; };
 		6AD3B26C2B92670D001D7873 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3B26B2B92670D001D7873 /* Font.swift */; };
@@ -81,6 +84,9 @@
 		6A80EA122B85424000C3D750 /* FocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusField.swift; sourceTree = "<group>"; };
 		6A80EA142B85443900C3D750 /* OTPTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextView.swift; sourceTree = "<group>"; };
 		6A80EA162B8545D200C3D750 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		6AA9453E2B9DA4CA00CB81F0 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
+		6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		6AA945422B9DA66400CB81F0 /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
 		6AD3B2652B92655C001D7873 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6AD3B2682B9265AA001D7873 /* MadimiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MadimiOne-Regular.ttf"; sourceTree = "<group>"; };
 		6AD3B26A2B9265C7001D7873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				6A0D74D62B96828F007FA77E /* Map */,
 				6A8042582B98E8B900AD4A83 /* ErrorScreens */,
 				6A80425B2B99068700AD4A83 /* TypewriterTextAnimation.swift */,
+				6AA945442B9DA67400CB81F0 /* ExpandableMenu */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
 				6A5057A42B7975DB0002C2F4 /* Preview Content */,
@@ -228,6 +235,16 @@
 				6A80EA162B8545D200C3D750 /* Extension+String.swift */,
 			);
 			path = PIN;
+			sourceTree = "<group>";
+		};
+		6AA945442B9DA67400CB81F0 /* ExpandableMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9453E2B9DA4CA00CB81F0 /* ExpandableView.swift */,
+				6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */,
+				6AA945422B9DA66400CB81F0 /* ExpandedView.swift */,
+			);
+			path = ExpandableMenu;
 			sourceTree = "<group>";
 		};
 		6AD3B2642B92653E001D7873 /* Login */ = {
@@ -348,6 +365,7 @@
 				6A0D74D82B9682AD007FA77E /* Annotation.swift in Sources */,
 				6A759F832B8683E500FAD0B0 /* ExpenseDate.swift in Sources */,
 				6A759F852B86846300FAD0B0 /* Constants.swift in Sources */,
+				6AA945412B9DA62000CB81F0 /* ThumbnailView.swift in Sources */,
 				6AD9A7282B7D462200B4C57A /* MorphingDragEffectView.swift in Sources */,
 				6A80425C2B99068700AD4A83 /* TypewriterTextAnimation.swift in Sources */,
 				6AD3B26E2B939C4B001D7873 /* LoginTextFields.swift in Sources */,
@@ -360,7 +378,9 @@
 				6A1FD1EF2B94BB77004F7B8D /* CaruselContentView.swift in Sources */,
 				6AD9A72A2B7D4DE300B4C57A /* SideViewContents.swift in Sources */,
 				6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */,
+				6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */,
 				6A5057A12B7975D90002C2F4 /* SideMenuView.swift in Sources */,
+				6AA945432B9DA66400CB81F0 /* ExpandedView.swift in Sources */,
 				6AF9909F2B94B2C100C15341 /* CarouselViewChild.swift in Sources */,
 				6A3F930D2B925CA000A9E236 /* TabBarShape.swift in Sources */,
 				6A50579F2B7975D90002C2F4 /* LegoSwiftUIApp.swift in Sources */,
