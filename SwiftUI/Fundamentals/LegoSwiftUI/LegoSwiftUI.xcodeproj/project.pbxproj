@@ -41,6 +41,7 @@
 		6AA945412B9DA62000CB81F0 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */; };
 		6AA945432B9DA66400CB81F0 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945422B9DA66400CB81F0 /* ExpandedView.swift */; };
 		6AA945462B9DAE0F00CB81F0 /* ImplementationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945452B9DAE0F00CB81F0 /* ImplementationView.swift */; };
+		6AA945482B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945472B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift */; };
 		6AD3B2662B92655C001D7873 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3B2652B92655C001D7873 /* LoginView.swift */; };
 		6AD3B2692B9265AA001D7873 /* MadimiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD3B2682B9265AA001D7873 /* MadimiOne-Regular.ttf */; };
 		6AD3B26C2B92670D001D7873 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3B26B2B92670D001D7873 /* Font.swift */; };
@@ -89,6 +90,7 @@
 		6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		6AA945422B9DA66400CB81F0 /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
 		6AA945452B9DAE0F00CB81F0 /* ImplementationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplementationView.swift; sourceTree = "<group>"; };
+		6AA945472B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateSFSymbolsView.swift; sourceTree = "<group>"; };
 		6AD3B2652B92655C001D7873 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6AD3B2682B9265AA001D7873 /* MadimiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MadimiOne-Regular.ttf"; sourceTree = "<group>"; };
 		6AD3B26A2B9265C7001D7873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				6A80425B2B99068700AD4A83 /* TypewriterTextAnimation.swift */,
 				6AA945442B9DA67400CB81F0 /* ExpandableMenu */,
 				6AA945452B9DAE0F00CB81F0 /* ImplementationView.swift */,
+				6AA945472B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
 				6A5057A42B7975DB0002C2F4 /* Preview Content */,
@@ -391,6 +394,7 @@
 				6A0D74DC2B9683C9007FA77E /* MapsScreenView.swift in Sources */,
 				6A80EA132B85424000C3D750 /* FocusField.swift in Sources */,
 				6A0D74D52B967B88007FA77E /* BlogViewTypeTwo.swift in Sources */,
+				6AA945482B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
