@@ -2,15 +2,22 @@
 //  ScreenshotView.swift
 //  LegoSwiftUI
 //
-//  Created by Mustafa Bekirov on 10.03.2024.
+//  Created by Mustafa Bekirov on 12.03.2024.
 //
 
 import SwiftUI
 
 struct ScreenshotView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(systemName: "hand.raised")
+                .imageScale(.large)
+                .foregroundStyle(.red)
+            Text("Block Screenshot")
+        }
+        .screenshotProtected(isProtected: true)
     }
+    
 }
 
 #Preview {
