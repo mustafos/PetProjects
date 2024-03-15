@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ActivityKit
 
 struct UserDefaultsManager {
     static func saveNewActivity(id: String, 

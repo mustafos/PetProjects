@@ -30,7 +30,7 @@ class LiveActivityManager {
     }
     
     static func listAllActivities() -> [[String:String]] {
-        let sortedActivities = Activity<FoodDeliveryAttributes>.activities.sorted{ $0.id > $1.id }
+        let sortedActivities = Activity<FoodDeliveryAttributes>.activities.sorted { $0.id > $1.id }
         return sortedActivities.map {
             [
                 "id": $0.id,
@@ -59,9 +59,10 @@ class LiveActivityManager {
                                phoneNumber: String,
                                restaurantName: String,
                                customerAddress: String) async {
-        let updateContentState = FoodDeliveryAttributes.ContentState(arrivalTime: arrivalTime, phoneNumber: phoneNumber, restaurantName: restaurantName, customerAddress: customerAddress)
+        let updatedContentState = FoodDeliveryAttributes.ContentState(arrivalTime: arrivalTime, phoneNumber: phoneNumber, 
+                                                                      restaurantName: restaurantName, customerAddress: customerAddress)
         let activity = Activity<FoodDeliveryAttributes>.activities.first(where: { $0.id == id })
-        await activity?.update(using: updateContentState)
+        await activity?.update(using: updatedContentState)
     }
 }
 

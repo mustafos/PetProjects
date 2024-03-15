@@ -2,7 +2,7 @@
 //  FoodDeliveryActivityWidgetBundle.swift
 //  FoodDeliveryActivityWidget
 //
-//  Created by Mustafa Bekirov on 12.03.2024.
+//  Created by Mustafa Bekirov on 15.03.2024.
 //
 
 import WidgetKit
