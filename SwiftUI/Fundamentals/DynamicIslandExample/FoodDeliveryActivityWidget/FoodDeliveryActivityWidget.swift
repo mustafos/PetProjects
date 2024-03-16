@@ -8,73 +8,174 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
-    }
-
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
-        completion(entry)
-    }
-
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let emoji: String
-}
-
-struct FoodDeliveryActivityWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
-        }
-    }
-}
-
 struct FoodDeliveryActivityWidget: Widget {
-    let kind: String = "FoodDeliveryActivityWidget"
-
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                FoodDeliveryActivityWidgetEntryView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
-            } else {
-                FoodDeliveryActivityWidgetEntryView(entry: entry)
-                    .padding()
-                    .background()
+        ActivityConfiguration(for: FoodDeliveryAttributes.self) { context in
+            VStack(alignment: .center) {
+                VStack(alignment: .center) {
+                    HStack {
+                        Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 14, height: 14)
+                            .foregroundStyle(.cyan)
+                        
+                        Spacer()
+                        
+                        Text("~ \(context.state.arrivalTime)")
+                            .font(.system(size: 14))
+                            .bold()
+                    }
+                    .padding(.horizontal, 10)
+                    
+                    VStack {
+                        HStack {
+                            Image(systemName: "figure.outdoor.cycle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 44, height: 44)
+                                .foregroundStyle(.cyan)
+                            
+                            VStack(spacing: 0) {
+                                HStack {
+                                    Text("Your food is on delivery")
+                                        .font(.system(size: 20))
+                                        .bold()
+                                    Spacer()
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 30)
+                    }
+                }
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("From")
+                            .font(.system(size: 8))
+                        Text(context.state.restaurantName)
+                            .font(.system(size: 14))
+                            .bold()
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing) {
+                        Text("To")
+                            .font(.system(size: 8))
+                        Text(context.state.customerAddress)
+                            .font(.system(size: 14))
+                            .bold()
+                    }
+                }
+                .frame(height: 20)
+                .padding(.horizontal, 10)
+                
+                HStack {
+                    ProgressView(value: CGFloat((context.state.remainingDistance as NSString).floatValue), total: 100)
+                        .tint(.yellow)
+                        .background(.white)
+                }
+                .padding(.horizontal, 10)
+            }
+            .frame(height: 160)
+            .background(.black)
+            
+        } dynamicIsland: { context in
+            DynamicIsland {
+                DynamicIslandExpandedRegion(.center) {
+                    VStack {
+                        HStack {
+                            Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 14, height: 14)
+                                .foregroundStyle(.cyan)
+                            Spacer()
+                            Text("~ \(context.state.arrivalTime)")
+                                .font(.system(size: 14))
+                                .bold()
+                        }
+                        .padding(.horizontal, 10)
+                        
+                        VStack {
+                            HStack {
+                                Image(systemName: "figure.outdoor.cycle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 44, height: 44)
+                                    .foregroundStyle(.cyan)
+                                
+                                VStack(spacing: 0) {
+                                    HStack {
+                                        Text("Your food is on delivery")
+                                            .font(.system(size: 20))
+                                            .bold()
+                                        Spacer()
+                                    }
+                                    
+                                    HStack {
+                                        Button {
+                                            
+                                        } label: {
+                                            HStack {
+                                                Image(systemName: "phone.fill")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 14, height: 14)
+                                                    .foregroundStyle(.white)
+                                                Text("Call")
+                                                    .font(.system(size: 10))
+                                                    .foregroundStyle(.white)
+                                            }
+                                        }
+                                        .buttonBorderShape(.capsule)
+                                        Spacer()
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 30)
+                        }
+                    }
+                }
+                DynamicIslandExpandedRegion(.bottom) {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("From")
+                                .font(.system(size: 8))
+                            Text(context.state.restaurantName)
+                                .font(.system(size: 14))
+                                .bold()
+                        }
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .trailing) {
+                            Text("To")
+                                .font(.system(size: 8))
+                            Text(context.state.customerAddress)
+                                .font(.system(size: 14))
+                                .bold()
+                        }
+                    }
+                    .frame(height: 20)
+                    .padding(.horizontal, 10)
+                }
+            } compactLeading: {
+                Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 14, height: 14)
+                    .foregroundStyle(.cyan)
+            } compactTrailing: {
+                Text("En Route")
+            } minimal: {
+                Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 14, height: 14)
+                    .foregroundStyle(.cyan)
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
     }
-}
-
-#Preview(as: .systemSmall) {
-    FoodDeliveryActivityWidget()
-} timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
 }

@@ -37,10 +37,6 @@
 		6A80EA132B85424000C3D750 /* FocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA122B85424000C3D750 /* FocusField.swift */; };
 		6A80EA152B85443900C3D750 /* OTPTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA142B85443900C3D750 /* OTPTextView.swift */; };
 		6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA162B8545D200C3D750 /* Extension+String.swift */; };
-		6AA21A592B9FAFBF003C164C /* DynamicIsland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA21A582B9FAFBF003C164C /* DynamicIsland.swift */; };
-		6AA21A5C2B9FB043003C164C /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA21A5B2B9FB043003C164C /* LiveActivityManager.swift */; };
-		6AA21A5E2B9FB08A003C164C /* FoodDeliveryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA21A5D2B9FB08A003C164C /* FoodDeliveryAttributes.swift */; };
-		6AA21A602B9FB0BB003C164C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA21A5F2B9FB0BB003C164C /* UserDefaultsManager.swift */; };
 		6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9453E2B9DA4CA00CB81F0 /* ExpandableView.swift */; };
 		6AA945412B9DA62000CB81F0 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */; };
 		6AA945432B9DA66400CB81F0 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA945422B9DA66400CB81F0 /* ExpandedView.swift */; };
@@ -60,24 +56,7 @@
 		6AD9A72F2B7D574200B4C57A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD9A72E2B7D574200B4C57A /* CategoryView.swift */; };
 		6AF9909D2B94B2AF00C15341 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9909C2B94B2AF00C15341 /* CarouselView.swift */; };
 		6AF9909F2B94B2C100C15341 /* CarouselViewChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9909E2B94B2C100C15341 /* CarouselViewChild.swift */; };
-		6AFE25CD2BA4CB900040BAA1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A210AC12BA0ED3E00506352 /* WidgetKit.framework */; };
-		6AFE25CE2BA4CB900040BAA1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A210AC32BA0ED3E00506352 /* SwiftUI.framework */; };
-		6AFE25D12BA4CB900040BAA1 /* FoodDeliveryActivityWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE25D02BA4CB900040BAA1 /* FoodDeliveryActivityWidgetBundle.swift */; };
-		6AFE25D32BA4CB900040BAA1 /* FoodDeliveryActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE25D22BA4CB900040BAA1 /* FoodDeliveryActivityWidget.swift */; };
-		6AFE25D52BA4CB920040BAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AFE25D42BA4CB920040BAA1 /* Assets.xcassets */; };
-		6AFE25D92BA4CB920040BAA1 /* FoodDeliveryActivityWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6AFE25CC2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6AFE25DD2BA4CC110040BAA1 /* FoodDeliveryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA21A5D2B9FB08A003C164C /* FoodDeliveryAttributes.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6AFE25D72BA4CB920040BAA1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A5057932B7975D90002C2F4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6AFE25CB2BA4CB8F0040BAA1;
-			remoteInfo = FoodDeliveryActivityWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6A210AD02BA0ED4000506352 /* Embed Foundation Extensions */ = {
@@ -86,7 +65,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6AFE25D92BA4CB920040BAA1 /* FoodDeliveryActivityWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,10 +105,6 @@
 		6A80EA122B85424000C3D750 /* FocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusField.swift; sourceTree = "<group>"; };
 		6A80EA142B85443900C3D750 /* OTPTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextView.swift; sourceTree = "<group>"; };
 		6A80EA162B8545D200C3D750 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
-		6AA21A582B9FAFBF003C164C /* DynamicIsland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIsland.swift; sourceTree = "<group>"; };
-		6AA21A5B2B9FB043003C164C /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
-		6AA21A5D2B9FB08A003C164C /* FoodDeliveryAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryAttributes.swift; sourceTree = "<group>"; };
-		6AA21A5F2B9FB0BB003C164C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		6AA9453E2B9DA4CA00CB81F0 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 		6AA945402B9DA62000CB81F0 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		6AA945422B9DA66400CB81F0 /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
@@ -151,11 +125,6 @@
 		6AD9A72E2B7D574200B4C57A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		6AF9909C2B94B2AF00C15341 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		6AF9909E2B94B2C100C15341 /* CarouselViewChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewChild.swift; sourceTree = "<group>"; };
-		6AFE25CC2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FoodDeliveryActivityWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AFE25D02BA4CB900040BAA1 /* FoodDeliveryActivityWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryActivityWidgetBundle.swift; sourceTree = "<group>"; };
-		6AFE25D22BA4CB900040BAA1 /* FoodDeliveryActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryActivityWidget.swift; sourceTree = "<group>"; };
-		6AFE25D42BA4CB920040BAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6AFE25D62BA4CB920040BAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,15 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6AFE25C92BA4CB8F0040BAA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6AFE25CE2BA4CB900040BAA1 /* SwiftUI.framework in Frameworks */,
-				6AFE25CD2BA4CB900040BAA1 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				6A50579D2B7975D90002C2F4 /* LegoSwiftUI */,
-				6AFE25CF2BA4CB900040BAA1 /* FoodDeliveryActivityWidget */,
 				6A210AC02BA0ED3E00506352 /* Frameworks */,
 				6A50579C2B7975D90002C2F4 /* Products */,
 			);
@@ -239,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				6A50579B2B7975D90002C2F4 /* LegoSwiftUI.app */,
-				6AFE25CC2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,7 +228,6 @@
 				6AA945452B9DAE0F00CB81F0 /* ImplementationView.swift */,
 				6AA945472B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift */,
 				6AA945492B9DB9D700CB81F0 /* Screenshot */,
-				6AA21A5A2B9FB023003C164C /* DynamicIsland */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -318,17 +275,6 @@
 				6A80EA162B8545D200C3D750 /* Extension+String.swift */,
 			);
 			path = PIN;
-			sourceTree = "<group>";
-		};
-		6AA21A5A2B9FB023003C164C /* DynamicIsland */ = {
-			isa = PBXGroup;
-			children = (
-				6AA21A582B9FAFBF003C164C /* DynamicIsland.swift */,
-				6AA21A5B2B9FB043003C164C /* LiveActivityManager.swift */,
-				6AA21A5D2B9FB08A003C164C /* FoodDeliveryAttributes.swift */,
-				6AA21A5F2B9FB0BB003C164C /* UserDefaultsManager.swift */,
-			);
-			path = DynamicIsland;
 			sourceTree = "<group>";
 		};
 		6AA945442B9DA67400CB81F0 /* ExpandableMenu */ = {
@@ -381,17 +327,6 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
-		6AFE25CF2BA4CB900040BAA1 /* FoodDeliveryActivityWidget */ = {
-			isa = PBXGroup;
-			children = (
-				6AFE25D02BA4CB900040BAA1 /* FoodDeliveryActivityWidgetBundle.swift */,
-				6AFE25D22BA4CB900040BAA1 /* FoodDeliveryActivityWidget.swift */,
-				6AFE25D42BA4CB920040BAA1 /* Assets.xcassets */,
-				6AFE25D62BA4CB920040BAA1 /* Info.plist */,
-			);
-			path = FoodDeliveryActivityWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -407,29 +342,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				6AFE25D82BA4CB920040BAA1 /* PBXTargetDependency */,
 			);
 			name = LegoSwiftUI;
 			productName = LegoSwiftUI;
 			productReference = 6A50579B2B7975D90002C2F4 /* LegoSwiftUI.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6AFE25CB2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6AFE25DC2BA4CB920040BAA1 /* Build configuration list for PBXNativeTarget "FoodDeliveryActivityWidgetExtension" */;
-			buildPhases = (
-				6AFE25C82BA4CB8F0040BAA1 /* Sources */,
-				6AFE25C92BA4CB8F0040BAA1 /* Frameworks */,
-				6AFE25CA2BA4CB8F0040BAA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FoodDeliveryActivityWidgetExtension;
-			productName = FoodDeliveryActivityWidgetExtension;
-			productReference = 6AFE25CC2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -443,9 +360,6 @@
 				TargetAttributes = {
 					6A50579A2B7975D90002C2F4 = {
 						CreatedOnToolsVersion = 15.2;
-					};
-					6AFE25CB2BA4CB8F0040BAA1 = {
-						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -463,7 +377,6 @@
 			projectRoot = "";
 			targets = (
 				6A50579A2B7975D90002C2F4 /* LegoSwiftUI */,
-				6AFE25CB2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -479,14 +392,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AFE25CA2BA4CB8F0040BAA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6AFE25D52BA4CB920040BAA1 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -498,7 +403,6 @@
 				6A0D74DA2B9682BB007FA77E /* MapView.swift in Sources */,
 				6A759F872B86891100FAD0B0 /* ChartViewModel.swift in Sources */,
 				6A759F892B868E0D00FAD0B0 /* Extension+Date.swift in Sources */,
-				6AA21A592B9FAFBF003C164C /* DynamicIsland.swift in Sources */,
 				6A759F812B86835B00FAD0B0 /* Expense.swift in Sources */,
 				6A8042572B98E5F900AD4A83 /* ErrorScreens.swift in Sources */,
 				6AD3B26C2B92670D001D7873 /* Font.swift in Sources */,
@@ -526,11 +430,9 @@
 				6A58DF612B97D3DE006EFCFE /* SmoothIconAnimation.swift in Sources */,
 				6A80EA112B85416F00C3D750 /* OTPTextField.swift in Sources */,
 				6A759F8B2B8693BD00FAD0B0 /* Styles.swift in Sources */,
-				6AA21A5E2B9FB08A003C164C /* FoodDeliveryAttributes.swift in Sources */,
 				6A4054D32B93F54000A93E4E /* LandingPageView.swift in Sources */,
 				6A3F93082B9257F500A9E236 /* BottomTabBar.swift in Sources */,
 				6A1FD1EF2B94BB77004F7B8D /* CaruselContentView.swift in Sources */,
-				6AA21A602B9FB0BB003C164C /* UserDefaultsManager.swift in Sources */,
 				6AD9A72A2B7D4DE300B4C57A /* SideViewContents.swift in Sources */,
 				6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */,
 				6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */,
@@ -540,32 +442,13 @@
 				6A3F930D2B925CA000A9E236 /* TabBarShape.swift in Sources */,
 				6A50579F2B7975D90002C2F4 /* LegoSwiftUIApp.swift in Sources */,
 				6A0D74DC2B9683C9007FA77E /* MapsScreenView.swift in Sources */,
-				6AA21A5C2B9FB043003C164C /* LiveActivityManager.swift in Sources */,
 				6A80EA132B85424000C3D750 /* FocusField.swift in Sources */,
 				6A0D74D52B967B88007FA77E /* BlogViewTypeTwo.swift in Sources */,
 				6AA945482B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6AFE25C82BA4CB8F0040BAA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6AFE25D32BA4CB900040BAA1 /* FoodDeliveryActivityWidget.swift in Sources */,
-				6AFE25DD2BA4CC110040BAA1 /* FoodDeliveryAttributes.swift in Sources */,
-				6AFE25D12BA4CB900040BAA1 /* FoodDeliveryActivityWidgetBundle.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6AFE25D82BA4CB920040BAA1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6AFE25CB2BA4CB8F0040BAA1 /* FoodDeliveryActivityWidgetExtension */;
-			targetProxy = 6AFE25D72BA4CB920040BAA1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6A5057A72B7975DB0002C2F4 /* Debug */ = {
@@ -690,7 +573,6 @@
 		6A5057AA2B7975DB0002C2F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -700,7 +582,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LegoSwiftUI/Info.plist;
-				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -722,7 +603,6 @@
 		6A5057AB2B7975DB0002C2F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -732,7 +612,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LegoSwiftUI/Info.plist;
-				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -745,62 +624,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mustafos.LegoSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		6AFE25DA2BA4CB920040BAA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PCQ5XC84W;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FoodDeliveryActivityWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FoodDeliveryActivityWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mustafos.LegoSwiftUI.FoodDeliveryActivityWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6AFE25DB2BA4CB920040BAA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PCQ5XC84W;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FoodDeliveryActivityWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = FoodDeliveryActivityWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mustafos.LegoSwiftUI.FoodDeliveryActivityWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -824,15 +647,6 @@
 			buildConfigurations = (
 				6A5057AA2B7975DB0002C2F4 /* Debug */,
 				6A5057AB2B7975DB0002C2F4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6AFE25DC2BA4CB920040BAA1 /* Build configuration list for PBXNativeTarget "FoodDeliveryActivityWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6AFE25DA2BA4CB920040BAA1 /* Debug */,
-				6AFE25DB2BA4CB920040BAA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
