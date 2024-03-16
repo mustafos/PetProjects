@@ -11,8 +11,7 @@ import SwiftUI
 struct LegoSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            ScreenshotView()
+            DynamicIsland()
         }
     }
 }

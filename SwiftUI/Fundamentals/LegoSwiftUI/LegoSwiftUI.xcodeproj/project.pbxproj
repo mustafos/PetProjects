@@ -763,7 +763,7 @@
 				INFOPLIST_FILE = FoodDeliveryActivityWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoodDeliveryActivityWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -791,7 +791,7 @@
 				INFOPLIST_FILE = FoodDeliveryActivityWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoodDeliveryActivityWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
