@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0BDDB62BA7783F0086B150 /* PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0BDDB52BA7783F0086B150 /* PHPicker.swift */; };
 		6A0D74D32B966B82007FA77E /* BlogViewTypeOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D74D22B966B82007FA77E /* BlogViewTypeOne.swift */; };
 		6A0D74D52B967B88007FA77E /* BlogViewTypeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D74D42B967B88007FA77E /* BlogViewTypeTwo.swift */; };
 		6A0D74D82B9682AD007FA77E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D74D72B9682AD007FA77E /* Annotation.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A0BDDB52BA7783F0086B150 /* PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPicker.swift; sourceTree = "<group>"; };
 		6A0D74D22B966B82007FA77E /* BlogViewTypeOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewTypeOne.swift; sourceTree = "<group>"; };
 		6A0D74D42B967B88007FA77E /* BlogViewTypeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewTypeTwo.swift; sourceTree = "<group>"; };
 		6A0D74D72B9682AD007FA77E /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				6AA945472B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift */,
 				6AA945492B9DB9D700CB81F0 /* Screenshot */,
 				6A88A75C2BA5C7C500860E2A /* RingProgressBarView.swift */,
+				6A0BDDB52BA7783F0086B150 /* PHPicker.swift */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -449,6 +452,7 @@
 				6A80EA132B85424000C3D750 /* FocusField.swift in Sources */,
 				6A0D74D52B967B88007FA77E /* BlogViewTypeTwo.swift in Sources */,
 				6AA945482B9DB0D300CB81F0 /* AnimateSFSymbolsView.swift in Sources */,
+				6A0BDDB62BA7783F0086B150 /* PHPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
