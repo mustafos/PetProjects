@@ -21,6 +21,8 @@
 		6A0D69232BA5C3BE00729344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0D69222BA5C3BE00729344 /* Assets.xcassets */; };
 		6A0D69272BA5C3BE00729344 /* FoodDeliveryActivityWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6A0D69172BA5C3BB00729344 /* FoodDeliveryActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6A0D692C2BA5C3E700729344 /* FoodDeliveryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D690F2BA5C33D00729344 /* FoodDeliveryAttributes.swift */; };
+		6A729CCE2BAC225C00F33718 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A729CCD2BAC225C00F33718 /* BannerAd.swift */; };
+		6A729CD12BAC25F400F33718 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 6A729CD02BAC25F400F33718 /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		6A0D69202BA5C3BB00729344 /* FoodDeliveryActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryActivityWidget.swift; sourceTree = "<group>"; };
 		6A0D69222BA5C3BE00729344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A0D69242BA5C3BE00729344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A729CCD2BAC225C00F33718 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		6A729CD22BAC268200F33718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A729CD12BAC25F400F33718 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +112,11 @@
 		6A0D68FE2BA5C29000729344 /* DynamicIslandExample */ = {
 			isa = PBXGroup;
 			children = (
+				6A729CD22BAC268200F33718 /* Info.plist */,
 				6A0D68FF2BA5C29000729344 /* DynamicIslandExampleApp.swift */,
 				6A0D690F2BA5C33D00729344 /* FoodDeliveryAttributes.swift */,
 				6A0D69012BA5C29000729344 /* ContentView.swift */,
+				6A729CCD2BAC225C00F33718 /* BannerAd.swift */,
 				6A0D690D2BA5C31900729344 /* UserDefaultsManager.swift */,
 				6A0D69112BA5C36C00729344 /* LiveActivityManager.swift */,
 				6A0D69032BA5C29100729344 /* Assets.xcassets */,
@@ -164,6 +171,9 @@
 				6A0D69262BA5C3BE00729344 /* PBXTargetDependency */,
 			);
 			name = DynamicIslandExample;
+			packageProductDependencies = (
+				6A729CD02BAC25F400F33718 /* GoogleMobileAds */,
+			);
 			productName = DynamicIslandExample;
 			productReference = 6A0D68FC2BA5C29000729344 /* DynamicIslandExample.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 6A0D68F32BA5C29000729344;
+			packageReferences = (
+				6A729CCF2BAC25F400F33718 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 6A0D68FD2BA5C29000729344 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,6 +264,7 @@
 				6A0D69002BA5C29000729344 /* DynamicIslandExampleApp.swift in Sources */,
 				6A0D69102BA5C33D00729344 /* FoodDeliveryAttributes.swift in Sources */,
 				6A0D69122BA5C36C00729344 /* LiveActivityManager.swift in Sources */,
+				6A729CCE2BAC225C00F33718 /* BannerAd.swift in Sources */,
 				6A0D690E2BA5C31900729344 /* UserDefaultsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +421,7 @@
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DynamicIslandExample/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -438,6 +453,7 @@
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DynamicIslandExample/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -542,6 +558,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A729CCF2BAC25F400F33718 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A729CD02BAC25F400F33718 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A729CCF2BAC25F400F33718 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A0D68F42BA5C29000729344 /* Project object */;
 }

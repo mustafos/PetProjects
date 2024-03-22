@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "amoutMe.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
