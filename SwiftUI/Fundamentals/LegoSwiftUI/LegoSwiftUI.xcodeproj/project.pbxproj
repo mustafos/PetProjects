@@ -31,6 +31,7 @@
 		6A759F872B86891100FAD0B0 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A759F862B86891100FAD0B0 /* ChartViewModel.swift */; };
 		6A759F892B868E0D00FAD0B0 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A759F882B868E0D00FAD0B0 /* Extension+Date.swift */; };
 		6A759F8B2B8693BD00FAD0B0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A759F8A2B8693BD00FAD0B0 /* Styles.swift */; };
+		6A75AABA2BAED8B600B71593 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A75AAB92BAED8B600B71593 /* TipView.swift */; };
 		6A8042572B98E5F900AD4A83 /* ErrorScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8042562B98E5F900AD4A83 /* ErrorScreens.swift */; };
 		6A80425A2B98E8CF00AD4A83 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8042592B98E8CF00AD4A83 /* ErrorType.swift */; };
 		6A80425C2B99068700AD4A83 /* TypewriterTextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80425B2B99068700AD4A83 /* TypewriterTextAnimation.swift */; };
@@ -101,6 +102,7 @@
 		6A759F862B86891100FAD0B0 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		6A759F882B868E0D00FAD0B0 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		6A759F8A2B8693BD00FAD0B0 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		6A75AAB92BAED8B600B71593 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		6A8042562B98E5F900AD4A83 /* ErrorScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreens.swift; sourceTree = "<group>"; };
 		6A8042592B98E8CF00AD4A83 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		6A80425B2B99068700AD4A83 /* TypewriterTextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypewriterTextAnimation.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				6AA945492B9DB9D700CB81F0 /* Screenshot */,
 				6A88A75C2BA5C7C500860E2A /* RingProgressBarView.swift */,
 				6A0BDDB52BA7783F0086B150 /* PHPicker.swift */,
+				6A75AAB92BAED8B600B71593 /* TipView.swift */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -440,6 +443,7 @@
 				6A4054D32B93F54000A93E4E /* LandingPageView.swift in Sources */,
 				6A3F93082B9257F500A9E236 /* BottomTabBar.swift in Sources */,
 				6A1FD1EF2B94BB77004F7B8D /* CaruselContentView.swift in Sources */,
+				6A75AABA2BAED8B600B71593 /* TipView.swift in Sources */,
 				6AD9A72A2B7D4DE300B4C57A /* SideViewContents.swift in Sources */,
 				6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */,
 				6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */,
