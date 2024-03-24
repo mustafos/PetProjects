@@ -21,7 +21,8 @@ struct LegoSwiftUIApp: App {
 //                        .datastoreLocation(.applicationDefault)
 //                    ])
 //                }
-            PDFViewer()
+//            PDFViewer()
+            GesturesView()
         }
     }
 }
