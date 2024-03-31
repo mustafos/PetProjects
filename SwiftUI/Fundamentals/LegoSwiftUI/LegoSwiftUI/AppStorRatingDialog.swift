@@ -2,14 +2,25 @@
 //  AppStorRatingDialog.swift
 //  LegoSwiftUI
 //
-//  Created by Mustafa Bekirov on 30.03.2024.
+//  Created by Mustafa Bekirov on 01.04.2024.
 //
 
 import SwiftUI
+import StoreKit
 
 struct AppStorRatingDialog: View {
+    @Environment(\.requestReview) var requestReview
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            Button {
+                requestReview()
+            } label: {
+                Text("Rate Us")
+            }
+        }
     }
 }
 
