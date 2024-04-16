@@ -11,8 +11,7 @@ import SwiftUI
 struct WeatherAApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            MonolithDropdown()
+            AlamofireJSONParsingView()
         }
     }
 }

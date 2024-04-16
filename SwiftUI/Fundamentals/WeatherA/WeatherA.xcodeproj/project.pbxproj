@@ -22,6 +22,11 @@
 		6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */; };
 		6AA73B4A2B3A046D00DDF0DB /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA73B492B3A046D00DDF0DB /* ColorPickerView.swift */; };
 		6AA73B4F2B3A0A2000DDF0DB /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA73B4E2B3A0A2000DDF0DB /* AppTabBarView.swift */; };
+		6AC020A12BCD5492008F15CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020A02BCD5492008F15CE /* Alamofire */; };
+		6AC020A32BCD5492008F15CE /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020A22BCD5492008F15CE /* AlamofireDynamic */; };
+		6AC020A62BCD54A6008F15CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020A52BCD54A6008F15CE /* SwiftyJSON */; };
+		6AC020A92BCD5502008F15CE /* AlamofireJSONParsingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC020A82BCD5502008F15CE /* AlamofireJSONParsingView.swift */; };
+		6AC020B12BCD6276008F15CE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020B02BCD6276008F15CE /* SDWebImageSwiftUI */; };
 		6AEFBC762AEC380B007D893B /* MainVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFBC752AEC380B007D893B /* MainVideoView.swift */; };
 		6AEFBC792AEC396B007D893B /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFBC782AEC396B007D893B /* VideoViewModel.swift */; };
 		6AEFBC7B2AEC3EF0007D893B /* video.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AEFBC7A2AEC3EF0007D893B /* video.json */; };
@@ -54,6 +59,7 @@
 		6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageUserDefault.swift; sourceTree = "<group>"; };
 		6AA73B492B3A046D00DDF0DB /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		6AA73B4E2B3A0A2000DDF0DB /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
+		6AC020A82BCD5502008F15CE /* AlamofireJSONParsingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireJSONParsingView.swift; sourceTree = "<group>"; };
 		6AEFBC752AEC380B007D893B /* MainVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVideoView.swift; sourceTree = "<group>"; };
 		6AEFBC782AEC396B007D893B /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		6AEFBC7A2AEC3EF0007D893B /* video.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = video.json; sourceTree = "<group>"; };
@@ -75,6 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC020B12BCD6276008F15CE /* SDWebImageSwiftUI in Frameworks */,
+				6AC020A62BCD54A6008F15CE /* SwiftyJSON in Frameworks */,
+				6AC020A12BCD5492008F15CE /* Alamofire in Frameworks */,
+				6AC020A32BCD5492008F15CE /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +155,13 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		6AC020A72BCD54AF008F15CE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		6AEFBC772AEC3838007D893B /* AsyncVideo */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +199,8 @@
 				6AFD24692AEAA0DE00A33836 /* WeatherAApp.swift */,
 				6AFD246B2AEAA0DE00A33836 /* ContentView.swift */,
 				6AFD24772AEAB27700A33836 /* WeatherButton.swift */,
+				6AC020A82BCD5502008F15CE /* AlamofireJSONParsingView.swift */,
+				6AC020A72BCD54AF008F15CE /* New Group */,
 				6A5F47702B3B41D500266024 /* DropdownMenu */,
 				6AA73B4B2B3A094A00DDF0DB /* TabBar */,
 				6AA73B482B3A043E00DDF0DB /* ColorPicker */,
@@ -229,6 +248,12 @@
 			dependencies = (
 			);
 			name = WeatherA;
+			packageProductDependencies = (
+				6AC020A02BCD5492008F15CE /* Alamofire */,
+				6AC020A22BCD5492008F15CE /* AlamofireDynamic */,
+				6AC020A52BCD54A6008F15CE /* SwiftyJSON */,
+				6AC020B02BCD6276008F15CE /* SDWebImageSwiftUI */,
+			);
 			productName = WeatherA;
 			productReference = 6AFD24662AEAA0DE00A33836 /* WeatherA.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +282,11 @@
 				Base,
 			);
 			mainGroup = 6AFD245D2AEAA0DE00A33836;
+			packageReferences = (
+				6AC0209F2BCD5492008F15CE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6AC020A42BCD54A6008F15CE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6AC020AF2BCD6276008F15CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 6AFD24672AEAA0DE00A33836 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,6 +326,7 @@
 				6AFD246A2AEAA0DE00A33836 /* WeatherAApp.swift in Sources */,
 				6A50D4C62B3C227C00DFFB80 /* PickerMenu.swift in Sources */,
 				6A3635392B3A18D500AB8E40 /* CustomTabBar2.swift in Sources */,
+				6AC020A92BCD5502008F15CE /* AlamofireJSONParsingView.swift in Sources */,
 				6A5F47742B3B4A2200266024 /* DropTow.swift in Sources */,
 				6AA73B4A2B3A046D00DDF0DB /* ColorPickerView.swift in Sources */,
 				6AEFBC7F2AEC4113007D893B /* Decoder.swift in Sources */,
@@ -516,6 +547,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6AC0209F2BCD5492008F15CE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		6AC020A42BCD54A6008F15CE /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		6AC020AF2BCD6276008F15CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AC020A02BCD5492008F15CE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC0209F2BCD5492008F15CE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6AC020A22BCD5492008F15CE /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC0209F2BCD5492008F15CE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		6AC020A52BCD54A6008F15CE /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC020A42BCD54A6008F15CE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		6AC020B02BCD6276008F15CE /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC020AF2BCD6276008F15CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6AFD245E2AEAA0DE00A33836 /* Project object */;
 }
