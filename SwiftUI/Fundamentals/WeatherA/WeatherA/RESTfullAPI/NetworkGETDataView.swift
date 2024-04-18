@@ -1,5 +1,5 @@
 //
-//  URLSessionView.swift
+//  NetworkGETDataView.swift
 //  WeatherA
 //
 //  Created by Mustafa Bekirov on 16.04.2024.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct URLSessionView: View {
+struct NetworkGETDataView: View {
     var body: some View {
         NavigationView {
             VStack {
@@ -33,27 +33,52 @@ struct URLSessionView: View {
 }
 
 #Preview {
-    URLSessionView()
+    NetworkGETDataView()
 }
 
 struct EmployeesView: View {
     
     @StateObject var networkManager = NetworkManager.shared
     
-//    @State private var employees = [Employee]() Singleton
+    @State private var employees = [Employee]()
+    
+    @State private var showProgress: Bool = false
+    @State private var showError: Bool = false
+    @State private var errorMessage: String = ""
     
     var body: some View {
         ZStack {
-            List(networkManager.employees, id: \.self) { employee in
+            List(employees, id: \.self) { employee in
                 HStack {
                     Text(employee.employee_name)
                     Spacer()
                     Text(employee.employee_salary, format: .number)
                 }
             }
+            
+            ProgressView()
+                .progressViewStyle(.circular)
+                .opacity(showProgress ? 1 : 0)
         }
-        onAppear {
-            networkManager.fetchEmployees()
+        .alert(isPresented: $showError, content: {
+            Alert(title: Text(errorMessage))
+        })
+        .onAppear {
+            showProgress = true
+            networkManager.fetchEmployees { result in
+                showProgress = false
+                switch result {
+                case .success(let decodedEmployees):
+                    print("success")
+                    
+                    employees = decodedEmployees
+                    
+                case .failure(let networkError):
+                    print("feilure: \(networkError)")
+                    errorMessage = warningMessage(error: networkError)
+                    showError = true
+                }
+            }
         }
     }
 }
@@ -86,32 +111,45 @@ enum Link {
     }
 }
 
+enum NetworkError: Error {
+    case noData
+    case tooManyRequests
+    case decodingError
+}
+
 final class NetworkManager: ObservableObject {
     
     init() {}
     
     static let shared = NetworkManager()
     
-    @Published var employees = [Employee]()
-    
-    func fetchEmployees() {
+    func fetchEmployees(completion: @escaping (Result<[Employee], NetworkError>) -> Void) {
         print("try to fetch")
         
         let fetchRequest = URLRequest(url: Link.employees.url)
         
-        URLSession.shared.dataTask(with: fetchRequest) { [weak self] (data, response, error) -> Void in
+        URLSession.shared.dataTask(with: fetchRequest) { (data, response, error) -> Void in
             if error != nil {
                 print("Error in session is not nil")
+                completion(.failure(.noData))
             } else {
                 // We've got data!
                 let httpResponse = response as? HTTPURLResponse
-                print("status code: \(String(describing: httpResponse?.statusCode))")
+                print("status code: \(String(describing: httpResponse?.statusCode ?? 0))")
                 
-                guard let safeData = data else { return }
-                
-                if let decodedQuery = try? JSONDecoder().decode(Query.self, from: safeData) {
-                    DispatchQueue.main.async {
-                        self?.employees = decodedQuery.data
+                if httpResponse?.statusCode == 429 {
+                    completion(.failure(.tooManyRequests))
+                } else {
+                    guard let safeData = data else { return }
+                    
+                    do {
+                        let decodedQuery = try JSONDecoder().decode(Query.self, from: safeData)
+                        
+                        completion(.success(decodedQuery.data))
+                        
+                    } catch let decodeError {
+                        print("Decoding error: \(decodeError)")
+                        completion(.failure(.decodingError))
                     }
                 }
             }
@@ -119,3 +157,16 @@ final class NetworkManager: ObservableObject {
         .resume()
     }
 }
+
+//________________________________________________________ Helper
+func warningMessage(error: NetworkError) -> String {
+    switch error {
+    case .noData:
+        return "Data cannot be found at this URL"
+    case .tooManyRequests:
+        return "429: Too many requests"
+    case .decodingError:
+        return "Can't decode data"
+    }
+}
+

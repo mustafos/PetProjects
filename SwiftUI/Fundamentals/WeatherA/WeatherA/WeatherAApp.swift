@@ -11,7 +11,7 @@ import SwiftUI
 struct WeatherAApp: App {
     var body: some Scene {
         WindowGroup {
-            AlamofireJSONParsingView()
+            NetworkGETDataView()
         }
     }
 }
