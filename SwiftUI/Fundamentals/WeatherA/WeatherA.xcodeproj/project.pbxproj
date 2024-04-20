@@ -20,6 +20,7 @@
 		6A5F47742B3B4A2200266024 /* DropTow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F47732B3B4A2200266024 /* DropTow.swift */; };
 		6A774DAB2B0CCB270054C8C6 /* ArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */; };
 		6A81E3162B6B924B002104FD /* MonolithDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A81E3152B6B924B002104FD /* MonolithDropdown.swift */; };
+		6A8325872BD03BF8007E9224 /* AsyncAwaitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8325862BD03BF8007E9224 /* AsyncAwaitView.swift */; };
 		6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */; };
 		6AA73B4A2B3A046D00DDF0DB /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA73B492B3A046D00DDF0DB /* ColorPickerView.swift */; };
 		6AA73B4F2B3A0A2000DDF0DB /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA73B4E2B3A0A2000DDF0DB /* AppTabBarView.swift */; };
@@ -58,6 +59,7 @@
 		6A5F47732B3B4A2200266024 /* DropTow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTow.swift; sourceTree = "<group>"; };
 		6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayStorage.swift; sourceTree = "<group>"; };
 		6A81E3152B6B924B002104FD /* MonolithDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonolithDropdown.swift; sourceTree = "<group>"; };
+		6A8325862BD03BF8007E9224 /* AsyncAwaitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitView.swift; sourceTree = "<group>"; };
 		6A9AAF922AFB99FC00290FF6 /* AppStorageUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageUserDefault.swift; sourceTree = "<group>"; };
 		6AA73B492B3A046D00DDF0DB /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		6AA73B4E2B3A0A2000DDF0DB /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				6AC020A82BCD5502008F15CE /* AlamofireJSONParsingView.swift */,
 				6A48F9032BCE97A300ADB472 /* NetworkGETDataView.swift */,
+				6A8325862BD03BF8007E9224 /* AsyncAwaitView.swift */,
 			);
 			path = RESTfullAPI;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				6A36353B2B3A1C5900AB8E40 /* AppTabBar2.swift in Sources */,
 				6AA73B4F2B3A0A2000DDF0DB /* AppTabBarView.swift in Sources */,
 				6AFD24782AEAB27700A33836 /* WeatherButton.swift in Sources */,
+				6A8325872BD03BF8007E9224 /* AsyncAwaitView.swift in Sources */,
 				6AEFBC852AEC4A08007D893B /* VideoPlayer.swift in Sources */,
 				6AFF0EDC2AFD8437001ED21D /* CustomScrollView.swift in Sources */,
 			);
