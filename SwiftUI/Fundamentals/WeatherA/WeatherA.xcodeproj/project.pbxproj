@@ -26,6 +26,7 @@
 		6AA73B4F2B3A0A2000DDF0DB /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA73B4E2B3A0A2000DDF0DB /* AppTabBarView.swift */; };
 		6AA85E2F2BD5B44600B3483B /* APIFetchingAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA85E2E2BD5B44600B3483B /* APIFetchingAlamofire.swift */; };
 		6AA85E312BD5B62F00B3483B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA85E302BD5B62F00B3483B /* NetworkManager.swift */; };
+		6AB176892BE386C0003D3829 /* ZindexDropDownUpMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB176882BE386C0003D3829 /* ZindexDropDownUpMenu.swift */; };
 		6AC020A12BCD5492008F15CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020A02BCD5492008F15CE /* Alamofire */; };
 		6AC020A32BCD5492008F15CE /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020A22BCD5492008F15CE /* AlamofireDynamic */; };
 		6AC020A62BCD54A6008F15CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC020A52BCD54A6008F15CE /* SwiftyJSON */; };
@@ -67,6 +68,7 @@
 		6AA73B4E2B3A0A2000DDF0DB /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 		6AA85E2E2BD5B44600B3483B /* APIFetchingAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetchingAlamofire.swift; sourceTree = "<group>"; };
 		6AA85E302BD5B62F00B3483B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6AB176882BE386C0003D3829 /* ZindexDropDownUpMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZindexDropDownUpMenu.swift; sourceTree = "<group>"; };
 		6AC020A82BCD5502008F15CE /* AlamofireJSONParsingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireJSONParsingView.swift; sourceTree = "<group>"; };
 		6AEFBC752AEC380B007D893B /* MainVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVideoView.swift; sourceTree = "<group>"; };
 		6AEFBC782AEC396B007D893B /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				6A5F47732B3B4A2200266024 /* DropTow.swift */,
 				6A50D4C52B3C227C00DFFB80 /* PickerMenu.swift */,
 				6A81E3152B6B924B002104FD /* MonolithDropdown.swift */,
+				6AB176882BE386C0003D3829 /* ZindexDropDownUpMenu.swift */,
 			);
 			path = DropdownMenu;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				6AEFBC7D2AEC3F66007D893B /* VideoModel.swift in Sources */,
 				6A1491FC2B66E2B100D7ED87 /* PopUpView.swift in Sources */,
 				6AEFBC762AEC380B007D893B /* MainVideoView.swift in Sources */,
+				6AB176892BE386C0003D3829 /* ZindexDropDownUpMenu.swift in Sources */,
 				6A1F3C442B2CED940032247C /* FontView.swift in Sources */,
 				6AA85E2F2BD5B44600B3483B /* APIFetchingAlamofire.swift in Sources */,
 				6A9AAF932AFB99FC00290FF6 /* AppStorageUserDefault.swift in Sources */,
