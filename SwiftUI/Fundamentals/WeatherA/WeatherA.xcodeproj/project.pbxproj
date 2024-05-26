@@ -16,6 +16,7 @@
 		6A47B2D92B2CF4A9006F7441 /* APICallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47B2D82B2CF4A9006F7441 /* APICallsView.swift */; };
 		6A48F9042BCE97A300ADB472 /* NetworkGETDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A48F9032BCE97A300ADB472 /* NetworkGETDataView.swift */; };
 		6A50D4C62B3C227C00DFFB80 /* PickerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A50D4C52B3C227C00DFFB80 /* PickerMenu.swift */; };
+		6A59E4D32BFBD29F009FDF39 /* WheelSpinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A59E4D22BFBD29F009FDF39 /* WheelSpinView.swift */; };
 		6A5F47722B3B41FF00266024 /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F47712B3B41FF00266024 /* DropdownMenu.swift */; };
 		6A5F47742B3B4A2200266024 /* DropTow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F47732B3B4A2200266024 /* DropTow.swift */; };
 		6A774DAB2B0CCB270054C8C6 /* ArrayStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */; };
@@ -58,6 +59,7 @@
 		6A47B2D82B2CF4A9006F7441 /* APICallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallsView.swift; sourceTree = "<group>"; };
 		6A48F9032BCE97A300ADB472 /* NetworkGETDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGETDataView.swift; sourceTree = "<group>"; };
 		6A50D4C52B3C227C00DFFB80 /* PickerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerMenu.swift; sourceTree = "<group>"; };
+		6A59E4D22BFBD29F009FDF39 /* WheelSpinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSpinView.swift; sourceTree = "<group>"; };
 		6A5F47712B3B41FF00266024 /* DropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
 		6A5F47732B3B4A2200266024 /* DropTow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTow.swift; sourceTree = "<group>"; };
 		6A774DAA2B0CCB270054C8C6 /* ArrayStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayStorage.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = RESTfullAPI;
 			sourceTree = "<group>";
 		};
+		6A59E4D12BFBD260009FDF39 /* WheelSpin */ = {
+			isa = PBXGroup;
+			children = (
+				6A59E4D22BFBD29F009FDF39 /* WheelSpinView.swift */,
+			);
+			path = WheelSpin;
+			sourceTree = "<group>";
+		};
 		6A5F47702B3B41D500266024 /* DropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +225,7 @@
 				6AFD24692AEAA0DE00A33836 /* WeatherAApp.swift */,
 				6AFD246B2AEAA0DE00A33836 /* ContentView.swift */,
 				6AFD24772AEAB27700A33836 /* WeatherButton.swift */,
+				6A59E4D12BFBD260009FDF39 /* WheelSpin */,
 				6A48F9022BCE94EE00ADB472 /* RESTfullAPI */,
 				6A5F47702B3B41D500266024 /* DropdownMenu */,
 				6AA73B4B2B3A094A00DDF0DB /* TabBar */,
@@ -353,6 +364,7 @@
 				6A3F58B82B0660AA0098B470 /* CustomProgressBar.swift in Sources */,
 				6A81E3162B6B924B002104FD /* MonolithDropdown.swift in Sources */,
 				6A47B2D92B2CF4A9006F7441 /* APICallsView.swift in Sources */,
+				6A59E4D32BFBD29F009FDF39 /* WheelSpinView.swift in Sources */,
 				6AEFBC792AEC396B007D893B /* VideoViewModel.swift in Sources */,
 				6A36353B2B3A1C5900AB8E40 /* AppTabBar2.swift in Sources */,
 				6AA73B4F2B3A0A2000DDF0DB /* AppTabBarView.swift in Sources */,
