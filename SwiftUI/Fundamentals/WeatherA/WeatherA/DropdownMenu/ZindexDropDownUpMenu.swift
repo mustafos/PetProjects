@@ -79,7 +79,7 @@ struct DropDownUpView: View {
             .contentShape(.rect)
             .background((sheme == .dark ? Color.black : Color.white)
                 .shadow(.drop(color: .primary.opacity(0.15), radius: 4)),
-                        in: .rect(cornerRadius: cornerRadius))
+                        in: .rect(cornerRadius: 12))
             .frame(height: size.height, alignment: anchor == .top ? .bottom : .top)
         }
         .frame(width: maxWidth, height: 50)

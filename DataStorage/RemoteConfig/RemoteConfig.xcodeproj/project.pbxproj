@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A5B2DE92C106D5400A439E4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 6A5B2DE82C106D5400A439E4 /* FirebaseMessaging */; };
 		6AE2FC822C0F117B001DD4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2FC812C0F117B001DD4C2 /* AppDelegate.swift */; };
-		6AE2FC842C0F117B001DD4C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2FC832C0F117B001DD4C2 /* SceneDelegate.swift */; };
 		6AE2FC862C0F117B001DD4C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2FC852C0F117B001DD4C2 /* ViewController.swift */; };
 		6AE2FC892C0F117B001DD4C2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6AE2FC882C0F117B001DD4C2 /* Base */; };
 		6AE2FC8B2C0F117C001DD4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AE2FC8A2C0F117C001DD4C2 /* Assets.xcassets */; };
@@ -21,9 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A5B2DEA2C106D9600A439E4 /* RemoteConfig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteConfig.entitlements; sourceTree = "<group>"; };
 		6AE2FC7E2C0F117B001DD4C2 /* RemoteConfig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteConfig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE2FC812C0F117B001DD4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AE2FC832C0F117B001DD4C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6AE2FC852C0F117B001DD4C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AE2FC882C0F117B001DD4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AE2FC8A2C0F117C001DD4C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +39,7 @@
 			files = (
 				6AE2FC9A2C0F15B7001DD4C2 /* FirebaseAuth in Frameworks */,
 				6AE2FC9C2C0F15D2001DD4C2 /* FirebaseRemoteConfig in Frameworks */,
+				6A5B2DE92C106D5400A439E4 /* FirebaseMessaging in Frameworks */,
 				6AE2FCA02C0F15EE001DD4C2 /* FirebaseAnalytics in Frameworks */,
 				6AE2FC9E2C0F15E8001DD4C2 /* FirebaseFirestore in Frameworks */,
 			);
@@ -67,8 +68,8 @@
 		6AE2FC802C0F117B001DD4C2 /* RemoteConfig */ = {
 			isa = PBXGroup;
 			children = (
+				6A5B2DEA2C106D9600A439E4 /* RemoteConfig.entitlements */,
 				6AE2FC812C0F117B001DD4C2 /* AppDelegate.swift */,
-				6AE2FC832C0F117B001DD4C2 /* SceneDelegate.swift */,
 				6AE2FC852C0F117B001DD4C2 /* ViewController.swift */,
 				6AE2FC872C0F117B001DD4C2 /* Main.storyboard */,
 				6AE2FC8A2C0F117C001DD4C2 /* Assets.xcassets */,
@@ -107,6 +108,7 @@
 				6AE2FC9B2C0F15D2001DD4C2 /* FirebaseRemoteConfig */,
 				6AE2FC9D2C0F15E8001DD4C2 /* FirebaseFirestore */,
 				6AE2FC9F2C0F15EE001DD4C2 /* FirebaseAnalytics */,
+				6A5B2DE82C106D5400A439E4 /* FirebaseMessaging */,
 			);
 			productName = RemoteConfig;
 			productReference = 6AE2FC7E2C0F117B001DD4C2 /* RemoteConfig.app */;
@@ -169,7 +171,6 @@
 			files = (
 				6AE2FC862C0F117B001DD4C2 /* ViewController.swift in Sources */,
 				6AE2FC822C0F117B001DD4C2 /* AppDelegate.swift in Sources */,
-				6AE2FC842C0F117B001DD4C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteConfig/RemoteConfig.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
@@ -347,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteConfig/RemoteConfig.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
@@ -405,6 +408,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A5B2DE82C106D5400A439E4 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AE2FC972C0F1320001DD4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		6AE2FC992C0F15B7001DD4C2 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6AE2FC972C0F1320001DD4C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

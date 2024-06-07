@@ -13,6 +13,7 @@
 		6A0D74D82B9682AD007FA77E /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D74D72B9682AD007FA77E /* Annotation.swift */; };
 		6A0D74DA2B9682BB007FA77E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D74D92B9682BB007FA77E /* MapView.swift */; };
 		6A0D74DC2B9683C9007FA77E /* MapsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D74DB2B9683C9007FA77E /* MapsScreenView.swift */; };
+		6A0E80352C124DD600175FC0 /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E80342C124DD600175FC0 /* LocalNotificationView.swift */; };
 		6A1FD1EF2B94BB77004F7B8D /* CaruselContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1FD1EE2B94BB77004F7B8D /* CaruselContentView.swift */; };
 		6A30C1B62BB855C700BFB262 /* AppStorRatingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A30C1B52BB855C700BFB262 /* AppStorRatingDialog.swift */; };
 		6A3CCA0D2BC1D68C002A6454 /* DifferentGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3CCA0C2BC1D68C002A6454 /* DifferentGrids.swift */; };
@@ -94,6 +95,7 @@
 		6A0D74D72B9682AD007FA77E /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		6A0D74D92B9682BB007FA77E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6A0D74DB2B9683C9007FA77E /* MapsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsScreenView.swift; sourceTree = "<group>"; };
+		6A0E80342C124DD600175FC0 /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
 		6A1FD1EE2B94BB77004F7B8D /* CaruselContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaruselContentView.swift; sourceTree = "<group>"; };
 		6A210AC12BA0ED3E00506352 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6A210AC32BA0ED3E00506352 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -276,6 +278,7 @@
 				6AF3EAD52BBB4FDE0027CBD3 /* FloatingTextFieldView.swift */,
 				6A60119E2BBDDA9600DA5A82 /* PieChartsView.swift */,
 				6A3CCA0C2BC1D68C002A6454 /* DifferentGrids.swift */,
+				6A0E80342C124DD600175FC0 /* LocalNotificationView.swift */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -498,6 +501,7 @@
 				6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */,
 				6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */,
 				6A5057A12B7975D90002C2F4 /* SideMenuView.swift in Sources */,
+				6A0E80352C124DD600175FC0 /* LocalNotificationView.swift in Sources */,
 				6AA945432B9DA66400CB81F0 /* ExpandedView.swift in Sources */,
 				6AF9909F2B94B2C100C15341 /* CarouselViewChild.swift in Sources */,
 				6A3F930D2B925CA000A9E236 /* TabBarShape.swift in Sources */,

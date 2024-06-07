@@ -22,7 +22,8 @@ struct LegoSwiftUIApp: App {
 //                    ])
 //                }
 //            PDFViewer()
-            GesturesView()
+//            GesturesView()
+            NotificationView()
         }
     }
 }

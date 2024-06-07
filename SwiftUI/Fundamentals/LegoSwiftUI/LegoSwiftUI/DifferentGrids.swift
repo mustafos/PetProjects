@@ -61,54 +61,54 @@ struct LazyHGridsView: View {
 }
 
 //MARK: – StaticGridsView
-struct StaticGridsView: View {
-    @State private var isOn: Bool = false
-    var body: some View {
-        Grid(alignment: .center, horizontalSpacing: 30, verticalSpacing: 30) {
-            GridRow {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(.red.gradient)
-                    .frame(width: 100, height: 100)
-                
-                VStack {
-                    Circle()
-                        .foregroundStyle(.secondary)
-                        .frame(width: 60, height: 60)
-                    Text("Sean")
-                }
-                
-                VStack {
-                    Button("Press") {
-                        isOn.toggle()
-                    }
-                    .padding(10)
-                    .foregroundStyle(.white)
-                    .background(isOn ? .gray : .blue)
-                    .cornerRadius(16)
-                    
-                    Toggle("Volume", isOn: $isOn)
-                        .labelsHidden()
-                }
-            }
-            
-            Divider()
-            
-            GridRow {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(.teal.gradient)
-                    .frame(height: 100)
-                    .gridCellColumns(3)
-            }
-        }
-        .padding
-    }
-}
+//struct StaticGridsView: View {
+//    @State private var isOn: Bool = false
+//    var body: some View {
+//        Grid(alignment: .center, horizontalSpacing: 30, verticalSpacing: 30) {
+//            GridRow {
+//                RoundedRectangle(cornerRadius: 8)
+//                    .fill(.red.gradient)
+//                    .frame(width: 100, height: 100)
+//                
+//                VStack {
+//                    Circle()
+//                        .foregroundStyle(.secondary)
+//                        .frame(width: 60, height: 60)
+//                    Text("Sean")
+//                }
+//                
+//                VStack {
+//                    Button("Press") {
+//                        isOn.toggle()
+//                    }
+//                    .padding(10)
+//                    .foregroundStyle(.white)
+//                    .background(isOn ? .gray : .blue)
+//                    .cornerRadius(16)
+//                    
+//                    Toggle("Volume", isOn: $isOn)
+//                        .labelsHidden()
+//                }
+//            }
+//            
+//            Divider()
+//            
+//            GridRow {
+//                RoundedRectangle(cornerRadius: 8)
+//                    .fill(.teal.gradient)
+//                    .frame(height: 100)
+//                    .gridCellColumns(3)
+//            }
+//        }
+//        .padding
+//    }
+//}
 
-#Preview {
+//#Preview {
     //    LazyVGridsView()
     //    LazyHGridsView()
-    StaticGridsView()
-}
+//    StaticGridsView()
+//}
 
 struct MockData {
     static var colors: [Color] {
