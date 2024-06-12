@@ -46,6 +46,7 @@
 		6A80EA132B85424000C3D750 /* FocusField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA122B85424000C3D750 /* FocusField.swift */; };
 		6A80EA152B85443900C3D750 /* OTPTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA142B85443900C3D750 /* OTPTextView.swift */; };
 		6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A80EA162B8545D200C3D750 /* Extension+String.swift */; };
+		6A8689212C187AD4005176D1 /* GlowEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8689202C187AD4005176D1 /* GlowEffectView.swift */; };
 		6A883A382BB758C600295336 /* ShimmerEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A883A372BB758C600295336 /* ShimmerEffectView.swift */; };
 		6A883A3A2BB75E6100295336 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A883A392BB75E6100295336 /* FloatingButtonView.swift */; };
 		6A88A75D2BA5C7C500860E2A /* RingProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A88A75C2BA5C7C500860E2A /* RingProgressBarView.swift */; };
@@ -132,6 +133,7 @@
 		6A80EA122B85424000C3D750 /* FocusField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusField.swift; sourceTree = "<group>"; };
 		6A80EA142B85443900C3D750 /* OTPTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextView.swift; sourceTree = "<group>"; };
 		6A80EA162B8545D200C3D750 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		6A8689202C187AD4005176D1 /* GlowEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowEffectView.swift; sourceTree = "<group>"; };
 		6A883A372BB758C600295336 /* ShimmerEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectView.swift; sourceTree = "<group>"; };
 		6A883A392BB75E6100295336 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		6A88A75C2BA5C7C500860E2A /* RingProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressBarView.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				6A3CCA0C2BC1D68C002A6454 /* DifferentGrids.swift */,
 				6A0E80342C124DD600175FC0 /* LocalNotificationView.swift */,
 				6AAF40F82C15C5550064F285 /* NewNavigationStackView.swift */,
+				6A8689202C187AD4005176D1 /* GlowEffectView.swift */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -502,6 +505,7 @@
 				6AF3EAD62BBB4FDE0027CBD3 /* FloatingTextFieldView.swift in Sources */,
 				6AD9A72A2B7D4DE300B4C57A /* SideViewContents.swift in Sources */,
 				6A75AAC12BB07FF900B71593 /* OnboardingScreenView.swift in Sources */,
+				6A8689212C187AD4005176D1 /* GlowEffectView.swift in Sources */,
 				6A80EA172B8545D200C3D750 /* Extension+String.swift in Sources */,
 				6AA9453F2B9DA4CA00CB81F0 /* ExpandableView.swift in Sources */,
 				6A5057A12B7975D90002C2F4 /* SideMenuView.swift in Sources */,
