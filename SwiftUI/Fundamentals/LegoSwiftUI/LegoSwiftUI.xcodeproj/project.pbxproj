@@ -16,6 +16,7 @@
 		6A0E80352C124DD600175FC0 /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E80342C124DD600175FC0 /* LocalNotificationView.swift */; };
 		6A1FD1EF2B94BB77004F7B8D /* CaruselContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1FD1EE2B94BB77004F7B8D /* CaruselContentView.swift */; };
 		6A30C1B62BB855C700BFB262 /* AppStorRatingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A30C1B52BB855C700BFB262 /* AppStorRatingDialog.swift */; };
+		6A34A82B2C47F32B00D83D92 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A34A82A2C47F32B00D83D92 /* Modifiers.swift */; };
 		6A3A96D42C373165008460D5 /* CustomNavMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3A96D32C373165008460D5 /* CustomNavMenuView.swift */; };
 		6A3CCA0D2BC1D68C002A6454 /* DifferentGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3CCA0C2BC1D68C002A6454 /* DifferentGrids.swift */; };
 		6A3F93082B9257F500A9E236 /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F93072B9257F500A9E236 /* BottomTabBar.swift */; };
@@ -104,6 +105,7 @@
 		6A210AC12BA0ED3E00506352 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6A210AC32BA0ED3E00506352 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6A30C1B52BB855C700BFB262 /* AppStorRatingDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorRatingDialog.swift; sourceTree = "<group>"; };
+		6A34A82A2C47F32B00D83D92 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		6A3A96D32C373165008460D5 /* CustomNavMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavMenuView.swift; sourceTree = "<group>"; };
 		6A3CCA0C2BC1D68C002A6454 /* DifferentGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentGrids.swift; sourceTree = "<group>"; };
 		6A3F93072B9257F500A9E236 /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				6A8689202C187AD4005176D1 /* GlowEffectView.swift */,
 				6A81CE212C2047EC00AC9C08 /* ImagePickerLibrary.swift */,
 				6A3A96D32C373165008460D5 /* CustomNavMenuView.swift */,
+				6A34A82A2C47F32B00D83D92 /* Modifiers.swift */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -490,6 +493,7 @@
 				6AF3EAD42BBB4E7E0027CBD3 /* ShareButtonView.swift in Sources */,
 				6AA945512B9DCA6100CB81F0 /* ScreenshotView.swift in Sources */,
 				6AF3EAD22BBB4CF00027CBD3 /* MarkdownTextView.swift in Sources */,
+				6A34A82B2C47F32B00D83D92 /* Modifiers.swift in Sources */,
 				6A759F852B86846300FAD0B0 /* Constants.swift in Sources */,
 				6AA945412B9DA62000CB81F0 /* ThumbnailView.swift in Sources */,
 				6AA9454D2B9DBFB400CB81F0 /* SecureViewHostingVC.swift in Sources */,
