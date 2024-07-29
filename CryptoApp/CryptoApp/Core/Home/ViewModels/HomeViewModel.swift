@@ -11,10 +11,9 @@ import Combine
 class HomeViewModel: ObservableObject {
     
     @Published var statistics: [StatisticModel] = []
-    
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
-    
+    @Published var isLoading: Bool = false
     @Published var searchText: String = ""
     
     private let coinDataService = CoinDataService()
@@ -43,8 +42,7 @@ class HomeViewModel: ObservableObject {
             .combineLatest(portfolioDataService.$savedEntities)
             .map(mapAllCoinsToPortfolioCoins)
             .sink { [weak self] (returnedCoins) in
-                guard let self = self else { return }
-                self.portfolioCoins = returnedCoins
+                self?.portfolioCoins = returnedCoins
             }
             .store(in: &cancellables)
         
@@ -54,12 +52,20 @@ class HomeViewModel: ObservableObject {
             .map(mapGlobalMarketData)
             .sink { [weak self] (returnedStats) in
                 self?.statistics = returnedStats
+                self?.isLoading = false
             }
             .store(in: &cancellables)
     }
     
     func updatePortfolio(coin: CoinModel, amount: Double) {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
+    }
+    
+    func reloadData() {
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getData()
+        HapticManager.notification(type: .success)
     }
     
     private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel] {
@@ -93,13 +99,11 @@ class HomeViewModel: ObservableObject {
         let volume = StatisticModel(title: "24h Volume", value: data.volume)
         let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominance)
         
-        let portfolioValue =
-        portfolioCoins
+        let portfolioValue = portfolioCoins
             .map({ $0.currentHoldingsValue })
             .reduce(0, +)
         
-        let previousValue =
-        portfolioCoins
+        let previousValue = portfolioCoins
             .map { (coin) -> Double in
                 let currentValue = coin.currentHoldingsValue
                 let percentChange = coin.priceChangePercentage24H ?? 0 / 100
