@@ -81,7 +81,9 @@ class HomeViewModel: ObservableObject {
     }
     
     private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel] {
-        guard !text.isEmpty else { return coins }
+        guard !text.isEmpty else {
+            return coins
+        }
         
         let lowercasedText = text.lowercased()
         
@@ -130,17 +132,21 @@ class HomeViewModel: ObservableObject {
     private func mapGlobalMarketData(marketDataModel: MarketDataModel?, portfolioCoins: [CoinModel]) -> [StatisticModel] {
         var stats: [StatisticModel] = []
         
-        guard let data = marketDataModel else { return stats }
+        guard let data = marketDataModel else {
+            return stats
+        }
         
         let marketCap = StatisticModel(title: "Market Cap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd)
         let volume = StatisticModel(title: "24h Volume", value: data.volume)
         let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominance)
         
-        let portfolioValue = portfolioCoins
+        let portfolioValue =
+        portfolioCoins
             .map({ $0.currentHoldingsValue })
             .reduce(0, +)
         
-        let previousValue = portfolioCoins
+        let previousValue =
+        portfolioCoins
             .map { (coin) -> Double in
                 let currentValue = coin.currentHoldingsValue
                 let percentChange = coin.priceChangePercentage24H ?? 0 / 100
@@ -164,4 +170,5 @@ class HomeViewModel: ObservableObject {
         ])
         return stats
     }
+    
 }

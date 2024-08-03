@@ -12,7 +12,6 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false // animate right
     @State private var showPortfolioView: Bool = false // new sheet
-    
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
     
@@ -36,9 +35,17 @@ struct HomeView: View {
                 if !showPortfolio {
                     allCoinsList
                         .transition(.move(edge: .leading))
-                } else {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                }
+                
+                if showPortfolio {
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else {
+                            portfolioCoinsList
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -53,15 +60,12 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
-
 extension HomeView {
+    
     private var homeHeader: some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-                .animation(.bouncy, value: showPortfolio)
+                .animation(.easeInOut, value: showPortfolio)
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
@@ -74,8 +78,8 @@ extension HomeView {
             Text(showPortfolio ? "Portfolio" : "Live Prices")
                 .font(.headline)
                 .fontWeight(.heavy)
-                .foregroundStyle(Color.theme.accent)
-                .animation(.bouncy, value: showPortfolio)
+                .foregroundColor(Color.theme.accent)
+                .animation(.none)
             Spacer()
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
@@ -96,6 +100,7 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
@@ -106,12 +111,22 @@ extension HomeView {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                onTapGesture {
-                    segue(coin: coin)
-                }
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
+    }
+    
+    private var portfolioEmptyText: some View {
+        Text("You haven't added any coins to your portfolio yet. Click the + button to get started! 🧐")
+            .font(.callout)
+            .foregroundColor(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
     }
     
     private func segue(coin: CoinModel) {
@@ -121,7 +136,6 @@ extension HomeView {
     
     private var columnTitles: some View {
         HStack {
-            
             HStack(spacing: 4) {
                 Text("Coin")
                 Image(systemName: "chevron.down")
@@ -129,13 +143,12 @@ extension HomeView {
                     .rotationEffect(Angle(degrees: vm.sortOption == .rank ? 0 : 180))
             }
             .onTapGesture {
-                withAnimation {
+                withAnimation(.default) {
                     vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
                 }
             }
             
             Spacer()
-            
             if showPortfolio {
                 HStack(spacing: 4) {
                     Text("Holdings")
@@ -144,12 +157,11 @@ extension HomeView {
                         .rotationEffect(Angle(degrees: vm.sortOption == .holdings ? 0 : 180))
                 }
                 .onTapGesture {
-                    withAnimation {
+                    withAnimation(.default) {
                         vm.sortOption = vm.sortOption == .holdings ? .holdingsReversed : .holdings
                     }
                 }
             }
-            
             HStack(spacing: 4) {
                 Text("Price")
                 Image(systemName: "chevron.down")
@@ -158,22 +170,23 @@ extension HomeView {
             }
             .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
             .onTapGesture {
-                withAnimation {
+                withAnimation(.default) {
                     vm.sortOption = vm.sortOption == .price ? .priceReversed : .price
                 }
             }
             
-            Button {
+            Button(action: {
                 withAnimation(.linear(duration: 2.0)) {
                     vm.reloadData()
                 }
-            } label: {
+            }, label: {
                 Image(systemName: "goforward")
-            }
+            })
             .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
         .padding(.horizontal)
     }
+    
 }
