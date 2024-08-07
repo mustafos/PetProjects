@@ -39,12 +39,11 @@ class DetailViewModel: ObservableObject {
         
         coinDetailService.$coinDetails
             .sink { [weak self] (returnedCoinDetails) in
-//                self?.coinDescription = returnedCoinDetails?.readableDescription
+                self?.coinDescription = returnedCoinDetails?.readableDescription
                 self?.websiteURL = returnedCoinDetails?.links?.homepage?.first
                 self?.redditURL = returnedCoinDetails?.links?.subredditURL
             }
             .store(in: &cancellables)
-        
     }
     
     private func mapDataToStatistics(coinDetailModel: CoinDetailModel?, coinModel: CoinModel) -> (overview: [StatisticModel], additional: [StatisticModel]) {
@@ -102,4 +101,5 @@ class DetailViewModel: ObservableObject {
         ]
         return additionalArray
     }
+    
 }

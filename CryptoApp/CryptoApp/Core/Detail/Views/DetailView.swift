@@ -164,4 +164,5 @@ extension DetailView {
         .frame(maxWidth: .infinity, alignment: .leading)
         .font(.headline)
     }
+    
 }
