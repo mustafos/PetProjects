@@ -158,7 +158,6 @@ extension DetailView {
                let url = URL(string: redditString) {
                 Link("Reddit", destination: url)
             }
-            
         }
         .accentColor(.blue)
         .frame(maxWidth: .infinity, alignment: .leading)

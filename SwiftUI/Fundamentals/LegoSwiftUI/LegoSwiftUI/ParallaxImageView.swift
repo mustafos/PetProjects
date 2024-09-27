@@ -12,7 +12,9 @@ struct ParallaxImageView: View {
     var body: some View {
         ZStack {
             Image("RedSky")
+                .resizable()
                 .offset(x: motionManager.roll * 100, y: motionManager.pitch * 100)
+                .ignoresSafeArea()
                 .onAppear {
                     motionManager.startMonitoringMotionUpdates()
                 }
