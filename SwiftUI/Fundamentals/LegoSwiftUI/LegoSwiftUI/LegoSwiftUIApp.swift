@@ -25,7 +25,8 @@ struct LegoSwiftUIApp: App {
 //            GesturesView()
 //            NotificationView()
 //            CustomNavMenuView()
-            ParallaxImageView()
+//            ParallaxImageView()
+            CustomPopupView()
         }
     }
 }

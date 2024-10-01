@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -173,6 +173,10 @@
 		6AF9909E2B94B2C100C15341 /* CarouselViewChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewChild.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6A0FEBBA2CBB7C950060073A /* CustomPopup */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CustomPopup; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		6A5057982B7975D90002C2F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -297,6 +301,7 @@
 				6A3A96D32C373165008460D5 /* CustomNavMenuView.swift */,
 				6A34A82A2C47F32B00D83D92 /* Modifiers.swift */,
 				6A8B1F912C6614DC00908B49 /* ParallaxImageView.swift */,
+				6A0FEBBA2CBB7C950060073A /* CustomPopup */,
 				6AD3B2672B926582001D7873 /* Font */,
 				6A759F842B86846300FAD0B0 /* Constants.swift */,
 				6A5057A22B7975DB0002C2F4 /* Assets.xcassets */,
@@ -411,6 +416,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6A0FEBBA2CBB7C950060073A /* CustomPopup */,
 			);
 			name = LegoSwiftUI;
 			productName = LegoSwiftUI;
