@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -90,6 +90,10 @@
 		6ABB5CB52C5238A3005AC7C9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6ABB5CB82C5244EE005AC7C9 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6A52ED1F2CF206FC00D40F6F /* New Folder */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); name = "New Folder"; path = Settings; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6A888C872C517BAB00AA2966 /* Frameworks */ = {
@@ -204,6 +208,7 @@
 		6A888C9E2C51827700AA2966 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6A52ED1F2CF206FC00D40F6F /* New Folder */,
 				6A65956B2C5CBC4D001D3934 /* Detail */,
 				6A888CA42C51838100AA2966 /* Components */,
 				6A888C9F2C51828900AA2966 /* Home */,
@@ -298,6 +303,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6A52ED1F2CF206FC00D40F6F /* New Folder */,
 			);
 			name = CryptoApp;
 			productName = CryptoApp;
