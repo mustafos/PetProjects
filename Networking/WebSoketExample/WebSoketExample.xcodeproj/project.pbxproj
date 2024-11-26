@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A41C4E32CF678D80066A3B4 /* Websocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41C4E22CF678D80066A3B4 /* Websocket.swift */; };
 		6A6235732998077900558BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6235722998077900558BAA /* AppDelegate.swift */; };
 		6A6235752998077900558BAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6235742998077900558BAA /* SceneDelegate.swift */; };
 		6A6235772998077900558BAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6235762998077900558BAA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A41C4E22CF678D80066A3B4 /* Websocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Websocket.swift; sourceTree = "<group>"; };
 		6A62356F2998077900558BAA /* WebSoketExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSoketExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6235722998077900558BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A6235742998077900558BAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				6A6235722998077900558BAA /* AppDelegate.swift */,
 				6A6235742998077900558BAA /* SceneDelegate.swift */,
 				6A6235762998077900558BAA /* ViewController.swift */,
+				6A41C4E22CF678D80066A3B4 /* Websocket.swift */,
 				6A6235782998077900558BAA /* Main.storyboard */,
 				6A62357B2998077B00558BAA /* Assets.xcassets */,
 				6A62357D2998077B00558BAA /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				6A6235772998077900558BAA /* ViewController.swift in Sources */,
 				6A6235732998077900558BAA /* AppDelegate.swift in Sources */,
+				6A41C4E32CF678D80066A3B4 /* Websocket.swift in Sources */,
 				6A6235752998077900558BAA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
