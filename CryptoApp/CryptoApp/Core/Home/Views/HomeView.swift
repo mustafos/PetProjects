@@ -44,7 +44,8 @@ struct HomeView: View {
                         } else {
                             portfolioCoinsList
                         }
-                    }.transition(.move(edge: .trailing))
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -62,9 +63,8 @@ struct HomeView: View {
     }
 }
 
-extension HomeView {
-    
-    private var homeHeader: some View {
+private extension HomeView {
+    var homeHeader: some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.easeInOut, value: showPortfolio)
@@ -96,7 +96,7 @@ extension HomeView {
         .padding(.horizontal)
     }
     
-    private var allCoinsList: some View {
+    var allCoinsList: some View {
         List {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: false)
@@ -104,7 +104,7 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
-                    .listRowBackground(Color.clear)
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
