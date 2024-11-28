@@ -24,7 +24,8 @@ struct CryptoAppApp: App {
         WindowGroup {
             ZStack {
                 NavigationView {
-                    HomeView().navigationBarHidden(true)
+                    HomeView()
+                        .navigationBarHidden(true)
                 }
                 .navigationViewStyle(StackNavigationViewStyle())
                 .environmentObject(vm)
