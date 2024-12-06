@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct ReduxAppApp: App {
     var body: some Scene {
+        
+        let store = Store(reducer: reducer)
+        
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(store)
         }
     }
 }
