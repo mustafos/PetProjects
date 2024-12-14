@@ -13,6 +13,11 @@ protocol ReduxState { }
 
 struct AppState: ReduxState {
     var counterState = CounterState()
+    var taskState = TaskState()
+}
+
+struct TaskState: ReduxState {
+    var tasks: [Task] = [Task]()
 }
 
 struct CounterState: ReduxState {
@@ -23,6 +28,9 @@ protocol Action { }
 
 struct IncrementAction: Action { }
 struct DecrementAction: Action { }
+struct AddTaskAction: Action {
+    let task: Task
+}
 
 struct AddAction: Action {
     let value: Int
