@@ -7,7 +7,10 @@
 
 import Foundation
 
+typealias Dispatcher = (Action) -> Void
+
 typealias Reducer<State: ReduxState> = (_ state: State, _ action: Action) -> State
+typealias Middlewere<StoreState: ReduxState> = (StoreState, Action, @escaping Dispatcher) -> Void
 
 protocol ReduxState { }
 
@@ -28,6 +31,8 @@ protocol Action { }
 
 struct IncrementAction: Action { }
 struct DecrementAction: Action { }
+struct IncrementAsyncAction: Action { }
+
 struct AddTaskAction: Action {
     let task: Task
 }
@@ -40,13 +45,22 @@ class Store<StoreState: ReduxState>: ObservableObject {
     
     var reducer: Reducer<StoreState>
     @Published var state: StoreState
+    var middlewares: [Middlewere<StoreState>]
     
-    init(reducer: @escaping Reducer<StoreState>, state: StoreState) {
+    init(reducer: @escaping Reducer<StoreState>, state: StoreState, middlewares: [Middlewere<StoreState>] = []) {
         self.reducer = reducer
         self.state = state
+        self.middlewares = middlewares
     }
     
     func dispatch(action: Action) {
-        state = reducer(state, action)
+        DispatchQueue.main.async {
+            self.state = self.reducer(self.state, action)
+        }
+        
+        // run all middlewares
+        middlewares.forEach { middlewares in
+            middlewares(state, action, dispatch)
+        }
     }
 }
