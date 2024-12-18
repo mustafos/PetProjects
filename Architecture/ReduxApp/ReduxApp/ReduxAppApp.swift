@@ -11,7 +11,7 @@ import SwiftUI
 struct ReduxAppApp: App {
     var body: some Scene {
         
-        let store = Store(reducer: appReducer, state: AppState(), middlewares: [logMiddleware(), incrementMiddleware()])
+        let store = Store(reducer: appReducer, state: AppState())
         
         WindowGroup {
             ContentView().environmentObject(store)
