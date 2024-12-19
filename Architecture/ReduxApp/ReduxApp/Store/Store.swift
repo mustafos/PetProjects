@@ -15,9 +15,22 @@ typealias Middlewere<StoreState: ReduxState> = (StoreState, Action, @escaping Di
 protocol ReduxState { }
 
 struct AppState: ReduxState {
+    var movies = MoviesState()
+}
+
+struct MoviesState: ReduxState {
+    var movies = [Movie]()
 }
 
 protocol Action { }
+
+struct FetchMovies: Action {
+    let search: String
+}
+
+struct SetMovies: Action {
+    let movies: [Movie]
+}
 
 class Store<StoreState: ReduxState>: ObservableObject {
     
