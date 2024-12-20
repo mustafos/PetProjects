@@ -10,11 +10,11 @@ import SwiftUI
 struct URLImage: View {
     
     let url: String
-    @ObservableObject private var imageDownloader: ImageDownloader = ImageDownloader()
+    @ObservedObject private var imageDownloader: ImageDownloader = ImageDownloader()
     
     init(url: String) {
         self.url = url
-        self.imageDownloader.download(url: self.url)
+        self.imageDownloader.downloadImage(url: self.url)
     }
     var body: some View {
         if let imageData = self.imageDownloader.downloadedData {
