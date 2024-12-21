@@ -22,6 +22,18 @@ func moviesMiddleware() -> Middlewere<AppState> {
                     print(error.localizedDescription)
                 }
             }
+            
+        case let action as FetchMovieDetail:
+            Webservice().getMovieDetailsBy(imdbId: action.imdbId) { result in
+                switch result {
+                case .success(let details):
+                    if let details = details {
+                        dispatch(SetMovieDetails(details: details))
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         default:
             break
         }

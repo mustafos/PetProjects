@@ -36,7 +36,11 @@ struct ContentView: View {
                 .padding()
 
             List(props.movies, id: \.imdbId) { movie in
-                MovieCell(movie: movie)
+                NavigationLink {
+                    MovieDetailsView(movie: movie)
+                } label: {
+                    MovieCell(movie: movie)
+                }
             }.listStyle(PlainListStyle())
         }
         .navigationTitle("Movies")
