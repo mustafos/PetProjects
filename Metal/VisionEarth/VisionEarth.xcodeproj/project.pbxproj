@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		6AB4D2872D3439A9001EFD87 /* LineCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB4D2872D3439A9001EFD87 /* VisionEarth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionEarth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		6AB4D2892D3439A9001EFD87 /* LineCraft */ = {
+		6AB4D2892D3439A9001EFD87 /* VisionEarth */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LineCraft;
+			path = VisionEarth;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		6AB4D27E2D3439A9001EFD87 = {
 			isa = PBXGroup;
 			children = (
-				6AB4D2892D3439A9001EFD87 /* LineCraft */,
+				6AB4D2892D3439A9001EFD87 /* VisionEarth */,
 				6AB4D2882D3439A9001EFD87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		6AB4D2882D3439A9001EFD87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AB4D2872D3439A9001EFD87 /* LineCraft.app */,
+				6AB4D2872D3439A9001EFD87 /* VisionEarth.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AB4D2862D3439A9001EFD87 /* LineCraft */ = {
+		6AB4D2862D3439A9001EFD87 /* VisionEarth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AB4D2952D3439AA001EFD87 /* Build configuration list for PBXNativeTarget "LineCraft" */;
+			buildConfigurationList = 6AB4D2952D3439AA001EFD87 /* Build configuration list for PBXNativeTarget "VisionEarth" */;
 			buildPhases = (
 				6AB4D2832D3439A9001EFD87 /* Sources */,
 				6AB4D2842D3439A9001EFD87 /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				6AB4D2892D3439A9001EFD87 /* LineCraft */,
+				6AB4D2892D3439A9001EFD87 /* VisionEarth */,
 			);
-			name = LineCraft;
+			name = VisionEarth;
 			packageProductDependencies = (
 			);
 			productName = LineCraft;
-			productReference = 6AB4D2872D3439A9001EFD87 /* LineCraft.app */;
+			productReference = 6AB4D2872D3439A9001EFD87 /* VisionEarth.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6AB4D2822D3439A9001EFD87 /* Build configuration list for PBXProject "LineCraft" */;
+			buildConfigurationList = 6AB4D2822D3439A9001EFD87 /* Build configuration list for PBXProject "VisionEarth" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AB4D2862D3439A9001EFD87 /* LineCraft */,
+				6AB4D2862D3439A9001EFD87 /* VisionEarth */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +252,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LineCraft/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"VisionEarth/Preview Content\"";
 				DEVELOPMENT_TEAM = KA633DFT94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -268,13 +268,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.LineCraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -286,7 +287,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LineCraft/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"VisionEarth/Preview Content\"";
 				DEVELOPMENT_TEAM = KA633DFT94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -302,20 +303,21 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.LineCraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AB4D2822D3439A9001EFD87 /* Build configuration list for PBXProject "LineCraft" */ = {
+		6AB4D2822D3439A9001EFD87 /* Build configuration list for PBXProject "VisionEarth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AB4D2932D3439AA001EFD87 /* Debug */,
@@ -324,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AB4D2952D3439AA001EFD87 /* Build configuration list for PBXNativeTarget "LineCraft" */ = {
+		6AB4D2952D3439AA001EFD87 /* Build configuration list for PBXNativeTarget "VisionEarth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AB4D2962D3439AA001EFD87 /* Debug */,
