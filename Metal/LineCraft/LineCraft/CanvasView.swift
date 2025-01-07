@@ -12,7 +12,7 @@ class CanvasView: UIView {
         super.draw(rect)
         
         let path = UIBezierPath()
-        let gridSize: CGFloat = 50 // Размер блока сетки
+        let gridSize: CGFloat = 25 // Размер блока сетки
         
         // Горизонтальные линии
         for y in stride(from: 0, to: rect.height, by: gridSize) {
