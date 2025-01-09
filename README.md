@@ -19,6 +19,7 @@ This repository, PetProject, is a testament to my iOS development skills and tec
 * [**ARKit**](https://github.com/mustafos/PetProjects/tree/main/ARKit)
 * [**SpriteKit**](https://github.com/mustafos/PetProjects/tree/main/SpriteKit)
 * [**Metal**](https://github.com/mustafos/PetProjects/tree/main/Metal/MetalRenderer)
+* [**Machine Learning**](https://github.com/mustafos/PetProjects/tree/main/Machine%20Learning)
 * [**SnapKit**](https://github.com/mustafos/PetProjects/tree/main/MiniApps/Insta)
 * [**WebView**](https://github.com/mustafos/PetProjects/tree/main/Metal/WebView)
 * [**StoreKit**](https://github.com/mustafos/PetProjects/tree/main/Metal/StoreKit)
