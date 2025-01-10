@@ -2,7 +2,7 @@
 //  PhotoViewController.swift
 //  PhotoTapps
 //
-//  Created by Mustafa Bekirov on 27.11.2022.
+//  Created by Mustafa Bekirov on 09.01.2025.
 //
 
 import UIKit

@@ -14,6 +14,7 @@
 		6A3C92172933819C00F0E889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92152933819C00F0E889 /* LaunchScreen.storyboard */; };
 		6A8AA7442933841D00142FF8 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8AA7432933841D00142FF8 /* PhotosCollectionViewController.swift */; };
 		6A8AA7462933882D00142FF8 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8AA7452933882D00142FF8 /* PhotoCell.swift */; };
+		6AA819E22D56163C0020A685 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6AA819E12D56163C0020A685 /* GoogLeNetPlaces.mlmodel */; };
 		6AF0DF142933AFF900CE8E8C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0DF132933AFF900CE8E8C /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		6A3C92182933819C00F0E889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A8AA7432933841D00142FF8 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		6A8AA7452933882D00142FF8 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		6AA819E12D56163C0020A685 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		6AF0DF132933AFF900CE8E8C /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		6A3C92092933819B00F0E889 /* PhotoTapps */ = {
 			isa = PBXGroup;
 			children = (
+				6AA819E12D56163C0020A685 /* GoogLeNetPlaces.mlmodel */,
 				6A3C920A2933819B00F0E889 /* AppDelegate.swift */,
 				6A3C920C2933819B00F0E889 /* SceneDelegate.swift */,
 				6A8AA7432933841D00142FF8 /* PhotosCollectionViewController.swift */,
@@ -149,6 +152,7 @@
 				6A3C920B2933819B00F0E889 /* AppDelegate.swift in Sources */,
 				6A3C920D2933819B00F0E889 /* SceneDelegate.swift in Sources */,
 				6AF0DF142933AFF900CE8E8C /* PhotoViewController.swift in Sources */,
+				6AA819E22D56163C0020A685 /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
