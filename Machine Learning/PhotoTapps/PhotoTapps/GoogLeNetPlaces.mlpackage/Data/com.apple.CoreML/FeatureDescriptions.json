@@ -1,0 +1,21 @@
+{
+  "Inputs" : {
+    "sceneImage" : {
+      "MLFeatureShortDescription" : "Input image of scene to be classified"
+    }
+  },
+  "Outputs" : {
+    "sceneLabel" : {
+      "MLFeatureShortDescription" : "Most likely scene label"
+    },
+    "sceneLabelProbs" : {
+      "MLFeatureShortDescription" : "Probability of each scene"
+    }
+  },
+  "TrainingInputs" : {
+
+  },
+  "States" : {
+
+  }
+}

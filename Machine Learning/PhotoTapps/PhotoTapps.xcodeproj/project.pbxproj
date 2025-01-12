@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		6A3C920B2933819B00F0E889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C920A2933819B00F0E889 /* AppDelegate.swift */; };
 		6A3C920D2933819B00F0E889 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C920C2933819B00F0E889 /* SceneDelegate.swift */; };
-		6A3C92122933819B00F0E889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92102933819B00F0E889 /* Main.storyboard */; };
 		6A3C92142933819C00F0E889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92132933819C00F0E889 /* Assets.xcassets */; };
-		6A3C92172933819C00F0E889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C92152933819C00F0E889 /* LaunchScreen.storyboard */; };
-		6AA819E22D56163C0020A685 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6AA819E12D56163C0020A685 /* GoogLeNetPlaces.mlmodel */; };
 		6AA819E42D5617F60020A685 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA819E32D5617F60020A685 /* Extensions.swift */; };
+		6AA819E62D561D850020A685 /* GoogLeNetPlaces.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 6AA819E52D561D850020A685 /* GoogLeNetPlaces.mlpackage */; };
 		6AF0DF142933AFF900CE8E8C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0DF132933AFF900CE8E8C /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +19,10 @@
 		6A3C92072933819B00F0E889 /* PhotoTapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3C920A2933819B00F0E889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A3C920C2933819B00F0E889 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A3C92112933819B00F0E889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A3C92132933819C00F0E889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6A3C92162933819C00F0E889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A3C92182933819C00F0E889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AA819E12D56163C0020A685 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		6AA819E32D5617F60020A685 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6AA819E52D561D850020A685 /* GoogLeNetPlaces.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = GoogLeNetPlaces.mlpackage; sourceTree = "<group>"; };
 		6AF0DF132933AFF900CE8E8C /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,14 +56,12 @@
 		6A3C92092933819B00F0E889 /* PhotoTapps */ = {
 			isa = PBXGroup;
 			children = (
-				6AA819E12D56163C0020A685 /* GoogLeNetPlaces.mlmodel */,
+				6AA819E52D561D850020A685 /* GoogLeNetPlaces.mlpackage */,
 				6AA819E32D5617F60020A685 /* Extensions.swift */,
 				6A3C920A2933819B00F0E889 /* AppDelegate.swift */,
 				6A3C920C2933819B00F0E889 /* SceneDelegate.swift */,
 				6AF0DF132933AFF900CE8E8C /* PhotoViewController.swift */,
-				6A3C92102933819B00F0E889 /* Main.storyboard */,
 				6A3C92132933819C00F0E889 /* Assets.xcassets */,
-				6A3C92152933819C00F0E889 /* LaunchScreen.storyboard */,
 				6A3C92182933819C00F0E889 /* Info.plist */,
 			);
 			path = PhotoTapps;
@@ -131,9 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A3C92172933819C00F0E889 /* LaunchScreen.storyboard in Resources */,
 				6A3C92142933819C00F0E889 /* Assets.xcassets in Resources */,
-				6A3C92122933819B00F0E889 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,34 +136,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AA819E62D561D850020A685 /* GoogLeNetPlaces.mlpackage in Sources */,
 				6A3C920B2933819B00F0E889 /* AppDelegate.swift in Sources */,
 				6A3C920D2933819B00F0E889 /* SceneDelegate.swift in Sources */,
 				6AF0DF142933AFF900CE8E8C /* PhotoViewController.swift in Sources */,
-				6AA819E22D56163C0020A685 /* GoogLeNetPlaces.mlmodel in Sources */,
 				6AA819E42D5617F60020A685 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6A3C92102933819B00F0E889 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6A3C92112933819B00F0E889 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6A3C92152933819C00F0E889 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6A3C92162933819C00F0E889 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6A3C92192933819C00F0E889 /* Debug */ = {
@@ -301,9 +274,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Our application needs permission to write photos from your photos library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +283,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PhotoTapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,9 +306,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Our application needs permission to write photos from your photos library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +315,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PhotoTapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

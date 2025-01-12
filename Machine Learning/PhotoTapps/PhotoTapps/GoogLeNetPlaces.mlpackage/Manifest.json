@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "0FA97363-E792-4EBD-9CC2-5A9FDA8A0612": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "7B3C4ED9-D0D1-4DBE-9597-4A3B466F7C3B": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "GoogLeNetPlaces.mlmodel",
+            "path": "com.apple.CoreML/GoogLeNetPlaces.mlmodel"
+        },
+        "FFFC4BBA-66B2-42B3-B3D5-18AC4993004F": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        }
+    },
+    "rootModelIdentifier": "7B3C4ED9-D0D1-4DBE-9597-4A3B466F7C3B"
+}

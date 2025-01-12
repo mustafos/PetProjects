@@ -1,0 +1,6 @@
+{
+  "MLModelVersionStringKey" : "--",
+  "MLModelDescriptionKey" : "Detects the scene of an image from 205 categories such as airport, bedroom, forest, coast etc.",
+  "MLModelAuthorKey" : "B. Zhou, A. Lapedriza, J. Xiao, A. Torralba, and A. Oliva",
+  "MLModelLicenseKey" : "Creative Common License. More information available at http:\/\/places.csail.mit.edu"
+}
