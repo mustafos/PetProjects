@@ -2,19 +2,40 @@
 //  ContentView.swift
 //  MLSwift
 //
-//  Created by Mustafa Bekirov on 07.02.2025.
+//  Created by Mustafa Bekirov on 06.02.2025.
 //
 
 import SwiftUI
+import NaturalLanguage
 
 struct ContentView: View {
+    @State private var inputText: String = ""
+    
+    private var score: String {
+        return analyzeSentiment(for: inputText)
+    }
+    
+    private let tagger = NLTagger(tagSchemes: [.sentimentScore])
+    
+    private func analyzeSentiment(for stringToAnalyze: String) -> String {
+        tagger.string = stringToAnalyze
+        let (sentimentScore, _) = tagger.tag(at: stringToAnalyze.startIndex,
+                                            unit: .paragraph,
+                                            scheme: .sentimentScore
+        )
+        return sentimentScore?.rawValue ?? ""
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Sentiment Analyzer")
+            
+            TextField("Enter text here", text: $inputText)
+            
+            Text(score)
         }
+        .font(.system(size: 40))
+        .multilineTextAlignment(.center)
         .padding()
     }
 }
