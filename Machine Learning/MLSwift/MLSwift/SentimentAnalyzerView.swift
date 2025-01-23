@@ -1,14 +1,14 @@
 //
-//  ContentView.swift
+//  SentimentAnalyzerView.swift
 //  MLSwift
 //
-//  Created by Mustafa Bekirov on 06.02.2025.
+//  Created by Mustafa Bekirov on 12.01.2025.
 //
 
 import SwiftUI
 import NaturalLanguage
 
-struct ContentView: View {
+struct SentimentAnalyzerView: View {
     @State private var inputText: String = ""
     
     private var score: String {
@@ -41,5 +41,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    SentimentAnalyzerView()
 }
