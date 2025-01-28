@@ -11,20 +11,35 @@ import UIKit
 class ImageProcessor {
     static func pixelBuffer(from image: UIImage) -> CVPixelBuffer? {
         let imageSize = CGSize(width: 416, height: 416) // Размер модели YOLOv3
-        UIGraphicsBeginImageContextWithOptions(imageSize, true, 2.0)
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 2.0)
         image.draw(in: CGRect(origin: .zero, size: imageSize))
         
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        
+        let cgImage = context.makeImage()
         UIGraphicsEndImageContext()
 
-        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue!,
-                     kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue!] as CFDictionary
+        guard let imageRef = cgImage else {
+            return nil
+        }
+
+        let attrs = [
+            kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue!,
+            kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue!
+        ] as CFDictionary
         
         var pixelBuffer: CVPixelBuffer?
+        
+        // Создание пустого CVPixelBuffer
         CVPixelBufferCreate(kCFAllocatorDefault, Int(imageSize.width), Int(imageSize.height),
                             kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+        
+        guard let buffer = pixelBuffer else {
+            return nil
+        }
 
-        guard let buffer = pixelBuffer else { return nil }
         CVPixelBufferLockBaseAddress(buffer, .readOnly)
 
         let pixelData = CVPixelBufferGetBaseAddress(buffer)
@@ -37,8 +52,10 @@ class ImageProcessor {
                                  space: rgbColorSpace,
                                  bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
         
-        context2?.draw(context.makeImage()!, in: CGRect(origin: .zero, size: imageSize))
+        context2?.draw(imageRef, in: CGRect(origin: .zero, size: imageSize))
+        
         CVPixelBufferUnlockBaseAddress(buffer, .readOnly)
+        
         return buffer
     }
 }
