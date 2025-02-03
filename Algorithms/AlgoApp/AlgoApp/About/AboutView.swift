@@ -18,6 +18,7 @@ struct AboutView: View {
     ]
     
     var body: some View {
+        #if os(iOS)
         NavigationStack {
             aboutContent
                 .navigationTitle("About")
@@ -30,6 +31,31 @@ struct AboutView: View {
                     }
                 }
         }
+        #elseif os(visionOS)
+        VStack {
+            HStack {
+                Spacer()
+                Button("Done") {
+                    dismiss()
+                }
+                .padding()
+            }
+            aboutContent
+        }
+        .frame(width: 400, height: 500)
+        #elseif os(macOS)
+        VStack {
+            aboutContent
+        }
+        .frame(width: 300, height: 400)
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Close") {
+                    dismiss()
+                }
+            }
+        }
+        #endif
     }
     
     private var aboutContent: some View {
@@ -85,4 +111,3 @@ struct AboutView: View {
 #Preview {
     AboutView()
 }
-
