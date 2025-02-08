@@ -29,9 +29,22 @@
 		6AB221B52DBFFFF000B6D947 /* AlgoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6A658F452DC11FBF001C547E /* Exceptions for "AlgoApp" folder in "AlgoAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DemoData.swift,
+			);
+			target = 6AB221AA2DBFFFF000B6D947 /* AlgoAppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6AB2219F2DBFFFEF00B6D947 /* AlgoApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A658F452DC11FBF001C547E /* Exceptions for "AlgoApp" folder in "AlgoAppTests" target */,
+			);
 			path = AlgoApp;
 			sourceTree = "<group>";
 		};
